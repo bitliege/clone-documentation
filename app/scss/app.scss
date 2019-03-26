@@ -1,0 +1,87 @@
+// =============================================================================
+
+    // Clone
+    // Core
+
+// =============================================================================
+
+$clone__font--sans: "Open Sans", sans-serif !default;
+$clone__font--serif: serif !default;
+$clone__font--script: "Euphoria Script", cursive !default;
+$clone__font--monospace: "Consolas", mono-space !default;
+
+$clone__font-default: $clone__font--sans !default;
+
+$clone__font-scale: 1.333 !default;
+
+$clone__line-height: 1.5 !default;
+
+// On Portrait Phone Devices, Media Queries exist at Tablet Landscape, and Desktop Large and are generated using the multiplier below.
+$clone__margin: 1rem !default;
+$clone__padding: 1rem !default;
+$clone__whitespace-multiplier: 1.25 !default;
+
+$clone__grid-columns: 12 !default;
+$clone__grid-gutter: $clone__padding !default;
+
+$clone__white: #FFFFFF !default;
+$clone__black: #333333 !default;
+
+$clone__go: green !default;
+$clone__slow: orange !default;
+$clone__stop: red !default;
+
+$clone__grey: gray !default;
+$clone__grey--light: lighten($clone__grey, 10%) !default;
+$clone__grey--dark: darken($clone__grey, 10%) !default;
+
+$clone__gray: $clone__grey;
+$clone__gray--light: $clone__grey--light;
+$clone__gray--dark: $clone__grey--dark;
+
+$clone__c1: #5B1647 !default;
+$clone__c1--light: lighten($clone__c1, 10%) !default;
+$clone__c1--dark: darken($clone__c1, 10%) !default;
+
+$clone__c2: #96043E !default;
+$clone__c2--light: lighten($clone__c2, 10%) !default;
+$clone__c2--dark: darken($clone__c2, 10%) !default;
+
+$clone__c3: #C90035 !default;
+$clone__c3--light: lighten($clone__c3, 10%) !default;
+$clone__c3--dark: darken($clone__c3, 10%) !default;
+
+$clone__c4: blue !default;
+$clone__c4--light: lighten($clone__c4, 10%) !default;
+$clone__c4--dark: darken($clone__c4, 10%) !default;
+
+$clone__c5: purple !default;
+$clone__c5--light: lighten($clone__c5, 10%) !default;
+$clone__c5--dark: darken($clone__c5, 10%) !default;
+
+$clone__hover-colour: teal !default;
+
+$clone__focus-colour: $clone__hover-colour !default;
+
+$clone__selection-background-colour: $clone__c5 !default;
+
+$clone__table-heading-colour: $clone__c1 !default;
+
+$clone__alert--information: $clone__go !default;
+$clone__alert--warning: $clone__slow !default;
+$clone__alert--error: $clone__stop !default;
+
+$clone__blockquote-colour: $clone__c1 !default;
+
+$clone__pullquote-colour: $clone__c2 !default;
+
+@import "../../node_modules/clone-framework/app/scss/clone";
+
+.clone-sidebar {
+    background: rgba(30, 30, 30, 1);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(1/5 * 100%);
+}

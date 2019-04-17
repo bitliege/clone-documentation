@@ -12,7 +12,7 @@
                 {{ title }}
             </span>
             {% if subtitle %}
-                <span data-c-margin="top(quarter)" data-c-heading="h5" data-c-font-colour="c1">
+                <span data-c-margin="top(quarter)" data-c-heading="h5" data-c-colour="c1">
                     Optional Accordion Subtitle
                 </span>
             {% endif %}
@@ -24,14 +24,14 @@
             aria-hidden="true"
             class="material-icons"
             data-c-accordion="icon--add"
-            data-c-font-colour="black">
+            data-c-colour="black">
             add_circle
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
             data-c-accordion="icon--remove"
-            data-c-font-colour="black">
+            data-c-colour="black">
             remove_circle
         </i>
     </button>
@@ -40,9 +40,12 @@
         data-c-accordion="content"
         data-c-padding="right(half) left(half)">
         <div data-c-padding="bottom(half)">
-        {% if element %}
-            <pre><code class="twig">{% filter escape %}{% include "../../../node_modules/clone-framework/app/twig/components/" ~ element ~ ".html" %}{% endfilter %}</code></pre>
-        {% endif %}
+            {% if element %}
+                <pre><code class="language-twig">{% filter escape %}{% include "../../../node_modules/clone-framework/app/twig/components/" ~ element ~ ".html" %}{% endfilter %}</code></pre>
+            {% endif %}
+            {% if content == "themeing" %}
+                <pre><code class="language-scss">{% filter escape %}{% include "../../../node_modules/clone-framework/app/scss/core/variables.scss" %}{% endfilter %}</code></pre>
+            {% endif %}
         </div>
     </div>
 </div>

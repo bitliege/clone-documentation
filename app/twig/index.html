@@ -36,18 +36,13 @@
             integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
             crossorigin="anonymous"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/clone-framework@2.2.2/dist/js/clone.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/clone-framework@2.2.3/dist/js/clone.min.js"></script>
 
         <!--build:css css/app.min.css-->
         <link async rel="stylesheet" href="css/app.css">
         <!--endbuild-->
 
-        <link
-            rel="stylesheet"
-            href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/styles/atom-one-dark.min.css">
-        <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.13.1/build/highlight.min.js"></script>
-
-        <script>hljs.initHighlightingOnLoad();</script>
+        <link async rel="stylesheet" href="css/prism/prism-okaidia.css">
 
     </head>
 
@@ -60,13 +55,28 @@
                 <img src="img/clone-white.svg">
             </div>
             <div data-c-padding="right(double) left(double)">
-                <ul data-c-font-colour="white">
+                <ul data-c-colour="white">
                     <li>
                         <a href="#about">About Clone</a>
-                        <ul data-c-font-colour="white">
+                        <ul data-c-colour="white">
                             <li><a href="#about-installation">Installation</a></li>
+                            <li><a href="#about-usage">Using Clone</a></li>
                             <li><a href="#about-themeing">Themeing</a></li>
                             <li><a href="#about-contributing">Contributing</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#utilities">Utility Attributes</a>
+                        <ul data-c-colour="white">
+                            <li><a href="#util-alignment">Alignment</a></li>
+                            <li><a href="#util-backgrounds">Backgrounds</a></li>
+                            <li><a href="#util-borders">Borders</a></li>
+                            <li><a href="#util-containers">Containers</a></li>
+                            <li><a href="#util-fonts">Fonts &amp; Font Styles</a></li>
+                            <li><a href="#util-whitespace">Margins &amp; Padding</a></li>
+                            <li><a href="#util-overlays">Overlays</a></li>
+                            <li><a href="#util-radius">Radius</a></li>
+                            <li><a href="#util-visibility">Visibility</a></li>
                         </ul>
                     </li>
                     <li><a href="#accordions">Accordions</a></li>
@@ -102,7 +112,7 @@
                 <h2
                     data-c-font-size="h2"
                     data-c-background="black(90)"
-                    data-c-font-colour="white"
+                    data-c-colour="white"
                     data-c-padding="top(normal) right(double) bottom(normal) left(double)">
                     About Clone
                 </h2>
@@ -111,39 +121,349 @@
                     <a id="about-installation"></a>
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-colour="c2"
-                        data-c-margin="bottom(half)">
+                        data-c-colour="c2"
+                        data-c-margin="bottom(normal)">
                         Installation
                     </h3>
 
-                    <div data-c-padding="bottom">
+                    <div>
+                        <h4
+                            data-c-font-size="h4"
+                            data-c-margin="top(double) bottom(normal)">
+                            CDN (No Theme)
+                        </h4>
+                        <p data-c-margin="bottom">If you want to get Clone up and running and have no interest in creating your own theme, you can include Clone's CSS and JavaScript files as linked resources. This allows for a quick and easy way to generate prototypes using Clone's native theme (See <a href="#about-themeing">Themeing</a> for more information on Maple, Clone's default theme).</p>
+                        <pre data-c-margin="bottom"><code class="language-twig">{% filter escape %}<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/clone-framework@2.2.3/dist/css/clone.min.css">{% endfilter %}</code></pre>
+                        <pre><code class="language-twig">{% filter escape %}<script src="https://cdn.jsdelivr.net/npm/clone-framework@2.2.3/dist/js/clone.min.js"></script>{% endfilter %}</code></pre>
+                        <h4
+                            data-c-font-size="h4"
+                            data-c-margin="top(double) bottom(normal)">
+                            NPM (Themeable)
+                        </h4>
+                        <p data-c-margin="bottom">
+                            Clone is built in a way that allows you to theme the aesthetic of the system without the need to alter Clone's source files. This means that you'll be able to update Clone without any worry of losing or modifying your changes. All theming will occur in your project's root Sass directory and pull Clone's primary .scss file from node_modules.
+                        </p>
+                        <p data-c-margin="bottom">
+                            While it doesn't matter how your project compiles Sass, theming Clone requires that your project be running <a href="https://sass-lang.com/" title="Learn more about Sass." target="_blank">Sass</a>, <a href="https://github.com/postcss/autoprefixer" title="Learn more about Autoprefixer." target="_blank">Autoprefixer</a>, and <a href="https://jquery.com/" title="Learn more about jQuery." target="_blank">jQuery</a>.
+                        </p>
+                        <ol data-c-margin="bottom">
+                            <li>From inside your project, run <code class="language-bash">npm install clone-framework --save-dev</code></li>
+                            <li>At the top of your main project <code class="language-md">.scss</code> file, include the following:</li>
+                        </ol>
+                        <pre data-c-margin="bottom"><code class="language-scss">{% filter escape %}// My Custom Clone Theme
+// Please note that Clone must be included last, after all of your custom variables.
 
+// Custom Variables
+// All available custom variables can be found at https://github.com/joshdrink/clone-framework/blob/master/app/scss/core/variables.scss
+
+// Include Clone
+@import "../node_modules/clone-framework/app/scss/clone";{% endfilter %}</code></pre>
+                        <p data-c-margin="bottom">
+                            For now, it is also required that Clone's JavaScript file be imported using the CDN.
+                        </p>
+                        <pre><code class="language-twig">{% filter escape %}<script src="https://cdn.jsdelivr.net/npm/clone-framework@2.2.3/dist/js/clone.min.js"></script>{% endfilter %}</code></pre>
+                    </div>
+
+                    <a id="about-usage"></a>
+                    <h3
+                        data-c-font-size="h3"
+                        data-c-colour="c2"
+                        data-c-margin="top(double) bottom(normal)">
+                        Using Clone
+                    </h3>
+
+                    <div>
+                        <p data-c-margin="bottom">
+                            Clone is built a little differently than a standard front-end framework. Instead of classes, Clone uses data-attributes to leverage a level of extra functionality right in your markup. This means that Clone is namespaced away from your custom code and won't conflict with any of your existing work.
+                        </p>
+                        <p data-c-margin="bottom">
+                            Here's an example of how Clone works:
+                        </p>
+                        <pre data-c-margin="bottom"><code class="language-twig">{% filter escape %}<div data-clone>
+    <div
+        data-c-backround="c1(100)"
+        data-c-padding="all(normal)"
+        data-c-colour="white">
+        <h5
+            data-c-font-size="h5"
+            data-c-margin="bottom(half)"
+            data-c-font-weight="700">Sample Title</h5>
+        <p>This is a sample sentence in a Clone example.</p>
+    </div>
+</div>{% endfilter %}</code></pre>
+                        <p data-c-margin="bottom">Which will appear on your site as:</p>
+                        <div
+                            data-c-background="c1(100)"
+                            data-c-padding="all(normal)"
+                            data-c-colour="white"
+                            data-c-margin="bottom">
+                            <h5
+                                data-c-font-size="h5"
+                                data-c-margin="bottom(half)"
+                                data-c-font-weight="700">Sample Title</h5>
+                            <p>This is a sample sentence in a Clone example.</p>
+                        </div>
+                        <p data-c-margin="bottom">Let's break this apart into 3 different types of Clone utility attribute:</p>
+                        <ol data-c-margin="bottom">
+                            <li>
+                                The <code class="language-html">{% filter escape %}<div data-clone>{% endfilter %}</code> attribute.<br>
+                                This attribute tells Clone that styles should be applied to any child element nested inside. If you're building from scratch, you can include this data-attribute on the <code class="language-html">{% filter escape %}<body>{% endfilter %}</code> element to give Clone access to your entire project. If you just need Clone here and there on an existing project, you can include this attribute as-needed on any element you'd like.
+                            </li>
+                            <li>
+                                The <code class="language-html">{% filter escape %}<div data-c-colour="white">{% endfilter %}</code> type of variable attribute.<br>
+                                This type of attribute functions as a declaration for a certain CSS value. These types of attributes only take one argument in the quotation marks and follow a set of rules that can be found in the utility section below. In this example, the attribute <code class="language-html">{% filter escape %}<div data-c-colour="">{% endfilter %}</code> takes an argument from a defined list of colour variables, one of which is <code class="language-md">white</code>.
+                            </li>
+                            <li>
+                                The <code class="language-html">{% filter escape %}<div data-c-padding="bottom(normal)">{% endfilter %}</code> type of function attribute.<br>
+                                These attributes are unique in that they take multiple arguments in the quotation marks and can even modify each argument using keywords within the parantheses. Each attribute has a unique set, but they all follow standard rules to help you learn them quickly. In this example, <code class="language-html">{% filter escape %}<div data-c-padding="">{% endfilter %}</code> can take multiple arguments for the orientation you're trying to target (i.e. top, right, bottom, left). Each of these can subsequently be modified using parentheses to increase or decrease the amount of padding you want (i.e. quarter, half, normal, double, triple). A more complex version of this attribute might look like: <code class="language-html">{% filter escape %}<div data-c-padding="top(half) right(double) bottom(normal) left(double)">{% endfilter %}</code>.
+                            </li>
+                        </ol>
+                        <p data-c-margin="bottom">A finite list of Utility attributes and how they're used can be found here: <a href="#utilities">Utility Attributes in Clone</a>.</p>
+                        <p>Above and beyond utility attributes are component attributes, which allow you to build unique and accessible elements. Each individual component is outlined in the sidebar of the site. These component attributes can be combined with utility attributes to design and style each component to exactly what you need.</p>
                     </div>
 
                     <a id="about-themeing"></a>
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-colour="c2"
-                        data-c-margin="bottom(half)">
+                        data-c-colour="c2"
+                        data-c-margin="top(double) bottom(normal)">
                         Themeing
                     </h3>
 
-                    <div data-c-padding="bottom">
+                    <div>
+                        <p data-c-margin="bottom">Not a fan of Maple, Clone's default theme? No problem!</p>
+                        <p data-c-margin="bottom">Clone has a set of built-in variables that you can customize through Sass that will allow you to control a variety of fonts, colours, whitespace, etc. Simply pick and choose the variables you want to customize from the list below and add them to your Sass file, directly above Clone's import function:</p>
+                        <pre data-c-margin="bottom"><code class="language-scss">{% filter escape %}// My Custom Clone Theme
+// Please note that Clone must be included last, after all of your custom variables.
 
+// Custom Variables
+$clone-grid-columns: 8;
+$clone-c1: #5B1647;
+
+// Include Clone
+@import "../node_modules/clone-framework/app/scss/clone";{% endfilter %}</code></pre>
+                        <div data-c-accordion="group">
+                            {% include "components/accordion.html" with {'title': 'View Theme Variables', 'content': 'themeing'} %}
+                        </div>
                     </div>
 
                     <a id="about-contributing"></a>
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-colour="c2"
-                        data-c-margin="bottom(half)">
+                        data-c-colour="c2"
+                        data-c-margin="top(double) bottom(normal)">
                         Contributing
                     </h3>
 
                     <div>
-
+                        <p>Coming Soon! Check out <a href="https://github.com/joshdrink/clone-framework" title="Contribute to Clone on Github." target="_blank">Github</a> in the meantime.</p>
                     </div>
 
+                </div>
+
+                <!-- Utilities ======================================== -->
+                <a id="utilities"></a>
+                <h2
+                    data-c-font-size="h2"
+                    data-c-background="black(90)"
+                    data-c-colour="white"
+                    data-c-padding="top(normal) right(double) bottom(normal) left(double)">
+                    Utility Attributes
+                </h2>
+                <div data-c-padding="double">
+                    <a id="util-alignment"></a>
+                    <h3
+                        data-c-font-size="h3"
+                        data-c-colour="c2"
+                        data-c-margin="bottom(normal)">
+                        Alignment
+                    </h3>
+                    <div>
+                        <p data-c-margin="bottom">Usage: <code class="language-html">{% filter escape %}<div data-c-alignment="MEDIA(ALIGNMENT)">{% endfilter %}</code></p>
+                        <p data-c-margin="bottom">Purpose: This attribute aligns inline level elements based on the media query and alignment provided. This is useful for aligning content at different media queries.</p>
+                        <h4 
+                            data-c-font-size="h4"
+                            data-c-font-weight="700"
+                            data-c-margin="top(double) bottom(normal)">Available Arguments</h4>
+                        <div data-c-grid="gutter">
+                            <div data-c-grid-item="equal-col tp(1of2)">
+                                <pre><code class="language-md"># MEDIA
+
+base
+pp (Phone - Portrait)
+pl (Phone - Landscape)
+tp (Tablet - Portrait)
+tl (Tablet - Landscape)
+ds (Desktop - Small)
+dm (Desktop - Medium)
+dl (Desktop - Large)</code></pre>
+                            </div>
+                            <div data-c-grid-item="equal-col tp(1of2)">
+                                <pre><code class="language-md"># (ALIGNMENT)
+
+(left)
+(centre) / (center)
+(right)</code></pre>
+                            </div>
+                        </div>
+                        <h4 
+                            data-c-font-size="h4"
+                            data-c-font-weight="700"
+                            data-c-margin="top(double) bottom(normal)">Examples</h4>
+                        <pre><code class="language-md">{% filter escape %}<!--Centred initially, left aligned on landscape tablets.-->
+<div data-c-alignment="base(centre) tl(left)"></div>{% endfilter %}</code></pre>
+                        <pre><code class="language-md">{% filter escape %}<!--Centred initially, right aligned on landscape phones, centred on landscape tablets, right aligned on large desktops.-->
+<div data-c-alignment="base(centre) pl(right) tl(centre) dl(right)"></div>{% endfilter %}</code></pre>
+                    </div>
+                    <a id="util-backgrounds"></a>
+                    <h3
+                        data-c-font-size="h3"
+                        data-c-colour="c2"
+                        data-c-margin="top(double) bottom(normal)">
+                        Backgrounds
+                    </h3>
+                    <div>
+                        <p data-c-margin="bottom">Usage: <code class="language-html">{% filter escape %}<div data-c-background="COLOUR(OPACITY)">{% endfilter %}</code></p>
+                        <p data-c-margin="bottom">Purpose: This attribute assigns a background colour based on the colour and opacity provided.</p>
+                        <h4 
+                            data-c-font-size="h4"
+                            data-c-font-weight="700"
+                            data-c-margin="top(double) bottom(normal)">Available Arguments</h4>
+                        <div data-c-grid="gutter">
+                            <div data-c-grid-item="equal-col tp(1of2)">
+                                <pre><code class="language-md"># COLOUR
+
+white
+black
+c1 (Theme Colour 01)
+c2 (Theme Colour 02)
+c3 (Theme Colour 03)
+c4 (Theme Colour 04)
+c5 (Theme Colour 05)
+stop
+warning
+go</code></pre>
+                            </div>
+                            <div data-c-grid-item="equal-col tp(1of2)">
+                                <pre><code class="language-md"># (OPACITY)
+
+(0)
+(10)
+(20)
+(30)
+(40)
+(50)
+(60)
+(70)
+(80)
+(90)
+(100)</code></pre>
+                            </div>
+                        </div>
+                        <h4 
+                            data-c-font-size="h4"
+                            data-c-font-weight="700"
+                            data-c-margin="top(double) bottom(normal)">Examples</h4>
+                        <pre><code class="language-md">{% filter escape %}<!--Solid black background.-->
+<div data-c-background="black(100)"></div>{% endfilter %}</code></pre>
+                        <pre><code class="language-md">{% filter escape %}<!--Semi-transparent (50%) theme colour 4 background.-->
+<div data-c-background="c4(50)"></div>{% endfilter %}</code></pre>
+                    </div>
+                    <a id="util-borders"></a>
+                    <h3
+                        data-c-font-size="h3"
+                        data-c-colour="c2"
+                        data-c-margin="top(double) bottom(normal)">
+                        Borders
+                    </h3>
+                    data-c-border
+                    <a id="util-containers"></a>
+                    <h3
+                        data-c-font-size="h3"
+                        data-c-colour="c2"
+                        data-c-margin="top(double) bottom(normal)">
+                        Containers
+                    </h3>
+                    data-c-container
+                    <a id="util-fonts"></a>
+                    <h3
+                        data-c-font-size="h3"
+                        data-c-colour="c2"
+                        data-c-margin="top(double) bottom(normal)">
+                        Fonts &amp; Font Styles
+                    </h3>
+                    data-c-font
+                    data-c-colour
+                    data-c-font-size
+                    data-c-font-style
+                    data-c-font-weight
+                    <a id="util-whitespace"></a>
+                    <h3
+                        data-c-font-size="h3"
+                        data-c-colour="c2"
+                        data-c-margin="top(double) bottom(normal)">
+                        Margins &amp; Padding
+                    </h3>
+                    <div>
+                        <p data-c-margin="bottom">Usage: <code class="language-html">{% filter escape %}<div data-c-margin="SIDE(VALUE)"></div>, <div data-c-padding="SIDE(VALUE)"></div>{% endfilter %}</code></p>
+                        <p data-c-margin="bottom">Purpose: These attributes allow you to control the amount of margin space or padding at a granular level. They support a similar shorthand to CSS where you supply the side and the value you want.</p>
+                        <h4 
+                            data-c-font-size="h4"
+                            data-c-font-weight="700"
+                            data-c-margin="top(double) bottom(normal)">Available Arguments</h4>
+                        <div data-c-grid="gutter">
+                            <div data-c-grid-item="equal-col tp(1of2)">
+                                <pre><code class="language-md"># SIDE
+
+all
+top
+right
+bottom
+left</code></pre>
+                            </div>
+                            <div data-c-grid-item="equal-col tp(1of2)">
+                                <pre><code class="language-md"># (VALUE)
+
+(quarter)
+(half)
+(normal)
+(double)
+(triple)</code></pre>
+                            </div>
+                        </div>
+                        <h4 
+                            data-c-font-size="h4"
+                            data-c-font-weight="700"
+                            data-c-margin="top(double) bottom(normal)">Examples</h4>
+                        <pre><code class="language-md">{% filter escape %}<!--A double value margin on all sides.-->
+<div data-c-margin="all(double)"></div>{% endfilter %}</code></pre>
+                        <pre><code class="language-md">{% filter escape %}<!--Double value on top, normal on the sides, and triple value on the bottom.-->
+<div data-c-padding="top(double) right(normal) bottom(triple) left(normal)"></div>{% endfilter %}</code></pre>
+                    </div>
+                    <a id="util-overlays"></a>
+                    <h3
+                        data-c-font-size="h3"
+                        data-c-colour="c2"
+                        data-c-margin="top(double) bottom(normal)">
+                        Overlays
+                    </h3>
+                    data-c-overlay
+                    <a id="util-radius"></a>
+                    <h3
+                        data-c-font-size="h3"
+                        data-c-colour="c2"
+                        data-c-margin="top(double) bottom(normal)">
+                        Radius
+                    </h3>
+                    data-c-radius
+                    <a id="util-visibility"></a>
+                    <h3
+                        data-c-font-size="h3"
+                        data-c-colour="c2"
+                        data-c-margin="top(double) bottom(normal)">
+                        Visibility
+                    </h3>
+                    data-c-visibility
                 </div>
 
                 <!-- Accordions ======================================== -->
@@ -151,14 +471,14 @@
                 <h2
                     data-c-font-size="h2"
                     data-c-background="black(90)"
-                    data-c-font-colour="white"
+                    data-c-colour="white"
                     data-c-padding="top(normal) right(double) bottom(normal) left(double)">
                     Accordions
                 </h2>
                 <div data-c-padding="double">
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-color="c2"
+                        data-c-color="c2"
                         data-c-margin="bottom(normal)">
                         Description
                     </h3>
@@ -166,7 +486,7 @@
                     {% include "views/accordion.html" %}
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-color="c2"
+                        data-c-color="c2"
                         data-c-margin="top(double) bottom(normal)">
                         Code Snippet
                     </h3>
@@ -175,7 +495,7 @@
                     </div>
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-color="c2"
+                        data-c-color="c2"
                         data-c-margin="top(double) bottom(normal)">
                         Accessibility
                     </h3>
@@ -187,14 +507,14 @@
                 <h2
                     data-c-font-size="h2"
                     data-c-background="black(90)"
-                    data-c-font-colour="white"
+                    data-c-colour="white"
                     data-c-padding="top(normal) right(double) bottom(normal) left(double)">
                     Alerts
                 </h2>
                 <div data-c-padding="double">
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-color="c2"
+                        data-c-color="c2"
                         data-c-margin="bottom(normal)">
                         Description
                     </h3>
@@ -202,7 +522,7 @@
                     {% include "views/alert.html" %}
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-color="c2"
+                        data-c-color="c2"
                         data-c-margin="top(double) bottom(normal)">
                         Code Snippet
                     </h3>
@@ -213,7 +533,7 @@
                     </div>
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-color="c2"
+                        data-c-color="c2"
                         data-c-margin="top(double) bottom(normal)">
                         Accessibility
                     </h3>
@@ -225,14 +545,14 @@
                 <h2
                     data-c-font-size="h2"
                     data-c-background="black(90)"
-                    data-c-font-colour="white"
+                    data-c-colour="white"
                     data-c-padding="top(normal) right(double) bottom(normal) left(double)">
                     Back-to-top Links
                 </h2>
                 <div data-c-padding="double">
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-color="c2"
+                        data-c-color="c2"
                         data-c-margin="bottom(normal)">
                         Description
                     </h3>
@@ -240,7 +560,7 @@
                     {% include "views/back-to-top-links.html" %}
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-color="c2"
+                        data-c-color="c2"
                         data-c-margin="top(double) bottom(normal)">
                         Code Snippet
                     </h3>
@@ -251,7 +571,7 @@
                     </div>
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-color="c2"
+                        data-c-color="c2"
                         data-c-margin="top(double) bottom(normal)">
                         Accessibility
                     </h3>
@@ -263,7 +583,7 @@
                 <h2
                     data-c-font-size="h2"
                     data-c-background="black(90)"
-                    data-c-font-colour="white"
+                    data-c-colour="white"
                     data-c-padding="top(normal) right(double) bottom(normal) left(double)">
                     Blockquotes
                 </h2>
@@ -282,7 +602,7 @@
                 <h2
                     data-c-font-size="h2"
                     data-c-background="black(90)"
-                    data-c-font-colour="white"
+                    data-c-colour="white"
                     data-c-padding="top(normal) right(double) bottom(normal) left(double)">
                     Breadcrumbs
                 </h2>
@@ -301,7 +621,7 @@
                 <h2
                     data-c-font-size="h2"
                     data-c-background="black(90)"
-                    data-c-font-colour="white"
+                    data-c-colour="white"
                     data-c-padding="top(normal) right(double) bottom(normal) left(double)">
                     Buttons
                 </h2>
@@ -309,7 +629,7 @@
 
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-colour="c2"
+                        data-c-colour="c2"
                         data-c-margin="bottom(half)">
                         Variations
                     </h3>
@@ -367,7 +687,7 @@
 
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-colour="c2"
+                        data-c-colour="c2"
                         data-c-margin="bottom(half)">
                         Solid
                     </h3>
@@ -422,7 +742,7 @@
 
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-colour="c2"
+                        data-c-colour="c2"
                         data-c-margin="bottom(half)">
                         Outline
                     </h3>
@@ -477,7 +797,7 @@
 
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-colour="c2"
+                        data-c-colour="c2"
                         data-c-margin="bottom(half)">
                         Stoplight
                     </h3>
@@ -548,7 +868,7 @@
 
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-colour="c2"
+                        data-c-colour="c2"
                         data-c-margin="bottom(half)">
                         Disabled
                     </h3>
@@ -572,7 +892,7 @@
 
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-colour="c2"
+                        data-c-colour="c2"
                         data-c-margin="bottom(half)">
                         Icons
                     </h3>
@@ -650,7 +970,7 @@
                 <h2
                     data-c-font-size="h2"
                     data-c-background="black(90)"
-                    data-c-font-colour="white"
+                    data-c-colour="white"
                     data-c-padding="top(normal) right(double) bottom(normal) left(double)">
                     Dialogs
                 </h2>
@@ -663,7 +983,7 @@
                 <h2
                     data-c-font-size="h2"
                     data-c-background="black(90)"
-                    data-c-font-colour="white"
+                    data-c-colour="white"
                     data-c-padding="top(normal) right(double) bottom(normal) left(double)">
                     iFrames
                 </h2>
@@ -671,7 +991,7 @@
 
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-colour="c2"
+                        data-c-colour="c2"
                         data-c-margin="bottom(half)">
                         Videos
                     </h3>
@@ -682,7 +1002,7 @@
 
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-colour="c2"
+                        data-c-colour="c2"
                         data-c-margin="bottom(half)">
                         Maps
                     </h3>
@@ -698,7 +1018,7 @@
                 <h2
                     data-c-font-size="h2"
                     data-c-background="black(90)"
-                    data-c-font-colour="white"
+                    data-c-colour="white"
                     data-c-padding="top(normal) right(double) bottom(normal) left(double)">
                     Inputs
                 </h2>
@@ -707,7 +1027,7 @@
                     <!-- Checkboxes -------------------------------------------- -->
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-colour="c2"
+                        data-c-colour="c2"
                         data-c-margin="bottom(half)">
                         Checkboxes
                     </h3>
@@ -721,7 +1041,7 @@
                     <!-- Dates ------------------------------------------------- -->
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-colour="c2"
+                        data-c-colour="c2"
                         data-c-margin="bottom(half)">
                         Dates
                     </h3>
@@ -735,7 +1055,7 @@
                     <!-- Dropdowns --------------------------------------------- -->
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-colour="c2"
+                        data-c-colour="c2"
                         data-c-margin="bottom(half)">
                         Dropdowns
                     </h3>
@@ -749,7 +1069,7 @@
                     <!-- Emails ------------------------------------------------ -->
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-colour="c2"
+                        data-c-colour="c2"
                         data-c-margin="bottom(half)">
                         Emails
                     </h3>
@@ -763,7 +1083,7 @@
                     <!-- Numbers ----------------------------------------------- -->
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-colour="c2"
+                        data-c-colour="c2"
                         data-c-margin="bottom(half)">
                         Numbers
                     </h3>
@@ -777,7 +1097,7 @@
                     <!-- Passwords --------------------------------------------- -->
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-colour="c2"
+                        data-c-colour="c2"
                         data-c-margin="bottom(half)">
                         Passwords
                     </h3>
@@ -791,7 +1111,7 @@
                     <!-- Radio Inputs ------------------------------------------ -->
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-colour="c2"
+                        data-c-colour="c2"
                         data-c-margin="bottom(half)">
                         Radio Inputs
                     </h3>
@@ -805,7 +1125,7 @@
                     <!-- Ranges ------------------------------------------------ -->
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-colour="c2"
+                        data-c-colour="c2"
                         data-c-margin="bottom(half)">
                         Ranges
                     </h3>
@@ -820,7 +1140,7 @@
                     <!-- Text -------------------------------------------------- -->
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-colour="c2"
+                        data-c-colour="c2"
                         data-c-margin="bottom(half)">
                         Text Inputs
                     </h3>
@@ -834,7 +1154,7 @@
                     <!-- Input w Button ---------------------------------------- -->
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-colour="c2"
+                        data-c-colour="c2"
                         data-c-margin="bottom(half)">
                         Text w/ Button
                     </h3>
@@ -848,7 +1168,7 @@
                     <!-- Textareas --------------------------------------------- -->
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-colour="c2"
+                        data-c-colour="c2"
                         data-c-margin="bottom(half)">
                         Textareas
                     </h3>
@@ -862,7 +1182,7 @@
                     <!-- Uploads ----------------------------------------------- -->
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-colour="c2"
+                        data-c-colour="c2"
                         data-c-margin="bottom(half)">
                         Uploads
                     </h3>
@@ -877,7 +1197,7 @@
                     <!-- URLs -------------------------------------------------- -->
                     <h3
                         data-c-font-size="h3"
-                        data-c-font-colour="c2"
+                        data-c-colour="c2"
                         data-c-margin="bottom(half)">
                         URLs
                     </h3>
@@ -893,7 +1213,7 @@
                 <h2
                     data-c-font-size="h2"
                     data-c-background="black(90)"
-                    data-c-font-colour="white"
+                    data-c-colour="white"
                     data-c-padding="top(normal) right(double) bottom(normal) left(double)">
                     Pullquotes
                 </h2>
@@ -906,7 +1226,7 @@
                 <h2
                     data-c-font-size="h2"
                     data-c-background="black(90)"
-                    data-c-font-colour="white"
+                    data-c-colour="white"
                     data-c-padding="top(normal) right(double) bottom(normal) left(double)">
                     Skip-to-content Links
                 </h2>
@@ -920,7 +1240,7 @@
                 <h2
                     data-c-font-size="h2"
                     data-c-background="black(90)"
-                    data-c-font-colour="white"
+                    data-c-colour="white"
                     data-c-padding="top(normal) right(double) bottom(normal) left(double)">
                     Tables
                 </h2>
@@ -935,6 +1255,13 @@
         <!--build:js js/app.min.js-->
         <script src="js/app.js"></script>
         <!--endbuild-->
+
+        <script src="js/prism/prism.js"></script>
+        <script src="js/prism/prism-twig.min.js"></script>
+        <script src="js/prism/prism-scss.min.js"></script>
+        <script src="js/prism/prism-markup.min.js"></script>
+        <script src="js/prism/prism-markdown.min.js"></script>
+        <script src="js/prism/prism-bash.min.js"></script>
 
     </body>
 

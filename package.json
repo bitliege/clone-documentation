@@ -18,15 +18,17 @@
   "homepage": "https://github.com/joshdrink/clone#readme",
   "devDependencies": {
     "browser-sync": "^2.26.3",
-    "clone-framework": "^2.2.2",
+    "clone-framework": "^2.2.4",
     "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
+    "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.3",
     "gulp-sass": "^4.0.2",
     "gulp-twig": "^1.2.0",
     "gulp-uglify": "^3.0.1",
     "gulp-useref": "^3.1.6",
+    "prismjs": "^1.16.0",
     "run-sequence": "^2.2.1"
   }
 }

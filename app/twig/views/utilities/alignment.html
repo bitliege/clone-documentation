@@ -1,0 +1,48 @@
+<a id="util-alignment"></a>
+<h3
+    data-c-font-size="h3"
+    data-c-colour="c2"
+    data-c-margin="bottom(normal)">
+    Alignment
+</h3>
+<div>
+    <p data-c-margin="bottom">Usage: <code class="language-html">{% filter escape %}<div data-c-alignment="MEDIA(ALIGNMENT)">{% endfilter %}</code></p>
+    <p data-c-margin="bottom">Purpose: This attribute aligns inline level elements based on the media query and alignment provided. This is useful for aligning content at different media queries.</p>
+    <h4 
+        data-c-font-size="h4"
+        data-c-font-weight="700"
+        data-c-margin="top(double) bottom(normal)">Available Arguments</h4>
+    <div data-c-grid="gutter">
+        <div data-c-grid-item="equal-col tp(1of2)">
+            <pre><code class="language-md"># MEDIA
+
+base
+pp (Phone - Portrait)
+pl (Phone - Landscape)
+tp (Tablet - Portrait)
+tl (Tablet - Landscape)
+ds (Desktop - Small)
+dm (Desktop - Medium)
+dl (Desktop - Large)</code></pre>
+        </div>
+        <div data-c-grid-item="equal-col tp(1of2)">
+            <pre><code class="language-md"># ALIGNMENT
+
+left
+centre / center
+right</code></pre>
+        </div>
+    </div>
+    <h4 
+        data-c-font-size="h4"
+        data-c-font-weight="700"
+        data-c-margin="top(double) bottom(normal)">
+        Examples
+    </h4>
+    <div data-c-margin="bottom(half)">
+        <pre><code class="language-md">{% filter escape %}<!--Centred initially, left aligned on landscape tablets.-->
+<div data-c-alignment="base(centre) tl(left)"></div>{% endfilter %}</code></pre>
+    </div>
+    <pre><code class="language-md">{% filter escape %}<!--Centred initially, right aligned on landscape phones, centred on landscape tablets, right aligned on large desktops.-->
+<div data-c-alignment="base(centre) pl(right) tl(centre) dl(right)"></div>{% endfilter %}</code></pre>
+</div>

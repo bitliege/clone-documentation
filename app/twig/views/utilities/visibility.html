@@ -1,0 +1,35 @@
+<a id="util-visibility"></a>
+<h3
+    data-c-font-size="h3"
+    data-c-colour="c2"
+    data-c-margin="top(double) bottom(normal)">
+    Visibility
+</h3>
+<div>
+    <p data-c-margin="bottom">Usage: <code class="language-html">{% filter escape %}<div data-c-visibility="VALUE"></div>{% endfilter %}</code></p>
+    <p data-c-margin="bottom">Purpose: This attribute allows you to hide elements from either all devices or just screens. This can be useful when an element needs to be hidden from screens but provides extra context to accessibility devices.</p>
+    <h4 
+        data-c-font-size="h4"
+        data-c-font-weight="700"
+        data-c-margin="top(double) bottom(normal)">Available Arguments</h4>
+    <div data-c-grid="gutter">
+        <div data-c-grid-item="equal-col base(1of1)">
+            <pre><code class="language-md"># VALUE
+
+hidden
+invisible</code></pre>
+        </div>
+    </div>
+    <h4 
+        data-c-font-size="h4"
+        data-c-font-weight="700"
+        data-c-margin="top(double) bottom(normal)">
+        Examples
+    </h4>
+    <div data-c-margin="bottom(half)">
+        <pre><code class="language-md">{% filter escape %}<!--An element hidden from all devices, including screen readers.-->
+<div data-c-visibility="hidden"></div>{% endfilter %}</code></pre>
+    </div>
+    <pre><code class="language-md">{% filter escape %}<!--An element hidden from screens, but not accessibility devices.-->
+<div data-c-visibility="invisible"></div>{% endfilter %}</code></pre>
+</div>

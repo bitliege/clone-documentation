@@ -1,0 +1,48 @@
+<a id="util-whitespace"></a>
+<h3
+    data-c-font-size="h3"
+    data-c-colour="c2"
+    data-c-margin="top(double) bottom(normal)">
+    Margins &amp; Padding
+</h3>
+<div>
+    <p data-c-margin="bottom">Usage (Margin): <code class="language-html">{% filter escape %}<div data-c-margin="SIDE(VALUE)"></div>{% endfilter %}</code></p>
+    <p data-c-margin="bottom">Usage (Padding): <code class="language-html">{% filter escape %}<div data-c-padding="SIDE(VALUE)"></div>{% endfilter %}</code></p>
+    <p data-c-margin="bottom">Purpose: These attributes allow you to control the amount of margin space or padding at a granular level. They support a similar shorthand to CSS where you supply the side and the value you want.</p>
+    <h4 
+        data-c-font-size="h4"
+        data-c-font-weight="700"
+        data-c-margin="top(double) bottom(normal)">Available Arguments</h4>
+    <div data-c-grid="gutter">
+        <div data-c-grid-item="equal-col tp(1of2)">
+            <pre><code class="language-md"># SIDE
+
+all
+top
+right
+bottom
+left</code></pre>
+        </div>
+        <div data-c-grid-item="equal-col tp(1of2)">
+            <pre><code class="language-md"># VALUE
+
+quarter
+half
+normal
+double
+triple</code></pre>
+        </div>
+    </div>
+    <h4 
+        data-c-font-size="h4"
+        data-c-font-weight="700"
+        data-c-margin="top(double) bottom(normal)">
+        Examples
+    </h4>
+    <div data-c-margin="bottom(half)">
+        <pre><code class="language-md">{% filter escape %}<!--A double value margin on all sides.-->
+<div data-c-margin="all(double)"></div>{% endfilter %}</code></pre>
+    </div>
+    <pre><code class="language-md">{% filter escape %}<!--Double value on top, normal on the sides, and triple value on the bottom.-->
+<div data-c-padding="top(double) right(normal) bottom(triple) left(normal)"></div>{% endfilter %}</code></pre>
+</div>

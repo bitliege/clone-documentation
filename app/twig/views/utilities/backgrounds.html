@@ -1,0 +1,58 @@
+<a id="util-backgrounds"></a>
+<h3
+    data-c-font-size="h3"
+    data-c-colour="c2"
+    data-c-margin="top(double) bottom(normal)">
+    Backgrounds
+</h3>
+<div>
+    <p data-c-margin="bottom">Usage: <code class="language-html">{% filter escape %}<div data-c-background="COLOUR(OPACITY)">{% endfilter %}</code></p>
+    <p data-c-margin="bottom">Purpose: This attribute assigns a background colour based on the colour and opacity provided.</p>
+    <h4 
+        data-c-font-size="h4"
+        data-c-font-weight="700"
+        data-c-margin="top(double) bottom(normal)">Available Arguments</h4>
+    <div data-c-grid="gutter">
+        <div data-c-grid-item="equal-col tp(1of2)">
+            <pre><code class="language-md"># COLOUR
+
+white
+black
+c1 (Theme Colour 01)
+c2 (Theme Colour 02)
+c3 (Theme Colour 03)
+c4 (Theme Colour 04)
+c5 (Theme Colour 05)
+stop
+warning
+go</code></pre>
+        </div>
+        <div data-c-grid-item="equal-col tp(1of2)">
+            <pre><code class="language-md"># OPACITY
+
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100</code></pre>
+        </div>
+    </div>
+    <h4 
+        data-c-font-size="h4"
+        data-c-font-weight="700"
+        data-c-margin="top(double) bottom(normal)">
+        Examples
+    </h4>
+    <div data-c-margin="bottom(half)">
+        <pre><code class="language-md">{% filter escape %}<!--Solid black background.-->
+<div data-c-background="black(100)"></div>{% endfilter %}</code></pre>
+    </div>
+    <pre><code class="language-md">{% filter escape %}<!--Semi-transparent (50%) theme colour 4 background.-->
+<div data-c-background="c4(50)"></div>{% endfilter %}</code></pre>
+</div>

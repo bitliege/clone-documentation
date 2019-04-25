@@ -115,40 +115,41 @@
                     About Clone
                 </h2>
                 <div data-c-padding="double">
-
                     <a id="about-installation"></a>
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-colour="c2"
-                        data-c-margin="bottom(normal)">
-                        Installation
-                    </h3>
+<h3
+    data-c-font-size="h3"
+    data-c-colour="c2"
+    data-c-margin="bottom(normal)">
+    Installation
+</h3>
 
-                    <div>
-                        <h4
-                            data-c-font-size="h4"
-                            data-c-margin="top(double) bottom(normal)">
-                            CDN (No Theme)
-                        </h4>
-                        <p data-c-margin="bottom">If you want to get Clone up and running and have no interest in creating your own theme, you can include Clone's CSS and JavaScript files as linked resources. This allows for a quick and easy way to generate prototypes using Clone's native theme (See <a href="#about-themeing">Themeing</a> for more information on Maple, Clone's default theme).</p>
-                        <pre data-c-margin="bottom"><code class="language-twig">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.2.3/dist/css/clone.min.css&quot;&gt;</code></pre>
-                        <pre><code class="language-twig">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.2.3/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
-                        <h4
-                            data-c-font-size="h4"
-                            data-c-margin="top(double) bottom(normal)">
-                            NPM (Themeable)
-                        </h4>
-                        <p data-c-margin="bottom">
-                            Clone is built in a way that allows you to theme the aesthetic of the system without the need to alter Clone's source files. This means that you'll be able to update Clone without any worry of losing or modifying your changes. All theming will occur in your project's root Sass directory and pull Clone's primary .scss file from node_modules.
-                        </p>
-                        <p data-c-margin="bottom">
-                            While it doesn't matter how your project compiles Sass, theming Clone requires that your project be running <a href="https://sass-lang.com/" title="Learn more about Sass." target="_blank">Sass</a>, <a href="https://github.com/postcss/autoprefixer" title="Learn more about Autoprefixer." target="_blank">Autoprefixer</a>, and <a href="https://jquery.com/" title="Learn more about jQuery." target="_blank">jQuery</a>.
-                        </p>
-                        <ol data-c-margin="bottom">
-                            <li>From inside your project, run <code class="language-bash">npm install clone-framework --save-dev</code></li>
-                            <li>At the top of your main project <code class="language-md">.scss</code> file, include the following:</li>
-                        </ol>
-                        <pre data-c-margin="bottom"><code class="language-scss">// My Custom Clone Theme
+<div>
+    <h4
+        data-c-font-size="h4"
+        data-c-margin="top(double) bottom(normal)">
+        CDN (No Theme)
+    </h4>
+    <p data-c-margin="bottom">If you want to get Clone up and running and have no interest in creating your own theme, you can include Clone's CSS and JavaScript files as linked resources. This allows for a quick and easy way to generate prototypes using Clone's native theme (See <a href="#about-themeing">Themeing</a> for more information on Maple, Clone's default theme).</p>
+    <div data-c-margin="bottom(half)">
+        <pre><code class="language-twig">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.2.3/dist/css/clone.min.css&quot;&gt;</code></pre>
+    </div>
+    <pre><code class="language-twig">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.2.3/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+    <h4
+        data-c-font-size="h4"
+        data-c-margin="top(double) bottom(normal)">
+        NPM (Themeable)
+    </h4>
+    <p data-c-margin="bottom">
+        Clone is built in a way that allows you to theme the aesthetic of the system without the need to alter Clone's source files. This means that you'll be able to update Clone without any worry of losing or modifying your changes. All theming will occur in your project's root Sass directory and pull Clone's primary .scss file from node_modules.
+    </p>
+    <p data-c-margin="bottom">
+        While it doesn't matter how your project compiles Sass, theming Clone requires that your project be running <a href="https://sass-lang.com/" title="Learn more about Sass." target="_blank">Sass</a>, <a href="https://github.com/postcss/autoprefixer" title="Learn more about Autoprefixer." target="_blank">Autoprefixer</a>, and <a href="https://jquery.com/" title="Learn more about jQuery." target="_blank">jQuery</a>.
+    </p>
+    <ol data-c-margin="bottom">
+        <li>From inside your project, run <code class="language-bash">npm install clone-framework --save-dev</code></li>
+        <li>At the top of your main project <code class="language-md">.scss</code> file, include the following:</li>
+    </ol>
+    <pre><code class="language-scss">// My Custom Clone Theme
 // Please note that Clone must be included last, after all of your custom variables.
 
 // Custom Variables
@@ -156,28 +157,27 @@
 
 // Include Clone
 @import &quot;../node_modules/clone-framework/app/scss/clone&quot;;</code></pre>
-                        <p data-c-margin="bottom">
-                            For now, it is also required that Clone's JavaScript file be imported using the CDN.
-                        </p>
-                        <pre><code class="language-twig">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.2.3/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
-                    </div>
-
+    <p data-c-margin="top(normal) bottom(normal)">
+        For now, it is also required that Clone's JavaScript file be imported using the CDN.
+    </p>
+    <pre><code class="language-twig">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.2.3/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+</div>
                     <a id="about-usage"></a>
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-colour="c2"
-                        data-c-margin="top(double) bottom(normal)">
-                        Using Clone
-                    </h3>
+<h3
+    data-c-font-size="h3"
+    data-c-colour="c2"
+    data-c-margin="top(double) bottom(normal)">
+    Using Clone
+</h3>
 
-                    <div>
-                        <p data-c-margin="bottom">
-                            Clone is built a little differently than a standard front-end framework. Instead of classes, Clone uses data-attributes to leverage a level of extra functionality right in your markup. This means that Clone is namespaced away from your custom code and won't conflict with any of your existing work.
-                        </p>
-                        <p data-c-margin="bottom">
-                            Here's an example of how Clone works:
-                        </p>
-                        <pre data-c-margin="bottom"><code class="language-twig">&lt;div data-clone&gt;
+<div>
+    <p data-c-margin="bottom">
+        Clone is built a little differently than a standard front-end framework. Instead of classes, Clone uses data-attributes to leverage a level of extra functionality right in your markup. This means that Clone is namespaced away from your custom code and won't conflict with any of your existing work.
+    </p>
+    <p data-c-margin="bottom">
+        Here's an example of how Clone works:
+    </p>
+    <pre><code class="language-twig">&lt;div data-clone&gt;
     &lt;div
         data-c-backround=&quot;c1(100)&quot;
         data-c-padding=&quot;all(normal)&quot;
@@ -189,49 +189,48 @@
         &lt;p&gt;This is a sample sentence in a Clone example.&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-                        <p data-c-margin="bottom">Which will appear on your site as:</p>
-                        <div
-                            data-c-background="c1(100)"
-                            data-c-padding="all(normal)"
-                            data-c-colour="white"
-                            data-c-margin="bottom">
-                            <h5
-                                data-c-font-size="h5"
-                                data-c-margin="bottom(half)"
-                                data-c-font-weight="700">Sample Title</h5>
-                            <p>This is a sample sentence in a Clone example.</p>
-                        </div>
-                        <p data-c-margin="bottom">Let's break this apart into 3 different types of Clone utility attribute:</p>
-                        <ol data-c-margin="bottom">
-                            <li>
-                                The <code class="language-html">&lt;div data-clone&gt;</code> attribute.<br>
-                                This attribute tells Clone that styles should be applied to any child element nested inside. If you're building from scratch, you can include this data-attribute on the <code class="language-html">&lt;body&gt;</code> element to give Clone access to your entire project. If you just need Clone here and there on an existing project, you can include this attribute as-needed on any element you'd like.
-                            </li>
-                            <li>
-                                The <code class="language-html">&lt;div data-c-colour=&quot;white&quot;&gt;</code> type of variable attribute.<br>
-                                This type of attribute functions as a declaration for a certain CSS value. These types of attributes only take one argument in the quotation marks and follow a set of rules that can be found in the utility section below. In this example, the attribute <code class="language-html">&lt;div data-c-colour=&quot;&quot;&gt;</code> takes an argument from a defined list of colour variables, one of which is <code class="language-md">white</code>.
-                            </li>
-                            <li>
-                                The <code class="language-html">&lt;div data-c-padding=&quot;bottom(normal)&quot;&gt;</code> type of function attribute.<br>
-                                These attributes are unique in that they take multiple arguments in the quotation marks and can even modify each argument using keywords within the parantheses. Each attribute has a unique set, but they all follow standard rules to help you learn them quickly. In this example, <code class="language-html">&lt;div data-c-padding=&quot;&quot;&gt;</code> can take multiple arguments for the orientation you're trying to target (i.e. top, right, bottom, left). Each of these can subsequently be modified using parentheses to increase or decrease the amount of padding you want (i.e. quarter, half, normal, double, triple). A more complex version of this attribute might look like: <code class="language-html">&lt;div data-c-padding=&quot;top(half) right(double) bottom(normal) left(double)&quot;&gt;</code>.
-                            </li>
-                        </ol>
-                        <p data-c-margin="bottom">A finite list of Utility attributes and how they're used can be found here: <a href="#utilities">Utility Attributes in Clone</a>.</p>
-                        <p>Above and beyond utility attributes are component attributes, which allow you to build unique and accessible elements. Each individual component is outlined in the sidebar of the site. These component attributes can be combined with utility attributes to design and style each component to exactly what you need.</p>
-                    </div>
-
+    <p data-c-margin="top(normal) bottom(normal)">Which will appear on your site as:</p>
+    <div
+        data-c-background="c1(100)"
+        data-c-padding="all(normal)"
+        data-c-colour="white"
+        data-c-margin="bottom">
+        <h5
+            data-c-font-size="h5"
+            data-c-margin="bottom(half)"
+            data-c-font-weight="700">Sample Title</h5>
+        <p>This is a sample sentence in a Clone example.</p>
+    </div>
+    <p data-c-margin="bottom">Let's break this apart into 3 different types of Clone utility attribute:</p>
+    <ol data-c-margin="bottom">
+        <li>
+            The <code class="language-html">&lt;div data-clone&gt;</code> attribute.<br>
+            This attribute tells Clone that styles should be applied to any child element nested inside. If you're building from scratch, you can include this data-attribute on the <code class="language-html">&lt;body&gt;</code> element to give Clone access to your entire project. If you just need Clone here and there on an existing project, you can include this attribute as-needed on any element you'd like.
+        </li>
+        <li>
+            The <code class="language-html">&lt;div data-c-colour=&quot;white&quot;&gt;</code> type of variable attribute.<br>
+            This type of attribute functions as a declaration for a certain CSS value. These types of attributes only take one argument in the quotation marks and follow a set of rules that can be found in the utility section below. In this example, the attribute <code class="language-html">&lt;div data-c-colour=&quot;&quot;&gt;</code> takes an argument from a defined list of colour variables, one of which is <code class="language-md">white</code>.
+        </li>
+        <li>
+            The <code class="language-html">&lt;div data-c-padding=&quot;bottom(normal)&quot;&gt;</code> type of function attribute.<br>
+            These attributes are unique in that they take multiple arguments in the quotation marks and can even modify each argument using keywords within the parantheses. Each attribute has a unique set, but they all follow standard rules to help you learn them quickly. In this example, <code class="language-html">&lt;div data-c-padding=&quot;&quot;&gt;</code> can take multiple arguments for the orientation you're trying to target (i.e. top, right, bottom, left). Each of these can subsequently be modified using parentheses to increase or decrease the amount of padding you want (i.e. quarter, half, normal, double, triple). A more complex version of this attribute might look like: <code class="language-html">&lt;div data-c-padding=&quot;top(half) right(double) bottom(normal) left(double)&quot;&gt;</code>.
+        </li>
+    </ol>
+    <p data-c-margin="bottom">A finite list of Utility attributes and how they're used can be found here: <a href="#utilities">Utility Attributes in Clone</a>.</p>
+    <p>Above and beyond utility attributes are component attributes, which allow you to build unique and accessible elements. Each individual component is outlined in the sidebar of the site. These component attributes can be combined with utility attributes to design and style each component to exactly what you need.</p>
+</div>
                     <a id="about-themeing"></a>
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-colour="c2"
-                        data-c-margin="top(double) bottom(normal)">
-                        Themeing
-                    </h3>
+<h3
+    data-c-font-size="h3"
+    data-c-colour="c2"
+    data-c-margin="top(double) bottom(normal)">
+    Themeing
+</h3>
 
-                    <div>
-                        <p data-c-margin="bottom">Not a fan of Maple, Clone's default theme? No problem!</p>
-                        <p data-c-margin="bottom">Clone has a set of built-in variables that you can customize through Sass that will allow you to control a variety of fonts, colours, whitespace, etc. Simply pick and choose the variables you want to customize from the list below and add them to your Sass file, directly above Clone's import function:</p>
-                        <pre data-c-margin="bottom"><code class="language-scss">// My Custom Clone Theme
+<div>
+    <p data-c-margin="bottom">Not a fan of Maple, Clone's default theme? No problem!</p>
+    <p data-c-margin="bottom">Clone has a set of built-in variables that you can customize through Sass that will allow you to control a variety of fonts, colours, whitespace, etc. Simply pick and choose the variables you want to customize from the list below and add them to your Sass file, directly above Clone's import function:</p>
+    <pre><code class="language-scss">// My Custom Clone Theme
 // Please note that Clone must be included last, after all of your custom variables.
 
 // Custom Variables
@@ -240,8 +239,10 @@ $clone-c1: #5B1647;
 
 // Include Clone
 @import &quot;../node_modules/clone-framework/app/scss/clone&quot;;</code></pre>
-                        <div data-c-accordion="group">
-                            <div
+    <div 
+        data-c-margin="top"
+        data-c-accordion="group">
+        <div
     data-c-accordion="object"
     data-c-background="white(100)">
     <button
@@ -383,21 +384,19 @@ $clone-selection-background-colour: $clone-c5;
     </div>
 </div>
 
-                        </div>
-                    </div>
-
+    </div>
+</div>
                     <a id="about-contributing"></a>
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-colour="c2"
-                        data-c-margin="top(double) bottom(normal)">
-                        Contributing
-                    </h3>
+<h3
+    data-c-font-size="h3"
+    data-c-colour="c2"
+    data-c-margin="top(double) bottom(normal)">
+    Contributing
+</h3>
 
-                    <div>
-                        <p>Coming Soon! Check out <a href="https://github.com/joshdrink/clone-framework" title="Contribute to Clone on Github." target="_blank">Github</a> in the meantime.</p>
-                    </div>
-
+<div>
+    <p>Coming Soon! Check out <a href="https://github.com/joshdrink/clone-framework" title="Contribute to Clone on Github." target="_blank">Github</a> in the meantime.</p>
+</div>
                 </div>
 
                 <!-- Utilities ======================================== -->
@@ -411,22 +410,22 @@ $clone-selection-background-colour: $clone-c5;
                 </h2>
                 <div data-c-padding="double">
                     <a id="util-alignment"></a>
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-colour="c2"
-                        data-c-margin="bottom(normal)">
-                        Alignment
-                    </h3>
-                    <div>
-                        <p data-c-margin="bottom">Usage: <code class="language-html">&lt;div data-c-alignment=&quot;MEDIA(ALIGNMENT)&quot;&gt;</code></p>
-                        <p data-c-margin="bottom">Purpose: This attribute aligns inline level elements based on the media query and alignment provided. This is useful for aligning content at different media queries.</p>
-                        <h4 
-                            data-c-font-size="h4"
-                            data-c-font-weight="700"
-                            data-c-margin="top(double) bottom(normal)">Available Arguments</h4>
-                        <div data-c-grid="gutter">
-                            <div data-c-grid-item="equal-col tp(1of2)">
-                                <pre><code class="language-md"># MEDIA
+<h3
+    data-c-font-size="h3"
+    data-c-colour="c2"
+    data-c-margin="bottom(normal)">
+    Alignment
+</h3>
+<div>
+    <p data-c-margin="bottom">Usage: <code class="language-html">&lt;div data-c-alignment=&quot;MEDIA(ALIGNMENT)&quot;&gt;</code></p>
+    <p data-c-margin="bottom">Purpose: This attribute aligns inline level elements based on the media query and alignment provided. This is useful for aligning content at different media queries.</p>
+    <h4 
+        data-c-font-size="h4"
+        data-c-font-weight="700"
+        data-c-margin="top(double) bottom(normal)">Available Arguments</h4>
+    <div data-c-grid="gutter">
+        <div data-c-grid-item="equal-col tp(1of2)">
+            <pre><code class="language-md"># MEDIA
 
 base
 pp (Phone - Portrait)
@@ -436,41 +435,45 @@ tl (Tablet - Landscape)
 ds (Desktop - Small)
 dm (Desktop - Medium)
 dl (Desktop - Large)</code></pre>
-                            </div>
-                            <div data-c-grid-item="equal-col tp(1of2)">
-                                <pre><code class="language-md"># (ALIGNMENT)
+        </div>
+        <div data-c-grid-item="equal-col tp(1of2)">
+            <pre><code class="language-md"># ALIGNMENT
 
-(left)
-(centre) / (center)
-(right)</code></pre>
-                            </div>
-                        </div>
-                        <h4 
-                            data-c-font-size="h4"
-                            data-c-font-weight="700"
-                            data-c-margin="top(double) bottom(normal)">Examples</h4>
-                        <pre><code class="language-md">&lt;!--Centred initially, left aligned on landscape tablets.--&gt;
+left
+centre / center
+right</code></pre>
+        </div>
+    </div>
+    <h4 
+        data-c-font-size="h4"
+        data-c-font-weight="700"
+        data-c-margin="top(double) bottom(normal)">
+        Examples
+    </h4>
+    <div data-c-margin="bottom(half)">
+        <pre><code class="language-md">&lt;!--Centred initially, left aligned on landscape tablets.--&gt;
 &lt;div data-c-alignment=&quot;base(centre) tl(left)&quot;&gt;&lt;/div&gt;</code></pre>
-                        <pre><code class="language-md">&lt;!--Centred initially, right aligned on landscape phones, centred on landscape tablets, right aligned on large desktops.--&gt;
+    </div>
+    <pre><code class="language-md">&lt;!--Centred initially, right aligned on landscape phones, centred on landscape tablets, right aligned on large desktops.--&gt;
 &lt;div data-c-alignment=&quot;base(centre) pl(right) tl(centre) dl(right)&quot;&gt;&lt;/div&gt;</code></pre>
-                    </div>
+</div>
                     <a id="util-backgrounds"></a>
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-colour="c2"
-                        data-c-margin="top(double) bottom(normal)">
-                        Backgrounds
-                    </h3>
-                    <div>
-                        <p data-c-margin="bottom">Usage: <code class="language-html">&lt;div data-c-background=&quot;COLOUR(OPACITY)&quot;&gt;</code></p>
-                        <p data-c-margin="bottom">Purpose: This attribute assigns a background colour based on the colour and opacity provided.</p>
-                        <h4 
-                            data-c-font-size="h4"
-                            data-c-font-weight="700"
-                            data-c-margin="top(double) bottom(normal)">Available Arguments</h4>
-                        <div data-c-grid="gutter">
-                            <div data-c-grid-item="equal-col tp(1of2)">
-                                <pre><code class="language-md"># COLOUR
+<h3
+    data-c-font-size="h3"
+    data-c-colour="c2"
+    data-c-margin="top(double) bottom(normal)">
+    Backgrounds
+</h3>
+<div>
+    <p data-c-margin="bottom">Usage: <code class="language-html">&lt;div data-c-background=&quot;COLOUR(OPACITY)&quot;&gt;</code></p>
+    <p data-c-margin="bottom">Purpose: This attribute assigns a background colour based on the colour and opacity provided.</p>
+    <h4 
+        data-c-font-size="h4"
+        data-c-font-weight="700"
+        data-c-margin="top(double) bottom(normal)">Available Arguments</h4>
+    <div data-c-grid="gutter">
+        <div data-c-grid-item="equal-col tp(1of2)">
+            <pre><code class="language-md"># COLOUR
 
 white
 black
@@ -482,127 +485,434 @@ c5 (Theme Colour 05)
 stop
 warning
 go</code></pre>
-                            </div>
-                            <div data-c-grid-item="equal-col tp(1of2)">
-                                <pre><code class="language-md"># (OPACITY)
+        </div>
+        <div data-c-grid-item="equal-col tp(1of2)">
+            <pre><code class="language-md"># OPACITY
 
-(0)
-(10)
-(20)
-(30)
-(40)
-(50)
-(60)
-(70)
-(80)
-(90)
-(100)</code></pre>
-                            </div>
-                        </div>
-                        <h4 
-                            data-c-font-size="h4"
-                            data-c-font-weight="700"
-                            data-c-margin="top(double) bottom(normal)">Examples</h4>
-                        <pre><code class="language-md">&lt;!--Solid black background.--&gt;
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100</code></pre>
+        </div>
+    </div>
+    <h4 
+        data-c-font-size="h4"
+        data-c-font-weight="700"
+        data-c-margin="top(double) bottom(normal)">
+        Examples
+    </h4>
+    <div data-c-margin="bottom(half)">
+        <pre><code class="language-md">&lt;!--Solid black background.--&gt;
 &lt;div data-c-background=&quot;black(100)&quot;&gt;&lt;/div&gt;</code></pre>
-                        <pre><code class="language-md">&lt;!--Semi-transparent (50%) theme colour 4 background.--&gt;
+    </div>
+    <pre><code class="language-md">&lt;!--Semi-transparent (50%) theme colour 4 background.--&gt;
 &lt;div data-c-background=&quot;c4(50)&quot;&gt;&lt;/div&gt;</code></pre>
-                    </div>
+</div>
                     <a id="util-borders"></a>
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-colour="c2"
-                        data-c-margin="top(double) bottom(normal)">
-                        Borders
-                    </h3>
-                    data-c-border
-                    <a id="util-containers"></a>
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-colour="c2"
-                        data-c-margin="top(double) bottom(normal)">
-                        Containers
-                    </h3>
-                    data-c-container
-                    <a id="util-fonts"></a>
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-colour="c2"
-                        data-c-margin="top(double) bottom(normal)">
-                        Fonts &amp; Font Styles
-                    </h3>
-                    data-c-font
-                    data-c-colour
-                    data-c-font-size
-                    data-c-font-style
-                    data-c-font-weight
-                    <a id="util-whitespace"></a>
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-colour="c2"
-                        data-c-margin="top(double) bottom(normal)">
-                        Margins &amp; Padding
-                    </h3>
-                    <div>
-                        <p data-c-margin="bottom">Usage: <code class="language-html">&lt;div data-c-margin=&quot;SIDE(VALUE)&quot;&gt;&lt;/div&gt;, &lt;div data-c-padding=&quot;SIDE(VALUE)&quot;&gt;&lt;/div&gt;</code></p>
-                        <p data-c-margin="bottom">Purpose: These attributes allow you to control the amount of margin space or padding at a granular level. They support a similar shorthand to CSS where you supply the side and the value you want.</p>
-                        <h4 
-                            data-c-font-size="h4"
-                            data-c-font-weight="700"
-                            data-c-margin="top(double) bottom(normal)">Available Arguments</h4>
-                        <div data-c-grid="gutter">
-                            <div data-c-grid-item="equal-col tp(1of2)">
-                                <pre><code class="language-md"># SIDE
+<h3
+    data-c-font-size="h3"
+    data-c-colour="c2"
+    data-c-margin="top(double) bottom(normal)">
+    Borders
+</h3>
+<div>
+    <p data-c-margin="bottom">Usage: <code class="language-html">&lt;div data-c-border=&quot;SIDE(THICKNESS, STYLE, COLOUR)&quot;&gt;</code></p>
+    <p data-c-margin="bottom">Purpose: This attribute assigns a border to the selected side of the element. It allows you to customize the thickness, style, and colour.</p>
+    <h4 
+        data-c-font-size="h4"
+        data-c-font-weight="700"
+        data-c-margin="top(double) bottom(normal)">Available Arguments</h4>
+    <div data-c-grid="gutter">
+        <div data-c-grid-item="equal-col tp(1of2) ds(1of4)">
+            <pre><code class="language-md"># SIDE
 
 all
 top
 right
 bottom
 left</code></pre>
-                            </div>
-                            <div data-c-grid-item="equal-col tp(1of2)">
-                                <pre><code class="language-md"># (VALUE)
+        </div>
+        <div data-c-grid-item="equal-col tp(1of2) ds(1of4)">
+            <pre><code class="language-md"># THICKNESS
+    
+thin
+thick</code></pre>
+        </div>
+        <div data-c-grid-item="equal-col tp(1of2) ds(1of4)">
+            <pre><code class="language-md"># STYLE
+    
+solid
+dashed</code></pre>
+        </div>
+        <div data-c-grid-item="equal-col tp(1of2) ds(1of4)">
+            <pre><code class="language-md"># COLOUR
 
-(quarter)
-(half)
-(normal)
-(double)
-(triple)</code></pre>
-                            </div>
-                        </div>
-                        <h4 
-                            data-c-font-size="h4"
-                            data-c-font-weight="700"
-                            data-c-margin="top(double) bottom(normal)">Examples</h4>
-                        <pre><code class="language-md">&lt;!--A double value margin on all sides.--&gt;
+white
+black
+c1 (Theme Colour 01)
+c2 (Theme Colour 02)
+c3 (Theme Colour 03)
+c4 (Theme Colour 04)
+c5 (Theme Colour 05)
+stop
+warning
+go</code></pre>
+        </div>
+    </div>
+    <h4 
+        data-c-font-size="h4"
+        data-c-font-weight="700"
+        data-c-margin="top(double) bottom(normal)">
+        Examples
+    </h4>
+    <div data-c-margin="bottom(half)">
+        <pre><code class="language-md">&lt;!--A thick, solid, black border on the top of the element.--&gt;
+&lt;div data-c-border=&quot;top(thick, solid, black)&quot;&gt;&lt;/div&gt;</code></pre>
+    </div>
+    <pre><code class="language-md">&lt;!--A thin, dashed, theme colour 5 border on all sides.--&gt;
+&lt;div data-c-border=&quot;all(thin, dashed, c5)&quot;&gt;&lt;/div&gt;</code></pre>
+</div>
+                    <a id="util-containers"></a>
+<h3
+    data-c-font-size="h3"
+    data-c-colour="c2"
+    data-c-margin="top(double) bottom(normal)">
+    Containers
+</h3>
+<div>
+    <p data-c-margin="bottom">Usage: <code class="language-html">&lt;div data-c-container=&quot;TYPE&quot;&gt;&lt;/div&gt;</code></p>
+    <p data-c-margin="bottom">Purpose: This attribute allows you to select from one of two container types: copy (for long swathes of text) and layout (for contained UI).</p>
+    <h4 
+        data-c-font-size="h4"
+        data-c-font-weight="700"
+        data-c-margin="top(double) bottom(normal)">Available Arguments</h4>
+    <div data-c-grid="gutter">
+        <div data-c-grid-item="equal-col base(1of1)">
+            <pre><code class="language-md"># TYPE
+
+copy
+layout</code></pre>
+        </div>
+    </div>
+    <h4 
+        data-c-font-size="h4"
+        data-c-font-weight="700"
+        data-c-margin="top(double) bottom(normal)">Examples</h4>
+    <pre><code class="language-md">&lt;!--A container for copy.--&gt;
+&lt;div data-c-container=&quot;copy&quot;&gt;&lt;/div&gt;</code></pre>
+</div>
+                    <a id="util-fonts"></a>
+<h3
+    data-c-font-size="h3"
+    data-c-colour="c2"
+    data-c-margin="top(double) bottom(normal)">
+    Fonts &amp; Font Styles
+</h3>
+<div>
+    <h4 
+        data-c-font-size="h4"
+        data-c-margin="top(double) bottom(normal)">
+        Font Family
+    </h4>
+    <p data-c-margin="bottom">Usage: <code class="language-html">&lt;div data-c-font=&quot;STYLE&quot;&gt;&lt;/div&gt;</code></p>
+    <p data-c-margin="bottom">Purpose: This attribute allows you to assign a specific font-family to an element. Font family arguments can be customized using the variables found in the themeing section of the documentation.</p>
+    <h5 
+        data-c-font-size="h5"
+        data-c-font-weight="700"
+        data-c-margin="top(normal) bottom(normal)">
+        Available Arguments
+    </h4>
+    <div data-c-grid="gutter">
+        <div data-c-grid-item="equal-col base(1of1)">
+            <pre><code class="language-md"># STYLE
+
+sans
+serif
+script
+mono</script></code></pre>
+        </div>
+    </div>
+    <h4 
+        data-c-font-size="h4"
+        data-c-margin="top(double) bottom(normal)">
+        Font Colour
+    </h4>
+    <p data-c-margin="bottom(normal)">Usage: <code class="language-html">&lt;div data-c-colour=&quot;COLOUR&quot;&gt;&lt;/div&gt;, &lt;div data-c-color=&quot;COLOR&quot;&gt;&lt;/div&gt;</code></p>
+    <p data-c-margin="bottom">Purpose: This attribute allows you to assign a font colour to an element and all of its children.</p>
+    <h5 
+        data-c-font-size="h5"
+        data-c-font-weight="700"
+        data-c-margin="top(normal) bottom(normal)">
+        Available Arguments
+    </h5>
+    <div data-c-grid="gutter">
+        <div data-c-grid-item="equal-col base(1of1)">
+            <pre><code class="language-md"># COLOUR
+
+white
+black
+c1 (Theme Colour 01)
+c2 (Theme Colour 02)
+c3 (Theme Colour 03)
+c4 (Theme Colour 04)
+c5 (Theme Colour 05)
+stop
+warning
+go</script></code></pre>
+        </div>
+    </div>
+    <h4 
+        data-c-font-size="h4"
+        data-c-margin="top(double) bottom(normal)">
+        Font Size
+    </h4>
+    <p data-c-margin="bottom(normal)">Usage: <code class="language-html">&lt;div data-c-font-size=&quot;SIZE&quot;&gt;&lt;/div&gt;</code></p>
+    <p data-c-margin="bottom">Purpose: This attribute allows you to assign a font-size to an element that is based on the font hierarchy. All text elements default to regularly sized fonts.</p>
+    <h5 
+        data-c-font-size="h5"
+        data-c-font-weight="700"
+        data-c-margin="top(normal) bottom(normal)">
+        Available Arguments
+    </h5>
+    <div data-c-grid="gutter">
+        <div data-c-grid-item="equal-col base(1of1)">
+            <pre><code class="language-md"># SIZE
+
+h1
+h2
+h3
+h4
+h5
+small</script></code></pre>
+        </div>
+    </div>
+    <h4 
+        data-c-font-size="h4"
+        data-c-margin="top(double) bottom(normal)">
+        Font Style
+    </h4>
+    <p data-c-margin="bottom(normal)">Usage: <code class="language-html">&lt;div data-c-font-style=&quot;STYLE&quot;&gt;&lt;/div&gt;</code></p>
+    <p data-c-margin="bottom">Purpose: This attribute allows you to assign a text style to an element. You can use <code class="language-html">&lt;div data-c-font-weight=&quot;bold&quot;&gt;&lt;/div&gt;</code> (found below) to bold items instead.</p>
+    <h5 
+        data-c-font-size="h5"
+        data-c-font-weight="700"
+        data-c-margin="top(normal) bottom(normal)">
+        Available Arguments
+    </h5>
+    <div data-c-grid="gutter">
+        <div data-c-grid-item="equal-col base(1of1)">
+            <pre><code class="language-md"># STYLE
+
+italic
+underline</script></code></pre>
+        </div>
+    </div>
+    <h4 
+        data-c-font-size="h4"
+        data-c-margin="top(double) bottom(normal)">
+        Font Weight
+    </h4>
+    <p data-c-margin="bottom(normal)">Usage: <code class="language-html">&lt;div data-c-font-weight=&quot;WEIGHT&quot;&gt;&lt;/div&gt;</code></p>
+    <p data-c-margin="bottom">Purpose: This attribute allows you to assign a font weight to an element.</p>
+    <h5 
+        data-c-font-size="h5"
+        data-c-font-weight="700"
+        data-c-margin="top(normal) bottom(normal)">
+        Available Arguments
+    </h5>
+    <div data-c-grid="gutter">
+        <div data-c-grid-item="equal-col base(1of1)">
+            <pre><code class="language-md"># WEIGHT
+
+100
+200
+300
+400
+normal
+500
+600
+700
+bold
+800
+900</script></code></pre>
+        </div>
+    </div>
+</div>
+                    <a id="util-whitespace"></a>
+<h3
+    data-c-font-size="h3"
+    data-c-colour="c2"
+    data-c-margin="top(double) bottom(normal)">
+    Margins &amp; Padding
+</h3>
+<div>
+    <p data-c-margin="bottom">Usage (Margin): <code class="language-html">&lt;div data-c-margin=&quot;SIDE(VALUE)&quot;&gt;&lt;/div&gt;</code></p>
+    <p data-c-margin="bottom">Usage (Padding): <code class="language-html">&lt;div data-c-padding=&quot;SIDE(VALUE)&quot;&gt;&lt;/div&gt;</code></p>
+    <p data-c-margin="bottom">Purpose: These attributes allow you to control the amount of margin space or padding at a granular level. They support a similar shorthand to CSS where you supply the side and the value you want.</p>
+    <h4 
+        data-c-font-size="h4"
+        data-c-font-weight="700"
+        data-c-margin="top(double) bottom(normal)">Available Arguments</h4>
+    <div data-c-grid="gutter">
+        <div data-c-grid-item="equal-col tp(1of2)">
+            <pre><code class="language-md"># SIDE
+
+all
+top
+right
+bottom
+left</code></pre>
+        </div>
+        <div data-c-grid-item="equal-col tp(1of2)">
+            <pre><code class="language-md"># VALUE
+
+quarter
+half
+normal
+double
+triple</code></pre>
+        </div>
+    </div>
+    <h4 
+        data-c-font-size="h4"
+        data-c-font-weight="700"
+        data-c-margin="top(double) bottom(normal)">
+        Examples
+    </h4>
+    <div data-c-margin="bottom(half)">
+        <pre><code class="language-md">&lt;!--A double value margin on all sides.--&gt;
 &lt;div data-c-margin=&quot;all(double)&quot;&gt;&lt;/div&gt;</code></pre>
-                        <pre><code class="language-md">&lt;!--Double value on top, normal on the sides, and triple value on the bottom.--&gt;
+    </div>
+    <pre><code class="language-md">&lt;!--Double value on top, normal on the sides, and triple value on the bottom.--&gt;
 &lt;div data-c-padding=&quot;top(double) right(normal) bottom(triple) left(normal)&quot;&gt;&lt;/div&gt;</code></pre>
-                    </div>
+</div>
                     <a id="util-overlays"></a>
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-colour="c2"
-                        data-c-margin="top(double) bottom(normal)">
-                        Overlays
-                    </h3>
-                    data-c-overlay
+<h3
+    data-c-font-size="h3"
+    data-c-colour="c2"
+    data-c-margin="top(double) bottom(normal)">
+    Overlays
+</h3>
+<div>
+    <p data-c-margin="bottom">Usage: <code class="language-html">&lt;div data-c-overlay=&quot;COLOUR(OPACITY)&quot;&gt;&lt;/div&gt;</code></p>
+    <p data-c-margin="bottom">Purpose: This attribute adds a coloured overlay to an element using a pseudo element (<code class="language-css">::before</code>). This attribute automatically assigns the <code class="language-css">relative</code> property to all elements nested inside of it, and will also centre any image placed as a background through the <code class="language-css">background-image</code> property.</p>
+    <h4 
+        data-c-font-size="h4"
+        data-c-font-weight="700"
+        data-c-margin="top(double) bottom(normal)">Available Arguments</h4>
+    <div data-c-grid="gutter">
+        <div data-c-grid-item="equal-col tp(1of2)">
+            <pre><code class="language-md"># COLOUR
+
+white
+black
+c1 (Theme Colour 01)
+c2 (Theme Colour 02)
+c3 (Theme Colour 03)
+c4 (Theme Colour 04)
+c5 (Theme Colour 05)
+stop
+warning
+go</code></pre>
+        </div>
+        <div data-c-grid-item="equal-col tp(1of2)">
+            <pre><code class="language-md"># OPACITY
+
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100</code></pre>
+        </div>
+    </div>
+    <h4 
+        data-c-font-size="h4"
+        data-c-font-weight="700"
+        data-c-margin="top(double) bottom(normal)">Examples</h4>
+    <div data-c-margin="bottom(half)">
+        <pre><code class="language-md">&lt;!--A semi-transparent (50%) white overlay.--&gt;
+&lt;div data-c-overlay=&quot;white(50)&quot;&gt;&lt;/div&gt;</code></pre>
+    </div>
+    <pre><code class="language-md">&lt;!--A slightly transparent (80%) black overlay over an image background.--&gt;
+&lt;div data-c-overlay=&quot;black(80)&quot; style=&quot;background-image: url(&#039;https://images.unsplash.com/photo-1513381958995-63fd0b0c8246?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1351&amp;q=80&#039;)&quot;&gt;&lt;/div&gt;</code></pre>
+</div>
                     <a id="util-radius"></a>
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-colour="c2"
-                        data-c-margin="top(double) bottom(normal)">
-                        Radius
-                    </h3>
-                    data-c-radius
+<h3
+    data-c-font-size="h3"
+    data-c-colour="c2"
+    data-c-margin="top(double) bottom(normal)">
+    Radius
+</h3>
+<div>
+    <p data-c-margin="bottom">Usage: <code class="language-html">&lt;div data-c-radius=&quot;STYLE&quot;&gt;&lt;/div&gt;</code></p>
+    <p data-c-margin="bottom">Purpose: This attribute allows you to rounde the corners of an element using two different styles: slightly rounded, and pill (which rounds them entirely).</p>
+    <h4 
+        data-c-font-size="h4"
+        data-c-font-weight="700"
+        data-c-margin="top(double) bottom(normal)">Available Arguments</h4>
+    <div data-c-grid="gutter">
+        <div data-c-grid-item="equal-col base(1of1)">
+            <pre><code class="language-md"># STYLE
+
+rounded
+pill</code></pre>
+        </div>
+    </div>
+    <h4 
+        data-c-font-size="h4"
+        data-c-font-weight="700"
+        data-c-margin="top(double) bottom(normal)">Examples</h4>
+    <pre><code class="language-md">&lt;!--An element with rounded corners.--&gt;
+&lt;div data-c-radius=&quot;rounded&quot;&gt;&lt;/div&gt;</code></pre>
+</div>
                     <a id="util-visibility"></a>
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-colour="c2"
-                        data-c-margin="top(double) bottom(normal)">
-                        Visibility
-                    </h3>
-                    data-c-visibility
+<h3
+    data-c-font-size="h3"
+    data-c-colour="c2"
+    data-c-margin="top(double) bottom(normal)">
+    Visibility
+</h3>
+<div>
+    <p data-c-margin="bottom">Usage: <code class="language-html">&lt;div data-c-visibility=&quot;VALUE&quot;&gt;&lt;/div&gt;</code></p>
+    <p data-c-margin="bottom">Purpose: This attribute allows you to hide elements from either all devices or just screens. This can be useful when an element needs to be hidden from screens but provides extra context to accessibility devices.</p>
+    <h4 
+        data-c-font-size="h4"
+        data-c-font-weight="700"
+        data-c-margin="top(double) bottom(normal)">Available Arguments</h4>
+    <div data-c-grid="gutter">
+        <div data-c-grid-item="equal-col base(1of1)">
+            <pre><code class="language-md"># VALUE
+
+hidden
+invisible</code></pre>
+        </div>
+    </div>
+    <h4 
+        data-c-font-size="h4"
+        data-c-font-weight="700"
+        data-c-margin="top(double) bottom(normal)">
+        Examples
+    </h4>
+    <div data-c-margin="bottom(half)">
+        <pre><code class="language-md">&lt;!--An element hidden from all devices, including screen readers.--&gt;
+&lt;div data-c-visibility=&quot;hidden&quot;&gt;&lt;/div&gt;</code></pre>
+    </div>
+    <pre><code class="language-md">&lt;!--An element hidden from screens, but not accessibility devices.--&gt;
+&lt;div data-c-visibility=&quot;invisible&quot;&gt;&lt;/div&gt;</code></pre>
+</div>
                 </div>
 
                 <!-- Accordions ======================================== -->

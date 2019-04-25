@@ -1,0 +1,47 @@
+<a id="about-installation"></a>
+<h3
+    data-c-font-size="h3"
+    data-c-colour="c2"
+    data-c-margin="bottom(normal)">
+    Installation
+</h3>
+
+<div>
+    <h4
+        data-c-font-size="h4"
+        data-c-margin="top(double) bottom(normal)">
+        CDN (No Theme)
+    </h4>
+    <p data-c-margin="bottom">If you want to get Clone up and running and have no interest in creating your own theme, you can include Clone's CSS and JavaScript files as linked resources. This allows for a quick and easy way to generate prototypes using Clone's native theme (See <a href="#about-themeing">Themeing</a> for more information on Maple, Clone's default theme).</p>
+    <div data-c-margin="bottom(half)">
+        <pre><code class="language-twig">{% filter escape %}<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/clone-framework@2.2.3/dist/css/clone.min.css">{% endfilter %}</code></pre>
+    </div>
+    <pre><code class="language-twig">{% filter escape %}<script src="https://cdn.jsdelivr.net/npm/clone-framework@2.2.3/dist/js/clone.min.js"></script>{% endfilter %}</code></pre>
+    <h4
+        data-c-font-size="h4"
+        data-c-margin="top(double) bottom(normal)">
+        NPM (Themeable)
+    </h4>
+    <p data-c-margin="bottom">
+        Clone is built in a way that allows you to theme the aesthetic of the system without the need to alter Clone's source files. This means that you'll be able to update Clone without any worry of losing or modifying your changes. All theming will occur in your project's root Sass directory and pull Clone's primary .scss file from node_modules.
+    </p>
+    <p data-c-margin="bottom">
+        While it doesn't matter how your project compiles Sass, theming Clone requires that your project be running <a href="https://sass-lang.com/" title="Learn more about Sass." target="_blank">Sass</a>, <a href="https://github.com/postcss/autoprefixer" title="Learn more about Autoprefixer." target="_blank">Autoprefixer</a>, and <a href="https://jquery.com/" title="Learn more about jQuery." target="_blank">jQuery</a>.
+    </p>
+    <ol data-c-margin="bottom">
+        <li>From inside your project, run <code class="language-bash">npm install clone-framework --save-dev</code></li>
+        <li>At the top of your main project <code class="language-md">.scss</code> file, include the following:</li>
+    </ol>
+    <pre><code class="language-scss">{% filter escape %}// My Custom Clone Theme
+// Please note that Clone must be included last, after all of your custom variables.
+
+// Custom Variables
+// All available custom variables can be found at https://github.com/joshdrink/clone-framework/blob/master/app/scss/core/variables.scss
+
+// Include Clone
+@import "../node_modules/clone-framework/app/scss/clone";{% endfilter %}</code></pre>
+    <p data-c-margin="top(normal) bottom(normal)">
+        For now, it is also required that Clone's JavaScript file be imported using the CDN.
+    </p>
+    <pre><code class="language-twig">{% filter escape %}<script src="https://cdn.jsdelivr.net/npm/clone-framework@2.2.3/dist/js/clone.min.js"></script>{% endfilter %}</code></pre>
+</div>

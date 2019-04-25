@@ -1,0 +1,64 @@
+<a id="util-borders"></a>
+<h3
+    data-c-font-size="h3"
+    data-c-colour="c2"
+    data-c-margin="top(double) bottom(normal)">
+    Borders
+</h3>
+<div>
+    <p data-c-margin="bottom">Usage: <code class="language-html">{% filter escape %}<div data-c-border="SIDE(THICKNESS, STYLE, COLOUR)">{% endfilter %}</code></p>
+    <p data-c-margin="bottom">Purpose: This attribute assigns a border to the selected side of the element. It allows you to customize the thickness, style, and colour.</p>
+    <h4 
+        data-c-font-size="h4"
+        data-c-font-weight="700"
+        data-c-margin="top(double) bottom(normal)">Available Arguments</h4>
+    <div data-c-grid="gutter">
+        <div data-c-grid-item="equal-col tp(1of2) ds(1of4)">
+            <pre><code class="language-md"># SIDE
+
+all
+top
+right
+bottom
+left</code></pre>
+        </div>
+        <div data-c-grid-item="equal-col tp(1of2) ds(1of4)">
+            <pre><code class="language-md"># THICKNESS
+    
+thin
+thick</code></pre>
+        </div>
+        <div data-c-grid-item="equal-col tp(1of2) ds(1of4)">
+            <pre><code class="language-md"># STYLE
+    
+solid
+dashed</code></pre>
+        </div>
+        <div data-c-grid-item="equal-col tp(1of2) ds(1of4)">
+            <pre><code class="language-md"># COLOUR
+
+white
+black
+c1 (Theme Colour 01)
+c2 (Theme Colour 02)
+c3 (Theme Colour 03)
+c4 (Theme Colour 04)
+c5 (Theme Colour 05)
+stop
+warning
+go</code></pre>
+        </div>
+    </div>
+    <h4 
+        data-c-font-size="h4"
+        data-c-font-weight="700"
+        data-c-margin="top(double) bottom(normal)">
+        Examples
+    </h4>
+    <div data-c-margin="bottom(half)">
+        <pre><code class="language-md">{% filter escape %}<!--A thick, solid, black border on the top of the element.-->
+<div data-c-border="top(thick, solid, black)"></div>{% endfilter %}</code></pre>
+    </div>
+    <pre><code class="language-md">{% filter escape %}<!--A thin, dashed, theme colour 5 border on all sides.-->
+<div data-c-border="all(thin, dashed, c5)"></div>{% endfilter %}</code></pre>
+</div>

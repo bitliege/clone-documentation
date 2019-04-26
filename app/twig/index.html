@@ -90,6 +90,8 @@
                             <li><a href="#about-contributing">Contributing</a></li>
                         </ul>
                     </li>
+                    <li>Menus (Coming Soon)</li>
+                    <li><a href="#flexbox-grid">Flexbox Grid</a></li>
                     <li>
                         <a href="#utilities">Utility Attributes</a>
                         <ul data-c-colour="white">
@@ -113,6 +115,7 @@
                             <li><a href="#blockquotes">Blockquotes</a></li>
                             <li><a href="#breadcrumbs">Breadcrumbs</a></li>
                             <li><a href="#buttons">Buttons</a></li>
+                            <li>Carousels (Coming Soon)</li>
                             <li><a href="#dialogs">Dialogs</a></li>
                             <li><a href="#iframes">iFrames</a></li>
                             <li><a href="#inputs">Inputs</a></li>
@@ -137,7 +140,9 @@
 
                 <!-- Hero ============================================== -->
                 <div class="clone-hero">
-                    <div data-c-padding="right(double) left(double)">
+                    <div 
+                        data-c-alignment="base(centre) tl(left)"
+                        data-c-container="full">
                         <h1
                             data-c-font-size="h1"
                             data-c-font-weight="bold"
@@ -149,6 +154,9 @@
                         </div>
                         <p data-c-margin="bottom(normal)">Clone is a simple design framework for building websites.</p>
                         <p data-c-margin="bottom(normal)">It leverages the power of HTML5 data attributes to provide easy-to-use and customizable properties. Clone can be used as is or it can be imported into your project to allow for deep customization through the power of Sass.</p>
+                        <p data-c-margin="bottom">
+                            Browser Support: IE11, Edge, Chrome, Firefox, Safari
+                        </p>
                         <a
                             data-c-button="solid(c1)"
                             data-c-radius="rounded"
@@ -163,30 +171,58 @@
 
                 <!-- About ============================================= -->
                 <a id="about"></a>
-                <h2
-                    data-c-font-size="h2"
-                    data-c-background="black(90)"
-                    data-c-colour="white"
-                    data-c-padding="top(normal) right(double) bottom(normal) left(double)">
-                    About Clone
-                </h2>
-                <div data-c-padding="double">
+                <div data-c-background="black(90)">
+                    <div data-c-container="full">
+                        <h2
+                            data-c-font-size="h2"
+                            data-c-colour="white"
+                            data-c-padding="top(normal) bottom(normal)">
+                            About Clone
+                        </h2>
+                    </div>
+                </div>
+                <div 
+                    data-c-container="full"
+                    data-c-padding="top(double) bottom(double)">
                     {% include "views/about/installation.html" %}
                     {% include "views/about/usage.html" %}
                     {% include "views/about/theme.html" %}
                     {% include "views/about/contributing.html" %}
                 </div>
 
+                <!-- Flexbox Grid ====================================== -->
+                <a id="flexbox-grid"></a>
+                <div data-c-background="black(90)">
+                    <div data-c-container="full">
+                        <h2
+                            data-c-font-size="h2"
+                            data-c-colour="white"
+                            data-c-padding="top(normal) bottom(normal)">
+                            Flexbox Grid
+                        </h2>
+                    </div>
+                </div>
+                <div 
+                    data-c-container="full"
+                    data-c-padding="top(double) bottom(double)">
+                    {% include "views/grid.html" %}
+                </div>
+
                 <!-- Utilities ======================================== -->
                 <a id="utilities"></a>
-                <h2
-                    data-c-font-size="h2"
-                    data-c-background="black(90)"
-                    data-c-colour="white"
-                    data-c-padding="top(normal) right(double) bottom(normal) left(double)">
-                    Utility Attributes
-                </h2>
-                <div data-c-padding="double">
+                <div data-c-background="black(90)">
+                    <div data-c-container="full">
+                        <h2
+                            data-c-font-size="h2"
+                            data-c-colour="white"
+                            data-c-padding="top(normal) bottom(normal)">
+                            Utility Attributes
+                        </h2>
+                    </div>
+                </div>
+                <div 
+                    data-c-container="full"
+                    data-c-padding="top(double) bottom(double)">
                     {% include "views/utilities/alignment.html" %}
                     {% include "views/utilities/backgrounds.html" %}
                     {% include "views/utilities/borders.html" %}
@@ -200,134 +236,179 @@
 
                 <!-- Accordions ======================================== -->
                 <a id="accordions"></a>
-                <h2
-                    data-c-font-size="h2"
-                    data-c-background="black(90)"
-                    data-c-colour="white"
-                    data-c-padding="top(normal) right(double) bottom(normal) left(double)">
-                    Accordions
-                </h2>
+                <div data-c-background="black(90)">
+                    <div data-c-container="full">
+                        <h2
+                            data-c-font-size="h2"
+                            data-c-colour="white"
+                            data-c-padding="top(normal) bottom(normal)">
+                            Accordions
+                        </h2>
+                    </div>
+                </div>
                 {% set accordionDesc = 'Coming Soon!' %}
                 {% set accordionAcc = 'Coming Soon!' %}
-                <div data-c-padding="double">
+                <div 
+                    data-c-container="full"
+                    data-c-padding="top(double) bottom(double)">
                     {% include "views/components/layout.html" with {'component': 'accordion', 'description': accordionDesc, 'accessibility': accordionAcc} %}
                 </div>
 
                 <!-- Alerts ============================================ -->
                 <a id="alerts"></a>
-                <h2
-                    data-c-font-size="h2"
-                    data-c-background="black(90)"
-                    data-c-colour="white"
-                    data-c-padding="top(normal) right(double) bottom(normal) left(double)">
-                    Alerts
-                </h2>
+                <div data-c-background="black(90)">
+                    <div data-c-container="full">
+                        <h2
+                            data-c-font-size="h2"
+                            data-c-colour="white"
+                            data-c-padding="top(normal) bottom(normal)">
+                            Alerts
+                        </h2>
+                    </div>
+                </div>
                 {% set alertDesc = 'Coming Soon!' %}
                 {% set alertAcc = 'Coming Soon!' %}
-                <div data-c-padding="double">
+                <div 
+                    data-c-container="full"
+                    data-c-padding="top(double) bottom(double)">
                     {% include "views/components/layout.html" with {'component': 'alert', 'description': alertDesc, 'accessibility': alertAcc} %}
                 </div>
 
                 <!-- Back-to-Top Links ================================= -->
                 <a id="back-to-top"></a>
-                <h2
-                    data-c-font-size="h2"
-                    data-c-background="black(90)"
-                    data-c-colour="white"
-                    data-c-padding="top(normal) right(double) bottom(normal) left(double)">
-                    Back-to-top Links
-                </h2>
+                <div data-c-background="black(90)">
+                    <div data-c-container="full">
+                        <h2
+                            data-c-font-size="h2"
+                            data-c-colour="white"
+                            data-c-padding="top(normal) bottom(normal)">
+                            Back-to-top Links
+                        </h2>
+                    </div>
+                </div>
                 {% set bttlDesc = 'Coming Soon!' %}
                 {% set bttlAcc = 'Coming Soon!' %}
-                <div data-c-padding="double">
+                <div 
+                    data-c-container="full"
+                    data-c-padding="top(double) bottom(double)">
                     {% include "views/components/layout.html" with {'component': 'back-to-top-link', 'description': bttlDesc, 'accessibility': bttlAcc} %}
                 </div>
 
                 <!-- Blockquotes ======================================= -->
                 <a id="blockquotes"></a>
-                <h2
-                    data-c-font-size="h2"
-                    data-c-background="black(90)"
-                    data-c-colour="white"
-                    data-c-padding="top(normal) right(double) bottom(normal) left(double)">
-                    Blockquotes
-                </h2>
+                <div data-c-background="black(90)">
+                    <div data-c-container="full">
+                        <h2
+                            data-c-font-size="h2"
+                            data-c-colour="white"
+                            data-c-padding="top(normal) bottom(normal)">
+                            Blockquotes
+                        </h2>
+                    </div>
+                </div>
                 {% set blockquoteDesc = 'Coming Soon!' %}
                 {% set blockquoteAcc = 'Coming Soon!' %}
-                <div data-c-padding="double">
+                <div 
+                    data-c-container="full"
+                    data-c-padding="top(double) bottom(double)">
                     {% include "views/components/layout.html" with {'component': 'blockquote', 'description': blockquoteDesc, 'accessibility': blockquoteAcc} %}
                 </div>
 
                 <!-- Breadcrumbs ======================================= -->
                 <a id="breadcrumbs"></a>
-                <h2
-                    data-c-font-size="h2"
-                    data-c-background="black(90)"
-                    data-c-colour="white"
-                    data-c-padding="top(normal) right(double) bottom(normal) left(double)">
-                    Breadcrumbs
-                </h2>
+                <div data-c-background="black(90)">
+                    <div data-c-container="full">
+                        <h2
+                            data-c-font-size="h2"
+                            data-c-colour="white"
+                            data-c-padding="top(normal) bottom(normal)">
+                            Breadcrumbs
+                        </h2>
+                    </div>
+                </div>
                 {% set breadcrumbDesc = 'Coming Soon!' %}
                 {% set breadcrumbAcc = 'Coming Soon!' %}
-                <div data-c-padding="double">
+                <div 
+                    data-c-container="full"
+                    data-c-padding="top(double) bottom(double)">
                     {% include "views/components/layout.html" with {'component': 'breadcrumb', 'description': breadcrumbDesc, 'accessibility': breadcrumbAcc} %}
                 </div>
 
                 <!-- Buttons =========================================== -->
                 <a id="buttons"></a>
-                <h2
-                    data-c-font-size="h2"
-                    data-c-background="black(90)"
-                    data-c-colour="white"
-                    data-c-padding="top(normal) right(double) bottom(normal) left(double)">
-                    Buttons
-                </h2>
+                <div data-c-background="black(90)">
+                    <div data-c-container="full">
+                        <h2
+                            data-c-font-size="h2"
+                            data-c-colour="white"
+                            data-c-padding="top(normal) bottom(normal)">
+                            Buttons
+                        </h2>
+                    </div>
+                </div>
                 {% set buttonDesc = 'Coming Soon!' %}
                 {% set buttonAcc = 'Coming Soon!' %}
-                <div data-c-padding="double">
+                <div 
+                    data-c-container="full"
+                    data-c-padding="top(double) bottom(double)">
                     {% include "views/components/layout.html" with {'component': 'button', 'description': buttonDesc, 'accessibility': buttonAcc} %}
                 </div>
 
                 <!-- Dialogues ========================================= -->
                 <a id="dialogs"></a>
-                <h2
-                    data-c-font-size="h2"
-                    data-c-background="black(90)"
-                    data-c-colour="white"
-                    data-c-padding="top(normal) right(double) bottom(normal) left(double)">
-                    Dialogs
-                </h2>
+                <div data-c-background="black(90)">
+                    <div data-c-container="full">
+                        <h2
+                            data-c-font-size="h2"
+                            data-c-colour="white"
+                            data-c-padding="top(normal) bottom(normal)">
+                            Dialogs
+                        </h2>
+                    </div>
+                </div>
                 {% set dialogDesc = 'Coming Soon!' %}
                 {% set dialogAcc = 'Coming Soon!' %}
-                <div data-c-padding="double">
+                <div 
+                    data-c-container="full"
+                    data-c-padding="top(double) bottom(double)">
                     {% include "views/components/layout.html" with {'component': 'dialog', 'description': dialogDesc, 'accessibility': dialogAcc} %}
                 </div>
 
                 <!-- iframes =========================================== -->
                 <a id="iframes"></a>
-                <h2
-                    data-c-font-size="h2"
-                    data-c-background="black(90)"
-                    data-c-colour="white"
-                    data-c-padding="top(normal) right(double) bottom(normal) left(double)">
-                    iFrames
-                </h2>
+                <div data-c-background="black(90)">
+                    <div data-c-container="full">
+                        <h2
+                            data-c-font-size="h2"
+                            data-c-colour="white"
+                            data-c-padding="top(normal) bottom(normal)">
+                            iFrames
+                        </h2>
+                    </div>
+                </div>
                 {% set iframeDesc = 'Coming Soon!' %}
                 {% set iframeAcc = 'Coming Soon!' %}
-                <div data-c-padding="double">
+                <div 
+                    data-c-container="full"
+                    data-c-padding="top(double) bottom(double)">
                     {% include "views/components/layout.html" with {'component': 'iframe', 'description': iframeDesc, 'accessibility': iframeAcc} %}
                 </div>
 
                 <!-- Inputs ============================================ -->
                 <a id="inputs"></a>
-                <h2
-                    data-c-font-size="h2"
-                    data-c-background="black(90)"
-                    data-c-colour="white"
-                    data-c-padding="top(normal) right(double) bottom(normal) left(double)">
-                    Inputs
-                </h2>
-                <div data-c-padding="double">
+                <div data-c-background="black(90)">
+                    <div data-c-container="full">
+                        <h2
+                            data-c-font-size="h2"
+                            data-c-colour="white"
+                            data-c-padding="top(normal) bottom(normal)">
+                            Inputs
+                        </h2>
+                    </div>
+                </div>
+                <div 
+                    data-c-container="full"
+                    data-c-padding="top(double) bottom(double)">
 
                     <!-- Checkboxes -------------------------------------------- -->
                     <h3
@@ -515,46 +596,61 @@
 
                 <!-- Pullquotes ======================================== -->
                 <a id="pullquotes"></a>
-                <h2
-                    data-c-font-size="h2"
-                    data-c-background="black(90)"
-                    data-c-colour="white"
-                    data-c-padding="top(normal) right(double) bottom(normal) left(double)">
-                    Pullquotes
-                </h2>
+                <div data-c-background="black(90)">
+                    <div data-c-container="full">
+                        <h2
+                            data-c-font-size="h2"
+                            data-c-colour="white"
+                            data-c-padding="top(normal) bottom(normal)">
+                            Pullquotes
+                        </h2>
+                    </div>
+                </div>
                 {% set pullquoteDesc = 'Coming Soon!' %}
                 {% set pullquoteAcc = 'Coming Soon!' %}
-                <div data-c-padding="double">
+                <div 
+                    data-c-container="full"
+                    data-c-padding="top(double) bottom(double)">
                     {% include "views/components/layout.html" with {'component': 'pullquote', 'description': pullquoteDesc, 'accessibility': pullquoteAcc} %}
                 </div>
 
                 <!-- Skip-to-content Links ============================= -->
                 <a id="skip-to-content"></a>
-                <h2
-                    data-c-font-size="h2"
-                    data-c-background="black(90)"
-                    data-c-colour="white"
-                    data-c-padding="top(normal) right(double) bottom(normal) left(double)">
-                    Skip-to-content Links
-                </h2>
+                <div data-c-background="black(90)">
+                    <div data-c-container="full">
+                        <h2
+                            data-c-font-size="h2"
+                            data-c-colour="white"
+                            data-c-padding="top(normal) bottom(normal)">
+                            Skip-to-content Links
+                        </h2>
+                    </div>
+                </div>
                 {% set stcDesc = 'Coming Soon!' %}
                 {% set stcAcc = 'Coming Soon!' %}
-                <div data-c-padding="double">
+                <div 
+                    data-c-container="full"
+                    data-c-padding="top(double) bottom(double)">
                     {% include "views/components/layout.html" with {'component': 'skip-to-content', 'description': stcDesc, 'accessibility': stcAcc} %}
                 </div>
 
                 <!-- Tables ============================================ -->
                 <a id="tables"></a>
-                <h2
-                    data-c-font-size="h2"
-                    data-c-background="black(90)"
-                    data-c-colour="white"
-                    data-c-padding="top(normal) right(double) bottom(normal) left(double)">
-                    Tables
-                </h2>
+                <div data-c-background="black(90)">
+                    <div data-c-container="full">
+                        <h2
+                            data-c-font-size="h2"
+                            data-c-colour="white"
+                            data-c-padding="top(normal) bottom(normal)">
+                            Tables
+                        </h2>
+                    </div>
+                </div>
                 {% set tableDesc = 'Coming Soon!' %}
                 {% set tableAcc = 'Coming Soon!' %}
-                <div data-c-padding="double">
+                <div 
+                    data-c-container="full"
+                    data-c-padding="top(double) bottom(double)">
                     {% include "views/components/layout.html" with {'component': 'table', 'description': tableDesc, 'accessibility': tableAcc} %}
                 </div>
 

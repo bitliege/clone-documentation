@@ -1,0 +1,24 @@
+<h3
+    data-c-font-size="h3"
+    data-c-color="c2"
+    data-c-margin="bottom(normal)">
+    Description
+</h3>
+<p data-c-margin="bottom(normal)">{{ description }}</p>
+{% include "partials/" ~ component ~ ".html" %}
+<h3
+    data-c-font-size="h3"
+    data-c-color="c2"
+    data-c-margin="top(double) bottom(normal)">
+    Code Snippet
+</h3>
+<div data-c-accordion="group">
+    {% include "../../components/accordion.html" with {'title': 'View ' ~ component|title ~ ' Code', 'element': component} %}
+</div>
+<h3
+    data-c-font-size="h3"
+    data-c-color="c2"
+    data-c-margin="top(double) bottom(normal)">
+    Accessibility
+</h3>
+<p>{{ accessibility }}</p>

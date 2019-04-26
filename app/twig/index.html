@@ -79,18 +79,23 @@
                             <li><a href="#util-visibility">Visibility</a></li>
                         </ul>
                     </li>
-                    <li><a href="#accordions">Accordions</a></li>
-                    <li><a href="#alerts">Alerts</a></li>
-                    <li><a href="#back-to-top">Back-to-top Links</a></li>
-                    <li><a href="#blockquotes">Blockquotes</a></li>
-                    <li><a href="#breadcrumbs">Breadcrumbs</a></li>
-                    <li><a href="#buttons">Buttons</a></li>
-                    <li><a href="#dialogs">Dialogs</a></li>
-                    <li><a href="#iframes">iFrames</a></li>
-                    <li><a href="#inputs">Inputs</a></li>
-                    <li><a href="#pullquotes">Pullquotes</a></li>
-                    <li><a href="#skip-to-content">Skip-to-content Links</a></li>
-                    <li><a href="#tables">Tables</a></li>
+                    <li>
+                        <a href="#components">Components</a>
+                        <ul data-c-colour="white">
+                            <li><a href="#accordions">Accordions</a></li>
+                            <li><a href="#alerts">Alerts</a></li>
+                            <li><a href="#back-to-top">Back-to-top Links</a></li>
+                            <li><a href="#blockquotes">Blockquotes</a></li>
+                            <li><a href="#breadcrumbs">Breadcrumbs</a></li>
+                            <li><a href="#buttons">Buttons</a></li>
+                            <li><a href="#dialogs">Dialogs</a></li>
+                            <li><a href="#iframes">iFrames</a></li>
+                            <li><a href="#inputs">Inputs</a></li>
+                            <li><a href="#pullquotes">Pullquotes</a></li>
+                            <li><a href="#skip-to-content">Skip-to-content Links</a></li>
+                            <li><a href="#tables">Tables</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -104,6 +109,24 @@
             <div data-c-grid-item="tl(4of5)">
 
                 <a id="pageTop"></a>
+
+                <!-- Hero ============================================== -->
+                <div class="clone-hero">
+                    <div>
+                        <h1
+                            data-c-font-size="h1"
+                            data-c-font-weight="bold"
+                            data-c-margin="bottom(normal)">Welcome to Clone</h1>
+                        <p data-c-margin="bottom(normal)">Clone is a simple design framework for building websites. It leverages the power of HTML5 data attributes to provide easy-to-use and customizable properties. Clone can be used as is or it can be imported into your project to allow for deep customization through the power of Sass.</p>
+                        <a
+                            data-c-button="solid(c1)"
+                            data-c-radius="rounded"
+                            href="#content"
+                            title="View the About Clone section.">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
 
                 <a id="content"></a>
 
@@ -153,31 +176,10 @@
                     data-c-padding="top(normal) right(double) bottom(normal) left(double)">
                     Accordions
                 </h2>
+                {% set accordionDesc = 'bar' %}
+                {% set accordionAcc = 'bar' %}
                 <div data-c-padding="double">
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-color="c2"
-                        data-c-margin="bottom(normal)">
-                        Description
-                    </h3>
-                    <p data-c-margin="bottom(normal)">Accordions are...</p>
-                    {% include "views/accordion.html" %}
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-color="c2"
-                        data-c-margin="top(double) bottom(normal)">
-                        Code Snippet
-                    </h3>
-                    <div data-c-accordion="group">
-                        {% include "components/accordion.html" with {'title': 'View Accordion Code', 'element': 'accordion'} %}
-                    </div>
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-color="c2"
-                        data-c-margin="top(double) bottom(normal)">
-                        Accessibility
-                    </h3>
-                    <p>Accordions are...</p>
+                    {% include "views/components/layout.html" with {'component': 'accordion', 'description': accordionDesc, 'accessibility': accordionAcc} %}
                 </div>
 
                 <!-- Alerts ============================================ -->
@@ -189,33 +191,10 @@
                     data-c-padding="top(normal) right(double) bottom(normal) left(double)">
                     Alerts
                 </h2>
+                {% set alertDesc = 'bar' %}
+                {% set alertAcc = 'bar' %}
                 <div data-c-padding="double">
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-color="c2"
-                        data-c-margin="bottom(normal)">
-                        Description
-                    </h3>
-                    <p data-c-margin="bottom(normal)">Alerts are...</p>
-                    {% include "views/alert.html" %}
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-color="c2"
-                        data-c-margin="top(double) bottom(normal)">
-                        Code Snippet
-                    </h3>
-                    <div
-                        data-c-margin="top(normal)"
-                        data-c-accordion="group">
-                        {% include "components/accordion.html" with {'title': 'View Alert Code', 'element': 'alert-information'} %}
-                    </div>
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-color="c2"
-                        data-c-margin="top(double) bottom(normal)">
-                        Accessibility
-                    </h3>
-                    <p>Alerts are...</p>
+                    {% include "views/components/layout.html" with {'component': 'alert', 'description': alertDesc, 'accessibility': alertAcc} %}
                 </div>
 
                 <!-- Back-to-Top Links ================================= -->
@@ -227,33 +206,10 @@
                     data-c-padding="top(normal) right(double) bottom(normal) left(double)">
                     Back-to-top Links
                 </h2>
+                {% set bttlDesc = 'bar' %}
+                {% set bttlAcc = 'bar' %}
                 <div data-c-padding="double">
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-color="c2"
-                        data-c-margin="bottom(normal)">
-                        Description
-                    </h3>
-                    <p data-c-margin="bottom(normal)">Back-to-top links are...</p>
-                    {% include "views/back-to-top-links.html" %}
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-color="c2"
-                        data-c-margin="top(double) bottom(normal)">
-                        Code Snippet
-                    </h3>
-                    <div
-                        data-c-margin="top(normal)"
-                        data-c-accordion="group">
-                        {% include "components/accordion.html" with {'title': 'View Back-to-top Link Code', 'element': 'back-to-top-link'} %}
-                    </div>
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-color="c2"
-                        data-c-margin="top(double) bottom(normal)">
-                        Accessibility
-                    </h3>
-                    <p>Back-to-top links are...</p>
+                    {% include "views/components/layout.html" with {'component': 'back-to-top-link', 'description': bttlDesc, 'accessibility': bttlAcc} %}
                 </div>
 
                 <!-- Blockquotes ======================================= -->
@@ -265,14 +221,10 @@
                     data-c-padding="top(normal) right(double) bottom(normal) left(double)">
                     Blockquotes
                 </h2>
+                {% set blockquoteDesc = 'bar' %}
+                {% set blockquoteAcc = 'bar' %}
                 <div data-c-padding="double">
-                    <p data-c-margin="bottom(normal)">Blockquotes are...</p>
-                    {% include "components/blockquote.html" %}
-                    <div
-                        data-c-margin="top(normal)"
-                        data-c-accordion="group">
-                        {% include "components/accordion.html" with {'title': 'View Blockquotes Code', 'element': 'blockquote'} %}
-                    </div>
+                    {% include "views/components/layout.html" with {'component': 'blockquote', 'description': blockquoteDesc, 'accessibility': blockquoteAcc} %}
                 </div>
 
                 <!-- Breadcrumbs ======================================= -->

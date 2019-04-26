@@ -113,3 +113,15 @@ pre, code {
 pre code, code {
     padding: 0 !important;
 }
+
+.clone-hero {
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    >div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

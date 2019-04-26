@@ -119,9 +119,11 @@ pre code, code {
     position: relative;
     width: 100%;
     >div {
+        max-width: 70rem;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        width: 100%;
     }
 }

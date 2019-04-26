@@ -122,6 +122,10 @@ const twig = require('gulp-twig');
         return src('cache/js/prism/*.js')
         .pipe(dest('dist/js/prism'));
     }
+    function distFavicons() {
+        return src('app/favicons/*')
+        .pipe(dest('dist'));
+    }
     function distribute() {
         return src('cache/*.html')
         .pipe(useref())
@@ -146,6 +150,6 @@ const twig = require('gulp-twig');
     }
 
     // Export
-    exports.build = series(cleanDist, template, movePrismJSMain, movePrismJSTwig, movePrismJSSCSS, movePrismJSMarkup, movePrismJSMarkdown, movePrismJSBash, js, cacheImages, movePrismCSS, compileCSS, distribute, distPrismJS, distPrismCSS, moveImages);
+    exports.build = series(cleanDist, template, movePrismJSMain, movePrismJSTwig, movePrismJSSCSS, movePrismJSMarkup, movePrismJSMarkdown, movePrismJSBash, js, cacheImages, movePrismCSS, compileCSS, distribute, distPrismJS, distPrismCSS, moveImages, distFavicons);
     exports.watch = series(template, movePrismJSMain, movePrismJSTwig, movePrismJSSCSS, movePrismJSMarkup, movePrismJSMarkdown, movePrismJSBash, js, cacheImages, movePrismCSS, compileCSS, parallel(browserSync, watchFiles));
     exports.default = series(template, movePrismJSMain, movePrismJSTwig, movePrismJSSCSS, movePrismJSMarkup, movePrismJSMarkdown, movePrismJSBash, js, cacheImages, movePrismCSS, compileCSS, parallel(browserSync, watchFiles));

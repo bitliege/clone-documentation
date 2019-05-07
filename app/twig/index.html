@@ -36,8 +36,6 @@
             integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
             crossorigin="anonymous"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/clone-framework@2.2.3/dist/js/clone.min.js"></script>
-
         <!--build:css css/app.min.css-->
         <link async rel="stylesheet" href="css/app.css">
         <!--endbuild-->
@@ -115,7 +113,7 @@
                             <li><a href="#blockquotes">Blockquotes</a></li>
                             <li><a href="#breadcrumbs">Breadcrumbs</a></li>
                             <li><a href="#buttons">Buttons</a></li>
-                            <li>Carousels (Coming Soon)</li>
+                            <li><a href="#carousels">Carousels</a></li>
                             <li><a href="#dialogs">Dialogs</a></li>
                             <li><a href="#iframes">iFrames</a></li>
                             <li><a href="#inputs">Inputs</a></li>
@@ -147,7 +145,7 @@
                             data-c-font-size="h1"
                             data-c-font-weight="bold"
                             data-c-margin="bottom(normal)">
-                            Welcome to Clone
+                            Welcome to Clone (beta)
                         </h1>
                         <div data-c-margin="bottom(normal)">
                             <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/joshdrink/clone-framework.svg">
@@ -352,6 +350,26 @@
                     data-c-container="full"
                     data-c-padding="top(double) bottom(double)">
                     {% include "views/components/layout.html" with {'component': 'button', 'description': buttonDesc, 'accessibility': buttonAcc} %}
+                </div>
+
+                <!-- Carousels ========================================= -->
+                <a id="carousels"></a>
+                <div data-c-background="black(90)">
+                    <div data-c-container="full">
+                        <h2
+                            data-c-font-size="h2"
+                            data-c-colour="white"
+                            data-c-padding="top(normal) bottom(normal)">
+                            Carousels
+                        </h2>
+                    </div>
+                </div>
+                {% set carouselDesc = 'Coming Soon!' %}
+                {% set carouselAcc = 'Coming Soon!' %}
+                <div 
+                    data-c-container="full"
+                    data-c-padding="top(double) bottom(double)">
+                    {% include "views/components/layout.html" with {'component': 'carousel', 'description': carouselDesc, 'accessibility': carouselAcc} %}
                 </div>
 
                 <!-- Dialogues ========================================= -->
@@ -657,6 +675,8 @@
             </div>
 
         </div>
+
+        <script src="js/clone/clone.js"></script>
 
         <!--build:js js/app.min.js-->
         <script src="js/app.js"></script>

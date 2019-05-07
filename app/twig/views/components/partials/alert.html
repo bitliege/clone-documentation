@@ -4,25 +4,27 @@
             data-c-alert="information"
             data-c-radius="rounded"
             data-c-padding="half"
-            role="alert"
-        >
-            <span
-                data-c-margin="bottom(quarter)"
-                data-c-heading="h5"
-                data-c-font-weight="bold"
-            >
-                <i
-                    aria-hidden="true"
-                    class="material-icons">
-                    stars
-                </i>
-                Optional Alert Title
-            </span>
-
-            <p>
-                This is a sample informative alert. These alerts are used to display
-                non-critical information to the user.
-            </p>
+            role="alert">
+            <div>
+                <span
+                    data-c-margin="bottom(quarter)"
+                    data-c-heading="h5"
+                    data-c-font-weight="bold">
+                    <i
+                        aria-hidden="true"
+                        class="material-icons">
+                        stars
+                    </i>
+                    Optional Alert Title
+                </span>
+                <p>
+                    This is a sample informative alert. These alerts are used to display
+                    non-critical information to the user.
+                </p>
+            </div>
+            <button data-c-alert="close-trigger">
+                <i class="material-icons">close</i>
+            </button>
         </div>
     </div>
     <div data-c-grid-item="tl(1of3)">
@@ -30,25 +32,24 @@
             data-c-alert="warning"
             data-c-radius="rounded"
             data-c-padding="half"
-            role="alert"
-        >
-            <span
-                data-c-margin="bottom(quarter)"
-                data-c-heading="h5"
-                data-c-font-weight="bold"
-            >
-                <i
-                    aria-hidden="true"
-                    class="material-icons">
-                    info
-                </i>
-                Optional Alert Title
-            </span>
-
-            <p>
-                This is a sample warning alert. These alerts are used to display user
-                interface warnings and system alerts.
-            </p>
+            role="alert">
+            <div>
+                <span
+                    data-c-margin="bottom(quarter)"
+                    data-c-heading="h5"
+                    data-c-font-weight="bold">
+                    <i
+                        aria-hidden="true"
+                        class="material-icons">
+                        info
+                    </i>
+                    Optional Alert Title
+                </span>
+                <p>
+                    This is a sample warning alert. These alerts are used to display user
+                    interface warnings and system alerts.
+                </p>
+            </div>
         </div>
     </div>
     <div data-c-grid-item="tl(1of3)">
@@ -56,25 +57,18 @@
             data-c-alert="error"
             data-c-radius="rounded"
             data-c-padding="half"
-            role="alert"
-        >
-            <span
-                data-c-margin="bottom(quarter)"
-                data-c-heading="h5"
-                data-c-font-weight="bold"
-            >
-                <i
-                    aria-hidden="true"
-                    class="material-icons">
-                    report_problem
+            role="alert">
+            <div>
+                <p>
+                    This is a sample error alert. These alerts are used to display critical
+                    system and form errors.
+                </p>
+            </div>
+            <button data-c-alert="close-trigger">
+                <i class="material-icons">
+                    close
                 </i>
-                Optional Alert Title
-            </span>
-
-            <p>
-                This is a sample error alert. These alerts are used to display critical
-                system and form errors.
-            </p>
+            </button>
         </div>
     </div>
 </div>

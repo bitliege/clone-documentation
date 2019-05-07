@@ -52,6 +52,12 @@ const twig = require('gulp-twig');
         .pipe(dest('cache'));
     }
 
+    // Clone JS
+    function moveCloneJS() {
+        return src('node_modules/clone-framework/cache/js/clone.js')
+        .pipe(dest('cache/js/clone'));
+    }
+
     // Prism CSS
     function movePrismCSS() {
         return src('node_modules/prismjs/themes/prism-okaidia.css')
@@ -114,6 +120,10 @@ const twig = require('gulp-twig');
     }
 
     // Minification
+    function distCloneJS() {
+        return src('cache/css/clone/*.js')
+        .pipe(dest('dist/js/clone'));
+    }
     function distPrismCSS() {
         return src('cache/css/prism/*.css')
         .pipe(dest('dist/css/prism'));
@@ -146,10 +156,10 @@ const twig = require('gulp-twig');
     function watchFiles() {
         watch('app/scss/**/*.scss', series(compileCSS, browserSyncReload));
         watch('app/twig/**/*.html', series(template, cacheImages, browserSyncReload));
-        watch('app/js/**/*.js', series(js, browserSyncReload));
+        watch('app/js/*.js', series(js, moveCloneJS, browserSyncReload));
     }
 
     // Export
-    exports.build = series(cleanDist, template, movePrismJSMain, movePrismJSTwig, movePrismJSSCSS, movePrismJSMarkup, movePrismJSMarkdown, movePrismJSBash, js, cacheImages, movePrismCSS, compileCSS, distribute, distPrismJS, distPrismCSS, moveImages, distFavicons);
-    exports.watch = series(template, movePrismJSMain, movePrismJSTwig, movePrismJSSCSS, movePrismJSMarkup, movePrismJSMarkdown, movePrismJSBash, js, cacheImages, movePrismCSS, compileCSS, parallel(browserSync, watchFiles));
-    exports.default = series(template, movePrismJSMain, movePrismJSTwig, movePrismJSSCSS, movePrismJSMarkup, movePrismJSMarkdown, movePrismJSBash, js, cacheImages, movePrismCSS, compileCSS, parallel(browserSync, watchFiles));
+    exports.build = series(cleanDist, template, moveCloneJS, movePrismJSMain, movePrismJSTwig, movePrismJSSCSS, movePrismJSMarkup, movePrismJSMarkdown, movePrismJSBash, js, cacheImages, movePrismCSS, compileCSS, distribute, distCloneJS, distPrismJS, distPrismCSS, moveImages, distFavicons);
+    exports.watch = series(template, moveCloneJS, movePrismJSMain, movePrismJSTwig, movePrismJSSCSS, movePrismJSMarkup, movePrismJSMarkdown, movePrismJSBash, js, cacheImages, movePrismCSS, compileCSS, parallel(browserSync, watchFiles));
+    exports.default = series(template, moveCloneJS, movePrismJSMain, movePrismJSTwig, movePrismJSSCSS, movePrismJSMarkup, movePrismJSMarkdown, movePrismJSBash, js, cacheImages, movePrismCSS, compileCSS, parallel(browserSync, watchFiles));

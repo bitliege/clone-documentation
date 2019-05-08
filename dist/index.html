@@ -36,8 +36,6 @@
             integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
             crossorigin="anonymous"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/clone-framework@2.2.3/dist/js/clone.min.js"></script>
-
         <link rel="stylesheet" href="css/app.min.css">
 
         <link async rel="stylesheet" href="css/prism/prism-okaidia.css">
@@ -113,7 +111,7 @@
                             <li><a href="#blockquotes">Blockquotes</a></li>
                             <li><a href="#breadcrumbs">Breadcrumbs</a></li>
                             <li><a href="#buttons">Buttons</a></li>
-                            <li>Carousels (Coming Soon)</li>
+                            <li><a href="#carousels">Carousels</a></li>
                             <li><a href="#dialogs">Dialogs</a></li>
                             <li><a href="#iframes">iFrames</a></li>
                             <li><a href="#inputs">Inputs</a></li>
@@ -145,7 +143,7 @@
                             data-c-font-size="h1"
                             data-c-font-weight="bold"
                             data-c-margin="bottom(normal)">
-                            Welcome to Clone
+                            Welcome to Clone (beta)
                         </h1>
                         <div data-c-margin="bottom(normal)">
                             <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/joshdrink/clone-framework.svg">
@@ -196,15 +194,35 @@
         data-c-margin="top(double) bottom(normal)">
         CDN (No Theme)
     </h4>
-    <div data-c-margin="bottom(normal)">
-        <img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/joshdrink/clone-framework/dist/css/clone.min.css.svg?label=CDN%20CSS">
-        <img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/joshdrink/clone-framework/dist/js/clone.min.js.svg?label=CDN%20JS">
-    </div>
     <p data-c-margin="bottom">If you want to get Clone up and running and have no interest in creating your own theme, you can include Clone's CSS and JavaScript files as linked resources. This allows for a quick and easy way to generate prototypes using Clone's native theme (See <a href="#about-themeing">Themeing</a> for more information on Maple, Clone's default theme).</p>
-    <div data-c-margin="bottom(half)">
-        <pre><code class="language-twig">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.2.6/dist/css/clone.min.css&quot;&gt;</code></pre>
+    <h5
+        data-c-font-size="h5"
+        data-c-font-weight="bold"
+        data-c-margin="top(double) bottom(normal)">
+        With Grid
+    </h5>
+    <div data-c-margin="bottom(normal)">
+        <img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/joshdrink/clone-framework/dist/css/gzip/clone.min.css.gz.svg?label=CSS%20%28minified%2C%20gzipped%29">
+        <img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/joshdrink/clone-framework/dist/js/gzip/clone.min.js.gz.svg?label=JS%20%28minified%2C%20gzipped%29">
     </div>
-    <pre><code class="language-twig">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.2.6/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+    <div data-c-margin="bottom(half)">
+        <pre><code class="language-twig">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.2.9/dist/css/clone.min.css&quot;&gt;</code></pre>
+    </div>
+    <pre><code class="language-twig">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.2.9/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+    <h5
+        data-c-font-size="h5"
+        data-c-font-weight="bold"
+        data-c-margin="top(double) bottom(normal)">
+        No Grid
+    </h5>
+    <div data-c-margin="bottom(normal)">
+        <img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/joshdrink/clone-framework/dist/css/gzip/clone-gridless.min.css.gz.svg?label=CSS%20%28minified%2C%20gzipped%29">
+        <img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/joshdrink/clone-framework/dist/js/gzip/clone.min.js.gz.svg?label=JS%20%28minified%2C%20gzipped%29">
+    </div>
+    <div data-c-margin="bottom(half)">
+        <pre><code class="language-twig">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.2.9/dist/css/clone-gridless.min.css&quot;&gt;</code></pre>
+    </div>
+    <pre><code class="language-twig">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.2.9/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
     <h4
         data-c-font-size="h4"
         data-c-margin="top(double) bottom(normal)">
@@ -231,7 +249,7 @@
     <p data-c-margin="top(normal) bottom(normal)">
         For now, it is also required that Clone's JavaScript file be imported using the CDN.
     </p>
-    <pre><code class="language-twig">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.2.6/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+    <pre><code class="language-twig">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.2.9/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
 </div>
                     <a id="about-usage"></a>
 <h3
@@ -491,6 +509,29 @@ $clone-selection-background-colour: $clone-c5;
     data-c-margin="bottom(normal)">
     Usage
 </h3>
+<div
+    data-c-alert="information"
+    data-c-radius="rounded"
+    data-c-padding="half"
+    data-c-margin="bottom(normal)"
+    role="alert">
+    <div>
+        <span
+            data-c-margin="bottom(quarter)"
+            data-c-heading="h5"
+            data-c-font-weight="bold">
+            <i
+                aria-hidden="true"
+                class="material-icons">
+                star
+            </i>
+            Just a heads up!
+        </span>
+        <p>
+            Clone has a built in flexbox grid to help you easily create layouts compatible with IE11. It's worth noting however, that depending on your unique browser support needs, including this grid is not mandatory and will drastically reduce Clone's file size. You can choose to include the gridless version of Clone via CDN or Sass using the information in <a href="#about-installation" title="View installation information.">Installation</a>.
+        </p>
+    </div>
+</div>
 <div>
     <p data-c-margin="bottom">Usage (Grid): <code class="language-html">&lt;div data-c-grid=&quot;OPTIONS&quot;&gt;&lt;/div&gt;</code></p>
     <p data-c-margin="bottom">Usage (Grid Items): <code class="language-html">&lt;div data-c-padding=&quot;MEDIA(XOFY)&quot;&gt;&lt;/div&gt;</code></p>
@@ -1496,25 +1537,27 @@ invisible</code></pre>
             data-c-alert="information"
             data-c-radius="rounded"
             data-c-padding="half"
-            role="alert"
-        >
-            <span
-                data-c-margin="bottom(quarter)"
-                data-c-heading="h5"
-                data-c-font-weight="bold"
-            >
-                <i
-                    aria-hidden="true"
-                    class="material-icons">
-                    stars
-                </i>
-                Optional Alert Title
-            </span>
-
-            <p>
-                This is a sample informative alert. These alerts are used to display
-                non-critical information to the user.
-            </p>
+            role="alert">
+            <div>
+                <span
+                    data-c-margin="bottom(quarter)"
+                    data-c-heading="h5"
+                    data-c-font-weight="bold">
+                    <i
+                        aria-hidden="true"
+                        class="material-icons">
+                        stars
+                    </i>
+                    Optional Alert Title
+                </span>
+                <p>
+                    This is a sample informative alert. These alerts are used to display
+                    non-critical information to the user.
+                </p>
+            </div>
+            <button data-c-alert="close-trigger">
+                <i class="material-icons">close</i>
+            </button>
         </div>
     </div>
     <div data-c-grid-item="tl(1of3)">
@@ -1522,25 +1565,24 @@ invisible</code></pre>
             data-c-alert="warning"
             data-c-radius="rounded"
             data-c-padding="half"
-            role="alert"
-        >
-            <span
-                data-c-margin="bottom(quarter)"
-                data-c-heading="h5"
-                data-c-font-weight="bold"
-            >
-                <i
-                    aria-hidden="true"
-                    class="material-icons">
-                    info
-                </i>
-                Optional Alert Title
-            </span>
-
-            <p>
-                This is a sample warning alert. These alerts are used to display user
-                interface warnings and system alerts.
-            </p>
+            role="alert">
+            <div>
+                <span
+                    data-c-margin="bottom(quarter)"
+                    data-c-heading="h5"
+                    data-c-font-weight="bold">
+                    <i
+                        aria-hidden="true"
+                        class="material-icons">
+                        info
+                    </i>
+                    Optional Alert Title
+                </span>
+                <p>
+                    This is a sample warning alert. These alerts are used to display user
+                    interface warnings and system alerts.
+                </p>
+            </div>
         </div>
     </div>
     <div data-c-grid-item="tl(1of3)">
@@ -1548,25 +1590,18 @@ invisible</code></pre>
             data-c-alert="error"
             data-c-radius="rounded"
             data-c-padding="half"
-            role="alert"
-        >
-            <span
-                data-c-margin="bottom(quarter)"
-                data-c-heading="h5"
-                data-c-font-weight="bold"
-            >
-                <i
-                    aria-hidden="true"
-                    class="material-icons">
-                    report_problem
+            role="alert">
+            <div>
+                <p>
+                    This is a sample error alert. These alerts are used to display critical
+                    system and form errors.
+                </p>
+            </div>
+            <button data-c-alert="close-trigger">
+                <i class="material-icons">
+                    close
                 </i>
-                Optional Alert Title
-            </span>
-
-            <p>
-                This is a sample error alert. These alerts are used to display critical
-                system and form errors.
-            </p>
+            </button>
         </div>
     </div>
 </div>
@@ -1622,21 +1657,27 @@ invisible</code></pre>
     data-c-radius=&quot;rounded&quot;
     data-c-padding=&quot;half&quot;
     role=&quot;alert&quot;&gt;
+    &lt;div&gt;
     &lt;!-- This title/icon span is optional. --&gt;
-    &lt;span
-        data-c-margin=&quot;bottom(quarter)&quot;
-        data-c-heading=&quot;h5&quot;
-        data-c-font-weight=&quot;bold&quot;&gt;
-        &lt;i
-            aria-hidden=&quot;true&quot;
-            class=&quot;material-icons&quot;&gt;
-            report_problem
-        &lt;/i&gt;
-        &lt;!-- Alert Title Here --&gt;
-    &lt;/span&gt;
-    &lt;p&gt;
-        &lt;!-- Alert Content Here --&gt;
-    &lt;/p&gt;
+        &lt;span
+            data-c-margin=&quot;bottom(quarter)&quot;
+            data-c-heading=&quot;h5&quot;
+            data-c-font-weight=&quot;bold&quot;&gt;
+            &lt;i
+                aria-hidden=&quot;true&quot;
+                class=&quot;material-icons&quot;&gt;
+                report_problem
+            &lt;/i&gt;
+            &lt;!-- Alert Title Here --&gt;
+        &lt;/span&gt;
+        &lt;p&gt;
+            &lt;!-- Alert Content Here --&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;!-- This optional close trigger will remove the element from the DOM. You&#039;ll need to manually add events if you need it to persist or perform further action. --&gt;
+    &lt;button data-c-alert=&quot;close-trigger&quot;&gt;
+        &lt;i class=&quot;material-icons&quot;&gt;close&lt;/i&gt;
+    &lt;/button&gt;
 &lt;/div&gt;
 </code></pre>
             
@@ -2488,7 +2529,216 @@ invisible</code></pre>
         data-c-padding="right(normal) left(normal)">
         <div data-c-padding="bottom(normal)">
             
-                <pre><code class="language-twig"></code></pre>
+                <pre><code class="language-twig">&lt;!-- Modify the data-c-button value. --&gt;
+&lt;button
+    data-c-button=&quot;solid(stop)&quot;
+    type=&quot;button&quot;&gt;
+    &lt;!-- Button Text Here --&gt;
+&lt;/button&gt;</code></pre>
+            
+            
+        </div>
+    </div>
+</div>
+
+</div>
+<h3
+    data-c-font-size="h3"
+    data-c-color="c2"
+    data-c-margin="top(double) bottom(normal)">
+    Accessibility
+</h3>
+<p>Coming Soon!</p>
+                </div>
+
+                <!-- Carousels ========================================= -->
+                <a id="carousels"></a>
+                <div data-c-background="black(90)">
+                    <div data-c-container="full">
+                        <h2
+                            data-c-font-size="h2"
+                            data-c-colour="white"
+                            data-c-padding="top(normal) bottom(normal)">
+                            Carousels
+                        </h2>
+                    </div>
+                </div>
+                
+                
+                <div 
+                    data-c-container="full"
+                    data-c-padding="top(double) bottom(double)">
+                    <h3
+    data-c-font-size="h3"
+    data-c-color="c2"
+    data-c-margin="bottom(normal)">
+    Description
+</h3>
+<p data-c-margin="bottom(normal)">Coming Soon!</p>
+<h3
+    data-c-font-size="h3"
+    data-c-color="c2"
+    data-c-margin="top(double) bottom(normal)">
+    Examples
+</h3>
+<div
+    data-c-carousel="content"
+    data-slick='{"slidesToShow": 1, "dots": true}'>
+    <div
+        data-c-carousel="item"
+        style="background-image:url('https://images.unsplash.com/photo-1547810689-3c16713a7a3c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80');">
+        <div
+            data-c-padding="normal"
+            data-c-background="black(100)"
+            data-c-margin="top(triple) bottom(triple)">
+            <h5
+                data-c-heading="h5"
+                data-c-margin="bottom(half)"
+                data-c-font-weight="bold"
+                data-c-colour="white">
+                Optional Slide Title
+            </h5>
+            <p data-c-colour="white">
+                Lorem ipsum dolor sit amet,
+                <a href="#">consectetur adipiscing elit</a>, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+        </div>
+    </div>
+    <div
+        data-c-carousel="item"
+        style="background-image:url('https://images.unsplash.com/photo-1547700784-b849e5a332ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80');">
+        <div
+            data-c-padding="normal"
+            data-c-background="black(100)"
+            data-c-margin="top(triple) bottom(triple)">
+            <h5
+                data-c-heading="h5"
+                data-c-margin="bottom(half)"
+                data-c-font-weight="bold"
+                data-c-colour="white">
+                Optional Slide Title
+            </h5>
+            <p data-c-colour="white">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                lectus arcu bibendum at varius vel pharetra. Aenean vel elit
+                scelerisque mauris pellentesque pulvinar pellentesque habitant
+                morbi. Viverra suspendisse potenti nullam ac tortor vitae purus
+                faucibus.
+            </p>
+        </div>
+    </div>
+    <div
+        data-c-carousel="item"
+        style="background-image:url('https://images.unsplash.com/photo-1547651619-238e04d07889?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=737&q=80');">
+        <div
+            data-c-padding="normal"
+            data-c-background="black(100)"
+            data-c-margin="top(triple) bottom(triple)">
+            <h5
+                data-c-heading="h5"
+                data-c-margin="bottom(half)"
+                data-c-font-weight="bold"
+                data-c-colour="white">
+                Optional Slide Title
+            </h5>
+            <p data-c-colour="white">
+                Lorem ipsum dolor sit amet,
+                <a href="#">consectetur adipiscing elit</a>, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+        </div>
+    </div>
+</div>
+<div data-c-margin="top(triple)">
+    <div data-c-carousel="image" data-slick='{"slidesToShow": 1, "dots": true}'>
+        <div
+            data-c-carousel="item"
+            style="background-image:url('https://images.unsplash.com/photo-1547665979-bb809517610d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80');"
+        ></div>
+        <div
+            data-c-carousel="item"
+            style="background-image:url('https://images.unsplash.com/photo-1547779235-41ae109f3bad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=564&q=80');"
+        ></div>
+        <div
+            data-c-carousel="item"
+            style="background-image:url('https://images.unsplash.com/photo-1547816399-a6810d86e2dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80');"
+        ></div>
+    </div>
+</div>
+<h3
+    data-c-font-size="h3"
+    data-c-color="c2"
+    data-c-margin="top(double) bottom(normal)">
+    Code Snippet
+</h3>
+<div data-c-accordion="group">
+    <div
+    data-c-accordion="object"
+    data-c-background="white(100)">
+    <button
+        aria-expanded="false"
+        data-c-accordion="trigger"
+        data-c-padding="right"
+        tabindex="0"
+        type="button">
+        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
+            <span data-c-heading="h4" data-c-font-weight="bold">
+                View Carousel Code
+            </span>
+            
+        </div>
+        <span data-c-visibility="invisible">
+            Click to view...
+        </span>
+        <i
+            aria-hidden="true"
+            class="material-icons"
+            data-c-accordion="icon--add"
+            data-c-colour="black">
+            add_circle
+        </i>
+        <i
+            aria-hidden="true"
+            class="material-icons"
+            data-c-accordion="icon--remove"
+            data-c-colour="black">
+            remove_circle
+        </i>
+    </button>
+    <div
+        aria-hidden="true"
+        data-c-accordion="content"
+        data-c-padding="right(normal) left(normal)">
+        <div data-c-padding="bottom(normal)">
+            
+                <pre><code class="language-twig">&lt;div
+    data-c-carousel=&quot;content&quot;
+    data-slick=&#039;{&quot;slidesToShow&quot;: 1, &quot;dots&quot;: true}&#039;&gt;
+    &lt;!-- Repeat items as necessary. --&gt;
+    &lt;div
+        data-c-carousel=&quot;item&quot;
+        style=&quot;background-image: url(&#039;URL&#039;);&quot;&gt;
+        &lt;!-- This div is the content wrapper. --&gt;
+        &lt;div
+            data-c-padding=&quot;normal&quot;
+            data-c-background=&quot;black(100)&quot;
+            data-c-margin=&quot;top(triple) bottom(triple)&quot;&gt;
+            &lt;h5
+                data-c-heading=&quot;h5&quot;
+                data-c-margin=&quot;bottom(half)&quot;
+                data-c-font-weight=&quot;bold&quot;
+                data-c-colour=&quot;white&quot;&gt;
+                &lt;!-- Optional Slide Title Here --&gt;
+            &lt;/h5&gt;
+            &lt;p data-c-colour=&quot;white&quot;&gt;
+                &lt;!-- Slide Content Here --&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
             
             
         </div>
@@ -2535,7 +2785,7 @@ invisible</code></pre>
     data-c-margin="top(double) bottom(normal)">
     Examples
 </h3>
-<div data-c-alignment="center">
+<div data-c-alignment="base(centre) tl(left)">
     <button
         data-c-button="solid(c1)"
         data-c-radius="rounded"
@@ -4114,6 +4364,8 @@ invisible</code></pre>
             </div>
 
         </div>
+
+        <script src="js/clone/clone.js"></script>
 
         <script src="js/app.min.js"></script>
 

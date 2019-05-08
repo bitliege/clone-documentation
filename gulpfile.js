@@ -121,7 +121,7 @@ const twig = require('gulp-twig');
 
     // Minification
     function distCloneJS() {
-        return src('cache/css/clone/*.js')
+        return src('cache/js/clone/*.js')
         .pipe(dest('dist/js/clone'));
     }
     function distPrismCSS() {

@@ -12,15 +12,35 @@
         data-c-margin="top(double) bottom(normal)">
         CDN (No Theme)
     </h4>
-    <div data-c-margin="bottom(normal)">
-        <img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/joshdrink/clone-framework/dist/css/clone.min.css.svg?label=CDN%20CSS">
-        <img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/joshdrink/clone-framework/dist/js/clone.min.js.svg?label=CDN%20JS">
-    </div>
     <p data-c-margin="bottom">If you want to get Clone up and running and have no interest in creating your own theme, you can include Clone's CSS and JavaScript files as linked resources. This allows for a quick and easy way to generate prototypes using Clone's native theme (See <a href="#about-themeing">Themeing</a> for more information on Maple, Clone's default theme).</p>
-    <div data-c-margin="bottom(half)">
-        <pre><code class="language-twig">{% filter escape %}<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/clone-framework@2.2.6/dist/css/clone.min.css">{% endfilter %}</code></pre>
+    <h5
+        data-c-font-size="h5"
+        data-c-font-weight="bold"
+        data-c-margin="top(double) bottom(normal)">
+        With Grid
+    </h5>
+    <div data-c-margin="bottom(normal)">
+        <img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/joshdrink/clone-framework/dist/css/gzip/clone.min.css.gz.svg?label=CSS%20%28minified%2C%20gzipped%29">
+        <img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/joshdrink/clone-framework/dist/js/gzip/clone.min.js.gz.svg?label=JS%20%28minified%2C%20gzipped%29">
     </div>
-    <pre><code class="language-twig">{% filter escape %}<script src="https://cdn.jsdelivr.net/npm/clone-framework@2.2.6/dist/js/clone.min.js"></script>{% endfilter %}</code></pre>
+    <div data-c-margin="bottom(half)">
+        <pre><code class="language-twig">{% filter escape %}<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/clone-framework@2.2.9/dist/css/clone.min.css">{% endfilter %}</code></pre>
+    </div>
+    <pre><code class="language-twig">{% filter escape %}<script src="https://cdn.jsdelivr.net/npm/clone-framework@2.2.9/dist/js/clone.min.js"></script>{% endfilter %}</code></pre>
+    <h5
+        data-c-font-size="h5"
+        data-c-font-weight="bold"
+        data-c-margin="top(double) bottom(normal)">
+        No Grid
+    </h5>
+    <div data-c-margin="bottom(normal)">
+        <img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/joshdrink/clone-framework/dist/css/gzip/clone-gridless.min.css.gz.svg?label=CSS%20%28minified%2C%20gzipped%29">
+        <img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/joshdrink/clone-framework/dist/js/gzip/clone.min.js.gz.svg?label=JS%20%28minified%2C%20gzipped%29">
+    </div>
+    <div data-c-margin="bottom(half)">
+        <pre><code class="language-twig">{% filter escape %}<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/clone-framework@2.2.9/dist/css/clone-gridless.min.css">{% endfilter %}</code></pre>
+    </div>
+    <pre><code class="language-twig">{% filter escape %}<script src="https://cdn.jsdelivr.net/npm/clone-framework@2.2.9/dist/js/clone.min.js"></script>{% endfilter %}</code></pre>
     <h4
         data-c-font-size="h4"
         data-c-margin="top(double) bottom(normal)">
@@ -47,5 +67,5 @@
     <p data-c-margin="top(normal) bottom(normal)">
         For now, it is also required that Clone's JavaScript file be imported using the CDN.
     </p>
-    <pre><code class="language-twig">{% filter escape %}<script src="https://cdn.jsdelivr.net/npm/clone-framework@2.2.6/dist/js/clone.min.js"></script>{% endfilter %}</code></pre>
+    <pre><code class="language-twig">{% filter escape %}<script src="https://cdn.jsdelivr.net/npm/clone-framework@2.2.9/dist/js/clone.min.js"></script>{% endfilter %}</code></pre>
 </div>

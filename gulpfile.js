@@ -116,32 +116,32 @@ const twig = require('gulp-twig');
 
     function moveImages() {
         return src('cache/img/*')
-        .pipe(dest('dist/img'));
+        .pipe(dest('docs/img'));
     }
 
     // Minification
     function distCloneJS() {
         return src('cache/js/clone/*.js')
-        .pipe(dest('dist/js/clone'));
+        .pipe(dest('docs/js/clone'));
     }
     function distPrismCSS() {
         return src('cache/css/prism/*.css')
-        .pipe(dest('dist/css/prism'));
+        .pipe(dest('docs/css/prism'));
     }
     function distPrismJS() {
         return src('cache/js/prism/*.js')
-        .pipe(dest('dist/js/prism'));
+        .pipe(dest('docs/js/prism'));
     }
     function distFavicons() {
         return src('app/favicons/*')
-        .pipe(dest('dist'));
+        .pipe(dest('docs'));
     }
     function distribute() {
         return src('cache/*.html')
         .pipe(useref())
         .pipe(gulpIf('*.js', uglify()))
         .pipe(gulpIf('*.css', cssnano()))
-        .pipe(dest('dist'))
+        .pipe(dest('docs'))
         .pipe(browsersync.reload({
             stream: true
         }));
@@ -149,7 +149,7 @@ const twig = require('gulp-twig');
 
     // Dist Removal
     function cleanDist() {
-        return del('dist');
+        return del('docs');
     }
 
     // Watch

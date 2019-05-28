@@ -71,103 +71,24 @@
             </div>
         </div>
 
-        <div
-            class="clone-sidebar"
-            data-c-background="black(100)">
-            <div data-c-padding="top(triple) right(double) bottom(triple) left(double)">
-                <img src="img/clone-white.svg">
-            </div>
-            <div data-c-padding="right(double) left(double)">
-                <ul data-c-colour="white">
-                    <li>
-                        <a href="#about">About Clone</a>
-                        <ul data-c-colour="white">
-                            <li><a href="#about-installation">Installation</a></li>
-                            <li><a href="#about-usage">Using Clone</a></li>
-                            <li><a href="#about-themeing">Themeing</a></li>
-                            <li><a href="#about-contributing">Contributing</a></li>
-                        </ul>
-                    </li>
-                    <li>Menus (Coming Soon)</li>
-                    <li><a href="#flexbox-grid">Flexbox Grid</a></li>
-                    <li>
-                        <a href="#utilities">Utility Attributes</a>
-                        <ul data-c-colour="white">
-                            <li><a href="#util-alignment">Alignment</a></li>
-                            <li><a href="#util-backgrounds">Backgrounds</a></li>
-                            <li><a href="#util-borders">Borders</a></li>
-                            <li><a href="#util-containers">Containers</a></li>
-                            <li><a href="#util-fonts">Fonts &amp; Font Styles</a></li>
-                            <li><a href="#util-whitespace">Margins &amp; Padding</a></li>
-                            <li><a href="#util-overlays">Overlays</a></li>
-                            <li><a href="#util-radius">Radius</a></li>
-                            <li><a href="#util-visibility">Visibility</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <p>Components</p>
-                        <ul data-c-colour="white">
-                            <li><a href="#accordions">Accordions</a></li>
-                            <li><a href="#alerts">Alerts</a></li>
-                            <li><a href="#back-to-top">Back-to-top Links</a></li>
-                            <li><a href="#blockquotes">Blockquotes</a></li>
-                            <li><a href="#breadcrumbs">Breadcrumbs</a></li>
-                            <li><a href="#buttons">Buttons</a></li>
-                            <li><a href="#carousels">Carousels</a></li>
-                            <li><a href="#dialogs">Dialogs</a></li>
-                            <li><a href="#iframes">iFrames</a></li>
-                            <li><a href="#inputs">Inputs</a></li>
-                            <li><a href="#pullquotes">Pullquotes</a></li>
-                            <li><a href="#skip-to-content">Skip-to-content Links</a></li>
-                            <li><a href="#tables">Tables</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        {% include "components/menu.html" %}
 
         <div data-c-grid>
 
-            <div data-c-grid-item="tl(1of5)">
-
-            </div>
+            <!-- This serves the purpose of pushing the body content over so that the fixed menu has room (it is of equivalent width to this grid item). -->
+            <div data-c-grid-item="tl(1of5)"></div>
 
             <div data-c-grid-item="tl(4of5)">
 
                 <a id="pageTop"></a>
+                <a id="home"></a>
 
-                <!-- Hero ============================================== -->
-                <div class="clone-hero">
-                    <div 
-                        data-c-alignment="base(centre) tl(left)"
-                        data-c-container="full">
-                        <h1
-                            data-c-font-size="h1"
-                            data-c-font-weight="bold"
-                            data-c-margin="bottom(normal)">
-                            Welcome to Clone (beta)
-                        </h1>
-                        <div data-c-margin="bottom(normal)">
-                            <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/joshdrink/clone-framework.svg">
-                        </div>
-                        <p data-c-margin="bottom(normal)">Clone is a simple design framework for building websites.</p>
-                        <p data-c-margin="bottom(normal)">It leverages the power of HTML5 data attributes to provide easy-to-use and customizable properties. Clone can be used as is or it can be imported into your project to allow for deep customization through the power of Sass.</p>
-                        <p data-c-margin="bottom">
-                            Browser Support: IE11, Edge, Chrome, Firefox, Safari
-                        </p>
-                        <a
-                            data-c-button="solid(c1)"
-                            data-c-radius="rounded"
-                            href="#content"
-                            title="View the About Clone section.">
-                            Get Started
-                        </a>
-                    </div>
-                </div>
+                <!-- Hero ================================================== -->
+                {% include "components/hero.html" %}
 
                 <a id="content"></a>
 
-                <!-- About ============================================= -->
+                <!-- About ================================================= -->
                 <a id="about"></a>
                 <div data-c-background="black(90)">
                     <div data-c-container="full">
@@ -188,25 +109,27 @@
                     {% include "views/about/contributing.html" %}
                 </div>
 
-                <!-- Flexbox Grid ====================================== -->
-                <a id="flexbox-grid"></a>
+                <!-- Essentials ============================================ -->
+                <a id="essentials"></a>
                 <div data-c-background="black(90)">
                     <div data-c-container="full">
                         <h2
                             data-c-font-size="h2"
                             data-c-colour="white"
                             data-c-padding="top(normal) bottom(normal)">
-                            Flexbox Grid
+                            Essentials
                         </h2>
                     </div>
                 </div>
                 <div 
                     data-c-container="full"
                     data-c-padding="top(double) bottom(double)">
-                    {% include "views/grid.html" %}
+                    {% include "views/essentials/colour.html" %}
+                    {% include "views/essentials/grid.html" %}
+                    {% include "views/essentials/type.html" %}
                 </div>
 
-                <!-- Utilities ======================================== -->
+                <!-- Utilities ============================================= -->
                 <a id="utilities"></a>
                 <div data-c-background="black(90)">
                     <div data-c-container="full">
@@ -214,7 +137,7 @@
                             data-c-font-size="h2"
                             data-c-colour="white"
                             data-c-padding="top(normal) bottom(normal)">
-                            Utility Attributes
+                            Utilities
                         </h2>
                     </div>
                 </div>
@@ -232,445 +155,82 @@
                     {% include "views/utilities/visibility.html" %}
                 </div>
 
-                <!-- Accordions ======================================== -->
-                <a id="accordions"></a>
-                <div data-c-background="black(90)">
-                    <div data-c-container="full">
-                        <h2
-                            data-c-font-size="h2"
-                            data-c-colour="white"
-                            data-c-padding="top(normal) bottom(normal)">
-                            Accordions
-                        </h2>
-                    </div>
-                </div>
-                {% set accordionDesc = 'Coming Soon!' %}
-                {% set accordionAcc = 'Coming Soon!' %}
-                <div 
-                    data-c-container="full"
-                    data-c-padding="top(double) bottom(double)">
+                <!-- Components ============================================ -->
+                    <a id="components"></a>
+                    <!-- Accordions ---------------------------------------- -->
+                    {% set accordionDesc = "Accordions are a great way to arrange and display a high volume of categoric information. They provide the opportunity to include a title, subtitle, and content. The content area is flexible and is a great way to display copy, media, code, etc. It's possible to change the colour of the trigger using the background attribute. Alternatively, you can set the alt property on the accordion group to automatically alternate accordion colours between white and the variable you've selected." %}
+                    {% set accordionAcc = 'Coming Soon!' %}
                     {% include "views/components/layout.html" with {'component': 'accordion', 'description': accordionDesc, 'accessibility': accordionAcc} %}
-                </div>
-
-                <!-- Alerts ============================================ -->
-                <a id="alerts"></a>
-                <div data-c-background="black(90)">
-                    <div data-c-container="full">
-                        <h2
-                            data-c-font-size="h2"
-                            data-c-colour="white"
-                            data-c-padding="top(normal) bottom(normal)">
-                            Alerts
-                        </h2>
-                    </div>
-                </div>
-                {% set alertDesc = 'Coming Soon!' %}
-                {% set alertAcc = 'Coming Soon!' %}
-                <div 
-                    data-c-container="full"
-                    data-c-padding="top(double) bottom(double)">
+                    <!-- Alerts -------------------------------------------- -->
+                    {% set alertDesc = 'Coming Soon!' %}
+                    {% set alertAcc = 'Coming Soon!' %}
                     {% include "views/components/layout.html" with {'component': 'alert', 'description': alertDesc, 'accessibility': alertAcc} %}
-                </div>
-
-                <!-- Back-to-Top Links ================================= -->
-                <a id="back-to-top"></a>
-                <div data-c-background="black(90)">
-                    <div data-c-container="full">
-                        <h2
-                            data-c-font-size="h2"
-                            data-c-colour="white"
-                            data-c-padding="top(normal) bottom(normal)">
-                            Back-to-top Links
-                        </h2>
-                    </div>
-                </div>
-                {% set bttlDesc = 'Coming Soon!' %}
-                {% set bttlAcc = 'Coming Soon!' %}
-                <div 
-                    data-c-container="full"
-                    data-c-padding="top(double) bottom(double)">
+                    <!-- Back-to-Top Links --------------------------------- -->
+                    {% set bttlDesc = 'Coming Soon!' %}
+                    {% set bttlAcc = 'Coming Soon!' %}
                     {% include "views/components/layout.html" with {'component': 'back-to-top-link', 'description': bttlDesc, 'accessibility': bttlAcc} %}
-                </div>
-
-                <!-- Blockquotes ======================================= -->
-                <a id="blockquotes"></a>
-                <div data-c-background="black(90)">
-                    <div data-c-container="full">
-                        <h2
-                            data-c-font-size="h2"
-                            data-c-colour="white"
-                            data-c-padding="top(normal) bottom(normal)">
-                            Blockquotes
-                        </h2>
-                    </div>
-                </div>
-                {% set blockquoteDesc = 'Coming Soon!' %}
-                {% set blockquoteAcc = 'Coming Soon!' %}
-                <div 
-                    data-c-container="full"
-                    data-c-padding="top(double) bottom(double)">
+                    <!-- Blockquotes --------------------------------------- -->
+                    {% set blockquoteDesc = 'Coming Soon!' %}
+                    {% set blockquoteAcc = 'Coming Soon!' %}
                     {% include "views/components/layout.html" with {'component': 'blockquote', 'description': blockquoteDesc, 'accessibility': blockquoteAcc} %}
-                </div>
-
-                <!-- Breadcrumbs ======================================= -->
-                <a id="breadcrumbs"></a>
-                <div data-c-background="black(90)">
-                    <div data-c-container="full">
-                        <h2
-                            data-c-font-size="h2"
-                            data-c-colour="white"
-                            data-c-padding="top(normal) bottom(normal)">
-                            Breadcrumbs
-                        </h2>
-                    </div>
-                </div>
-                {% set breadcrumbDesc = 'Coming Soon!' %}
-                {% set breadcrumbAcc = 'Coming Soon!' %}
-                <div 
-                    data-c-container="full"
-                    data-c-padding="top(double) bottom(double)">
+                    <!-- Breadcrumbs --------------------------------------- -->
+                    {% set breadcrumbDesc = 'Coming Soon!' %}
+                    {% set breadcrumbAcc = 'Coming Soon!' %}
                     {% include "views/components/layout.html" with {'component': 'breadcrumb', 'description': breadcrumbDesc, 'accessibility': breadcrumbAcc} %}
-                </div>
-
-                <!-- Buttons =========================================== -->
-                <a id="buttons"></a>
-                <div data-c-background="black(90)">
-                    <div data-c-container="full">
-                        <h2
-                            data-c-font-size="h2"
-                            data-c-colour="white"
-                            data-c-padding="top(normal) bottom(normal)">
-                            Buttons
-                        </h2>
-                    </div>
-                </div>
-                {% set buttonDesc = 'Coming Soon!' %}
-                {% set buttonAcc = 'Coming Soon!' %}
-                <div 
-                    data-c-container="full"
-                    data-c-padding="top(double) bottom(double)">
+                    <!-- Buttons ------------------------------------------- -->
+                    {% set buttonDesc = 'Coming Soon!' %}
+                    {% set buttonAcc = 'Coming Soon!' %}
                     {% include "views/components/layout.html" with {'component': 'button', 'description': buttonDesc, 'accessibility': buttonAcc} %}
-                </div>
-
-                <!-- Carousels ========================================= -->
-                <a id="carousels"></a>
-                <div data-c-background="black(90)">
-                    <div data-c-container="full">
-                        <h2
-                            data-c-font-size="h2"
-                            data-c-colour="white"
-                            data-c-padding="top(normal) bottom(normal)">
-                            Carousels
-                        </h2>
-                    </div>
-                </div>
-                {% set carouselDesc = 'Coming Soon!' %}
-                {% set carouselAcc = 'Coming Soon!' %}
-                <div 
-                    data-c-container="full"
-                    data-c-padding="top(double) bottom(double)">
+                    <!-- Carousels ----------------------------------------- -->
+                    {% set carouselDesc = 'Coming Soon!' %}
+                    {% set carouselAcc = 'Coming Soon!' %}
                     {% include "views/components/layout.html" with {'component': 'carousel', 'description': carouselDesc, 'accessibility': carouselAcc} %}
-                </div>
-
-                <!-- Dialogues ========================================= -->
-                <a id="dialogs"></a>
-                <div data-c-background="black(90)">
-                    <div data-c-container="full">
-                        <h2
-                            data-c-font-size="h2"
-                            data-c-colour="white"
-                            data-c-padding="top(normal) bottom(normal)">
-                            Dialogs
-                        </h2>
-                    </div>
-                </div>
-                {% set dialogDesc = 'Coming Soon!' %}
-                {% set dialogAcc = 'Coming Soon!' %}
-                <div 
-                    data-c-container="full"
-                    data-c-padding="top(double) bottom(double)">
+                    <!-- Dialogs ------------------------------------------- -->
+                    {% set dialogDesc = 'Coming Soon!' %}
+                    {% set dialogAcc = 'Coming Soon!' %}
                     {% include "views/components/layout.html" with {'component': 'dialog', 'description': dialogDesc, 'accessibility': dialogAcc} %}
-                </div>
-
-                <!-- iframes =========================================== -->
-                <a id="iframes"></a>
-                <div data-c-background="black(90)">
-                    <div data-c-container="full">
-                        <h2
-                            data-c-font-size="h2"
-                            data-c-colour="white"
-                            data-c-padding="top(normal) bottom(normal)">
-                            iFrames
-                        </h2>
-                    </div>
-                </div>
-                {% set iframeDesc = 'Coming Soon!' %}
-                {% set iframeAcc = 'Coming Soon!' %}
-                <div 
-                    data-c-container="full"
-                    data-c-padding="top(double) bottom(double)">
+                    <!-- iframes ------------------------------------------- -->
+                    {% set iframeDesc = 'Coming Soon!' %}
+                    {% set iframeAcc = 'Coming Soon!' %}
                     {% include "views/components/layout.html" with {'component': 'iframe', 'description': iframeDesc, 'accessibility': iframeAcc} %}
-                </div>
-
-                <!-- Inputs ============================================ -->
-                <a id="inputs"></a>
-                <div data-c-background="black(90)">
-                    <div data-c-container="full">
-                        <h2
-                            data-c-font-size="h2"
-                            data-c-colour="white"
-                            data-c-padding="top(normal) bottom(normal)">
-                            Inputs
-                        </h2>
+                    <!-- Inputs -------------------------------------------- -->
+                    <a id="inputs"></a>
+                    <div data-c-background="black(90)">
+                        <div data-c-container="full">
+                            <h2
+                                data-c-font-size="h2"
+                                data-c-colour="white"
+                                data-c-padding="top(normal) bottom(normal)">
+                                Inputs
+                            </h2>
+                        </div>
                     </div>
-                </div>
-                <div 
-                    data-c-container="full"
-                    data-c-padding="top(double) bottom(double)">
-
-                    <!-- Checkboxes -------------------------------------------- -->
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-colour="c2"
-                        data-c-margin="bottom(half)">
-                        Checkboxes
-                    </h3>
-
-                    <form
-                        data-c-grid="gutter"
-                        data-c-padding="bottom">
-                        {% include "components/inputs/checkboxes.html" %}
-                    </form>
-
-                    <!-- Dates ------------------------------------------------- -->
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-colour="c2"
-                        data-c-margin="bottom(half)">
-                        Dates
-                    </h3>
-
-                    <form
-                        data-c-grid="gutter"
-                        data-c-padding="bottom">
-                        {% include "components/inputs/dates.html" %}
-                    </form>
-
-                    <!-- Dropdowns --------------------------------------------- -->
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-colour="c2"
-                        data-c-margin="bottom(half)">
-                        Dropdowns
-                    </h3>
-
-                    <form
-                        data-c-grid="gutter"
-                        data-c-padding="bottom">
-                        {% include "components/inputs/dropdowns.html" %}
-                    </form>
-
-                    <!-- Emails ------------------------------------------------ -->
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-colour="c2"
-                        data-c-margin="bottom(half)">
-                        Emails
-                    </h3>
-
-                    <form
-                        data-c-grid="gutter"
-                        data-c-padding="bottom">
-                        {% include "components/inputs/emails.html" %}
-                    </form>
-
-                    <!-- Numbers ----------------------------------------------- -->
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-colour="c2"
-                        data-c-margin="bottom(half)">
-                        Numbers
-                    </h3>
-
-                    <form
-                        data-c-grid="gutter"
-                        data-c-padding="bottom">
-                        {% include "components/inputs/numbers.html" %}
-                    </form>
-
-                    <!-- Passwords --------------------------------------------- -->
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-colour="c2"
-                        data-c-margin="bottom(half)">
-                        Passwords
-                    </h3>
-
-                    <form
-                        data-c-grid="gutter"
-                        data-c-padding="bottom">
-                        {% include "components/inputs/passwords.html" %}
-                    </form>
-
-                    <!-- Radio Inputs ------------------------------------------ -->
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-colour="c2"
-                        data-c-margin="bottom(half)">
-                        Radio Inputs
-                    </h3>
-
-                    <form
-                        data-c-grid="gutter"
-                        data-c-padding="bottom">
-                        {% include "components/inputs/radio.html" %}
-                    </form>
-
-                    <!-- Ranges ------------------------------------------------ -->
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-colour="c2"
-                        data-c-margin="bottom(half)">
-                        Ranges
-                    </h3>
-
-                    <form
-                        data-c-grid="gutter"
-                        data-c-padding="bottom">
-                        <p data-c-grid-item="base(1of1)">Coming Soon</p>
-                        <!-- {% include "components/inputs/ranges.html" %} -->
-                    </form>
-
-                    <!-- Text -------------------------------------------------- -->
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-colour="c2"
-                        data-c-margin="bottom(half)">
-                        Text Inputs
-                    </h3>
-
-                    <form
-                        data-c-grid="gutter"
-                        data-c-padding="bottom">
-                        {% include "components/inputs/text.html" %}
-                    </form>
-
-                    <!-- Input w Button ---------------------------------------- -->
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-colour="c2"
-                        data-c-margin="bottom(half)">
-                        Text w/ Button
-                    </h3>
-
-                    <form
-                        data-c-grid="gutter"
-                        data-c-padding="bottom">
-                        {% include "components/inputs/with-button.html" %}
-                    </form>
-
-                    <!-- Textareas --------------------------------------------- -->
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-colour="c2"
-                        data-c-margin="bottom(half)">
-                        Textareas
-                    </h3>
-
-                    <form
-                        data-c-grid="gutter"
-                        data-c-padding="bottom">
-                        {% include "components/inputs/textarea.html" %}
-                    </form>
-
-                    <!-- Uploads ----------------------------------------------- -->
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-colour="c2"
-                        data-c-margin="bottom(half)">
-                        Uploads
-                    </h3>
-
-                    <form
-                        data-c-grid="gutter"
-                        data-c-padding="bottom">
-                        <p data-c-grid-item="base(1of1)">Coming Soon</p>
-                        <!-- {% include "components/inputs/uploads.html" %} -->
-                    </form>
-
-                    <!-- URLs -------------------------------------------------- -->
-                    <h3
-                        data-c-font-size="h3"
-                        data-c-colour="c2"
-                        data-c-margin="bottom(half)">
-                        URLs
-                    </h3>
-
-                    <form data-c-grid="gutter">
-                        {% include "components/inputs/urls.html" %}
-                    </form>
-
-                </div>
-
-                <!-- Pullquotes ======================================== -->
-                <a id="pullquotes"></a>
-                <div data-c-background="black(90)">
-                    <div data-c-container="full">
-                        <h2
-                            data-c-font-size="h2"
-                            data-c-colour="white"
-                            data-c-padding="top(normal) bottom(normal)">
-                            Pullquotes
-                        </h2>
+                    <div>
+                        {% include "views/components/layout-inputs.html" with {'component': 'input-checkbox', 'title': 'Checkbox Input'} %}
+                        {% include "views/components/layout-inputs.html" with {'component': 'input-date', 'title': 'Date Input', 'alt': true} %}
+                        {% include "views/components/layout-inputs.html" with {'component': 'input-dropdown', 'title': 'Dropdown Input'} %}
+                        {% include "views/components/layout-inputs.html" with {'component': 'input-email', 'title': 'Email Input', 'alt': true} %}
+                        {% include "views/components/layout-inputs.html" with {'component': 'input-number', 'title': 'Number Input'} %}
+                        {% include "views/components/layout-inputs.html" with {'component': 'input-password', 'title': 'Password Input', 'alt': true} %}
+                        {% include "views/components/layout-inputs.html" with {'component': 'input-radio', 'title': 'Radio Input'} %}
+                        {% include "views/components/layout-inputs.html" with {'component': 'input-text', 'title': 'Text Input', 'alt': true} %}
+                        {% include "views/components/layout-inputs.html" with {'component': 'input-textarea', 'title': 'Textarea Input'} %}
+                        {% include "views/components/layout-inputs.html" with {'component': 'input-with-button', 'title': 'Text Input with Button', 'alt': true} %}
+                        {% include "views/components/layout-inputs.html" with {'component': 'input-url', 'title': 'URL Input'} %}
                     </div>
-                </div>
-                {% set pullquoteDesc = 'Coming Soon!' %}
-                {% set pullquoteAcc = 'Coming Soon!' %}
-                <div 
-                    data-c-container="full"
-                    data-c-padding="top(double) bottom(double)">
+                    <!-- Menus --------------------------------------------- -->
+                    <!-- Pullquotes ---------------------------------------- -->
+                    {% set pullquoteDesc = 'Coming Soon!' %}
+                    {% set pullquoteAcc = 'Coming Soon!' %}
                     {% include "views/components/layout.html" with {'component': 'pullquote', 'description': pullquoteDesc, 'accessibility': pullquoteAcc} %}
-                </div>
-
-                <!-- Skip-to-content Links ============================= -->
-                <a id="skip-to-content"></a>
-                <div data-c-background="black(90)">
-                    <div data-c-container="full">
-                        <h2
-                            data-c-font-size="h2"
-                            data-c-colour="white"
-                            data-c-padding="top(normal) bottom(normal)">
-                            Skip-to-content Links
-                        </h2>
-                    </div>
-                </div>
-                {% set stcDesc = 'Coming Soon!' %}
-                {% set stcAcc = 'Coming Soon!' %}
-                <div 
-                    data-c-container="full"
-                    data-c-padding="top(double) bottom(double)">
-                    {% include "views/components/layout.html" with {'component': 'skip-to-content', 'description': stcDesc, 'accessibility': stcAcc} %}
-                </div>
-
-                <!-- Tables ============================================ -->
-                <a id="tables"></a>
-                <div data-c-background="black(90)">
-                    <div data-c-container="full">
-                        <h2
-                            data-c-font-size="h2"
-                            data-c-colour="white"
-                            data-c-padding="top(normal) bottom(normal)">
-                            Tables
-                        </h2>
-                    </div>
-                </div>
-                {% set tableDesc = 'Coming Soon!' %}
-                {% set tableAcc = 'Coming Soon!' %}
-                <div 
-                    data-c-container="full"
-                    data-c-padding="top(double) bottom(double)">
+                    <!-- Skip-to-content Links ----------------------------- -->
+                    {% set stcDesc = 'Coming Soon!' %}
+                    {% set stcAcc = 'Coming Soon!' %}
+                    {% include "views/components/layout.html" with {'component': 'skip-to-content-link', 'description': stcDesc, 'accessibility': stcAcc} %}
+                    <!-- Tables -------------------------------------------- -->
+                    {% set tableDesc = 'Coming Soon!' %}
+                    {% set tableAcc = 'Coming Soon!' %}
                     {% include "views/components/layout.html" with {'component': 'table', 'description': tableDesc, 'accessibility': tableAcc} %}
-                </div>
 
             </div>
 

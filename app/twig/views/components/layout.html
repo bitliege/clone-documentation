@@ -1,30 +1,59 @@
-<h3
-    data-c-font-size="h3"
-    data-c-color="c2"
-    data-c-margin="bottom(normal)">
-    Description
-</h3>
-<p data-c-margin="bottom(normal)">{{ description }}</p>
-<h3
-    data-c-font-size="h3"
-    data-c-color="c2"
-    data-c-margin="top(double) bottom(normal)">
-    Examples
-</h3>
-{% include "partials/" ~ component ~ ".html" %}
-<h3
-    data-c-font-size="h3"
-    data-c-color="c2"
-    data-c-margin="top(double) bottom(normal)">
-    Code Snippet
-</h3>
-<div data-c-accordion="group">
-    {% include "../../components/accordion.html" with {'title': 'View ' ~ component|title ~ ' Code', 'element': component} %}
+<a id="{{ component }}s"></a>
+<div data-c-background="black(90)">
+    <div data-c-container="full">
+        <h2
+            data-c-font-size="h2"
+            data-c-colour="white"
+            data-c-padding="top(normal) bottom(normal)">
+            {{ component|title }}s
+        </h2>
+    </div>
 </div>
-<h3
-    data-c-font-size="h3"
-    data-c-color="c2"
-    data-c-margin="top(double) bottom(normal)">
-    Accessibility
-</h3>
-<p>{{ accessibility }}</p>
+<div 
+    data-c-container="full"
+    data-c-padding="top(double) bottom(double)">
+    <h3
+        data-c-font-size="h3"
+        data-c-color="c1"
+        data-c-font-weight="600"
+        data-c-margin="bottom(normal)">
+        Description
+    </h3>
+    <p data-c-margin="bottom(normal)">{{ description }}</p>
+    <h3
+        data-c-font-size="h3"
+        data-c-color="c1"
+        data-c-font-weight="600"
+        data-c-margin="top(double) bottom(normal)">
+        Examples
+    </h3>
+    {% include "examples/" ~ component ~ ".html" %}
+    <h3
+        data-c-font-size="h3"
+        data-c-color="c1"
+        data-c-font-weight="600"
+        data-c-margin="top(double) bottom(normal)">
+        Code Snippet
+    </h3>
+    <div data-c-accordion="group">
+        {% include "../../components/accordion.html" with {'title': 'View ' ~ component|title ~ ' Code', 'element': component} %}
+    </div>
+    <h3
+        data-c-font-size="h3"
+        data-c-color="c1"
+        data-c-font-weight="600"
+        data-c-margin="top(double) bottom(normal)">
+        Code Explanation
+    </h3>
+    <div data-c-accordion="group">
+        {% include "../../components/accordion.html" with {'title': 'View ' ~ component|title ~ ' Code Explanation', 'explanation': component} %}
+    </div>
+    <h3
+        data-c-font-size="h3"
+        data-c-color="c1"
+        data-c-font-weight="600"
+        data-c-margin="top(double) bottom(normal)">
+        How {{ component|title }}s are Designed to be Accessible
+    </h3>
+    <p>{{ accessibility }}</p>
+</div>

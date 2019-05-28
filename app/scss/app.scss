@@ -5,75 +5,7 @@
 
 // =============================================================================
 
-$clone-font--sans: "Open Sans", sans-serif;
-$clone-font--serif: serif;
-$clone-font--script: "Euphoria Script", cursive;
-$clone-font--monospace: "Consolas", mono-space;
-
-$clone-font-default: $clone-font--sans;
-
-$clone-font-scale: 1.333;
-
-$clone-line-height: 1.5;
-
-// On Portrait Phone Devices, Media Queries exist at Tablet Landscape, and Desktop Large and are generated using the multiplier below.
-$clone-margin: 1rem;
-$clone-padding: 1rem;
-$clone-whitespace-multiplier: 1.25;
-
-$clone-grid-columns: 12;
-$clone-grid-gutter: $clone-padding;
-
-$clone-white: #FFFFFF;
-$clone-black: rgba(20, 20, 25, 1);
-
-$clone-go: green;
-$clone-slow: orange;
-$clone-stop: red;
-
-$clone-grey: gray;
-$clone-grey--light: lighten($clone-grey, 10%);
-$clone-grey--dark: darken($clone-grey, 10%);
-
-$clone-gray: $clone-grey;
-$clone-gray--light: $clone-grey--light;
-$clone-gray--dark: $clone-grey--dark;
-
-$clone-c1: #5B1647;
-$clone-c1--light: lighten($clone-c1, 10%);
-$clone-c1--dark: darken($clone-c1, 10%);
-
-$clone-c2: #96043E;
-$clone-c2--light: lighten($clone-c2, 10%);
-$clone-c2--dark: darken($clone-c2, 10%);
-
-$clone-c3: #C90035;
-$clone-c3--light: lighten($clone-c3, 10%);
-$clone-c3--dark: darken($clone-c3, 10%);
-
-$clone-c4: blue;
-$clone-c4--light: lighten($clone-c4, 10%);
-$clone-c4--dark: darken($clone-c4, 10%);
-
-$clone-c5: purple;
-$clone-c5--light: lighten($clone-c5, 10%);
-$clone-c5--dark: darken($clone-c5, 10%);
-
-$clone-hover-colour: teal;
-
-$clone-focus-colour: $clone-hover-colour;
-
-$clone-selection-background-colour: $clone-c5;
-
-$clone-table-heading-colour: $clone-c1;
-
-$clone-alert--information: $clone-go;
-$clone-alert--warning: $clone-slow;
-$clone-alert--error: $clone-stop;
-
-$clone-blockquote-colour: $clone-c1;
-
-$clone-pullquote-colour: $clone-c2;
+$clone-whitespace-multiplier: 1.4;
 
 @import "../../node_modules/clone-framework/app/scss/clone";
 
@@ -88,16 +20,91 @@ $clone-pullquote-colour: $clone-c2;
     @media #{$clone-tablet-landscape} {
         display: block;
     }
-    div >ul {
-        list-style: none;
-        padding: 0;
-        padding-bottom: 2rem;
-        ul {
+    .clone-search-results {
+        display: none;
+        height: 50vh;
+        overflow: auto;
+        &.active {
+            display: block;
+        }
+        .clone-search-null {
+            display: none;
+        }
+        >div >ul {
             list-style: none;
+            padding: 0;
+            a {
+                color: white !important;
+            }
+        }
+    }
+    .clone-menu {
+        display: block;
+        &.hidden {
+            display: none;
+        }
+        >ul {
+            list-style: none;
+            padding: 0;
+            padding-bottom: 2rem;
+            position: relative;
+            li {
+                position: relative;
+            }
+            ul {
+                display: none;
+                list-style: none;
+                padding-left: 1.5rem;
+                position: relative;
+                &.active {
+                    display: block;
+                }
+                li {
+                    position: relative;
+                }
+            }
+            a {
+                color: white !important;
+            }
+        }
+    }
+    [data-docs-menu-trigger] {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: .5rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(.5rem, -.5rem);
+        &:hover {
+            i {
+                color: $clone-c1;
+                transition: color .2s ease;
+            }
+        }
+        &.active {
+            i {
+                &:first-child {
+                    display: none;
+                }
+                &:last-child {
+                    display: block;
+                }
+            }
+        }
+        i {
+            color: white;
+            transition: color .2s ease;
+            &:first-child {
+
+            }
+            &:last-child {
+                display: none;
+            }
         }
     }
 }
-
 pre {
     margin: 0 !important;
 }
@@ -112,6 +119,18 @@ pre, code {
 
 pre code, code {
     padding: 0 !important;
+}
+
+[data-c-accordion] {
+    pre {
+        padding: calc(#{$clone-padding} * 1) !important;
+        @media #{$clone-tablet-portrait} {
+            padding: calc((#{$clone-padding} * 1) * #{$clone-whitespace-multiplier}) !important;
+        }
+        @media #{$clone-desktop-large} {
+            padding: calc(((#{$clone-padding} * 1) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) !important;
+        }
+    }
 }
 
 .clone-hero {

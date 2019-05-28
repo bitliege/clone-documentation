@@ -1,13 +1,14 @@
 <a id="about-usage"></a>
 <h3
     data-c-font-size="h3"
-    data-c-colour="c2"
+    data-c-colour="c1"
+    data-c-font-weight="600"
     data-c-margin="top(double) bottom(normal)">
     Using Clone
 </h3>
 
 <div>
-    <p data-c-margin="bottom">
+    <p data-c-margin="bottom(half)">
         Clone is built a little differently than a standard front-end framework. Instead of classes, Clone uses data-attributes to leverage a level of extra functionality right in your markup. This means that Clone is namespaced away from your custom code and won't conflict with any of your existing work.
     </p>
     <p data-c-margin="bottom">
@@ -15,7 +16,7 @@
     </p>
     <pre><code class="language-twig">{% filter escape %}<div data-clone>
     <div
-        data-c-backround="c1(100)"
+        data-c-backround="c5(100)"
         data-c-padding="all(normal)"
         data-c-colour="white">
         <h5
@@ -27,7 +28,7 @@
 </div>{% endfilter %}</code></pre>
     <p data-c-margin="top(normal) bottom(normal)">Which will appear on your site as:</p>
     <div
-        data-c-background="c1(100)"
+        data-c-background="c5(100)"
         data-c-padding="all(normal)"
         data-c-colour="white"
         data-c-margin="bottom">
@@ -52,6 +53,6 @@
             These attributes are unique in that they take multiple arguments in the quotation marks and can even modify each argument using keywords within the parantheses. Each attribute has a unique set, but they all follow standard rules to help you learn them quickly. In this example, <code class="language-html">{% filter escape %}<div data-c-padding="">{% endfilter %}</code> can take multiple arguments for the orientation you're trying to target (i.e. top, right, bottom, left). Each of these can subsequently be modified using parentheses to increase or decrease the amount of padding you want (i.e. quarter, half, normal, double, triple). A more complex version of this attribute might look like: <code class="language-html">{% filter escape %}<div data-c-padding="top(half) right(double) bottom(normal) left(double)">{% endfilter %}</code>.
         </li>
     </ol>
-    <p data-c-margin="bottom">A finite list of Utility attributes and how they're used can be found here: <a href="#utilities">Utility Attributes in Clone</a>.</p>
+    <p data-c-margin="bottom(half)">A finite list of Utility attributes and how they're used can be found here: <a href="#utilities">Utility Attributes in Clone</a>.</p>
     <p>Above and beyond utility attributes are component attributes, which allow you to build unique and accessible elements. Each individual component is outlined in the sidebar of the site. These component attributes can be combined with utility attributes to design and style each component to exactly what you need.</p>
 </div>

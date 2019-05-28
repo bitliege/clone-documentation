@@ -1,14 +1,16 @@
 <div
-    data-c-accordion="object"
+    data-c-accordion="accordion"
     data-c-background="white(100)">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
+        data-c-background="c5(100)"
+        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4" data-c-font-weight="bold">
+            <span data-c-heading="h4">
                 {{ title }}
             </span>
             {% if subtitle %}
@@ -23,28 +25,38 @@
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add"
-            data-c-colour="black">
-            add_circle
+            data-c-accordion="icon--add">
+            add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove"
-            data-c-colour="black">
-            remove_circle
+            data-c-accordion="icon--remove">
+            remove
         </i>
     </button>
     <div
         aria-hidden="true"
-        data-c-accordion="content"
-        data-c-padding="right(normal) left(normal)">
-        <div data-c-padding="bottom(normal)">
+        {% if element %}
+            
+        {% else %}
+            data-c-padding="right(normal) left(normal)"
+        {% endif %}
+        data-c-accordion="content">
+        <div 
+            {% if element %}
+                
+            {% else %}
+                data-c-padding="top(normal) bottom(normal)"
+            {% endif %}>
             {% if element %}
                 <pre><code class="language-twig">{% filter escape %}{% include "../../../node_modules/clone-framework/app/twig/components/" ~ element ~ ".html" %}{% endfilter %}</code></pre>
             {% endif %}
             {% if content == "themeing" %}
                 <pre><code class="language-scss">{% filter escape %}{% include "../../../node_modules/clone-framework/app/scss/core/variables.scss" %}{% endfilter %}</code></pre>
+            {% endif %}
+            {% if explanation %}
+                {% include "../views/components/explanation/" ~ explanation ~ ".html" %}
             {% endif %}
         </div>
     </div>

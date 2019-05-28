@@ -1,0 +1,290 @@
+{% set nav = {
+    home: {
+        title: "Home",
+        hash: "home"
+    },
+    about: {
+        title: "About Clone",
+        hash: "about",
+        submenu: {
+            "1": {
+                title: "Installation",
+                hash: "about-installation"
+            },
+            "2": {
+                title: "Using Clone",
+                hash: "about-usage"
+            },
+            "3": {
+                title: "Themeing",
+                hash: "about-themeing"
+            },
+            "4": {
+                title: "Contributing",
+                hash: "about-contributing"
+            }
+        }
+    },
+    essentials: {
+        title: "Essentials",
+        hash: "essentials",
+        submenu: {
+            "1": {
+                title: "Colour",
+                hash: "colour"
+            },
+            "2": {
+                title: "Flexbox Grid",
+                hash: "flexbox-grid"
+            },
+            "3": {
+                title: "Typography",
+                hash: "type"
+            }
+        }
+    },
+    utilities: {
+        title: "Utilities",
+        hash: "utilities",
+        submenu: {
+            "1": {
+                title: "Alignment",
+                hash: "util-alignment"
+            },
+            "2": {
+                title: "Backgrounds",
+                hash: "util-backgrounds"
+            },
+            "3": {
+                title: "Borders",
+                hash: "util-borders"
+            },
+            "4": {
+                title: "Containers",
+                hash: "util-containers"
+            },
+            "5": {
+                title: "Fonts & Font Styles",
+                hash: "util-fonts"
+            },
+            "6": {
+                title: "Margins & Padding",
+                hash: "util-whitespace"
+            },
+            "7": {
+                title: "Overlays",
+                hash: "util-overlays"
+            },
+            "8": {
+                title: "Radius",
+                hash: "util-radius"
+            },
+            "9": {
+                title: "Visibility",
+                hash: "util-visibility"
+            }
+        }
+    },
+    components: {
+        title: "components",
+        submenu: {
+            "1": {
+                title: "accordions",
+                hash: "accordions"
+            },
+            "2": {
+                title: "alerts",
+                hash: "alerts"
+            },
+            "3": {
+                title: "back-to-top links",
+                hash: "back-to-top-links"
+            },
+            "4": {
+                title: "blockquotes",
+                hash: "blockquotes"
+            },
+            "5": {
+                title: "breadcrumbs",
+                hash: "breadcrumbs"
+            },
+            "6": {
+                title: "buttons",
+                hash: "buttons"
+            },
+            "7": {
+                title: "carousels",
+                hash: "carousels"
+            },
+            "8": {
+                title: "dialogs",
+                hash: "dialogs"
+            },
+            "9": {
+                title: "iframes",
+                hash: "iframes"
+            },
+            "10": {
+                title: "inputs",
+                hash: "inputs",
+                submenu: {
+                    "1": {
+                        title: "checkboxs",
+                        hash: "input-checkbox"
+                    },
+                    "2": {
+                        title: "dates",
+                        hash: "input-date"
+                    },
+                    "3": {
+                        title: "dropdowns",
+                        hash: "input-dropdown"
+                    },
+                    "4": {
+                        title: "emails",
+                        hash: "input-email"
+                    },
+                    "5": {
+                        title: "numbers",
+                        hash: "input-number"
+                    },
+                    "6": {
+                        title: "passwords",
+                        hash: "input-password"
+                    },
+                    "7": {
+                        title: "radios",
+                        hash: "input-radio"
+                    },
+                    "8": {
+                        title: "text",
+                        hash: "input-text"
+                    },
+                    "9": {
+                        title: "textareas",
+                        hash: "input-textarea"
+                    },
+                    "10": {
+                        title: "text with button",
+                        hash: "input-with-button"
+                    },
+                    "11": {
+                        title: "urls",
+                        hash: "input-url"
+                    }
+                }
+            },
+            "11": {
+                title: "pullquotes",
+                hash: "pullquotes"
+            },
+            "12": {
+                title: "skip-to-content links",
+                hash: "skip-to-content-links"
+            },
+            "13": {
+                title: "tables",
+                hash: "tables"
+            }
+        }
+    }
+} %}
+<div
+    class="clone-sidebar"
+    data-c-background="black(100)">
+    <div data-c-padding="top(triple) right(double) bottom(double) left(double)">
+        <img src="img/clone-white.svg">
+    </div>
+    <form data-c-padding="right(double) left(double)">
+        <div data-c-input="text">
+            <label data-c-colour="white" for="cloneSearch">Search Clone</label>
+            <span>Required</span>
+            <div>
+                <input id="cloneSearch" placeholder="e.g. margins" type="text" />
+            </div>
+            <span>This input has an error.</span>
+        </div>
+    </form>
+    <div class="clone-search-results" data-c-padding="right(double) bottom(triple) left(double)">
+        <span data-c-font-weight="600" data-c-colour="c1" data-c-margin="bottom(half)">Results:</span>
+        <div class="clone-search-null">
+            <p data-c-colour="white">No Results :(</p>
+        </div>
+        <div>
+            <ul data-c-colour="white">
+                {% for topItem in nav %}
+                {% if topItem.hash %}
+                    <li>
+                        <a data-terms="{{ topItem.title }}" href="#{{ topItem.hash }}">{{ topItem.title|title }}</a>
+                    </li>
+                {% endif %}
+                {% if topItem.submenu %}
+                    {% for secondItem in topItem.submenu %}
+                        <li>
+                            {% if secondItem.hash %}
+                                <a data-terms="{{ secondItem.title }}" href="#{{ secondItem.hash }}">{{ secondItem.title|title }}</a>
+                            {% endif %}
+                        </li>
+                        {% if secondItem.submenu %}
+                            {% for thirdItem in secondItem.submenu %}
+                                <li>
+                                    {% if thirdItem.hash %}
+                                        <a data-terms="{{ thirdItem.title }}" href="#{{ thirdItem.hash }}">{{ thirdItem.title|title }}</a>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="clone-menu" data-c-padding="right(double) bottom(triple) left(double)">
+        <ul data-c-colour="white">
+            {% for topItem in nav %}
+                <li>
+                    {% if topItem.hash %}
+                        <a href="#{{ topItem.hash }}">{{ topItem.title|title }}</a>
+                    {% else %}
+                        <p>{{ topItem.title|title }}</p>
+                    {% endif %}
+                    {% if topItem.submenu %}
+                        <button data-docs-menu-trigger>
+                            <i class="material-icons">add</i>
+                            <i class="material-icons">remove</i>
+                        </button>
+                        <ul data-c-colour="white">
+                            {% for secondItem in topItem.submenu %}
+                                <li>
+                                    {% if secondItem.hash %}
+                                        <a href="#{{ secondItem.hash }}">{{ secondItem.title|title }}</a>
+                                    {% else %}
+                                        <p>{{ secondItem.title|title }}</p>
+                                    {% endif %}
+                                    {% if secondItem.submenu %}
+                                        <button data-docs-menu-trigger>
+                                            <i class="material-icons">add</i>
+                                            <i class="material-icons">remove</i>
+                                        </button>
+                                        <ul data-c-colour="white">
+                                            {% for thirdItem in secondItem.submenu %}
+                                                <li>
+                                                    {% if thirdItem.hash %}
+                                                        <a href="#{{ thirdItem.hash }}">{{ thirdItem.title|title }}</a>
+                                                    {% else %}
+                                                        <p>{{ thirdItem.title|title }}</p>
+                                                    {% endif %}
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

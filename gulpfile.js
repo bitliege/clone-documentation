@@ -149,7 +149,7 @@ const twig = require('gulp-twig');
 
     // Dist Removal
     function cleanDist() {
-        return del('docs');
+        return del(['docs/**/*', '!docs/CNAME']);
     }
 
     // Watch

@@ -162,4 +162,12 @@ pre code, code {
             transform: translate(-50%, -50%);
         }
     }
+    .clone-hero-release {
+        img, a {
+            vertical-align: middle;
+        }
+        a {
+            margin-left: .5rem;
+        }
+    }
 }

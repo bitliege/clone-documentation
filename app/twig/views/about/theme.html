@@ -9,7 +9,7 @@
 
 <div>
     <p data-c-margin="bottom(half)">Not a fan of Brave, Clone's default theme? No problem!</p>
-    <p data-c-margin="bottom">Clone has a set of built-in variables that you can customize through Sass that will allow you to control a variety of fonts, colours, whitespace, etc. Simply pick and choose the variables you want to customize from the list below and add them to your Sass file, directly above Clone's import function:</p>
+    <p data-c-margin="bottom">Clone has a set of built-in variables that you can customize through Sass that will allow you to control a variety of fonts, colours, whitespace, etc. Simply pick and choose the variables you want to customize from the list below and add them to your Sass file, directly above Clone's import function (don't forget to remove the <code class="language-scss">{% filter escape %}!default{% endfilter %}</code>):</p>
     <pre><code class="language-scss">{% filter escape %}// My Custom Clone Theme
 // Please note that Clone must be included last, after all of your custom variables.
 

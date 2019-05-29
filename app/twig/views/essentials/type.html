@@ -6,3 +6,30 @@
     data-c-margin="top(double) bottom(normal)">
     Typography
 </h3>
+<h4
+    data-c-font-size="h4"
+    data-c-margin="top(normal) bottom(normal)">
+    Font Scale &amp; Line Height
+</h4>
+<p>Clone provides a built in means of controlling a typography scale based on a ratio. The system sets the base font to the user's default browser setting to begin with. By default, Clone uses a 1.333 scale for determining the size of the typography. This can be changed by modifying the <code class="language-scss">{% filter escape %}$clone-font-scale{% endfilter %}</code> variable. This scale appears as follows:</p>
+<h1 data-c-font-size="h1" data-c-margin="top(normal) bottom(normal)">Heading 01</h1>
+<h2 data-c-font-size="h2" data-c-margin="top(normal) bottom(normal)">Heading 02</h2>
+<h3 data-c-font-size="h3" data-c-margin="top(normal) bottom(normal)">Heading 03</h3>
+<h4 data-c-font-size="h4" data-c-margin="top(normal) bottom(normal)">Heading 04</h4>
+<h5 data-c-font-size="h5" data-c-margin="top(normal) bottom(normal)">Heading 05</h5>
+<p data-c-font-size="normal" data-c-margin="top(normal) bottom(normal)">Paragraph Copy</p>
+<p data-c-font-size="small" data-c-margin="top(normal) bottom(normal)">Captions &amp; Labels</p>
+<p data-c-margin="bottom(half)">Please note that this scale is not automatically applied to the heading elements and must be applied manually using the <code class="language-html">{% filter escape %} data-c-font-size=""{% endfilter %}</code> property. This is so that you can manually determine the appearance of a heading when the markup structure might dictate otherwise.</p>
+<p>Line height defaults to 1.5, but can manually changed using the <code class="language-scss">{% filter escape %}$clone-line-height{% endfilter %}</code> variable.</p>
+<h4
+    data-c-font-size="h4"
+    data-c-margin="top(double) bottom(normal)">
+    Font Types
+</h4>
+<p data-c-margin="bottom(normal)">Clone provides you with customizable variables for the 4 following font types:</p>
+<ul>
+    <li><code class="language-scss">{% filter escape %}$clone-font-sans{% endfilter %}</code></li>
+    <li><code class="language-scss">{% filter escape %}$clone-font-serif{% endfilter %}</code></li>
+    <li><code class="language-scss">{% filter escape %}$clone-font-script{% endfilter %}</code></li>
+    <li><code class="language-scss">{% filter escape %}$clone-font-monospace{% endfilter %}</code></li>
+</ul>

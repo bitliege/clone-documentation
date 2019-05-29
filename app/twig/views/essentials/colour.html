@@ -6,3 +6,157 @@
     data-c-margin="bottom(normal)">
     Colour
 </h3>
+<h4
+    data-c-font-size="h4"
+    data-c-margin="top(normal) bottom(normal)">
+    Black, White, Grey, and Theme Colours
+</h4>
+<p data-c-margin="bottom(half)">If you're using Clone through <a href="#about-installation" title="Learn about installing Clone as a Node Module.">NPM</a>, it comes with a built in theme system to help you build in your brand aesthetic. There are customizable variables for black, white, gre/ay, and 5 distinct theme colours.</p>
+<p data-c-margin="bottom(double)">In practice, theme colours are accessed using <code class="language-html">{% filter escape %}cX{% endfilter %}</code>, where <code class="language-html">{% filter escape %}X{% endfilter %}</code> can be any number between 1 and 5. We recommend setting up your theme colours in order of importance: 1 being your primary, 2 being your secondary, etc. Black, white, and gre/ay are accessed using their respective names (and yes, we included both spellings!).</p>
+<div data-c-grid="gutter" data-c-padding="bottom(half)">
+    <div data-c-grid-item="base(1of2) tp(1of5)">
+        <div data-c-background="black(30)" data-c-colour="black" data-c-border="all(thin, solid, black)" data-c-radius="rounded" data-c-alignment="centre" data-c-padding="top(normal) right(half) bottom(normal) left(half)">
+            Black
+        </div>
+    </div>
+    <div data-c-grid-item="base(1of2) tp(1of5)">
+        <div data-c-background="grey(30)" data-c-colour="grey" data-c-border="all(thin, solid, grey)" data-c-radius="rounded" data-c-alignment="centre" data-c-padding="top(normal) right(half) bottom(normal) left(half)">
+            Gre/ay
+        </div>
+    </div>
+    <div data-c-grid-item="base(1of2) tp(1of5)">
+        <div data-c-background="white(30)" data-c-colour="black" data-c-border="all(thin, solid, black)" data-c-radius="rounded" data-c-alignment="centre" data-c-padding="top(normal) right(half) bottom(normal) left(half)">
+            White
+        </div>
+    </div>
+</div>
+<div data-c-grid="gutter">
+    <div data-c-grid-item="base(1of2) tp(1of5)">
+        <div data-c-background="c1(30)" data-c-colour="c1" data-c-border="all(thin, solid, c1)" data-c-radius="rounded" data-c-alignment="centre" data-c-padding="top(normal) right(half) bottom(normal) left(half)">
+            Theme 1
+        </div>
+    </div>
+    <div data-c-grid-item="base(1of2) tp(1of5)">
+        <div data-c-background="c2(30)" data-c-colour="c2" data-c-border="all(thin, solid, c2)" data-c-radius="rounded" data-c-alignment="centre" data-c-padding="top(normal) right(half) bottom(normal) left(half)">
+            Theme 2
+        </div>
+    </div>
+    <div data-c-grid-item="base(1of2) tp(1of5)">
+        <div data-c-background="c3(30)" data-c-colour="c3" data-c-border="all(thin, solid, c3)" data-c-radius="rounded" data-c-alignment="centre" data-c-padding="top(normal) right(half) bottom(normal) left(half)">
+            Theme 3
+        </div>
+    </div>
+    <div data-c-grid-item="base(1of2) tp(1of5)">
+        <div data-c-background="c4(30)" data-c-colour="c4" data-c-border="all(thin, solid, c4)" data-c-radius="rounded" data-c-alignment="centre" data-c-padding="top(normal) right(half) bottom(normal) left(half)">
+            Theme 4
+        </div>
+    </div>
+    <div data-c-grid-item="base(1of2) tp(1of5)">
+        <div data-c-background="c5(30)" data-c-colour="c5" data-c-border="all(thin, solid, c5)" data-c-radius="rounded" data-c-alignment="centre" data-c-padding="top(normal) right(half) bottom(normal) left(half)">
+            Theme 5
+        </div>
+    </div>
+</div>
+<h4
+    data-c-font-size="h4"
+    data-c-margin="top(double) bottom(normal)">
+    Go, Slow, Stop
+</h4>
+<p data-c-margin="bottom(normal)">Clone also provides you with three customizable action colours: go (good), slow (attention), stop (error).</p>
+<div data-c-grid="gutter" data-c-padding="bottom(half)">
+    <div data-c-grid-item="base(1of2) tp(1of5)">
+        <div data-c-background="go(30)" data-c-colour="go" data-c-border="all(thin, solid, go)" data-c-radius="rounded" data-c-alignment="centre" data-c-padding="top(normal) right(half) bottom(normal) left(half)">
+            Go
+        </div>
+    </div>
+    <div data-c-grid-item="base(1of2) tp(1of5)">
+        <div data-c-background="slow(30)" data-c-colour="slow" data-c-border="all(thin, solid, slow)" data-c-radius="rounded" data-c-alignment="centre" data-c-padding="top(normal) right(half) bottom(normal) left(half)">
+            Slow
+        </div>
+    </div>
+    <div data-c-grid-item="base(1of2) tp(1of5)">
+        <div data-c-background="stop(30)" data-c-colour="stop" data-c-border="all(thin, solid, stop)" data-c-radius="rounded" data-c-alignment="centre" data-c-padding="top(normal) right(half) bottom(normal) left(half)">
+            Stop
+        </div>
+    </div>
+</div>
+<h4
+    data-c-font-size="h4"
+    data-c-margin="top(double) bottom(normal)">
+    Sitewide Colour Settings
+</h4>
+<p data-c-margin="bottom(normal)">Clone allows you to customize the following sitewide colour settings:</p>
+<ul>
+    <li>
+        <strong>Text Selection Background Colour</strong> <span data-c-colour="grey">(changes the colour of the background behind highlighted text)</span>
+        <ul>
+            <li><code class="language-scss">{% filter escape %}$clone-selection-background-colour{% endfilter %}</code></li>
+        </ul>
+    </li>
+    <li>
+        <strong>Hover Colour</strong> <span data-c-colour="grey">(changes the hover colour of links and buttons)</span>
+        <ul>
+            <li><code class="language-scss">{% filter escape %}$clone-hover-colour{% endfilter %}</code></li>
+        </ul>
+    </li>
+    <li>
+        <strong>Focus Colour</strong> <span data-c-colour="grey">(changes the focus border colour of buttons and input fields)</span>
+        <ul>
+            <li><code class="language-scss">{% filter escape %}$clone-focus-colour{% endfilter %}</code></li>
+        </ul>
+    </li>
+    <li>
+        <strong>Visited Links Colour</strong> <span data-c-colour="grey">(changes the colour of links that have already been clicked on)</span>
+        <ul>
+            <li><code class="language-scss">{% filter escape %}$clone-visited-colour{% endfilter %}</code></li>
+        </ul>
+    </li>
+</ul>
+<h4
+    data-c-font-size="h4"
+    data-c-margin="top(double) bottom(normal)">
+    Component Colours
+</h4>
+<p data-c-margin="bottom(normal)">Clone allows you to customize the following component specific colour settings:</p>
+<ul>
+    <li>
+        <strong>Accordions</strong>
+        <ul>
+            <li><code class="language-scss">{% filter escape %}$clone-accordion-border-colour{% endfilter %}</code></li>
+            <li><code class="language-scss">{% filter escape %}$clone-accordion-alternating-background-colour{% endfilter %}</code></li>
+        </ul>
+    </li>
+    <li>
+        <strong>Alerts</strong>
+        <ul>
+            <li><code class="language-scss">{% filter escape %}$clone-alert-information{% endfilter %}</code></li>
+            <li><code class="language-scss">{% filter escape %}$clone-alert-warning{% endfilter %}</code></li>
+            <li><code class="language-scss">{% filter escape %}$clone-alert-error{% endfilter %}</code></li>
+        </ul>
+    </li>
+    <li>
+        <strong>Blockquotes</strong>
+        <ul>
+            <li><code class="language-scss">{% filter escape %}$clone-blockquote-colour{% endfilter %}</code></li>
+        </ul>
+    </li>
+    <li>
+        <strong>Code Blocks</strong>
+        <ul>
+            <li><code class="language-scss">{% filter escape %}$clone-code-background{% endfilter %}</code></li>
+        </ul>
+    </li>
+    <li>
+        <strong>Pullquotes</strong>
+        <ul>
+            <li><code class="language-scss">{% filter escape %}$clone-pullquote-colour{% endfilter %}</code></li>
+        </ul>
+    </li>
+    <li>
+        <strong>Tables</strong>
+        <ul>
+            <li><code class="language-scss">{% filter escape %}$clone-table-heading-colour{% endfilter %}</code></li>
+            <li><code class="language-scss">{% filter escape %}$clone-table-alternating-colour{% endfilter %}</code></li>
+        </ul>
+    </li>
+</ul>

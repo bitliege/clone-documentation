@@ -53,7 +53,7 @@
                 <pre><code class="language-twig">{% filter escape %}{% include "../../../node_modules/clone-framework/app/twig/components/" ~ element ~ ".html" %}{% endfilter %}</code></pre>
             {% endif %}
             {% if content == "themeing" %}
-                <pre><code class="language-scss">{% filter escape %}{% include "../../../node_modules/clone-framework/app/scss/core/variables.scss" %}{% endfilter %}</code></pre>
+                <pre><code class="language-scss">{% filter escape %}{% include "../../../node_modules/clone-framework/app/scss/core/_defaults.scss" %}{% endfilter %}</code></pre>
             {% endif %}
             {% if explanation %}
                 {% include "../views/components/explanation/" ~ explanation ~ ".html" %}

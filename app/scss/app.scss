@@ -22,8 +22,6 @@ $clone-whitespace-multiplier: 1.4;
     }
     .clone-search-results {
         display: none;
-        height: 50vh;
-        overflow: auto;
         &.active {
             display: block;
         }
@@ -106,18 +104,20 @@ $clone-whitespace-multiplier: 1.4;
     }
 }
 pre {
+    border-radius: 5px !important;
     margin: 0 !important;
 }
 
 pre, code {
     background: rgba($clone-black, .9) !important;
-    border-radius: 0 !important;
+    border-radius: 5px !important;
     >code {
         background: none !important;
     }
 }
 
 pre code, code {
+    border-radius: 5px !important;
     padding: 0 !important;
 }
 

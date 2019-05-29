@@ -9,6 +9,18 @@ $clone-whitespace-multiplier: 1.4;
 
 @import "../../node_modules/clone-framework/app/scss/clone";
 
+#cookieAlert {
+    display: none;
+    button {
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    &.active {
+        display: flex;
+    }
+}
+
 .clone-sidebar {
     display: none;
     height: 100vh;
@@ -134,15 +146,20 @@ pre code, code {
 }
 
 .clone-hero {
-    min-height: 100vh;
+    padding: 4rem 0;
     position: relative;
     width: 100%;
+    @media screen and (min-width: 480px){
+        min-height: 100vh;
+    }
     >div {
-        max-width: 70rem;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         width: 100%;
+        @media screen and (min-width: 480px){
+            max-width: 70rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 }

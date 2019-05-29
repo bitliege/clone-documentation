@@ -51,9 +51,44 @@
         <meta name="msapplication-TileColor" content="#b91d47">
         <meta name="theme-color" content="#b91d47">
 
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97077222-3"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-97077222-3');
+        </script>
+
     </head>
 
     <body data-clone>
+
+        <div
+            data-c-alert="information(toast)"
+            data-c-radius="rounded"
+            role="alert"
+            id="cookieAlert">
+            <div data-c-padding="half">
+                <span
+                    data-c-margin="bottom(quarter)"
+                    data-c-heading="h5"
+                    data-c-font-weight="bold">
+                    <i
+                        aria-hidden="true"
+                        class="material-icons">
+                        assessment
+                    </i>
+                    Just a heads up!
+                </span>
+                <p>
+                    Clone's documentation uses Cookies and <a href="https://marketingplatform.google.com/about/analytics/benefits/" title="Learn more about what Google Analytics is." target="_blank">Google Analytics</a> to help us better understand our visitors. By viewing this site, you agree to have this basic information collected and relayed back to us. You can learn more about how Google Analytics provides us with this information <a href="https://support.google.com/analytics#topic=3544906" title="Learn more about how Google Analytics works." target="_blank">here</a>.
+                </p>
+            </div>
+            <button data-docs-cookie-trigger data-c-padding="half">
+                <i class="material-icons">close</i>
+            </button>
+        </div>
 
         <div data-c-grid>
             <div data-c-grid-item="tl(1of5)">

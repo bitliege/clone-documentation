@@ -29,6 +29,23 @@
             lazyLoad: "progressive"
         });
 
+        if (localStorage.getItem("cookieTrigger") == "true") {
+            $("#cookieAlert").remove();
+        } else {
+            $("#cookieAlert").addClass("active");
+        }
+
+        // Cookie & Analytics Alert Trigger ====================================
+        function cookieTrigger(trigger) {
+            localStorage.setItem("cookieTrigger", "true");
+            $(trigger).parent("div").remove();
+        }
+
+        $(document).on("click", "[data-docs-cookie-trigger]", function (e) {
+            e.preventDefault();
+            cookieTrigger(this);
+        });
+
         // Menu Search =========================================================
         $("#cloneSearch").keyup(function(e) {
 

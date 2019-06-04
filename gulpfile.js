@@ -126,6 +126,20 @@ const twig = require('gulp-twig');
     }
 
     // Minification
+    function distCacheHTML() {
+        return src('cache/**/*.html')
+        .pipe(dest('docs'));
+    }
+    function distCacheJS() {
+        return src('cache/js/*.js')
+        .pipe(uglify())
+        .pipe(dest('docs/js'));
+    }
+    function distCacheCSS() {
+        return src('cache/css/*.css')
+        .pipe(cssnano())
+        .pipe(dest('docs/css'));
+    }
     function distCloneJS() {
         return src('cache/js/clone/*.js')
         .pipe(dest('docs/js/clone'));
@@ -142,16 +156,6 @@ const twig = require('gulp-twig');
         return src('app/favicons/*')
         .pipe(dest('docs'));
     }
-    function distribute() {
-        return src('cache/**/*.html')
-        .pipe(useref())
-        .pipe(gulpIf('*.js', uglify()))
-        .pipe(gulpIf('*.css', cssnano()))
-        .pipe(dest('docs'))
-        .pipe(browsersync.reload({
-            stream: true
-        }));
-    }
 
     // Cache Removal
     function cleanCache() {
@@ -166,6 +170,9 @@ const twig = require('gulp-twig');
     // Compile
     const compile = series(cleanCache, template, templateThemes, moveCloneJS, movePrismJSMain, movePrismJSTwig, movePrismJSSCSS, movePrismJSMarkup, movePrismJSMarkdown, movePrismJSBash, js, cacheImages, movePrismCSS, compileCSS);
 
+    // Dist
+    const dist = series(distCacheHTML, distCacheJS, distCacheCSS, distCloneJS, distPrismJS, distPrismCSS, moveImages, distFavicons);
+
     // Watch
     function watchFiles() {
         watch('app/scss/**/*.scss', series(compile, browserSyncReload));
@@ -174,6 +181,6 @@ const twig = require('gulp-twig');
     }
 
     // Export
-    exports.build = series(cleanDocs, compile, distribute, distCloneJS, distPrismJS, distPrismCSS, moveImages, distFavicons);
+    exports.build = series(cleanDocs, compile, dist);
     exports.watch = series(compile, parallel(browserSync, watchFiles));
     exports.default = series(compile, parallel(browserSync, watchFiles));

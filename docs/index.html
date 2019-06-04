@@ -1013,6 +1013,8 @@ $clone-c1: #5B1647;
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -1040,12 +1042,11 @@ $clone-c1: #5B1647;
     </button>
     <div
         aria-hidden="true"
-            
+        
         
         data-c-accordion="content">
         <div 
             
-
             >
             
             
@@ -1176,6 +1177,8 @@ $clone-grid-gutter: $clone-padding !default;
 </code></pre>
             
             
+            
+            
         </div>
     </div>
 </div>
@@ -1187,30 +1190,415 @@ $clone-grid-gutter: $clone-padding !default;
     data-c-margin="top(double) bottom(normal)">
     Pre-built Themes
 </h4>
-<h5
-    data-c-font-size="h5"
-    data-c-font-weight="bold"
-    data-c-margin="top(double) bottom(normal)">
-    Brave (Default)
-</h5>
-<p data-c-margin="bottom(normal)">Brave is the default theme installed on Clone. It uses a progression of a soft orange-red to orange-yellow to give the theme a warm, upbeat vibe.</p>
-<a data-c-button="outline(c3)" href="/themes/brave/" title="Visit the Brave theme in a new browser tab." target="_blank">Preview Brave</a>
-<h5
-    data-c-font-size="h5"
-    data-c-font-weight="bold"
-    data-c-margin="top(double) bottom(normal)">
-    Canada.ca
-</h5>
-<p data-c-margin="bottom(normal)">The Canada.ca theme is built to emulate the basic style (colour, font, whitespace, etc.) of the Canada.ca government theme.</p>
-<a data-c-button="outline(c3)" href="/themes/canada/" title="Visit the Canada.ca theme in a new browser tab." target="_blank">Preview Canada.ca</a>
-<h5
-    data-c-font-size="h5"
-    data-c-font-weight="bold"
-    data-c-margin="top(double) bottom(normal)">
-    Talent Cloud
-</h5>
-<p data-c-margin="bottom(normal)">The Talent Cloud theme is built to...</p>
-<a data-c-button="outline(c3)" href="/themes/talent-cloud/" title="Visit the Talent Cloud theme in a new browser tab." target="_blank">Preview Talent Cloud</a>
+<div data-c-grid="gutter middle">
+    <div data-c-grid-item="tp(1of2)">
+        <h5
+            data-c-font-size="h5"
+            data-c-font-weight="bold">
+            Brave (Default)
+        </h5>
+    </div>
+    <div data-c-grid-item="tp(1of2)" data-c-align="tp(right)">
+        <a href="/themes/brave/" title="Visit the Brave theme in a new browser tab." target="_blank">Preview Brave</a>
+    </div>
+</div>
+<p data-c-margin="tb(normal)">Brave is the default theme installed on Clone. It uses a progression of a soft orange-red to orange-yellow to give the theme a warm, upbeat vibe.</p>
+<div data-c-grid="gutter middle">
+    <div data-c-grid-item="tp(1of2)">
+        <h5
+            data-c-font-size="h5"
+            data-c-font-weight="bold">
+            Canada.ca
+        </h5>
+    </div>
+    <div data-c-grid-item="tp(1of2)" data-c-align="tp(right)">
+        <a href="/themes/canada/" title="Visit the Canada.ca theme in a new browser tab." target="_blank">Preview Canada.ca</a>
+    </div>
+</div>
+<p data-c-margin="tb(normal)">The Canada.ca theme is built to emulate the basic style (colour, font, whitespace, etc.) of the Canada.ca government theme.</p>
+<div 
+    data-c-margin="tb(normal)"
+    data-c-accordion="group">
+    <div
+    data-c-accordion="accordion"
+    data-c-background="white(100)">
+    <button
+        aria-expanded="false"
+        data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
+        data-c-padding="right"
+        tabindex="0"
+        type="button">
+        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
+            <p data-c-heading="h4">
+                View Canada.ca's Theme Variables
+            </p>
+            
+        </div>
+        <span data-c-visibility="invisible">
+            Click to view...
+        </span>
+        <i
+            aria-hidden="true"
+            class="material-icons"
+            data-c-accordion="icon--add">
+            add
+        </i>
+        <i
+            aria-hidden="true"
+            class="material-icons"
+            data-c-accordion="icon--remove">
+            remove
+        </i>
+    </button>
+    <div
+        aria-hidden="true"
+        
+        
+        data-c-accordion="content">
+        <div 
+            
+            >
+            
+            
+            
+                <pre><code class="language-scss">// =============================================================================
+
+    // Clone
+    // Canada.ca
+
+// =============================================================================
+
+// Clone =======================================================================
+
+// Layout Variables
+$clone-wide-layout: 100rem;
+$clone-form-layout: 60rem;
+$clone-copy-layout: 39rem;
+
+// Whitespace Variables
+// On Portrait Phone Devices, Media Queries exist at Tablet Landscape, and Desktop Large and are generated using the multiplier below.
+$clone-margin: 1rem;
+$clone-padding: 1rem;
+$clone-whitespace-multiplier: 1.5;
+
+// Grid Variables
+$clone-grid-columns: 12;
+$clone-grid-gutter: $clone-padding;
+
+// Main Colour Variables
+
+    // Black &amp; White
+    $clone-white: #FFFFFF;
+    $clone-black: rgba(10, 10, 20, 1);
+
+    // Grey/Gray
+    $clone-grey: rgba(150, 150, 150, 1);
+    $clone-grey-light: lighten($clone-grey, 10%);
+    $clone-grey-dark: darken($clone-grey, 10%);
+
+    $clone-gray: $clone-grey;
+    $clone-gray-light: $clone-grey-light;
+    $clone-gray-dark: $clone-grey-dark;
+
+    // Theme Colours
+    $clone-c1: #26374A;
+    $clone-c1-light: lighten($clone-c1, 10%);
+    $clone-c1-dark: darken($clone-c1, 10%);
+
+    $clone-c2: #269abc;
+    $clone-c2-light: lighten($clone-c2, 10%);
+    $clone-c2-dark: darken($clone-c2, 10%);
+
+    $clone-c3: #af3c43;
+    $clone-c3-light: lighten($clone-c3, 10%);
+    $clone-c3-dark: darken($clone-c3, 10%);
+
+    $clone-c4: #F79559;
+    $clone-c4-light: lighten($clone-c4, 10%);
+    $clone-c4-dark: darken($clone-c4, 10%);
+
+    $clone-c5: #F7AF5B;
+    $clone-c5-light: lighten($clone-c5, 10%);
+    $clone-c5-dark: darken($clone-c5, 10%);
+
+    // Go, Slow, Stop
+    $clone-go: green;
+    $clone-slow: #ff9900;
+    $clone-stop: #d3080c;
+    $clone-error: $clone-stop;
+
+// Sitewide Colour Variables
+
+    // Text Selection
+    $clone-selection-background-colour: $clone-c5;
+
+    // Hover
+    $clone-hover-colour: #0535d2;
+
+    // Focus
+    $clone-focus-colour: $clone-hover-colour;
+
+    // Visited Links
+    $clone-visited-colour: #7834bc;
+
+// Component Colour Variables
+
+    // Accordions
+    $clone-accordion-border-colour: $clone-black;
+    $clone-accordion-alternating-background-colour: lighten($clone-grey, 35%);
+
+    // Alerts
+    $clone-alert-information: $clone-c2;
+    $clone-alert-warning: $clone-slow;
+    $clone-alert-error: $clone-stop;
+
+    // Blockquotes
+    $clone-blockquote-colour: $clone-c1;
+
+    // Carousels
+    $clone-carousel-dot-colour: $clone-c1;
+    $clone-carousel-dot-active-colour: $clone-c3;
+
+    // Code Blocks
+    $clone-code-background: $clone-black;
+
+    // Pullquotes
+    $clone-pullquote-colour: $clone-c2;
+
+    // Tables
+    $clone-table-heading-colour: $clone-c1;
+    $clone-table-alternating-colour: rgba(0, 0, 0, .1); // Note that this transparency allows for a checker pattern on the grid when there is a vertical heading column,.
+
+// Font Variables
+
+    // Fonts
+    $clone-font-sans: &#039;Lato&#039;, sans-serif;
+    $clone-font-serif: serif;
+    $clone-font-script: &quot;Euphoria Script&quot;, cursive;
+    $clone-font-monospace: &quot;Consolas&quot;, mono-space;
+
+    $clone-font-default: $clone-font-sans;
+
+    // Default Line Height
+    $clone-line-height: 1.5;
+
+    // The Typography Scale
+    $clone-default-font-size: 1.25rem;
+    $clone-font-scale: 1.2;
+
+    $clone-font-scale-h1: calc(#{$clone-default-font-size}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale})))));
+    $clone-font-scale-h2: calc(#{$clone-default-font-size}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}))));
+    $clone-font-scale-h3: calc(#{$clone-default-font-size}*(#{$clone-font-scale}*(#{$clone-font-scale})));
+    $clone-font-scale-h4: calc(#{$clone-default-font-size}*(#{$clone-font-scale}));
+    $clone-font-scale-h5: $clone-default-font-size;
+    $clone-font-scale-small: calc(#{$clone-default-font-size}/(#{$clone-font-scale}));</code></pre>
+            
+            
+            
+        </div>
+    </div>
+</div>
+
+</div>
+<div data-c-grid="gutter middle">
+    <div data-c-grid-item="tp(1of2)">
+        <h5
+            data-c-font-size="h5"
+            data-c-font-weight="bold">
+            Talent Cloud
+        </h5>
+    </div>
+    <div data-c-grid-item="tp(1of2)" data-c-align="tp(right)">
+        <a href="/themes/talent-cloud/" title="Visit the Talent Cloud theme in a new browser tab." target="_blank">Preview Talent Cloud</a>
+    </div>
+</div>
+
+<div data-c-margin="top(normal)" data-c-accordion="group">
+    <div
+    data-c-accordion="accordion"
+    data-c-background="white(100)">
+    <button
+        aria-expanded="false"
+        data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
+        data-c-padding="right"
+        tabindex="0"
+        type="button">
+        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
+            <p data-c-heading="h4">
+                View Talent Cloud's Theme Variables
+            </p>
+            
+        </div>
+        <span data-c-visibility="invisible">
+            Click to view...
+        </span>
+        <i
+            aria-hidden="true"
+            class="material-icons"
+            data-c-accordion="icon--add">
+            add
+        </i>
+        <i
+            aria-hidden="true"
+            class="material-icons"
+            data-c-accordion="icon--remove">
+            remove
+        </i>
+    </button>
+    <div
+        aria-hidden="true"
+          
+        
+        data-c-accordion="content">
+        <div 
+            
+            >
+            
+            
+            
+            
+                <pre><code class="language-scss">// =============================================================================
+
+    // Clone
+    // Talent Cloud
+
+// =============================================================================
+
+// Clone =======================================================================
+
+// Layout Variables
+$clone-wide-layout: 100rem;
+$clone-form-layout: 60rem;
+$clone-copy-layout: 39rem;
+
+// Whitespace Variables
+// On Portrait Phone Devices, Media Queries exist at Tablet Landscape, and Desktop Large and are generated using the multiplier below.
+$clone-margin: 1rem !default;
+$clone-padding: 1rem !default;
+$clone-whitespace-multiplier: 1.4 !default;
+
+// Grid Variables
+$clone-grid-columns: 12;
+$clone-grid-gutter: $clone-padding;
+
+// Main Colour Variables
+
+    // Black &amp; White
+    $clone-white: #FFFFFF;
+    $clone-black: rgba(20, 20, 35, 1);
+
+    // Grey/Gray
+    $clone-grey: rgba(150, 150, 150, 1);
+    $clone-grey-light: lighten($clone-grey, 10%);
+    $clone-grey-dark: darken($clone-grey, 10%);
+
+    $clone-gray: $clone-grey;
+    $clone-gray-light: $clone-grey-light;
+    $clone-gray-dark: $clone-grey-dark;
+
+    // Theme Colours
+    $clone-c1: #5b1647;
+    $clone-c1-light: lighten($clone-c1, 10%);
+    $clone-c1-dark: darken($clone-c1, 10%);
+
+    $clone-c2: #96043e;
+    $clone-c2-light: lighten($clone-c2, 10%);
+    $clone-c2-dark: darken($clone-c2, 10%);
+
+    $clone-c3: #c90035;
+    $clone-c3-light: lighten($clone-c3, 10%);
+    $clone-c3-dark: darken($clone-c3, 10%);
+
+    $clone-c4: #0a6cbc;
+    $clone-c4-light: lighten($clone-c4, 10%);
+    $clone-c4-dark: darken($clone-c4, 10%);
+
+    $clone-c5: #0a6cbc;
+    $clone-c5-light: lighten($clone-c5, 10%);
+    $clone-c5-dark: darken($clone-c5, 10%);
+
+    // Go, Slow, Stop
+    $clone-go: green !default;
+    $clone-slow: orange !default;
+    $clone-stop: red !default;
+    $clone-error: $clone-stop !default;
+
+// Sitewide Colour Variables
+
+    // Text Selection
+    $clone-selection-background-colour: $clone-c5;
+
+    // Hover
+    $clone-hover-colour: $clone-c5;
+
+    // Focus
+    $clone-focus-colour: $clone-hover-colour;
+
+    // Visited Links
+    $clone-visited-colour: $clone-c4-dark !default;
+
+// Component Colour Variables
+
+    // Accordions
+    $clone-accordion-border-colour: $clone-black;
+    $clone-accordion-alternating-background-colour: lighten($clone-grey, 35%);
+
+    // Alerts
+    $clone-alert-information: $clone-c1;
+    $clone-alert-warning: $clone-slow;
+    $clone-alert-error: $clone-stop;
+
+    // Blockquotes
+    $clone-blockquote-colour: $clone-c1;
+
+    // Carousels
+    $clone-carousel-dot-colour: $clone-c1;
+    $clone-carousel-dot-active-colour: $clone-c3;
+
+    // Code Blocks
+    $clone-code-background: $clone-black;
+
+    // Pullquotes
+    $clone-pullquote-colour: $clone-c2;
+
+    // Tables
+    $clone-table-heading-colour: $clone-c1;
+    $clone-table-alternating-colour: rgba(0, 0, 0, .1); // Note that this transparency allows for a checker pattern on the grid when there is a vertical heading column,.
+
+// Font Variables
+
+    // Fonts
+    $clone-font-sans: &quot;Open Sans&quot;, sans-serif !default;
+    $clone-font-serif: serif !default;
+    $clone-font-script: &quot;Euphoria Script&quot;, cursive !default;
+    $clone-font-monospace: &quot;Consolas&quot;, mono-space !default;
+
+    $clone-font-default: $clone-font-sans !default;
+
+    // Default Line Height
+    $clone-line-height: 1.5 !default;
+
+    // The Typography Scale
+    $clone-default-font-size: 1rem !default;
+    $clone-font-scale: 1.333 !default;
+
+    $clone-font-scale-h1: calc(#{$clone-default-font-size}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}))))) !default;
+    $clone-font-scale-h2: calc(#{$clone-default-font-size}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale})))) !default;
+    $clone-font-scale-h3: calc(#{$clone-default-font-size}*(#{$clone-font-scale}*(#{$clone-font-scale}))) !default;
+    $clone-font-scale-h4: calc(#{$clone-default-font-size}*(#{$clone-font-scale})) !default;
+    $clone-font-scale-h5: $clone-default-font-size !default;
+    $clone-font-scale-small: calc(#{$clone-default-font-size}/(#{$clone-font-scale})) !default;</code></pre>
+            
+            
+        </div>
+    </div>
+</div>
+
+</div>
                     <a id="about-contributing"></a>
 <h3
     data-c-font-size="h3"
@@ -2369,6 +2757,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -2401,7 +2791,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                
             >
             
                 <pre><code class="language-twig">&lt;div data-c-accordion=&quot;group&quot;&gt;
@@ -2455,6 +2844,8 @@ invisible</code></pre>
             
             
             
+            
+            
         </div>
     </div>
 </div>
@@ -2474,6 +2865,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -2509,6 +2902,8 @@ invisible</code></pre>
             
                 data-c-padding="top(normal) bottom(normal)"
             >
+            
+            
             
             
             
@@ -2654,6 +3049,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -2686,7 +3083,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                
             >
             
                 <pre><code class="language-twig">&lt;!-- Alerts can have three arguments: information, warning, error. You can also include the toast argument on any of these types to fix the alert to the bottom right of the viewport. e.g. information(toast) --&gt;
@@ -2720,6 +3116,8 @@ invisible</code></pre>
             
             
             
+            
+            
         </div>
     </div>
 </div>
@@ -2739,6 +3137,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -2774,6 +3174,8 @@ invisible</code></pre>
             
                 data-c-padding="top(normal) bottom(normal)"
             >
+            
+            
             
             
             
@@ -2883,6 +3285,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -2915,7 +3319,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                
             >
             
                 <pre><code class="language-twig">&lt;a
@@ -2927,6 +3330,8 @@ invisible</code></pre>
     &lt;!-- Button Text Here --&gt;
 &lt;/a&gt;
 </code></pre>
+            
+            
             
             
             
@@ -2949,6 +3354,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -2984,6 +3391,8 @@ invisible</code></pre>
             
                 data-c-padding="top(normal) bottom(normal)"
             >
+            
+            
             
             
             
@@ -3084,6 +3493,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -3116,7 +3527,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                
             >
             
                 <pre><code class="language-twig">&lt;blockquote
@@ -3134,6 +3544,8 @@ invisible</code></pre>
     &lt;/p&gt;
 &lt;/blockquote&gt;
 </code></pre>
+            
+            
             
             
             
@@ -3156,6 +3568,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -3191,6 +3605,8 @@ invisible</code></pre>
             
                 data-c-padding="top(normal) bottom(normal)"
             >
+            
+            
             
             
             
@@ -3296,6 +3712,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -3328,7 +3746,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                
             >
             
                 <pre><code class="language-twig">&lt;div data-c-alignment=&quot;center&quot;&gt;
@@ -3376,6 +3793,8 @@ invisible</code></pre>
             
             
             
+            
+            
         </div>
     </div>
 </div>
@@ -3395,6 +3814,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -3430,6 +3851,8 @@ invisible</code></pre>
             
                 data-c-padding="top(normal) bottom(normal)"
             >
+            
+            
             
             
             
@@ -3800,6 +4223,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -3832,7 +4257,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                
             >
             
                 <pre><code class="language-twig">&lt;!-- Modify the data-c-button value. --&gt;
@@ -3841,6 +4265,8 @@ invisible</code></pre>
     type=&quot;button&quot;&gt;
     &lt;!-- Button Text Here --&gt;
 &lt;/button&gt;</code></pre>
+            
+            
             
             
             
@@ -3863,6 +4289,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -3898,6 +4326,8 @@ invisible</code></pre>
             
                 data-c-padding="top(normal) bottom(normal)"
             >
+            
+            
             
             
             
@@ -4049,6 +4479,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -4081,7 +4513,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                
             >
             
                 <pre><code class="language-twig">&lt;div
@@ -4113,6 +4544,8 @@ invisible</code></pre>
             
             
             
+            
+            
         </div>
     </div>
 </div>
@@ -4132,6 +4565,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -4167,6 +4602,8 @@ invisible</code></pre>
             
                 data-c-padding="top(normal) bottom(normal)"
             >
+            
+            
             
             
             
@@ -4327,6 +4764,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -4359,7 +4798,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                
             >
             
                 <pre><code class="language-twig">&lt;!-- This is an example Dialog trigger. --&gt;
@@ -4448,6 +4886,8 @@ invisible</code></pre>
             
             
             
+            
+            
         </div>
     </div>
 </div>
@@ -4467,6 +4907,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -4502,6 +4944,8 @@ invisible</code></pre>
             
                 data-c-padding="top(normal) bottom(normal)"
             >
+            
+            
             
             
             
@@ -4582,6 +5026,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -4614,13 +5060,14 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                
             >
             
                 <pre><code class="language-twig">&lt;div data-c-iframe&gt;
     &lt;!-- iFrame Here --&gt;&gt;
 &lt;/div&gt;
 </code></pre>
+            
+            
             
             
             
@@ -4643,6 +5090,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -4678,6 +5127,8 @@ invisible</code></pre>
             
                 data-c-padding="top(normal) bottom(normal)"
             >
+            
+            
             
             
             
@@ -4820,6 +5271,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -4852,7 +5305,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                
             >
             
                 <pre><code class="language-twig">&lt;div data-c-input=&quot;checkbox&quot;&gt;
@@ -4892,6 +5344,8 @@ invisible</code></pre>
     &lt;/div&gt;
     &lt;span&gt;This input has an error.&lt;/span&gt;
 &lt;/div&gt;</code></pre>
+            
+            
             
             
             
@@ -4973,6 +5427,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -5005,7 +5461,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                
             >
             
                 <pre><code class="language-twig">&lt;div data-c-input=&quot;date&quot;&gt;
@@ -5020,6 +5475,8 @@ invisible</code></pre>
     &lt;span&gt;This input has an error.&lt;/span&gt;
 &lt;/div&gt;
 </code></pre>
+            
+            
             
             
             
@@ -5133,6 +5590,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -5165,7 +5624,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                
             >
             
                 <pre><code class="language-twig">&lt;div data-c-input=&quot;select&quot;&gt;
@@ -5190,6 +5648,8 @@ invisible</code></pre>
     &lt;span&gt;This input has an error.&lt;/span&gt;
 &lt;/div&gt;
 </code></pre>
+            
+            
             
             
             
@@ -5263,6 +5723,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -5295,7 +5757,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                
             >
             
                 <pre><code class="language-twig">&lt;div data-c-input=&quot;email&quot;&gt;
@@ -5307,6 +5768,8 @@ invisible</code></pre>
     &lt;span&gt;This input has an error.&lt;/span&gt;
 &lt;/div&gt;
 </code></pre>
+            
+            
             
             
             
@@ -5380,6 +5843,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -5412,7 +5877,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                
             >
             
                 <pre><code class="language-twig">&lt;div data-c-input=&quot;number&quot;&gt;
@@ -5424,6 +5888,8 @@ invisible</code></pre>
     &lt;span&gt;This input has an error.&lt;/span&gt;
 &lt;/div&gt;
 </code></pre>
+            
+            
             
             
             
@@ -5522,6 +5988,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -5554,7 +6022,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                
             >
             
                 <pre><code class="language-twig">&lt;div data-c-input=&quot;password&quot;&gt;
@@ -5573,6 +6040,8 @@ invisible</code></pre>
     &lt;/div&gt;
     &lt;span&gt;This input has an error.&lt;/span&gt;
 &lt;/div&gt;</code></pre>
+            
+            
             
             
             
@@ -5666,6 +6135,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -5698,7 +6169,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                
             >
             
                 <pre><code class="language-twig">&lt;div data-c-input=&quot;radio&quot;&gt;
@@ -5725,6 +6195,8 @@ invisible</code></pre>
     &lt;span&gt;This input has an error.&lt;/span&gt;
 &lt;/div&gt;
 </code></pre>
+            
+            
             
             
             
@@ -5798,6 +6270,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -5830,7 +6304,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                
             >
             
                 <pre><code class="language-twig">&lt;div data-c-input=&quot;text&quot;&gt;
@@ -5841,6 +6314,8 @@ invisible</code></pre>
     &lt;/div&gt;
     &lt;span&gt;This input has an error.&lt;/span&gt;
 &lt;/div&gt;</code></pre>
+            
+            
             
             
             
@@ -5914,6 +6389,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -5946,7 +6423,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                
             >
             
                 <pre><code class="language-twig">&lt;div data-c-input=&quot;textarea&quot;&gt;
@@ -5958,6 +6434,8 @@ invisible</code></pre>
     &lt;span&gt;This input has an error.&lt;/span&gt;
 &lt;/div&gt;
 </code></pre>
+            
+            
             
             
             
@@ -6059,6 +6537,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -6091,7 +6571,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                
             >
             
                 <pre><code class="language-twig">&lt;div data-c-input=&quot;button&quot;&gt;
@@ -6113,6 +6592,8 @@ invisible</code></pre>
     &lt;span&gt;This input has an error.&lt;/span&gt;
 &lt;/div&gt;
 </code></pre>
+            
+            
             
             
             
@@ -6186,6 +6667,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -6218,7 +6701,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                
             >
             
                 <pre><code class="language-twig">&lt;div data-c-input=&quot;url&quot;&gt;
@@ -6230,6 +6712,8 @@ invisible</code></pre>
     &lt;span&gt;This input has an error.&lt;/span&gt;
 &lt;/div&gt;
 </code></pre>
+            
+            
             
             
             
@@ -6306,6 +6790,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -6338,7 +6824,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                
             >
             
                 <pre><code class="language-twig">&lt;blockquote
@@ -6353,6 +6838,8 @@ invisible</code></pre>
         &lt;!-- Pullquote Here --&gt;
     &lt;/span&gt;
 &lt;/blockquote&gt;</code></pre>
+            
+            
             
             
             
@@ -6375,6 +6862,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -6410,6 +6899,8 @@ invisible</code></pre>
             
                 data-c-padding="top(normal) bottom(normal)"
             >
+            
+            
             
             
             
@@ -6488,6 +6979,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -6520,7 +7013,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                
             >
             
                 <pre><code class="language-twig">&lt;a
@@ -6533,6 +7025,8 @@ invisible</code></pre>
     Skip to Main Content
 &lt;/a&gt;
 </code></pre>
+            
+            
             
             
             
@@ -6555,6 +7049,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -6590,6 +7086,8 @@ invisible</code></pre>
             
                 data-c-padding="top(normal) bottom(normal)"
             >
+            
+            
             
             
             
@@ -6708,6 +7206,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -6740,7 +7240,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                
             >
             
                 <pre><code class="language-twig">&lt;div data-c-table&gt;
@@ -6778,6 +7277,8 @@ invisible</code></pre>
             
             
             
+            
+            
         </div>
     </div>
 </div>
@@ -6797,6 +7298,8 @@ invisible</code></pre>
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -6832,6 +7335,8 @@ invisible</code></pre>
             
                 data-c-padding="top(normal) bottom(normal)"
             >
+            
+            
             
             
             

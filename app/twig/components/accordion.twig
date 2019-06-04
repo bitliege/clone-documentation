@@ -4,6 +4,8 @@
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
+        data-c-colour="white"
+        data-c-background="c2(80)"
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -36,16 +38,18 @@
     <div
         aria-hidden="true"
         {% if element %}
-        {% elseif content == "themeing" %}    
+        {% elseif content == "themeing" %}
+        {% elseif content == "canada" %}
+        {% elseif content == "talent-cloud" %}  
         {% else %}
             data-c-padding="right(normal) left(normal)"
         {% endif %}
         data-c-accordion="content">
         <div 
             {% if element %}
-                
             {% elseif content == "themeing" %}
-
+            {% elseif content == "canada" %}
+            {% elseif content == "talent-cloud" %}
             {% else %}
                 data-c-padding="top(normal) bottom(normal)"
             {% endif %}>
@@ -54,6 +58,12 @@
             {% endif %}
             {% if content == "themeing" %}
                 <pre><code class="language-scss">{% filter escape %}{% include "../../../node_modules/clone-framework/app/scss/core/_defaults.scss" %}{% endfilter %}</code></pre>
+            {% endif %}
+            {% if content == "canada" %}
+                <pre><code class="language-scss">{% filter escape %}{% include "../../scss/themes/canada.scss" %}{% endfilter %}</code></pre>
+            {% endif %}
+            {% if content == "talent-cloud" %}
+                <pre><code class="language-scss">{% filter escape %}{% include "../../scss/themes/talent-cloud.scss" %}{% endfilter %}</code></pre>
             {% endif %}
             {% if explanation %}
                 {% include "../views/components/explanation/" ~ explanation ~ ".twig" %}

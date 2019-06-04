@@ -27,7 +27,7 @@
         data-c-margin="top(double) bottom(normal)">
         Examples
     </h3>
-    {% include "examples/" ~ component ~ ".html" %}
+    {% include "examples/" ~ component ~ ".twig" %}
     <h3
         data-c-font-size="h3"
         data-c-color="c1"
@@ -36,7 +36,7 @@
         Code Snippet
     </h3>
     <div data-c-accordion="group">
-        {% include "../../components/accordion.html" with {'title': 'View ' ~ component|title ~ ' Code', 'element': component} %}
+        {% include "../../components/accordion.twig" with {'title': 'View ' ~ component|title ~ ' Code', 'element': component} %}
     </div>
     <h3
         data-c-font-size="h3"
@@ -46,7 +46,7 @@
         Code Explanation
     </h3>
     <div data-c-accordion="group">
-        {% include "../../components/accordion.html" with {'title': 'View ' ~ component|title ~ ' Code Explanation', 'explanation': component} %}
+        {% include "../../components/accordion.twig" with {'title': 'View ' ~ component|title ~ ' Code Explanation', 'explanation': component} %}
     </div>
     <h3
         data-c-font-size="h3"

@@ -14,7 +14,7 @@
             Examples
         </h4>
         <form data-c-grid="gutter">
-            {% include "examples/" ~ component ~ ".html" %}
+            {% include "examples/" ~ component ~ ".twig" %}
         </form>
         <h4 
             data-c-font-size="h4"
@@ -22,7 +22,7 @@
             Code Snippet
         </h4>
         <div data-c-accordion="group">
-            {% include "../../components/accordion.html" with {'title': 'View ' ~ title|title ~ ' Code', 'element': component} %}
+            {% include "../../components/accordion.twig" with {'title': 'View ' ~ title|title ~ ' Code', 'element': component} %}
         </div>
     </div>
 </div>

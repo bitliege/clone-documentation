@@ -1,0 +1,19 @@
+@import "themes/talent-cloud";
+
+@import "../../node_modules/clone-framework/app/scss/clone";
+
+.theme-hero {
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 20rem;
+    }
+}
+
+.theme-gradient {
+    background: #5b1647;
+    background: -moz-linear-gradient(-45deg, #5b1647 0%, #c90035 100%);
+    background: -webkit-linear-gradient(-45deg, #5b1647 0%,#c90035 100%);
+    background: linear-gradient(135deg, #5b1647 0%,#c90035 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5b1647', endColorstr='#c90035',GradientType=1 );
+}

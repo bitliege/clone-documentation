@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html
+    lang="en">
+
+    <head>
+
+        <title>Clone / Themes / Talent Cloud</title>
+
+        <meta
+            charset="utf-8" />
+
+        <meta
+            http-equiv="X-UA-Compatible"
+            content="IE=edge">
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0">
+
+        <link
+            href="https://fonts.googleapis.com/css?family=Euphoria+Script|Open+Sans:400,400i,600,600i,800,800i&amp;subset=latin-ext"
+            rel="stylesheet">
+
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">
+
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+
+        <script
+            src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous"></script>
+
+        <!--build:css css/talent-cloud.min.css-->
+        <link async rel="stylesheet" href="../../css/talent-cloud.css">
+        <!--endbuild-->
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#b91d47">
+        <meta name="msapplication-TileColor" content="#b91d47">
+        <meta name="theme-color" content="#b91d47">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97077222-3"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-97077222-3');
+        </script>
+
+    </head>
+
+    <body data-clone>
+
+        {% include "../../views/theme-base.twig" with {'name': 'Talent Cloud'} %}
+
+        <script src="../../js/clone/clone.js"></script>
+
+        <!--build:js js/app.min.js-->
+        <script src="../../js/app.js"></script>
+        <!--endbuild-->
+
+        <script src="../../js/prism/prism.js"></script>
+        <script src="../../js/prism/prism-twig.min.js"></script>
+        <script src="../../js/prism/prism-scss.min.js"></script>
+        <script src="../../js/prism/prism-markup.min.js"></script>
+        <script src="../../js/prism/prism-markdown.min.js"></script>
+        <script src="../../js/prism/prism-bash.min.js"></script>
+
+    </body>
+
+</html>

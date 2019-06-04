@@ -171,3 +171,30 @@ pre code, code {
         }
     }
 }
+
+.theme-gradient {
+    background: #f14948;
+    background: -moz-linear-gradient(45deg, #f14948 0%, #f7af5b 100%);
+    background: -webkit-linear-gradient(45deg, #f14948 0%,#f7af5b 100%);
+    background: linear-gradient(45deg, #f14948 0%,#f7af5b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f14948', endColorstr='#f7af5b',GradientType=1 );
+}
+
+.theme-hero {
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 20rem;
+    }
+}
+
+.theme-site-notice {
+    i {
+        color: $clone-c1;
+        vertical-align: middle;
+    }
+    span {
+        margin-left: .5rem;
+        vertical-align: middle;
+    }
+}

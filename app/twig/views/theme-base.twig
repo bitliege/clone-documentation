@@ -1,0 +1,299 @@
+{# Notice =================================================================== #}
+{# <div class="theme-site-notice" data-c-background="c1(100)" data-c-padding="half">
+    <div data-c-colour="white" data-c-alignment="base(centre)">
+        <i data-c-colour="white" class="material-icons">face</i>
+        <span>This is a sample sitewide notice with a <a href="#" title="This is a fake link to simulate inline links styles.">link</a>.</span>
+    </div>
+</div> #}
+{# Hero ===================================================================== #}
+<div class="theme-hero" data-c-overlay="black(80)" data-c-padding="top(triple) bottom(triple)" style="background-image: url('../../img/themes/ezra-comeau-jeffrey-100710-unsplash.jpg');">
+    <div data-c-container="layout" data-c-alignment="centre">
+        <a data-c-colour="white" href="/" title="Go back to the Clone Documentation site."><i class="material-icons">arrow_left</i>Return</a>
+        <img data-c-margin="top(triple)" src="../../img/clone-white.svg">
+        <p data-c-font-weight="800" data-c-color="white" data-c-margin="top(triple)">{{ name|upper }} EDITION</p>
+    </div>
+</div>
+{# Slogan =================================================================== #}
+<div class="theme-gradient" data-c-padding="normal" data-c-colour="white">
+    <div data-c-container="layout" data-c-alignment="centre">
+        This is a sample slogan.
+    </div>
+</div>
+{# Text Blocks ============================================================== #}
+<div {% if name != "Canada.ca" %}data-c-background="grey(10)"{% endif %} data-c-padding="top(triple) bottom(triple)">
+    <div data-c-container="layout">
+        <div data-c-grid="gutter">
+            <div data-c-grid-item="base(1of1) tp(1of2)">
+                <h2 data-c-font-size="h2">
+                    These are sample text blocks.
+                </h2>
+            </div>
+            <div data-c-grid-item="base(1of1) tp(1of2)" data-c-alignment="tp(right)">
+                {% if name == "Brave" %}
+                    <button data-c-radius="rounded" data-c-button="solid(c5)">
+                        View More
+                    </button>
+                {% elseif name == "Canada.ca" %}
+                    <button data-c-radius="rounded" data-c-button="solid(c1)">
+                        View More
+                    </button>
+                {% endif %}
+            </div>
+            {% set triple = [1, 2, 3] %}
+            {% for item in triple %}
+                <div data-c-grid-item="base(1of1) tp(1of2) tl(1of3)">
+                    <div data-c-card data-c-background="white(100)" data-c-padding="normal" data-c-radius="rounded">
+                        <h3 data-c-font-size="h3" data-c-font-weight="600" data-c-colour="c1">
+                            This is a title.
+                        </h3>
+                        <div data-c-colour="c3" data-c-margin="tb(half)">
+                            <span>Tag 1, Tag 2, Tag 3</span>
+                        </div>
+                        <p data-c-margin="bottom(normal)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempus eget erat accumsan mollis. Morbi et lorem dui. Morbi placerat imperdiet malesuada. Aenean facilisis elementum neque id faucibus. Nunc consequat mi ut ipsum rutrum tristique.</p>
+                        <div data-c-align="base(centre) tl(right)">
+                            <a href="#" title="This is a sample read more button.">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{# Content ================================================================== #}
+<div data-c-overlay="black(80)" data-c-padding="triple" style="background-image: url('../../img/themes/rithika-gopalakrishnan-742460-unsplash.jpg');">
+    <div data-c-container="form">
+        <div data-c-background="white(100)" data-c-padding="normal" data-c-radius="rounded">
+            <h2 data-c-font-size="h2">
+                Sample Content
+            </h2>
+            <p data-c-margin="top(normal) bottom(half)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempus eget erat accumsan mollis. Morbi et lorem dui. Morbi placerat imperdiet malesuada. Aenean facilisis elementum neque id faucibus. Nunc consequat mi ut ipsum rutrum tristique.</p>
+            <form>
+                <div data-c-input="button">
+                    <label for="WB2">My Name</label>
+                    <span>Required</span>
+                    <div data-c-grid>
+                        <input
+                            data-c-grid-item="fit"
+                            id="WB2"
+                            placeholder="e.g. Clark Kent"
+                            type="text"
+                            required/>
+                        <button
+                            data-c-button="solid(c1)"
+                            type="button">
+                            Submit
+                        </button>
+                    </div>
+                    <span>This input has an error.</span>
+                </div>
+            </form>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempus eget erat accumsan mollis. Morbi et lorem dui. Morbi placerat imperdiet malesuada. Aenean facilisis elementum neque id faucibus. Nunc consequat mi ut ipsum rutrum tristique.</p>
+            <ul data-c-margin="tb(half)">
+                {% for item in triple %}
+                    <li>List Item</li>
+                {% endfor %}
+            </ul>
+            <p data-c-margin="top(half) bottom(normal)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempus eget erat accumsan mollis. Morbi et lorem dui. Morbi placerat imperdiet malesuada. Aenean facilisis elementum neque id faucibus. Nunc consequat mi ut ipsum rutrum tristique.</p>
+            <form data-c-grid="gutter">
+                <div data-c-input="checkbox" data-c-grid-item="base(1of1) tl(1of2)">
+                    <label>I want the following superpowers:</label>
+                    <span>Required</span>
+                    <div>
+                        <label for="cA1">
+                            <input
+                                id="cA1"
+                                type="checkbox"/>
+                            <span>Flight</span>
+                        </label>
+                        <label for="cA2">
+                            <input
+                                id="cA2"
+                                type="checkbox"/>
+                            <span>Strength</span>
+                        </label>
+                        <label for="cA3">
+                            <input
+                                id="cA3"
+                                type="checkbox"/>
+                            <span>Laser Vision</span>
+                        </label>
+                        <label for="cA4">
+                            <input
+                                id="cA4"
+                                type="checkbox"/>
+                            <span>Invulnerability</span>
+                        </label>
+                        <label for="cA5">
+                            <input
+                                id="cA5"
+                                type="checkbox"/>
+                            <span>Telekinesis</span>
+                        </label>
+                    </div>
+                    <span>This input has an error.</span>
+                </div>
+                <div data-c-input="radio" data-c-grid-item="base(1of1) tl(1of2)">
+                    <label for="RG2">I want the following hideout:</label>
+                    <span>Required</span>
+                    <div id="RG2" role="radiogroup">
+                        <label for="rB1">
+                            <input id="rB1" required name="radioB" type="radio" />
+                            <span>Crystal Fortress</span>
+                        </label>
+                        <label for="rB2">
+                            <input id="rB2" required name="radioB" type="radio" />
+                            <span>Secret Cave Lair</span>
+                        </label>
+                        <label for="rB3">
+                            <input id="rB3" required name="radioB" type="radio" />
+                            <span>Orbiting Space Station</span>
+                        </label>
+                        <label for="rB4">
+                            <input id="rB4" required name="radioB" type="radio" />
+                            <span>Public Hall</span>
+                        </label>
+                        <label for="rB5">
+                            <input id="rB5" required name="radioB" type="radio" />
+                            <span>Public Hall</span>
+                        </label>
+                    </div>
+                    <span>This input has an error.</span>
+                </div>
+            </form>
+            <p data-c-margin="top(half)">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempus eget erat accumsan mollis. Morbi et lorem dui. Morbi placerat imperdiet malesuada. Aenean facilisis elementum neque id faucibus. Nunc consequat mi ut ipsum rutrum tristique.</p>
+        </div>
+    </div>
+</div>
+{# Alert Examples =========================================================== #}
+<div data-c-padding="top(triple) bottom(triple)">
+    <div data-c-container="layout">
+        <div data-c-grid="gutter">
+            <div data-c-grid-item="base(1of1)">
+                <h2 data-c-font-size="h2">
+                    Sample Alerts
+                </h2>
+            </div>
+            {% for item in triple %}
+                <div data-c-grid-item="tl(1of3)">
+                    <div
+                        {% if item == 1 %}
+                            data-c-alert="information"
+                        {% elseif item == 2 %}
+                            data-c-alert="warning"
+                        {% elseif item == 3 %}
+                            data-c-alert="error"
+                        {% endif %}
+                        data-c-radius="rounded"
+                        role="alert">
+                        <div data-c-padding="half">
+                            <span
+                                data-c-margin="bottom(quarter)"
+                                data-c-heading="h5"
+                                data-c-font-weight="bold">
+                                <i
+                                    aria-hidden="true"
+                                    class="material-icons">
+                                    report_problem
+                                </i>
+                                Sample Info Alert
+                            </span>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempus eget erat accumsan mollis. Morbi et lorem dui. Morbi placerat imperdiet malesuada. Aenean facilisis elementum neque id faucibus. Nunc consequat mi ut ipsum rutrum tristique.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{# Carousel ================================================================= #}
+<div data-c-container="layout">
+    <h2 data-c-font-size="h2" data-c-margin="bottom(normal)">
+        Carousels
+    </h2>
+    <div
+        data-c-carousel="image"
+        data-slick='{"slidesToShow": 1, "dots": true}'>
+        {% for item in triple %}
+            <div
+                data-c-carousel="item"
+                {% if item == 1 %}
+                    style="background-image:url('../../img/themes/josh-spires-1646985-unsplash.jpg');"
+                {% elseif item == 2 %}
+                    style="background-image:url('../../img/themes/nicholas-safran-1645855-unsplash.jpg');"
+                {% elseif item == 3 %}
+                    style="background-image:url('../../img/themes/twk-tt-1646497-unsplash.jpg');"
+                {% endif %}>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{# Table Example ============================================================ #}
+<div data-c-padding="top(double) bottom(triple)">
+    <div data-c-container="layout">
+        <div data-c-grid="gutter">
+            <div data-c-grid-item="base(1of1) tp(1of2)">
+                <h2 data-c-font-size="h2">
+                    Sample Table
+                </h2>
+            </div>
+            <div data-c-grid-item="base(1of1) tp(1of2)" data-c-alignment="tp(right)">
+                {% if name == "Brave" %}
+                    <button data-c-radius="rounded" data-c-button="solid(c5)">
+                        View More
+                    </button>
+                {% elseif name == "Canada.ca" %}
+                    <button data-c-radius="rounded" data-c-button="solid(c1)">
+                        View More
+                    </button>
+                {% endif %}
+            </div>
+            <div data-c-grid-item="base(1of1)">
+                <div data-c-table>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">
+                                    Help! Tables!
+                                </th>
+                                <th scope="col">
+                                    Help! More Tables!
+                                </th>
+                                <th scope="col">
+                                    Help! Even More Tables!
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Repeat rows as necessary. -->
+                            {% for item in triple %}
+                                <tr>
+                                    <th scope="row">
+                                        Sample Title
+                                    </th>
+                                    <td>
+                                        This is sample content in a table.
+                                    </td>
+                                    <td>
+                                        This is sample content in a table.
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{# Footer =================================================================== #}
+{# {% if name == "Brave" %}
+    <footer data-c-background="black(100)" data-c-padding="tb(triple)">
+
+    </footer>
+{% elseif name == "Canada.ca" %}
+    <footer data-c-background="black(100)" data-c-padding="tb(triple)">
+        
+    </footer>
+{% endif %} #}

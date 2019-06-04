@@ -47,9 +47,15 @@ const twig = require('gulp-twig');
 
     // Twig
     function template() {
-        return src('app/twig/*.html')
+        return src('app/twig/*.twig')
         .pipe(twig())
         .pipe(dest('cache'));
+    }
+
+    function templateThemes() {
+        return src('app/twig/themes/**/*.twig')
+        .pipe(twig())
+        .pipe(dest('cache/themes'));
     }
 
     // Clone JS
@@ -110,12 +116,12 @@ const twig = require('gulp-twig');
 
     // Images
     function cacheImages() {
-        return src('app/img/*')
+        return src('app/img/**/*')
         .pipe(dest('cache/img'));
     }
 
     function moveImages() {
-        return src('cache/img/*')
+        return src('cache/img/**/*')
         .pipe(dest('docs/img'));
     }
 
@@ -137,7 +143,7 @@ const twig = require('gulp-twig');
         .pipe(dest('docs'));
     }
     function distribute() {
-        return src('cache/*.html')
+        return src('cache/**/*.html')
         .pipe(useref())
         .pipe(gulpIf('*.js', uglify()))
         .pipe(gulpIf('*.css', cssnano()))
@@ -147,19 +153,27 @@ const twig = require('gulp-twig');
         }));
     }
 
+    // Cache Removal
+    function cleanCache() {
+        return del('cache/**/*')
+    }
+
     // Dist Removal
-    function cleanDist() {
+    function cleanDocs() {
         return del(['docs/**/*', '!docs/CNAME']);
     }
 
+    // Compile
+    const compile = series(cleanCache, template, templateThemes, moveCloneJS, movePrismJSMain, movePrismJSTwig, movePrismJSSCSS, movePrismJSMarkup, movePrismJSMarkdown, movePrismJSBash, js, cacheImages, movePrismCSS, compileCSS);
+
     // Watch
     function watchFiles() {
-        watch('app/scss/**/*.scss', series(compileCSS, browserSyncReload));
-        watch('app/twig/**/*.html', series(template, cacheImages, browserSyncReload));
-        watch('app/js/*.js', series(js, moveCloneJS, browserSyncReload));
+        watch('app/scss/**/*.scss', series(compile, browserSyncReload));
+        watch('app/twig/**/*.twig', series(compile, browserSyncReload));
+        watch('app/js/*.js', series(compile, browserSyncReload));
     }
 
     // Export
-    exports.build = series(cleanDist, template, moveCloneJS, movePrismJSMain, movePrismJSTwig, movePrismJSSCSS, movePrismJSMarkup, movePrismJSMarkdown, movePrismJSBash, js, cacheImages, movePrismCSS, compileCSS, distribute, distCloneJS, distPrismJS, distPrismCSS, moveImages, distFavicons);
-    exports.watch = series(template, moveCloneJS, movePrismJSMain, movePrismJSTwig, movePrismJSSCSS, movePrismJSMarkup, movePrismJSMarkdown, movePrismJSBash, js, cacheImages, movePrismCSS, compileCSS, parallel(browserSync, watchFiles));
-    exports.default = series(template, moveCloneJS, movePrismJSMain, movePrismJSTwig, movePrismJSSCSS, movePrismJSMarkup, movePrismJSMarkdown, movePrismJSBash, js, cacheImages, movePrismCSS, compileCSS, parallel(browserSync, watchFiles));
+    exports.build = series(cleanDocs, compile, distribute, distCloneJS, distPrismJS, distPrismCSS, moveImages, distFavicons);
+    exports.watch = series(compile, parallel(browserSync, watchFiles));
+    exports.default = series(compile, parallel(browserSync, watchFiles));

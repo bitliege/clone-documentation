@@ -1,0 +1,131 @@
+// =============================================================================
+
+    // Clone
+    // Canada.ca
+
+// =============================================================================
+
+// Clone =======================================================================
+
+// Layout Variables
+$clone-wide-layout: 100rem;
+$clone-form-layout: 60rem;
+$clone-copy-layout: 39rem;
+
+// Whitespace Variables
+// On Portrait Phone Devices, Media Queries exist at Tablet Landscape, and Desktop Large and are generated using the multiplier below.
+$clone-margin: 1rem;
+$clone-padding: 1rem;
+$clone-whitespace-multiplier: 1.5;
+
+// Grid Variables
+$clone-grid-columns: 12;
+$clone-grid-gutter: $clone-padding;
+
+// Main Colour Variables
+
+    // Black & White
+    $clone-white: #FFFFFF;
+    $clone-black: rgba(10, 10, 20, 1);
+
+    // Grey/Gray
+    $clone-grey: rgba(150, 150, 150, 1);
+    $clone-grey-light: lighten($clone-grey, 10%);
+    $clone-grey-dark: darken($clone-grey, 10%);
+
+    $clone-gray: $clone-grey;
+    $clone-gray-light: $clone-grey-light;
+    $clone-gray-dark: $clone-grey-dark;
+
+    // Theme Colours
+    $clone-c1: #26374A;
+    $clone-c1-light: lighten($clone-c1, 10%);
+    $clone-c1-dark: darken($clone-c1, 10%);
+
+    $clone-c2: #269abc;
+    $clone-c2-light: lighten($clone-c2, 10%);
+    $clone-c2-dark: darken($clone-c2, 10%);
+
+    $clone-c3: #af3c43;
+    $clone-c3-light: lighten($clone-c3, 10%);
+    $clone-c3-dark: darken($clone-c3, 10%);
+
+    $clone-c4: #F79559;
+    $clone-c4-light: lighten($clone-c4, 10%);
+    $clone-c4-dark: darken($clone-c4, 10%);
+
+    $clone-c5: #F7AF5B;
+    $clone-c5-light: lighten($clone-c5, 10%);
+    $clone-c5-dark: darken($clone-c5, 10%);
+
+    // Go, Slow, Stop
+    $clone-go: green;
+    $clone-slow: #ff9900;
+    $clone-stop: #d3080c;
+    $clone-error: $clone-stop;
+
+// Sitewide Colour Variables
+
+    // Text Selection
+    $clone-selection-background-colour: $clone-c5;
+
+    // Hover
+    $clone-hover-colour: #0535d2;
+
+    // Focus
+    $clone-focus-colour: $clone-hover-colour;
+
+    // Visited Links
+    $clone-visited-colour: #7834bc;
+
+// Component Colour Variables
+
+    // Accordions
+    $clone-accordion-border-colour: $clone-black;
+    $clone-accordion-alternating-background-colour: lighten($clone-grey, 35%);
+
+    // Alerts
+    $clone-alert-information: $clone-c2;
+    $clone-alert-warning: $clone-slow;
+    $clone-alert-error: $clone-stop;
+
+    // Blockquotes
+    $clone-blockquote-colour: $clone-c1;
+
+    // Carousels
+    $clone-carousel-dot-colour: $clone-c1;
+    $clone-carousel-dot-active-colour: $clone-c3;
+
+    // Code Blocks
+    $clone-code-background: $clone-black;
+
+    // Pullquotes
+    $clone-pullquote-colour: $clone-c2;
+
+    // Tables
+    $clone-table-heading-colour: $clone-c1;
+    $clone-table-alternating-colour: rgba(0, 0, 0, .1); // Note that this transparency allows for a checker pattern on the grid when there is a vertical heading column,.
+
+// Font Variables
+
+    // Fonts
+    $clone-font-sans: 'Lato', sans-serif;
+    $clone-font-serif: serif;
+    $clone-font-script: "Euphoria Script", cursive;
+    $clone-font-monospace: "Consolas", mono-space;
+
+    $clone-font-default: $clone-font-sans;
+
+    // Default Line Height
+    $clone-line-height: 1.5;
+
+    // The Typography Scale
+    $clone-default-font-size: 1.25rem;
+    $clone-font-scale: 1.2;
+
+    $clone-font-scale-h1: calc(#{$clone-default-font-size}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale})))));
+    $clone-font-scale-h2: calc(#{$clone-default-font-size}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}))));
+    $clone-font-scale-h3: calc(#{$clone-default-font-size}*(#{$clone-font-scale}*(#{$clone-font-scale})));
+    $clone-font-scale-h4: calc(#{$clone-default-font-size}*(#{$clone-font-scale}));
+    $clone-font-scale-h5: $clone-default-font-size;
+    $clone-font-scale-small: calc(#{$clone-default-font-size}/(#{$clone-font-scale}));

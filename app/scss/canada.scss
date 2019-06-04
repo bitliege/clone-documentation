@@ -1,0 +1,15 @@
+@import "themes/canada";
+
+@import "../../node_modules/clone-framework/app/scss/clone";
+
+.theme-hero {
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 20rem;
+    }
+}
+
+.theme-gradient {
+    background: $clone-c1;
+}

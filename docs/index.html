@@ -350,7 +350,7 @@
                             
                                 <li>
                                     
-                                        <a data-terms="checkboxs" href="#input-checkbox">Checkboxs</a>
+                                        <a data-terms="checkboxes" href="#input-checkbox">Checkboxes</a>
                                     
                                 </li>
                             
@@ -696,7 +696,7 @@
                                             
                                                 <li>
                                                     
-                                                        <a href="#input-checkbox">Checkboxs</a>
+                                                        <a href="#input-checkbox">Checkboxes</a>
                                                     
                                                 </li>
                                             
@@ -812,7 +812,7 @@
             data-c-font-size="h1"
             data-c-font-weight="bold"
             data-c-margin="bottom(normal)">
-            Welcome to Clone (beta)
+            Welcome to Clone <span data-c-tag="c3" data-c-font-size="regular">BETA</span>
         </h1>
         <div data-c-margin="bottom(normal)" class="clone-hero-release">
             <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/joshdrink/clone-framework.svg">
@@ -879,9 +879,9 @@
         <img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/joshdrink/clone-framework/dist/js/gzip/clone.min.js.gz.svg?label=JS%20%28minified%2C%20gzipped%29">
     </div>
     <div data-c-margin="bottom(quarter)">
-        <pre><code class="language-twig">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.3/dist/css/clone-gridless.min.css&quot;&gt;</code></pre>
+        <pre><code class="language-twig">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.4/dist/css/clone-gridless.min.css&quot;&gt;</code></pre>
     </div>
-    <pre><code class="language-twig">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.3/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+    <pre><code class="language-twig">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.4/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
     <h5
         data-c-font-size="h5"
         data-c-font-weight="600"
@@ -893,9 +893,9 @@
         <img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/joshdrink/clone-framework/dist/js/gzip/clone.min.js.gz.svg?label=JS%20%28minified%2C%20gzipped%29">
     </div>
     <div data-c-margin="bottom(quarter)">
-        <pre><code class="language-twig">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.3/dist/css/clone.min.css&quot;&gt;</code></pre>
+        <pre><code class="language-twig">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.4/dist/css/clone.min.css&quot;&gt;</code></pre>
     </div>
-    <pre><code class="language-twig">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.3/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+    <pre><code class="language-twig">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.4/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
     <h4
         data-c-font-size="h4"
         data-c-margin="top(double) bottom(normal)">
@@ -923,7 +923,7 @@
     <p data-c-margin="top(normal) bottom(normal)">
         For now, it is also required that Clone's JavaScript file be imported using the CDN.
     </p>
-    <pre><code class="language-twig">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.3/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+    <pre><code class="language-twig">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.4/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
 </div>
                     <a id="about-usage"></a>
 <h3
@@ -943,7 +943,7 @@
     </p>
     <pre><code class="language-twig">&lt;div data-clone&gt;
     &lt;div
-        data-c-backround=&quot;c5(100)&quot;
+        data-c-backround=&quot;c2(100)&quot;
         data-c-padding=&quot;all(normal)&quot;
         data-c-colour=&quot;white&quot;&gt;
         &lt;h5
@@ -955,7 +955,7 @@
 &lt;/div&gt;</code></pre>
     <p data-c-margin="top(normal) bottom(normal)">Which will appear on your site as:</p>
     <div
-        data-c-background="c5(100)"
+        data-c-background="c2(100)"
         data-c-padding="all(normal)"
         data-c-colour="white"
         data-c-margin="bottom">
@@ -1014,14 +1014,12 @@ $clone-c1: #5B1647;
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Theme Variables
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -1042,13 +1040,12 @@ $clone-c1: #5B1647;
     </button>
     <div
         aria-hidden="true"
-        
-            data-c-padding="right(normal) left(normal)"
+            
         
         data-c-accordion="content">
         <div 
             
-                data-c-padding="top(normal) bottom(normal)"
+
             >
             
             
@@ -1073,7 +1070,7 @@ $clone-grid-gutter: $clone-padding !default;
 
     // Black &amp; White
     $clone-white: #FFFFFF !default;
-    $clone-black: #111111 !default;
+    $clone-black: rgba(10, 10, 20, 1) !default;
 
     // Grey/Gray
     $clone-grey: rgba(150, 150, 150, 1) !default;
@@ -1085,23 +1082,23 @@ $clone-grid-gutter: $clone-padding !default;
     $clone-gray-dark: $clone-grey-dark !default;
 
     // Theme Colours
-    $clone-c1: #ED5555 !default;
+    $clone-c1: #F14948 !default;
     $clone-c1-light: lighten($clone-c1, 10%) !default;
     $clone-c1-dark: darken($clone-c1, 10%) !default;
 
-    $clone-c2: #F2A460 !default;
+    $clone-c2: #F1604D !default;
     $clone-c2-light: lighten($clone-c2, 10%) !default;
     $clone-c2-dark: darken($clone-c2, 10%) !default;
 
-    $clone-c3: #B6C6B6 !default;
+    $clone-c3: #F47953 !default;
     $clone-c3-light: lighten($clone-c3, 10%) !default;
     $clone-c3-dark: darken($clone-c3, 10%) !default;
 
-    $clone-c4: #8C819E !default;
+    $clone-c4: #F79559 !default;
     $clone-c4-light: lighten($clone-c4, 10%) !default;
     $clone-c4-dark: darken($clone-c4, 10%) !default;
 
-    $clone-c5: #545482 !default;
+    $clone-c5: #F7AF5B !default;
     $clone-c5-light: lighten($clone-c5, 10%) !default;
     $clone-c5-dark: darken($clone-c5, 10%) !default;
 
@@ -1139,6 +1136,10 @@ $clone-grid-gutter: $clone-padding !default;
     // Blockquotes
     $clone-blockquote-colour: $clone-c1 !default;
 
+    // Carousels
+    $clone-carousel-dot-colour: $clone-c5 !default;
+    $clone-carousel-dot-active-colour: $clone-hover-colour !default;
+
     // Code Blocks
     $clone-code-background: $clone-black !default;
 
@@ -1163,15 +1164,15 @@ $clone-grid-gutter: $clone-padding !default;
     $clone-line-height: 1.5 !default;
 
     // The Typography Scale
-    $clone-font-scale-normal: 1rem !default;
+    $clone-default-font-size: 1rem !default;
     $clone-font-scale: 1.333 !default;
 
-    $clone-font-scale-h1: calc(1rem*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}))))) !default;
-    $clone-font-scale-h2: calc(1rem*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale})))) !default;
-    $clone-font-scale-h3: calc(1rem*(#{$clone-font-scale}*(#{$clone-font-scale}))) !default;
-    $clone-font-scale-h4: calc(1rem*(#{$clone-font-scale})) !default;
-    $clone-font-scale-h5: $clone-font-scale-normal !default;
-    $clone-font-scale-small: calc(1rem/(#{$clone-font-scale})) !default;
+    $clone-font-scale-h1: calc(#{$clone-default-font-size}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}))))) !default;
+    $clone-font-scale-h2: calc(#{$clone-default-font-size}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale})))) !default;
+    $clone-font-scale-h3: calc(#{$clone-default-font-size}*(#{$clone-font-scale}*(#{$clone-font-scale}))) !default;
+    $clone-font-scale-h4: calc(#{$clone-default-font-size}*(#{$clone-font-scale})) !default;
+    $clone-font-scale-h5: $clone-default-font-size !default;
+    $clone-font-scale-small: calc(#{$clone-default-font-size}/(#{$clone-font-scale})) !default;
 </code></pre>
             
             
@@ -1181,6 +1182,35 @@ $clone-grid-gutter: $clone-padding !default;
 
     </div>
 </div>
+<h4
+    data-c-font-size="h4"
+    data-c-margin="top(double) bottom(normal)">
+    Pre-built Themes
+</h4>
+<h5
+    data-c-font-size="h5"
+    data-c-font-weight="bold"
+    data-c-margin="top(double) bottom(normal)">
+    Brave (Default)
+</h5>
+<p data-c-margin="bottom(normal)">Brave is the default theme installed on Clone. It uses a progression of a soft orange-red to orange-yellow to give the theme a warm, upbeat vibe.</p>
+<a data-c-button="outline(c3)" href="/themes/brave/" title="Visit the Brave theme in a new browser tab." target="_blank">Preview Brave</a>
+<h5
+    data-c-font-size="h5"
+    data-c-font-weight="bold"
+    data-c-margin="top(double) bottom(normal)">
+    Canada.ca
+</h5>
+<p data-c-margin="bottom(normal)">The Canada.ca theme is built to emulate the basic style (colour, font, whitespace, etc.) of the Canada.ca government theme.</p>
+<a data-c-button="outline(c3)" href="/themes/canada/" title="Visit the Canada.ca theme in a new browser tab." target="_blank">Preview Canada.ca</a>
+<h5
+    data-c-font-size="h5"
+    data-c-font-weight="bold"
+    data-c-margin="top(double) bottom(normal)">
+    Talent Cloud
+</h5>
+<p data-c-margin="bottom(normal)">The Talent Cloud theme is built to...</p>
+<a data-c-button="outline(c3)" href="/themes/talent-cloud/" title="Visit the Talent Cloud theme in a new browser tab." target="_blank">Preview Talent Cloud</a>
                     <a id="about-contributing"></a>
 <h3
     data-c-font-size="h3"
@@ -1979,7 +2009,10 @@ all
 top
 right
 bottom
-left</code></pre>
+left
+tb (top &amp; bottom)
+lr (right &amp; left)
+rl (right &amp; left)</code></pre>
         </div>
         <div data-c-grid-item="equal-col tp(1of2)">
             <pre><code class="language-md"># VALUE
@@ -2177,12 +2210,12 @@ invisible</code></pre>
             tabindex="0"
             type="button">
             <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-                <span data-c-heading="h4" data-c-font-weight="bold">
+                <p data-c-heading="h4" data-c-font-weight="bold">
                     Accordion Title
-                </span>
-                <span data-c-margin="top(quarter)" data-c-heading="h5" data-c-colour="c5">
+                </p>
+                <p data-c-margin="top(quarter)" data-c-heading="h5" data-c-colour="c1">
                     Optional Accordion Subtitle
-                </span>
+                </p>
             </div>
             <span data-c-visibility="invisible">
                 Click to view...
@@ -2228,12 +2261,12 @@ invisible</code></pre>
             tabindex="0"
             type="button">
             <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-                <span data-c-heading="h4" data-c-font-weight="bold">
+                <p data-c-heading="h4" data-c-font-weight="bold">
                     Accordion Title
-                </span>
-                <span data-c-margin="top(quarter)" data-c-heading="h5" data-c-colour="c5">
+                </p>
+                <p data-c-margin="top(quarter)" data-c-heading="h5" data-c-colour="c1">
                     Optional Accordion Subtitle
-                </span>
+                </p>
             </div>
             <span data-c-visibility="invisible">
                 Click to view...
@@ -2279,12 +2312,12 @@ invisible</code></pre>
             tabindex="0"
             type="button">
             <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-                <span data-c-heading="h4" data-c-font-weight="bold">
+                <p data-c-heading="h4" data-c-font-weight="bold">
                     Accordion Title
-                </span>
-                <span data-c-margin="top(quarter)" data-c-heading="h5" data-c-colour="c5">
+                </p>
+                <p data-c-margin="top(quarter)" data-c-heading="h5" data-c-colour="c1">
                     Optional Accordion Subtitle
-                </span>
+                </p>
             </div>
             <span data-c-visibility="invisible">
                 Click to view...
@@ -2337,14 +2370,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Accordion Code
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -2366,7 +2397,6 @@ invisible</code></pre>
     <div
         aria-hidden="true"
         
-            
         
         data-c-accordion="content">
         <div 
@@ -2385,13 +2415,13 @@ invisible</code></pre>
             tabindex=&quot;0&quot;
             type=&quot;button&quot;&gt;
             &lt;div data-c-padding=&quot;top(normal) right bottom(normal) left(normal)&quot;&gt;
-                &lt;span data-c-heading=&quot;h4&quot; data-c-font-weight=&quot;bold&quot;&gt;
+                &lt;p data-c-heading=&quot;h4&quot; data-c-font-weight=&quot;bold&quot;&gt;
                     &lt;!-- Accordion Title Here --&gt;&gt;
-                &lt;/span&gt;
-                &lt;!-- This subtitle span can be removed if a subtitle is not necessary. --&gt;
-                &lt;span data-c-margin=&quot;top(quarter)&quot; data-c-heading=&quot;h5&quot; data-c-colour=&quot;c1&quot;&gt;
+                &lt;/p&gt;
+                &lt;!-- This subtitle p can be removed if a subtitle is not necessary. --&gt;
+                &lt;p data-c-margin=&quot;top(quarter)&quot; data-c-heading=&quot;h5&quot; data-c-colour=&quot;c1&quot;&gt;
                     &lt;!-- Accordion Subtitle Here --&gt;
-                &lt;/span&gt;
+                &lt;/p&gt;
             &lt;/div&gt;
             &lt;span data-c-visibility=&quot;invisible&quot;&gt;
                 Click to view...
@@ -2445,14 +2475,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Accordion Code Explanation
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -2627,14 +2655,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Alert Code
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -2656,7 +2682,6 @@ invisible</code></pre>
     <div
         aria-hidden="true"
         
-            
         
         data-c-accordion="content">
         <div 
@@ -2715,14 +2740,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Alert Code Explanation
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -2861,14 +2884,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Back-to-top-link Code
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -2890,7 +2911,6 @@ invisible</code></pre>
     <div
         aria-hidden="true"
         
-            
         
         data-c-accordion="content">
         <div 
@@ -2930,14 +2950,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Back-to-top-link Code Explanation
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -3067,14 +3085,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Blockquote Code
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -3096,7 +3112,6 @@ invisible</code></pre>
     <div
         aria-hidden="true"
         
-            
         
         data-c-accordion="content">
         <div 
@@ -3142,14 +3157,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Blockquote Code Explanation
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -3284,14 +3297,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Breadcrumb Code
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -3313,7 +3324,6 @@ invisible</code></pre>
     <div
         aria-hidden="true"
         
-            
         
         data-c-accordion="content">
         <div 
@@ -3386,14 +3396,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Breadcrumb Code Explanation
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -3793,14 +3801,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Button Code
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -3822,7 +3828,6 @@ invisible</code></pre>
     <div
         aria-hidden="true"
         
-            
         
         data-c-accordion="content">
         <div 
@@ -3859,14 +3864,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Button Code Explanation
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -4047,14 +4050,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Carousel Code
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -4076,7 +4077,6 @@ invisible</code></pre>
     <div
         aria-hidden="true"
         
-            
         
         data-c-accordion="content">
         <div 
@@ -4133,14 +4133,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Carousel Code Explanation
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -4256,11 +4254,11 @@ invisible</code></pre>
                 Dialog Title
             </h5>
 
-            <span
+            <p
                 data-c-font-size="h5"
                 data-c-margin="top(half)">
                 Optional Dialog Subtitle
-            </span>
+            </p>
 
             <button
                 data-c-dialog-action="close"
@@ -4330,14 +4328,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Dialog Code
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -4359,7 +4355,6 @@ invisible</code></pre>
     <div
         aria-hidden="true"
         
-            
         
         data-c-accordion="content">
         <div 
@@ -4402,12 +4397,12 @@ invisible</code></pre>
                 id=&quot;example-dialog-01-title&quot;&gt;
                 &lt;!-- Dialog Title Here --&gt;
             &lt;/h5&gt;
-            &lt;!-- This subtitle span can be removed if a subtitle isn&#039;t needed. --&gt;
-            &lt;span
+            &lt;!-- This subtitle p can be removed if a subtitle isn&#039;t needed. --&gt;
+            &lt;p
                 data-c-font-size=&quot;h5&quot;
                 data-c-margin=&quot;top(half)&quot;&gt;
                 &lt;!-- Dialog Subtitle Here --&gt;
-            &lt;/span&gt;
+            &lt;/p&gt;
             &lt;button
                 data-c-dialog-action=&quot;close&quot;
                 data-c-dialog-id=&quot;example-dialog-01&quot;
@@ -4473,14 +4468,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Dialog Code Explanation
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -4590,14 +4583,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Iframe Code
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -4619,7 +4610,6 @@ invisible</code></pre>
     <div
         aria-hidden="true"
         
-            
         
         data-c-accordion="content">
         <div 
@@ -4654,14 +4644,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Iframe Code Explanation
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -4711,7 +4699,7 @@ invisible</code></pre>
 </div>
                     <!-- Inputs -------------------------------------------- -->
                     <a id="inputs"></a>
-                    <div data-c-background="black(90)">
+                    <div data-c-background="black(80)">
                         <div data-c-container="full">
                             <h2
                                 data-c-font-size="h2"
@@ -4833,14 +4821,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Checkbox Input Code
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -4862,7 +4848,6 @@ invisible</code></pre>
     <div
         aria-hidden="true"
         
-            
         
         data-c-accordion="content">
         <div 
@@ -4989,14 +4974,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Date Input Code
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -5018,7 +5001,6 @@ invisible</code></pre>
     <div
         aria-hidden="true"
         
-            
         
         data-c-accordion="content">
         <div 
@@ -5152,14 +5134,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Dropdown Input Code
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -5181,7 +5161,6 @@ invisible</code></pre>
     <div
         aria-hidden="true"
         
-            
         
         data-c-accordion="content">
         <div 
@@ -5285,14 +5264,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Email Input Code
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -5314,7 +5291,6 @@ invisible</code></pre>
     <div
         aria-hidden="true"
         
-            
         
         data-c-accordion="content">
         <div 
@@ -5405,14 +5381,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Number Input Code
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -5434,7 +5408,6 @@ invisible</code></pre>
     <div
         aria-hidden="true"
         
-            
         
         data-c-accordion="content">
         <div 
@@ -5550,14 +5523,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Password Input Code
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -5579,7 +5550,6 @@ invisible</code></pre>
     <div
         aria-hidden="true"
         
-            
         
         data-c-accordion="content">
         <div 
@@ -5697,14 +5667,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Radio Input Code
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -5726,7 +5694,6 @@ invisible</code></pre>
     <div
         aria-hidden="true"
         
-            
         
         data-c-accordion="content">
         <div 
@@ -5832,14 +5799,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Text Input Code
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -5861,7 +5826,6 @@ invisible</code></pre>
     <div
         aria-hidden="true"
         
-            
         
         data-c-accordion="content">
         <div 
@@ -5951,14 +5915,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Textarea Input Code
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -5980,7 +5942,6 @@ invisible</code></pre>
     <div
         aria-hidden="true"
         
-            
         
         data-c-accordion="content">
         <div 
@@ -6099,14 +6060,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Text Input With Button Code
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -6128,7 +6087,6 @@ invisible</code></pre>
     <div
         aria-hidden="true"
         
-            
         
         data-c-accordion="content">
         <div 
@@ -6229,14 +6187,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Url Input Code
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -6258,7 +6214,6 @@ invisible</code></pre>
     <div
         aria-hidden="true"
         
-            
         
         data-c-accordion="content">
         <div 
@@ -6352,14 +6307,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Pullquote Code
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -6381,7 +6334,6 @@ invisible</code></pre>
     <div
         aria-hidden="true"
         
-            
         
         data-c-accordion="content">
         <div 
@@ -6424,14 +6376,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Pullquote Code Explanation
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -6539,14 +6489,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Skip-to-content-link Code
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -6568,7 +6516,6 @@ invisible</code></pre>
     <div
         aria-hidden="true"
         
-            
         
         data-c-accordion="content">
         <div 
@@ -6609,14 +6556,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Skip-to-content-link Code Explanation
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -6764,14 +6709,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Table Code
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">
@@ -6793,7 +6736,6 @@ invisible</code></pre>
     <div
         aria-hidden="true"
         
-            
         
         data-c-accordion="content">
         <div 
@@ -6856,14 +6798,12 @@ invisible</code></pre>
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 View Table Code Explanation
-            </span>
+            </p>
             
         </div>
         <span data-c-visibility="invisible">

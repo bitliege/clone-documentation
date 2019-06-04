@@ -1,0 +1,56 @@
+<a id="about-themeing"></a>
+<h3
+    data-c-font-size="h3"
+    data-c-colour="c1"
+    data-c-font-weight="600"
+    data-c-margin="top(double) bottom(normal)">
+    Themeing
+</h3>
+
+<div>
+    <p data-c-margin="bottom(half)">Not a fan of Brave, Clone's default theme? No problem!</p>
+    <p data-c-margin="bottom">Clone has a set of built-in variables that you can customize through Sass that will allow you to control a variety of fonts, colours, whitespace, etc. Simply pick and choose the variables you want to customize from the list below and add them to your Sass file, directly above Clone's import function (don't forget to remove the <code class="language-scss">{% filter escape %}!default{% endfilter %}</code>):</p>
+    <pre><code class="language-scss">{% filter escape %}// My Custom Clone Theme
+// Please note that Clone must be included last, after all of your custom variables.
+
+// Custom Variables
+$clone-grid-columns: 8;
+$clone-c1: #5B1647;
+
+// Include Clone
+@import "../node_modules/clone-framework/app/scss/clone";{% endfilter %}</code></pre>
+    <div 
+        data-c-margin="top"
+        data-c-accordion="group">
+        {% include "../../components/accordion.twig" with {'title': 'View Theme Variables', 'content': 'themeing'} %}
+    </div>
+</div>
+<h4
+    data-c-font-size="h4"
+    data-c-margin="top(double) bottom(normal)">
+    Pre-built Themes
+</h4>
+<h5
+    data-c-font-size="h5"
+    data-c-font-weight="bold"
+    data-c-margin="top(double) bottom(normal)">
+    Brave (Default)
+</h5>
+<p data-c-margin="bottom(normal)">Brave is the default theme installed on Clone. It uses a progression of a soft orange-red to orange-yellow to give the theme a warm, upbeat vibe.</p>
+<a data-c-button="outline(c3)" href="/themes/brave/" title="Visit the Brave theme in a new browser tab." target="_blank">Preview Brave</a>
+<h5
+    data-c-font-size="h5"
+    data-c-font-weight="bold"
+    data-c-margin="top(double) bottom(normal)">
+    Canada.ca
+</h5>
+<p data-c-margin="bottom(normal)">The Canada.ca theme is built to emulate the basic style (colour, font, whitespace, etc.) of the Canada.ca government theme.</p>
+<a data-c-button="outline(c3)" href="/themes/canada/" title="Visit the Canada.ca theme in a new browser tab." target="_blank">Preview Canada.ca</a>
+<h5
+    data-c-font-size="h5"
+    data-c-font-weight="bold"
+    data-c-margin="top(double) bottom(normal)">
+    Talent Cloud
+</h5>
+<p data-c-margin="bottom(normal)">The Talent Cloud theme is built to...</p>
+<a data-c-button="outline(c3)" href="/themes/talent-cloud/" title="Visit the Talent Cloud theme in a new browser tab." target="_blank">Preview Talent Cloud</a>

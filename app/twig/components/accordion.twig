@@ -5,18 +5,16 @@
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
-        data-c-background="c5(100)"
-        data-c-colour="white"
         tabindex="0"
         type="button">
         <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <span data-c-heading="h4">
+            <p data-c-heading="h4">
                 {{ title }}
-            </span>
+            </p>
             {% if subtitle %}
-                <span data-c-margin="top(quarter)" data-c-heading="h5" data-c-colour="c1">
+                <p data-c-margin="top(quarter)" data-c-heading="h5" data-c-colour="c1">
                     Optional Accordion Subtitle
-                </span>
+                </p>
             {% endif %}
         </div>
         <span data-c-visibility="invisible">
@@ -38,7 +36,7 @@
     <div
         aria-hidden="true"
         {% if element %}
-            
+        {% elseif content == "themeing" %}    
         {% else %}
             data-c-padding="right(normal) left(normal)"
         {% endif %}
@@ -46,6 +44,8 @@
         <div 
             {% if element %}
                 
+            {% elseif content == "themeing" %}
+
             {% else %}
                 data-c-padding="top(normal) bottom(normal)"
             {% endif %}>
@@ -56,7 +56,7 @@
                 <pre><code class="language-scss">{% filter escape %}{% include "../../../node_modules/clone-framework/app/scss/core/_defaults.scss" %}{% endfilter %}</code></pre>
             {% endif %}
             {% if explanation %}
-                {% include "../views/components/explanation/" ~ explanation ~ ".html" %}
+                {% include "../views/components/explanation/" ~ explanation ~ ".twig" %}
             {% endif %}
         </div>
     </div>

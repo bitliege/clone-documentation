@@ -60,7 +60,7 @@
 
     </head>
 
-    <body data-clone>
+    <body data-clone data-clone-js>
 
         <div
             data-c-alert="information(toast)"
@@ -94,7 +94,7 @@
             <div data-c-grid-item="tl(4of5)">
                 <a
                     data-c-skip-content
-                    data-c-background="grey(100)"
+                    data-c-background="grey(10)"
                     data-c-padding="normal"
                     data-c-color="white"
                     href="#content"
@@ -124,7 +124,7 @@
                 <!-- About ================================================= -->
                 <a id="about"></a>
                 <div data-c-background="black(90)">
-                    <div data-c-container="full">
+                    <div data-c-container="medium">
                         <h2
                             data-c-font-size="h2"
                             data-c-colour="white"
@@ -134,7 +134,7 @@
                     </div>
                 </div>
                 <div 
-                    data-c-container="full"
+                    data-c-container="medium"
                     data-c-padding="top(double) bottom(double)">
                     {% include "views/about/installation.twig" %}
                     {% include "views/about/usage.twig" %}
@@ -145,7 +145,7 @@
                 <!-- Essentials ============================================ -->
                 <a id="essentials"></a>
                 <div data-c-background="black(90)">
-                    <div data-c-container="full">
+                    <div data-c-container="medium">
                         <h2
                             data-c-font-size="h2"
                             data-c-colour="white"
@@ -155,7 +155,7 @@
                     </div>
                 </div>
                 <div 
-                    data-c-container="full"
+                    data-c-container="medium"
                     data-c-padding="top(double) bottom(double)">
                     {% include "views/essentials/colour.twig" %}
                     {% include "views/essentials/grid.twig" %}
@@ -165,7 +165,7 @@
                 <!-- Utilities ============================================= -->
                 <a id="utilities"></a>
                 <div data-c-background="black(90)">
-                    <div data-c-container="full">
+                    <div data-c-container="medium">
                         <h2
                             data-c-font-size="h2"
                             data-c-colour="white"
@@ -175,11 +175,12 @@
                     </div>
                 </div>
                 <div 
-                    data-c-container="full"
+                    data-c-container="medium"
                     data-c-padding="top(double) bottom(double)">
                     {% include "views/utilities/alignment.twig" %}
                     {% include "views/utilities/backgrounds.twig" %}
                     {% include "views/utilities/borders.twig" %}
+                    {% include "views/utilities/cards.twig" %}
                     {% include "views/utilities/containers.twig" %}
                     {% include "views/utilities/fonts.twig" %}
                     {% include "views/utilities/whitespace.twig" %}
@@ -228,7 +229,7 @@
                     {% include "views/components/layout.twig" with {'component': 'iframe', 'description': iframeDesc, 'accessibility': iframeAcc} %}
                     <!-- Inputs -------------------------------------------- -->
                     <a id="inputs"></a>
-                    <div data-c-background="black(80)">
+                    <div data-c-background="black(90)">
                         <div data-c-container="full">
                             <h2
                                 data-c-font-size="h2"
@@ -264,6 +265,10 @@
                     {% set tableDesc = 'Coming Soon!' %}
                     {% set tableAcc = 'Coming Soon!' %}
                     {% include "views/components/layout.twig" with {'component': 'table', 'description': tableDesc, 'accessibility': tableAcc} %}
+                    <!-- Tags ---------------------------------------------- -->
+                    {% set tagDesc = 'Tags are useful inline elements that can act as contextual information or links. Tags or pills are often short words or phrases and should be kept to a minimum amount of copy.' %}
+                    {% set tagAcc = 'Coming Soon!' %}
+                    {% include "views/components/layout.twig" with {'component': 'tag', 'description': tagDesc, 'accessibility': tagAcc} %}
 
             </div>
 

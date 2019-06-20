@@ -8,7 +8,7 @@
 </h3>
 <div>
     <p data-c-margin="bottom">Usage: <code class="language-html">{% filter escape %}<div data-c-container="TYPE"></div>{% endfilter %}</code></p>
-    <p data-c-margin="bottom">Purpose: This attribute allows you to select from one of three container types: full (for content that has no maximum width but requires a margin), copy (for long swathes of text) and layout (for contained UI).</p>
+    <p data-c-margin="bottom">Purpose: This attribute allows you to select from one of three container types: small (for large volumes of text), medium (for narrow UI and forms), large (for contained UI), and full (for content that has no maximum width but requires a margin).</p>
     <h4 
         data-c-font-size="h4"
         data-c-margin="top(double) bottom(normal)">
@@ -18,9 +18,10 @@
         <div data-c-grid-item="equal-col base(1of1)">
             <pre><code class="language-md"># TYPE
 
-full
-copy
-layout</code></pre>
+small
+medium
+large
+full</code></pre>
         </div>
     </div>
     <h4 
@@ -29,5 +30,5 @@ layout</code></pre>
         Examples
     </h4>
     <pre><code class="language-md">{% filter escape %}<!--A container for copy.-->
-<div data-c-container="copy"></div>{% endfilter %}</code></pre>
+<div data-c-container="small"></div>{% endfilter %}</code></pre>
 </div>

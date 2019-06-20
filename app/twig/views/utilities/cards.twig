@@ -1,0 +1,33 @@
+<a id="util-cards"></a>
+<h3
+    data-c-font-size="h3"
+    data-c-colour="c1"
+    data-c-font-weight="600"
+    data-c-margin="top(double) bottom(normal)">
+    Cards
+</h3>
+<div>
+    <p data-c-margin="bottom">Usage: <code class="language-html">{% filter escape %}<div data-c-card>{% endfilter %}</code></p>
+    <p data-c-margin="bottom">Purpose: This attribute aligns inline level elements based on the media query and alignment provided. This is useful for aligning content at different media queries.</p>
+    <h4 
+        data-c-font-size="h4"
+        data-c-margin="top(double) bottom(normal)">
+        Examples
+    </h4>
+    <div data-c-margin="bottom(normal)">
+        <div data-c-grid="gutter">
+            <div data-c-grid-item="base(1of1) tp(1of2)">
+                <div data-c-card data-c-padding="normal" data-c-radius="rounded">
+                    This is a sample card.
+                </div>
+            </div>
+            <div data-c-grid-item="base(1of1) tp(1of2)">
+                <div data-c-card data-c-padding="normal" data-c-radius="rounded">
+                    This is a sample card.
+                </div>
+            </div>
+        </div>
+    </div>
+    <pre><code class="language-md">{% filter escape %}<!--A card element with rounded edges.-->
+<div data-c-card data-c-radius="rounded"></div>{% endfilter %}</code></pre>
+</div>

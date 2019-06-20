@@ -20,7 +20,7 @@
     "autoprefixer": "^9.6.0",
     "browser-sync": "^2.26.7",
     "browserslist": "^4.6.3",
-    "clone-framework": "^2.3.5",
+    "clone-framework": "^2.3.6",
     "cssnano": "^4.1.10",
     "del": "^3.0.0",
     "gulp": "^4.0.2",

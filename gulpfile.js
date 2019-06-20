@@ -15,14 +15,12 @@ const gulp = require('gulp');
 const { series, parallel, src, dest, watch } = require('gulp');
 const sass = require('gulp-sass');
 const browsersync = require('browser-sync').create();
-const useref = require('gulp-useref');
 const uglify = require('gulp-uglify');
-const gulpIf = require('gulp-if');
 const concat = require('gulp-concat');
-const autoprefixer = require('gulp-autoprefixer');
-const cssnano = require('gulp-cssnano');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
 const del = require('del');
-const runSequence = require('run-sequence');
 const twig = require('gulp-twig');
 
 // Tasks =======================================================================
@@ -107,10 +105,7 @@ const twig = require('gulp-twig');
     function compileCSS() {
         return src('app/scss/**/*.scss')
         .pipe(sass())
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
+        .pipe(postcss([autoprefixer()]))
         .pipe(dest('cache/css'));
     }
 
@@ -137,7 +132,7 @@ const twig = require('gulp-twig');
     }
     function distCacheCSS() {
         return src('cache/css/*.css')
-        .pipe(cssnano())
+        .pipe(postcss([cssnano()]))
         .pipe(dest('docs/css'));
     }
     function distCloneJS() {
@@ -162,7 +157,7 @@ const twig = require('gulp-twig');
         return del('cache/**/*')
     }
 
-    // Dist Removal
+    // Docs Removal
     function cleanDocs() {
         return del(['docs/**/*', '!docs/CNAME']);
     }

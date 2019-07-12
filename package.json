@@ -1,26 +1,27 @@
 {
   "name": "clone-documentation",
   "version": "0.1.0",
-  "description": "Documentation for the clone framework.",
+  "description": "Documentation for the Clone design framework.",
   "main": "app/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clone": "npx gulp",
+    "clone build": "npx gulp build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joshdrink/clone.git"
+    "url": "git+https://github.com/joshdrink/clone-documentation.git"
   },
   "author": "Clone Contributors (https://github.com/joshdrink/clone/graphs/contributors)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/joshdrink/clone/issues"
+    "url": "https://github.com/joshdrink/clone-documentation/issues"
   },
   "homepage": "https://github.com/joshdrink/clone#readme",
   "devDependencies": {
     "autoprefixer": "^9.6.0",
     "browser-sync": "^2.26.7",
     "browserslist": "^4.6.3",
-    "clone-framework": "^2.3.6",
+    "clone-framework": "latest",
     "cssnano": "^4.1.10",
     "del": "^3.0.0",
     "gulp": "^4.0.2",

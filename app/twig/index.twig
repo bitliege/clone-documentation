@@ -1,46 +1,60 @@
 <!DOCTYPE html>
 
-<html
-    lang="en">
+<html lang="en">
 
     <head>
 
-        <title>Clone Documentation</title>
+        {# Site Title #}
+        <title>Clone: Documentation</title>
 
-        <meta
-            charset="utf-8" />
+        {# Charset #}
+        <meta charset="utf-8" />
 
+        {# Compatibility #}
         <meta
             http-equiv="X-UA-Compatible"
             content="IE=edge">
 
+        {# Viewport #}
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0">
 
+        {# Generic Google Fonts #}
         <link
             href="https://fonts.googleapis.com/css?family=Euphoria+Script|Open+Sans:400,400i,600,600i,800,800i&amp;subset=latin-ext"
             rel="stylesheet">
 
+        {# Material Icons #}
         <link
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
             rel="stylesheet">
 
+        {# jQuery #}
         <script
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
 
+        {# jQuery UI #}
         <script
             src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
             integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
             crossorigin="anonymous"></script>
 
-        <link async rel="stylesheet" href="css/app.css">
+        {# Documentation CSS #}
+        <link 
+            async 
+            href="css/app.css"
+            rel="stylesheet">
 
-        <link async rel="stylesheet" href="css/prism/prism-okaidia.css">
+        {# Prism CSS #}
+        <link 
+            async 
+            href="css/prism/prism-okaidia.css"
+            rel="stylesheet">
 
-        <!-- Favicons -->
+        {# Favicons #}
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -49,7 +63,7 @@
         <meta name="msapplication-TileColor" content="#b91d47">
         <meta name="theme-color" content="#b91d47">
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
+        {# Google Analytics #}
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97077222-3"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -61,6 +75,8 @@
     </head>
 
     <body data-clone data-clone-js>
+
+        {% set cloneVersion = "2.3.7" %}
 
         <div
             data-c-alert="information(toast)"

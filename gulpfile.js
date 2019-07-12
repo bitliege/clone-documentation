@@ -165,14 +165,17 @@ const twig = require('gulp-twig');
     // Compile
     const compile = series(cleanCache, template, templateThemes, moveCloneJS, movePrismJSMain, movePrismJSTwig, movePrismJSSCSS, movePrismJSMarkup, movePrismJSMarkdown, movePrismJSBash, js, cacheImages, movePrismCSS, compileCSS);
 
+    // Quick Compile
+    const quickCompile = series(template, templateThemes, js, cacheImages, compileCSS);
+
     // Dist
     const dist = series(distCacheHTML, distCacheJS, distCacheCSS, distCloneJS, distPrismJS, distPrismCSS, moveImages, distFavicons);
 
     // Watch
     function watchFiles() {
-        watch('app/scss/**/*.scss', series(compile, browserSyncReload));
-        watch('app/twig/**/*.twig', series(compile, browserSyncReload));
-        watch('app/js/*.js', series(compile, browserSyncReload));
+        watch('app/scss/**/*.scss', series(quickCompile, browserSyncReload));
+        watch('app/twig/**/*.twig', series(quickCompile, browserSyncReload));
+        watch('app/js/*.js', series(quickCompile, browserSyncReload));
     }
 
     // Export

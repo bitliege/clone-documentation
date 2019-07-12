@@ -1,20 +1,16 @@
 <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    {% if element %}
-        data-c-background="c3(80)"
-    {% endif %}
-    {% if explanation %}
-        data-c-background="c3(80)"
-    {% endif %}>
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 {{ title }}
             </p>
             {% if subtitle %}
@@ -29,13 +25,15 @@
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
@@ -44,19 +42,19 @@
         {% if element %}
         {% elseif content == "themeing" %}
         {% elseif content == "canada" %}
-        {% elseif content == "talent-cloud" %}  
+        {% elseif content == "talent-cloud" %}
         {% else %}
+            data-c-background="white(100)"
             data-c-padding="right(normal) left(normal)"
         {% endif %}
         data-c-accordion="content">
         <div 
             {% if element %}
-                data-c-padding="bottom(normal) rl(normal)"
             {% elseif content == "themeing" %}
             {% elseif content == "canada" %}
             {% elseif content == "talent-cloud" %}
             {% elseif explanation %}
-                data-c-padding="bottom(normal)"
+                data-c-padding="top(normal) bottom(normal)"
             {% else %}
                 data-c-padding="top(normal) bottom(normal)"
             {% endif %}>

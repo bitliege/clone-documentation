@@ -1,46 +1,60 @@
 <!DOCTYPE html>
 
-<html
-    lang="en">
+<html lang="en">
 
     <head>
 
-        <title>Clone Documentation</title>
+        
+        <title>Clone: Documentation</title>
 
-        <meta
-            charset="utf-8" />
+        
+        <meta charset="utf-8" />
 
+        
         <meta
             http-equiv="X-UA-Compatible"
             content="IE=edge">
 
+        
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0">
 
+        
         <link
             href="https://fonts.googleapis.com/css?family=Euphoria+Script|Open+Sans:400,400i,600,600i,800,800i&amp;subset=latin-ext"
             rel="stylesheet">
 
+        
         <link
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
             rel="stylesheet">
 
+        
         <script
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
 
+        
         <script
             src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
             integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
             crossorigin="anonymous"></script>
 
-        <link async rel="stylesheet" href="css/app.css">
+        
+        <link 
+            async 
+            href="css/app.css"
+            rel="stylesheet">
 
-        <link async rel="stylesheet" href="css/prism/prism-okaidia.css">
+        
+        <link 
+            async 
+            href="css/prism/prism-okaidia.css"
+            rel="stylesheet">
 
-        <!-- Favicons -->
+        
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -49,7 +63,7 @@
         <meta name="msapplication-TileColor" content="#b91d47">
         <meta name="theme-color" content="#b91d47">
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
+        
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97077222-3"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -61,6 +75,8 @@
     </head>
 
     <body data-clone data-clone-js>
+
+        
 
         <div
             data-c-alert="information(toast)"
@@ -152,14 +168,14 @@
                     
                         <li>
                             
-                                <a data-terms="Using Clone" href="#about-usage">Using Clone</a>
+                                <a data-terms="How To Use Clone" href="#about-usage">How To Use Clone</a>
                             
                         </li>
                         
                     
                         <li>
                             
-                                <a data-terms="Themeing" href="#about-themeing">Themeing</a>
+                                <a data-terms="Creating a Theme" href="#about-themeing">Creating A Theme</a>
                             
                         </li>
                         
@@ -486,14 +502,14 @@
                             
                                 <li>
                                     
-                                        <a href="#about-usage">Using Clone</a>
+                                        <a href="#about-usage">How To Use Clone</a>
                                     
                                     
                                 </li>
                             
                                 <li>
                                     
-                                        <a href="#about-themeing">Themeing</a>
+                                        <a href="#about-themeing">Creating A Theme</a>
                                     
                                     
                                 </li>
@@ -851,13 +867,27 @@
         <p data-c-margin="bottom">
             Browser Support: IE11, Edge, Chrome, Firefox, Safari
         </p>
-        <a
-            data-c-button="solid(c1)"
-            data-c-radius="rounded"
-            href="#content"
-            title="View the About Clone section.">
-            Get Started
-        </a>
+        <div data-c-grid="gutter">
+            <div data-c-grid-item="base(full) tl(1of2)">
+                <a
+                    data-c-button="solid(c1)"
+                    data-c-radius="rounded"
+                    href="#content"
+                    title="View the About Clone section.">
+                    Get Started
+                </a>
+            </div>
+            <div data-c-grid-item="base(full) tl(1of2)" data-c-align="tl(right)">
+                <a
+                    data-c-button="outline(c1)"
+                    data-c-radius="rounded"
+                    href="https://codesandbox.io/embed/clone-sandbox-ejqcl"
+                    title="Try Clone in your browser on Code Sandbox."
+                    target="_blank">
+                    Try it in your browser!
+                </a>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -887,10 +917,63 @@
     Installation
 </h3>
 
+<ul>
+    <li>
+        <a href="#about-installation-try" title="Learn about how you can try Clone out before using it on a project.">
+            Try It Out
+        </a>
+    </li>
+    <li>
+        <a href="#about-installation-cdn" title="Learn how you can use a CDN to install Clone on your project.">
+            Content Delivery Network (CDN)
+        </a>
+    </li>
+    <li>
+        <a href="#about-installation-npm" title="Learn how youc an use NPM to install Clone on your project.">
+            Node Package Manager (NPM)
+        </a>
+    </li>
+</ul>
+
 <div>
+    
+    <a id="about-installation-try"></a>
     <h4
         data-c-font-size="h4"
-        data-c-margin="top(normal) bottom(normal)">
+        data-c-margin="top(double) bottom(normal)">
+        Try It Out
+    </h4>
+    <p data-c-margin="bottom(normal)">There are 2 ways for you to try Clone out before you install it on your project:</p>
+    <ul>
+        <li><a href="https://codesandbox.io/embed/clone-sandbox-ejqcl" title="Try Clone out in your browser." target="_blank">Clone Sandbox</a>
+            <ul>
+                <li>
+                    This allows you to try Clone out right in your browser with no installation required.
+                </li>
+                <li>
+                    This is useful for testing small interactions or quickly prototyping a layout.
+                </li>
+                <li>
+                    This option is also useful for learning Clone risk free.
+                </li>
+            </ul>
+        </li>
+        <li><a href="https://github.com/joshdrink/clone-playground" title="Download and install Clone as a development environment." target="_blank">Clone Playground</a>
+            <ul>
+                <li>
+                    This lets you pull down a full development environment that let's you theme and prototype using Clone.
+                </li>
+                <li>
+                    This option is great for building static websites or prototypes (they can even be hosted on Github Pages!).
+                </li>
+            </ul>
+        </li>
+    </ul>
+    
+    <a id="about-installation-cdn"></a>
+    <h4
+        data-c-font-size="h4"
+        data-c-margin="top(double) bottom(normal)">
         Content Delivery Network (CDN)
     </h4>
     <p data-c-margin="bottom(half)">This option forces the use of the Brave default theme.</p>
@@ -901,15 +984,12 @@
         data-c-margin="top(double) bottom(normal)">
         Without Flexbox Grid
     </h5>
-    <p data-c-margin="bottom(normal)">Note: This option is great if your project can use CSS Grid.</p>
     <div data-c-margin="bottom(half)">
         <img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/joshdrink/clone-framework/dist/css/gzip/clone-gridless.min.css.gz.svg?label=CSS%20%28minified%2C%20gzipped%29">
         <img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/joshdrink/clone-framework/dist/js/gzip/clone.min.js.gz.svg?label=JS%20%28minified%2C%20gzipped%29">
     </div>
-    <div data-c-margin="bottom(quarter)">
-        <pre><code class="language-twig">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.7/dist/css/clone-gridless.min.css&quot;&gt;</code></pre>
-    </div>
-    <pre><code class="language-twig">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.7/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+    <pre><code class="language-twig">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.7/dist/css/clone-gridless.min.css&quot;&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.7/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
     <h5
         data-c-font-size="h5"
         data-c-font-weight="600"
@@ -920,10 +1000,10 @@
         <img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/joshdrink/clone-framework/dist/css/gzip/clone.min.css.gz.svg?label=CSS%20%28minified%2C%20gzipped%29">
         <img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/joshdrink/clone-framework/dist/js/gzip/clone.min.js.gz.svg?label=JS%20%28minified%2C%20gzipped%29">
     </div>
-    <div data-c-margin="bottom(quarter)">
-        <pre><code class="language-twig">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.7/dist/css/clone.min.css&quot;&gt;</code></pre>
-    </div>
-    <pre><code class="language-twig">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.7/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+    <pre><code class="language-twig">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.7/dist/css/clone.min.css&quot;&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.7/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+    
+    <a id="about-installation-npm"></a>
     <h4
         data-c-font-size="h4"
         data-c-margin="top(double) bottom(normal)">
@@ -943,11 +1023,13 @@
     <pre><code class="language-scss">// My Custom Clone Theme
 // Please note that Clone must be included last, after all of your custom variables.
 
-// Custom Variables
-// All available custom variables can be found at https://github.com/joshdrink/clone-framework/blob/master/app/scss/core/variables.scss
+// Clone Theme Variables
+// All available theme variables can be found at https://github.com/joshdrink/clone-framework/blob/master/app/scss/core/_defaults.scss
 
 // Include Clone
-@import &quot;../node_modules/clone-framework/app/scss/clone&quot;;</code></pre>
+@import &quot;../node_modules/clone-framework/app/scss/clone&quot;;
+
+// Your CSS Goes Below Here</code></pre>
     <p data-c-margin="top(normal) bottom(normal)">
         For now, it is also required that Clone's JavaScript file be imported using the CDN.
     </p>
@@ -959,7 +1041,7 @@
     data-c-colour="c1"
     data-c-font-weight="600"
     data-c-margin="top(double) bottom(normal)">
-    Using Clone
+    How To Use Clone
 </h3>
 
 <div>
@@ -1017,7 +1099,7 @@
     data-c-colour="c1"
     data-c-font-weight="600"
     data-c-margin="top(double) bottom(normal)">
-    Themeing
+    Creating A Theme
 </h3>
 
 <div>
@@ -1038,16 +1120,16 @@ $clone-c1: #5B1647;
         <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Theme Variables
             </p>
             
@@ -1058,13 +1140,15 @@ $clone-c1: #5B1647;
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
@@ -1152,7 +1236,7 @@ $clone-grid-gutter: $clone-padding !default;
     $clone-focus-colour: $clone-hover-colour !default;
 
     // Visited Links
-    $clone-visited-colour: $clone-c4-dark !default;
+    $clone-visited-colour: purple !default;
 
 // Component Options
 
@@ -1226,48 +1310,49 @@ $clone-grid-gutter: $clone-padding !default;
     data-c-margin="top(double) bottom(normal)">
     Pre-built Themes
 </h4>
-<div data-c-grid="gutter middle">
-    <div data-c-grid-item="tp(1of2)">
-        <h5
-            data-c-font-size="h5"
-            data-c-font-weight="bold">
-            Brave (Default)
-        </h5>
+<div data-c-background="grey(10)" data-c-padding="all(normal)" data-c-margin="bottom(normal)">
+    <div data-c-grid="gutter middle">
+        <div data-c-grid-item="tp(1of2)">
+            <h5
+                data-c-font-size="h5"
+                data-c-font-weight="bold">
+                Brave Theme
+            </h5>
+        </div>
+        <div data-c-grid-item="tp(1of2)" data-c-align="tp(right)">
+            <a href="/themes/brave/" title="Visit the Brave theme in a new browser tab." target="_blank">Preview Brave</a>
+        </div>
     </div>
-    <div data-c-grid-item="tp(1of2)" data-c-align="tp(right)">
-        <a href="/themes/brave/" title="Visit the Brave theme in a new browser tab." target="_blank">Preview Brave</a>
-    </div>
+    <p data-c-margin="top(normal)">Brave is the default theme installed on Clone. It uses a progression of a soft orange-red to orange-yellow to give the theme a warm, upbeat vibe.</p>
 </div>
-<p data-c-margin="tb(normal)">Brave is the default theme installed on Clone. It uses a progression of a soft orange-red to orange-yellow to give the theme a warm, upbeat vibe.</p>
-<div data-c-grid="gutter middle">
-    <div data-c-grid-item="tp(1of2)">
-        <h5
-            data-c-font-size="h5"
-            data-c-font-weight="bold">
-            Canada.ca
-        </h5>
+<div data-c-background="grey(10)" data-c-padding="all(normal)" data-c-margin="bottom(normal)">
+    <div data-c-grid="gutter middle">
+        <div data-c-grid-item="tp(1of2)">
+            <h5
+                data-c-font-size="h5"
+                data-c-font-weight="bold">
+                Canada.ca Theme
+            </h5>
+        </div>
+        <div data-c-grid-item="tp(1of2)" data-c-align="tp(right)">
+            <a href="/themes/canada/" title="Visit the Canada.ca theme in a new browser tab." target="_blank">Preview Canada.ca</a>
+        </div>
     </div>
-    <div data-c-grid-item="tp(1of2)" data-c-align="tp(right)">
-        <a href="/themes/canada/" title="Visit the Canada.ca theme in a new browser tab." target="_blank">Preview Canada.ca</a>
-    </div>
-</div>
-<p data-c-margin="tb(normal)">The Canada.ca theme is built to emulate the basic style (colour, font, whitespace, etc.) of the Canada.ca government theme.</p>
-<div 
-    data-c-margin="tb(normal)"
-    data-c-accordion="group">
-    <div
+    <p data-c-margin="tb(normal)">The Canada.ca theme is built to emulate the basic style (colour, font, whitespace, etc.) of the Canada.ca government theme.</p>
+    <div data-c-accordion="group">
+        <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Canada.ca's Theme Variables
             </p>
             
@@ -1278,13 +1363,15 @@ $clone-grid-gutter: $clone-padding !default;
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
@@ -1437,34 +1524,36 @@ $clone-grid-gutter: $clone-padding;
     </div>
 </div>
 
-</div>
-<div data-c-grid="gutter middle">
-    <div data-c-grid-item="tp(1of2)">
-        <h5
-            data-c-font-size="h5"
-            data-c-font-weight="bold">
-            Talent Cloud
-        </h5>
-    </div>
-    <div data-c-grid-item="tp(1of2)" data-c-align="tp(right)">
-        <a href="/themes/talent-cloud/" title="Visit the Talent Cloud theme in a new browser tab." target="_blank">Preview Talent Cloud</a>
     </div>
 </div>
-
-<div data-c-margin="top(normal)" data-c-accordion="group">
-    <div
+<div data-c-background="grey(10)" data-c-padding="all(normal)">
+    <div data-c-grid="gutter middle">
+        <div data-c-grid-item="tp(1of2)">
+            <h5
+                data-c-font-size="h5"
+                data-c-font-weight="bold">
+                Talent Cloud Theme
+            </h5>
+        </div>
+        <div data-c-grid-item="tp(1of2)" data-c-align="tp(right)">
+            <a href="/themes/talent-cloud/" title="Visit the Talent Cloud theme in a new browser tab." target="_blank">Preview Talent Cloud</a>
+        </div>
+    </div>
+    
+    <div data-c-margin="top(normal)" data-c-accordion="group">
+        <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Talent Cloud's Theme Variables
             </p>
             
@@ -1475,19 +1564,21 @@ $clone-grid-gutter: $clone-padding;
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
     <div
         aria-hidden="true"
-          
+        
         
         data-c-accordion="content">
         <div 
@@ -1634,6 +1725,7 @@ $clone-grid-gutter: $clone-padding;
     </div>
 </div>
 
+    </div>
 </div>
                     <a id="about-contributing"></a>
 <h3
@@ -2134,6 +2226,7 @@ right</code></pre>
             <pre><code class="language-md"># COLOUR
 
 white
+gray / grey
 black
 c1 (Theme Colour 01)
 c2 (Theme Colour 02)
@@ -2216,6 +2309,7 @@ dashed</code></pre>
             <pre><code class="language-md"># COLOUR
 
 white
+gray / grey
 black
 c1 (Theme Colour 01)
 c2 (Theme Colour 02)
@@ -2335,7 +2429,7 @@ full</code></pre>
 sans
 serif
 script
-mono</script></code></pre>
+mono / monospace</script></code></pre>
         </div>
     </div>
     <h4 
@@ -2356,6 +2450,7 @@ mono</script></code></pre>
             <pre><code class="language-md"># COLOUR
 
 white
+gray / grey
 black
 c1 (Theme Colour 01)
 c2 (Theme Colour 02)
@@ -2516,6 +2611,7 @@ triple</code></pre>
             <pre><code class="language-md"># COLOUR
 
 white
+gray / grey
 black
 c1 (Theme Colour 01)
 c2 (Theme Colour 02)
@@ -2647,10 +2743,128 @@ invisible</code></pre>
         data-c-font-size="h3"
         data-c-color="c1"
         data-c-font-weight="600"
-        data-c-margin="bottom(normal)">
+        data-c-margin="bottom(half)">
         Description
     </h3>
     <p data-c-margin="bottom(normal)">Accordions are a great way to arrange and display a high volume of categoric information. They provide the opportunity to include a title, subtitle, and content. The content area is flexible and is a great way to display copy, media, code, etc. It's possible to change the colour of the trigger using the background attribute. Alternatively, you can set the alt property on the accordion group to automatically alternate accordion colours between white and the variable you've selected.</p>
+    
+        <h4 
+            data-c-font-size="h4"
+            data-c-margin="top(double) bottom(half)">
+            Accessibility
+        </h4>
+        <p>Coming Soon!</p>
+    
+    <h3
+        data-c-font-size="h3"
+        data-c-color="c1"
+        data-c-font-weight="600"
+        data-c-margin="top(double) bottom(normal)">
+        Code Snippet
+    </h3>
+    <div data-c-accordion="group">
+        <div
+    data-c-accordion="accordion"
+    data-c-border="lr(thin, solid, black)"
+    data-c-background="black(90)"
+    data-c-radius="rounded">
+    <button
+        aria-expanded="false"
+        data-c-accordion="trigger"
+        data-c-padding="right"
+        tabindex="0"
+        type="button">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
+                View Accordion Code
+            </p>
+            
+        </div>
+        <span data-c-visibility="invisible">
+            Click to view...
+        </span>
+        <i
+            aria-hidden="true"
+            class="material-icons"
+            data-c-accordion="icon--add"
+            data-c-color="white">
+            add
+        </i>
+        <i
+            aria-hidden="true"
+            class="material-icons"
+            data-c-accordion="icon--remove"
+            data-c-color="white">
+            remove
+        </i>
+    </button>
+    <div
+        aria-hidden="true"
+        
+        
+        data-c-accordion="content">
+        <div 
+            
+            >
+            
+                <pre><code class="language-twig">&lt;div data-c-accordion=&quot;group&quot;&gt;
+    &lt;div
+        data-c-accordion=&quot;accordion&quot;
+        data-c-background=&quot;white(100)&quot;&gt;
+        &lt;button
+            aria-expanded=&quot;false&quot;
+            data-c-accordion=&quot;trigger&quot;
+            data-c-padding=&quot;right&quot;
+            tabindex=&quot;0&quot;
+            type=&quot;button&quot;&gt;
+            &lt;div data-c-padding=&quot;top(normal) right bottom(normal) left(normal)&quot;&gt;
+                &lt;p data-c-heading=&quot;h4&quot; data-c-font-weight=&quot;bold&quot;&gt;
+                    &lt;!-- Accordion Title Here --&gt;&gt;
+                &lt;/p&gt;
+                &lt;!-- This subtitle p can be removed if a subtitle is not necessary. --&gt;
+                &lt;p data-c-margin=&quot;top(quarter)&quot; data-c-heading=&quot;h5&quot; data-c-colour=&quot;c1&quot;&gt;
+                    &lt;!-- Accordion Subtitle Here --&gt;
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;span data-c-visibility=&quot;invisible&quot;&gt;
+                Click to view...
+            &lt;/span&gt;
+            &lt;i
+                aria-hidden=&quot;true&quot;
+                class=&quot;material-icons&quot;
+                data-c-accordion=&quot;icon--add&quot;
+                data-c-colour=&quot;black&quot;&gt;
+                add_circle
+            &lt;/i&gt;
+            &lt;i
+                aria-hidden=&quot;true&quot;
+                class=&quot;material-icons&quot;
+                data-c-accordion=&quot;icon--remove&quot;
+                data-c-colour=&quot;black&quot;&gt;
+                remove_circle
+            &lt;/i&gt;
+        &lt;/button&gt;
+        &lt;div
+            aria-hidden=&quot;true&quot;
+            data-c-accordion=&quot;content&quot;
+            data-c-padding=&quot;right(normal) left(normal)&quot;&gt;
+            &lt;div data-c-padding=&quot;bottom(normal)&quot;&gt;
+                &lt;!-- Content Goes Here --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            
+            
+            
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
     <h3
         data-c-font-size="h3"
         data-c-color="c1"
@@ -2819,135 +3033,22 @@ invisible</code></pre>
         data-c-color="c1"
         data-c-font-weight="600"
         data-c-margin="top(double) bottom(normal)">
-        Code Snippet
+        Detailed Information
     </h3>
     <div data-c-accordion="group">
         <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-        data-c-background="c3(80)"
-    
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
-                View Accordion Code
-            </p>
-            
-        </div>
-        <span data-c-visibility="invisible">
-            Click to view...
-        </span>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion="icon--add">
-            add
-        </i>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion="icon--remove">
-            remove
-        </i>
-    </button>
-    <div
-        aria-hidden="true"
-        
-        
-        data-c-accordion="content">
-        <div 
-            
-                data-c-padding="bottom(normal) rl(normal)"
-            >
-            
-                <pre><code class="language-twig">&lt;div data-c-accordion=&quot;group&quot;&gt;
-    &lt;div
-        data-c-accordion=&quot;accordion&quot;
-        data-c-background=&quot;white(100)&quot;&gt;
-        &lt;button
-            aria-expanded=&quot;false&quot;
-            data-c-accordion=&quot;trigger&quot;
-            data-c-padding=&quot;right&quot;
-            tabindex=&quot;0&quot;
-            type=&quot;button&quot;&gt;
-            &lt;div data-c-padding=&quot;top(normal) right bottom(normal) left(normal)&quot;&gt;
-                &lt;p data-c-heading=&quot;h4&quot; data-c-font-weight=&quot;bold&quot;&gt;
-                    &lt;!-- Accordion Title Here --&gt;&gt;
-                &lt;/p&gt;
-                &lt;!-- This subtitle p can be removed if a subtitle is not necessary. --&gt;
-                &lt;p data-c-margin=&quot;top(quarter)&quot; data-c-heading=&quot;h5&quot; data-c-colour=&quot;c1&quot;&gt;
-                    &lt;!-- Accordion Subtitle Here --&gt;
-                &lt;/p&gt;
-            &lt;/div&gt;
-            &lt;span data-c-visibility=&quot;invisible&quot;&gt;
-                Click to view...
-            &lt;/span&gt;
-            &lt;i
-                aria-hidden=&quot;true&quot;
-                class=&quot;material-icons&quot;
-                data-c-accordion=&quot;icon--add&quot;
-                data-c-colour=&quot;black&quot;&gt;
-                add_circle
-            &lt;/i&gt;
-            &lt;i
-                aria-hidden=&quot;true&quot;
-                class=&quot;material-icons&quot;
-                data-c-accordion=&quot;icon--remove&quot;
-                data-c-colour=&quot;black&quot;&gt;
-                remove_circle
-            &lt;/i&gt;
-        &lt;/button&gt;
-        &lt;div
-            aria-hidden=&quot;true&quot;
-            data-c-accordion=&quot;content&quot;
-            data-c-padding=&quot;right(normal) left(normal)&quot;&gt;
-            &lt;div data-c-padding=&quot;bottom(normal)&quot;&gt;
-                &lt;!-- Content Goes Here --&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-            
-            
-            
-            
-            
-        </div>
-    </div>
-</div>
-
-    </div>
-    <h3
-        data-c-font-size="h3"
-        data-c-color="c1"
-        data-c-font-weight="600"
-        data-c-margin="top(double) bottom(normal)">
-        Code Explanation
-    </h3>
-    <div data-c-accordion="group">
-        <div
-    data-c-accordion="accordion"
-    data-c-border="lr(thin, solid, black)"
-    
-    
-        data-c-background="c3(80)"
-    >
-    <button
-        aria-expanded="false"
-        data-c-accordion="trigger"
-        data-c-padding="right"
-        tabindex="0"
-        type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Accordion Code Explanation
             </p>
             
@@ -2958,25 +3059,28 @@ invisible</code></pre>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
     <div
         aria-hidden="true"
         
+            data-c-background="white(100)"
             data-c-padding="right(normal) left(normal)"
         
         data-c-accordion="content">
         <div 
             
-                data-c-padding="bottom(normal)"
+                data-c-padding="top(normal) bottom(normal)"
             >
             
             
@@ -2999,14 +3103,6 @@ invisible</code></pre>
 </div>
 
     </div>
-    <h3
-        data-c-font-size="h3"
-        data-c-color="c1"
-        data-c-font-weight="600"
-        data-c-margin="top(double) bottom(normal)">
-        How Accordions are Designed to be Accessible
-    </h3>
-    <p>Coming Soon!</p>
 </div>
                     <!-- Alerts -------------------------------------------- -->
                     
@@ -3029,10 +3125,108 @@ invisible</code></pre>
         data-c-font-size="h3"
         data-c-color="c1"
         data-c-font-weight="600"
-        data-c-margin="bottom(normal)">
+        data-c-margin="bottom(half)">
         Description
     </h3>
     <p data-c-margin="bottom(normal)">Coming Soon!</p>
+    
+        <h4 
+            data-c-font-size="h4"
+            data-c-margin="top(double) bottom(half)">
+            Accessibility
+        </h4>
+        <p>Coming Soon!</p>
+    
+    <h3
+        data-c-font-size="h3"
+        data-c-color="c1"
+        data-c-font-weight="600"
+        data-c-margin="top(double) bottom(normal)">
+        Code Snippet
+    </h3>
+    <div data-c-accordion="group">
+        <div
+    data-c-accordion="accordion"
+    data-c-border="lr(thin, solid, black)"
+    data-c-background="black(90)"
+    data-c-radius="rounded">
+    <button
+        aria-expanded="false"
+        data-c-accordion="trigger"
+        data-c-padding="right"
+        tabindex="0"
+        type="button">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
+                View Alert Code
+            </p>
+            
+        </div>
+        <span data-c-visibility="invisible">
+            Click to view...
+        </span>
+        <i
+            aria-hidden="true"
+            class="material-icons"
+            data-c-accordion="icon--add"
+            data-c-color="white">
+            add
+        </i>
+        <i
+            aria-hidden="true"
+            class="material-icons"
+            data-c-accordion="icon--remove"
+            data-c-color="white">
+            remove
+        </i>
+    </button>
+    <div
+        aria-hidden="true"
+        
+        
+        data-c-accordion="content">
+        <div 
+            
+            >
+            
+                <pre><code class="language-twig">&lt;!-- Alerts can have three arguments: information, warning, error. You can also include the toast argument on any of these types to fix the alert to the bottom right of the viewport. e.g. information(toast) --&gt;
+&lt;div
+    data-c-alert=&quot;error&quot;
+    data-c-radius=&quot;rounded&quot;
+    role=&quot;alert&quot;&gt;
+    &lt;div data-c-padding=&quot;half&quot;&gt;
+    &lt;!-- This title/icon span is optional. --&gt;
+        &lt;span
+            data-c-margin=&quot;bottom(quarter)&quot;
+            data-c-heading=&quot;h5&quot;
+            data-c-font-weight=&quot;bold&quot;&gt;
+            &lt;i
+                aria-hidden=&quot;true&quot;
+                class=&quot;material-icons&quot;&gt;
+                report_problem
+            &lt;/i&gt;
+            &lt;!-- Alert Title Here --&gt;
+        &lt;/span&gt;
+        &lt;p&gt;
+            &lt;!-- Alert Content Here --&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;!-- This optional close trigger will remove the element from the DOM. You&#039;ll need to manually add events if you need it to persist or perform further action. --&gt;
+    &lt;button data-c-alert=&quot;close-trigger&quot; data-c-padding=&quot;half&quot;&gt;
+        &lt;i class=&quot;material-icons&quot;&gt;close&lt;/i&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+            
+            
+            
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
     <h3
         data-c-font-size="h3"
         data-c-color="c1"
@@ -3116,115 +3310,22 @@ invisible</code></pre>
         data-c-color="c1"
         data-c-font-weight="600"
         data-c-margin="top(double) bottom(normal)">
-        Code Snippet
+        Detailed Information
     </h3>
     <div data-c-accordion="group">
         <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-        data-c-background="c3(80)"
-    
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
-                View Alert Code
-            </p>
-            
-        </div>
-        <span data-c-visibility="invisible">
-            Click to view...
-        </span>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion="icon--add">
-            add
-        </i>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion="icon--remove">
-            remove
-        </i>
-    </button>
-    <div
-        aria-hidden="true"
-        
-        
-        data-c-accordion="content">
-        <div 
-            
-                data-c-padding="bottom(normal) rl(normal)"
-            >
-            
-                <pre><code class="language-twig">&lt;!-- Alerts can have three arguments: information, warning, error. You can also include the toast argument on any of these types to fix the alert to the bottom right of the viewport. e.g. information(toast) --&gt;
-&lt;div
-    data-c-alert=&quot;error&quot;
-    data-c-radius=&quot;rounded&quot;
-    role=&quot;alert&quot;&gt;
-    &lt;div data-c-padding=&quot;half&quot;&gt;
-    &lt;!-- This title/icon span is optional. --&gt;
-        &lt;span
-            data-c-margin=&quot;bottom(quarter)&quot;
-            data-c-heading=&quot;h5&quot;
-            data-c-font-weight=&quot;bold&quot;&gt;
-            &lt;i
-                aria-hidden=&quot;true&quot;
-                class=&quot;material-icons&quot;&gt;
-                report_problem
-            &lt;/i&gt;
-            &lt;!-- Alert Title Here --&gt;
-        &lt;/span&gt;
-        &lt;p&gt;
-            &lt;!-- Alert Content Here --&gt;
-        &lt;/p&gt;
-    &lt;/div&gt;
-    &lt;!-- This optional close trigger will remove the element from the DOM. You&#039;ll need to manually add events if you need it to persist or perform further action. --&gt;
-    &lt;button data-c-alert=&quot;close-trigger&quot; data-c-padding=&quot;half&quot;&gt;
-        &lt;i class=&quot;material-icons&quot;&gt;close&lt;/i&gt;
-    &lt;/button&gt;
-&lt;/div&gt;
-</code></pre>
-            
-            
-            
-            
-            
-        </div>
-    </div>
-</div>
-
-    </div>
-    <h3
-        data-c-font-size="h3"
-        data-c-color="c1"
-        data-c-font-weight="600"
-        data-c-margin="top(double) bottom(normal)">
-        Code Explanation
-    </h3>
-    <div data-c-accordion="group">
-        <div
-    data-c-accordion="accordion"
-    data-c-border="lr(thin, solid, black)"
-    
-    
-        data-c-background="c3(80)"
-    >
-    <button
-        aria-expanded="false"
-        data-c-accordion="trigger"
-        data-c-padding="right"
-        tabindex="0"
-        type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Alert Code Explanation
             </p>
             
@@ -3235,25 +3336,28 @@ invisible</code></pre>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
     <div
         aria-hidden="true"
         
+            data-c-background="white(100)"
             data-c-padding="right(normal) left(normal)"
         
         data-c-accordion="content">
         <div 
             
-                data-c-padding="bottom(normal)"
+                data-c-padding="top(normal) bottom(normal)"
             >
             
             
@@ -3286,14 +3390,6 @@ invisible</code></pre>
 </div>
 
     </div>
-    <h3
-        data-c-font-size="h3"
-        data-c-color="c1"
-        data-c-font-weight="600"
-        data-c-margin="top(double) bottom(normal)">
-        How Alerts are Designed to be Accessible
-    </h3>
-    <p>Coming Soon!</p>
 </div>
                     <!-- Back-to-Top Links --------------------------------- -->
                     
@@ -3316,10 +3412,89 @@ invisible</code></pre>
         data-c-font-size="h3"
         data-c-color="c1"
         data-c-font-weight="600"
-        data-c-margin="bottom(normal)">
+        data-c-margin="bottom(half)">
         Description
     </h3>
     <p data-c-margin="bottom(normal)">Coming Soon!</p>
+    
+        <h4 
+            data-c-font-size="h4"
+            data-c-margin="top(double) bottom(half)">
+            Accessibility
+        </h4>
+        <p>Coming Soon!</p>
+    
+    <h3
+        data-c-font-size="h3"
+        data-c-color="c1"
+        data-c-font-weight="600"
+        data-c-margin="top(double) bottom(normal)">
+        Code Snippet
+    </h3>
+    <div data-c-accordion="group">
+        <div
+    data-c-accordion="accordion"
+    data-c-border="lr(thin, solid, black)"
+    data-c-background="black(90)"
+    data-c-radius="rounded">
+    <button
+        aria-expanded="false"
+        data-c-accordion="trigger"
+        data-c-padding="right"
+        tabindex="0"
+        type="button">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
+                View Back-to-top-link Code
+            </p>
+            
+        </div>
+        <span data-c-visibility="invisible">
+            Click to view...
+        </span>
+        <i
+            aria-hidden="true"
+            class="material-icons"
+            data-c-accordion="icon--add"
+            data-c-color="white">
+            add
+        </i>
+        <i
+            aria-hidden="true"
+            class="material-icons"
+            data-c-accordion="icon--remove"
+            data-c-color="white">
+            remove
+        </i>
+    </button>
+    <div
+        aria-hidden="true"
+        
+        
+        data-c-accordion="content">
+        <div 
+            
+            >
+            
+                <pre><code class="language-twig">&lt;a
+    data-c-button=&quot;solid(c1)&quot;
+    data-c-radius=&quot;rounded&quot;
+    href=&quot;#pageTop&quot;
+    title=&quot;Scroll to the top of the page.&quot;&gt;
+    &lt;i class=&quot;material-icons&quot;&gt;arrow_upward&lt;/i&gt;
+    &lt;!-- Button Text Here --&gt;
+&lt;/a&gt;
+</code></pre>
+            
+            
+            
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
     <h3
         data-c-font-size="h3"
         data-c-color="c1"
@@ -3357,96 +3532,22 @@ invisible</code></pre>
         data-c-color="c1"
         data-c-font-weight="600"
         data-c-margin="top(double) bottom(normal)">
-        Code Snippet
+        Detailed Information
     </h3>
     <div data-c-accordion="group">
         <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-        data-c-background="c3(80)"
-    
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
-                View Back-to-top-link Code
-            </p>
-            
-        </div>
-        <span data-c-visibility="invisible">
-            Click to view...
-        </span>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion="icon--add">
-            add
-        </i>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion="icon--remove">
-            remove
-        </i>
-    </button>
-    <div
-        aria-hidden="true"
-        
-        
-        data-c-accordion="content">
-        <div 
-            
-                data-c-padding="bottom(normal) rl(normal)"
-            >
-            
-                <pre><code class="language-twig">&lt;a
-    data-c-button=&quot;solid(c1)&quot;
-    data-c-radius=&quot;rounded&quot;
-    href=&quot;#pageTop&quot;
-    title=&quot;Scroll to the top of the page.&quot;&gt;
-    &lt;i class=&quot;material-icons&quot;&gt;arrow_upward&lt;/i&gt;
-    &lt;!-- Button Text Here --&gt;
-&lt;/a&gt;
-</code></pre>
-            
-            
-            
-            
-            
-        </div>
-    </div>
-</div>
-
-    </div>
-    <h3
-        data-c-font-size="h3"
-        data-c-color="c1"
-        data-c-font-weight="600"
-        data-c-margin="top(double) bottom(normal)">
-        Code Explanation
-    </h3>
-    <div data-c-accordion="group">
-        <div
-    data-c-accordion="accordion"
-    data-c-border="lr(thin, solid, black)"
-    
-    
-        data-c-background="c3(80)"
-    >
-    <button
-        aria-expanded="false"
-        data-c-accordion="trigger"
-        data-c-padding="right"
-        tabindex="0"
-        type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Back-to-top-link Code Explanation
             </p>
             
@@ -3457,25 +3558,28 @@ invisible</code></pre>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
     <div
         aria-hidden="true"
         
+            data-c-background="white(100)"
             data-c-padding="right(normal) left(normal)"
         
         data-c-accordion="content">
         <div 
             
-                data-c-padding="bottom(normal)"
+                data-c-padding="top(normal) bottom(normal)"
             >
             
             
@@ -3489,14 +3593,6 @@ invisible</code></pre>
 </div>
 
     </div>
-    <h3
-        data-c-font-size="h3"
-        data-c-color="c1"
-        data-c-font-weight="600"
-        data-c-margin="top(double) bottom(normal)">
-        How Back-to-top-links are Designed to be Accessible
-    </h3>
-    <p>Coming Soon!</p>
 </div>
                     <!-- Blockquotes --------------------------------------- -->
                     
@@ -3519,10 +3615,95 @@ invisible</code></pre>
         data-c-font-size="h3"
         data-c-color="c1"
         data-c-font-weight="600"
-        data-c-margin="bottom(normal)">
+        data-c-margin="bottom(half)">
         Description
     </h3>
     <p data-c-margin="bottom(normal)">Coming Soon!</p>
+    
+        <h4 
+            data-c-font-size="h4"
+            data-c-margin="top(double) bottom(half)">
+            Accessibility
+        </h4>
+        <p>Coming Soon!</p>
+    
+    <h3
+        data-c-font-size="h3"
+        data-c-color="c1"
+        data-c-font-weight="600"
+        data-c-margin="top(double) bottom(normal)">
+        Code Snippet
+    </h3>
+    <div data-c-accordion="group">
+        <div
+    data-c-accordion="accordion"
+    data-c-border="lr(thin, solid, black)"
+    data-c-background="black(90)"
+    data-c-radius="rounded">
+    <button
+        aria-expanded="false"
+        data-c-accordion="trigger"
+        data-c-padding="right"
+        tabindex="0"
+        type="button">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
+                View Blockquote Code
+            </p>
+            
+        </div>
+        <span data-c-visibility="invisible">
+            Click to view...
+        </span>
+        <i
+            aria-hidden="true"
+            class="material-icons"
+            data-c-accordion="icon--add"
+            data-c-color="white">
+            add
+        </i>
+        <i
+            aria-hidden="true"
+            class="material-icons"
+            data-c-accordion="icon--remove"
+            data-c-color="white">
+            remove
+        </i>
+    </button>
+    <div
+        aria-hidden="true"
+        
+        
+        data-c-accordion="content">
+        <div 
+            
+            >
+            
+                <pre><code class="language-twig">&lt;blockquote
+    data-c-blockquote
+    data-c-border=&quot;left(thick, solid, c1)&quot;
+    data-c-background=&quot;c1(30)&quot;
+    data-c-padding=&quot;normal&quot;&gt;
+    &lt;p data-c-margin=&quot;bottom&quot;&gt;
+        &lt;!-- Place your content here. --&gt;
+    &lt;/p&gt;
+    &lt;p 
+        data-c-alignment=&quot;base(right)&quot;
+        data-c-font-weight=&quot;bold&quot;&gt;
+        &lt;!-- Place your source here. --&gt;
+    &lt;/p&gt;
+&lt;/blockquote&gt;
+</code></pre>
+            
+            
+            
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
     <h3
         data-c-font-size="h3"
         data-c-color="c1"
@@ -3570,102 +3751,22 @@ invisible</code></pre>
         data-c-color="c1"
         data-c-font-weight="600"
         data-c-margin="top(double) bottom(normal)">
-        Code Snippet
+        Detailed Information
     </h3>
     <div data-c-accordion="group">
         <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-        data-c-background="c3(80)"
-    
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
-                View Blockquote Code
-            </p>
-            
-        </div>
-        <span data-c-visibility="invisible">
-            Click to view...
-        </span>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion="icon--add">
-            add
-        </i>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion="icon--remove">
-            remove
-        </i>
-    </button>
-    <div
-        aria-hidden="true"
-        
-        
-        data-c-accordion="content">
-        <div 
-            
-                data-c-padding="bottom(normal) rl(normal)"
-            >
-            
-                <pre><code class="language-twig">&lt;blockquote
-    data-c-blockquote
-    data-c-border=&quot;left(thick, solid, c1)&quot;
-    data-c-background=&quot;c1(30)&quot;
-    data-c-padding=&quot;normal&quot;&gt;
-    &lt;p data-c-margin=&quot;bottom&quot;&gt;
-        &lt;!-- Place your content here. --&gt;
-    &lt;/p&gt;
-    &lt;p 
-        data-c-alignment=&quot;base(right)&quot;
-        data-c-font-weight=&quot;bold&quot;&gt;
-        &lt;!-- Place your source here. --&gt;
-    &lt;/p&gt;
-&lt;/blockquote&gt;
-</code></pre>
-            
-            
-            
-            
-            
-        </div>
-    </div>
-</div>
-
-    </div>
-    <h3
-        data-c-font-size="h3"
-        data-c-color="c1"
-        data-c-font-weight="600"
-        data-c-margin="top(double) bottom(normal)">
-        Code Explanation
-    </h3>
-    <div data-c-accordion="group">
-        <div
-    data-c-accordion="accordion"
-    data-c-border="lr(thin, solid, black)"
-    
-    
-        data-c-background="c3(80)"
-    >
-    <button
-        aria-expanded="false"
-        data-c-accordion="trigger"
-        data-c-padding="right"
-        tabindex="0"
-        type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Blockquote Code Explanation
             </p>
             
@@ -3676,25 +3777,28 @@ invisible</code></pre>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
     <div
         aria-hidden="true"
         
+            data-c-background="white(100)"
             data-c-padding="right(normal) left(normal)"
         
         data-c-accordion="content">
         <div 
             
-                data-c-padding="bottom(normal)"
+                data-c-padding="top(normal) bottom(normal)"
             >
             
             
@@ -3708,14 +3812,6 @@ invisible</code></pre>
 </div>
 
     </div>
-    <h3
-        data-c-font-size="h3"
-        data-c-color="c1"
-        data-c-font-weight="600"
-        data-c-margin="top(double) bottom(normal)">
-        How Blockquotes are Designed to be Accessible
-    </h3>
-    <p>Coming Soon!</p>
 </div>
                     <!-- Breadcrumbs --------------------------------------- -->
                     
@@ -3738,57 +3834,18 @@ invisible</code></pre>
         data-c-font-size="h3"
         data-c-color="c1"
         data-c-font-weight="600"
-        data-c-margin="bottom(normal)">
+        data-c-margin="bottom(half)">
         Description
     </h3>
     <p data-c-margin="bottom(normal)">Coming Soon!</p>
-    <h3
-        data-c-font-size="h3"
-        data-c-color="c1"
-        data-c-font-weight="600"
-        data-c-margin="top(double) bottom(normal)">
-        Examples
-    </h3>
-    <nav
-    aria-label="breadcrumb"
-    data-c-breadcrumbs>
-    <ol>
-        <li>
-            <a
-                href="#link-to-page"
-                title="This is the title of the page link.">
-                Page Link 01
-            </a>
-            <i class="material-icons">arrow_right</i>
-        </li>
-        <li>
-            <a
-                href="#link-to-page"
-                title="This is the title of the page link.">
-                Page Link 02
-            </a>
-            <i class="material-icons">arrow_right</i>
-        </li>
-        <li>
-            <a
-                href="#link-to-page"
-                title="This is the title of the page link.">
-                Page Link 03
-            </a>
-            <i class="material-icons">arrow_right</i>
-        </li>
-        <li>
-            <a
-                aria-current="page"
-                href="#link-to-page"
-                title="This is the title of the page link.">
-                Page Link 04
-            </a>
-            <i class="material-icons">arrow_right</i>
-        </li>
-    </ol>
-</nav>
-
+    
+        <h4 
+            data-c-font-size="h4"
+            data-c-margin="top(double) bottom(half)">
+            Accessibility
+        </h4>
+        <p>Coming Soon!</p>
+    
     <h3
         data-c-font-size="h3"
         data-c-color="c1"
@@ -3800,18 +3857,16 @@ invisible</code></pre>
         <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-        data-c-background="c3(80)"
-    
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Breadcrumb Code
             </p>
             
@@ -3822,13 +3877,15 @@ invisible</code></pre>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
@@ -3839,7 +3896,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                data-c-padding="bottom(normal) rl(normal)"
             >
             
                 <pre><code class="language-twig">&lt;div data-c-alignment=&quot;center&quot;&gt;
@@ -3899,24 +3955,69 @@ invisible</code></pre>
         data-c-color="c1"
         data-c-font-weight="600"
         data-c-margin="top(double) bottom(normal)">
-        Code Explanation
+        Examples
+    </h3>
+    <nav
+    aria-label="breadcrumb"
+    data-c-breadcrumbs>
+    <ol>
+        <li>
+            <a
+                href="#link-to-page"
+                title="This is the title of the page link.">
+                Page Link 01
+            </a>
+            <i class="material-icons">arrow_right</i>
+        </li>
+        <li>
+            <a
+                href="#link-to-page"
+                title="This is the title of the page link.">
+                Page Link 02
+            </a>
+            <i class="material-icons">arrow_right</i>
+        </li>
+        <li>
+            <a
+                href="#link-to-page"
+                title="This is the title of the page link.">
+                Page Link 03
+            </a>
+            <i class="material-icons">arrow_right</i>
+        </li>
+        <li>
+            <a
+                aria-current="page"
+                href="#link-to-page"
+                title="This is the title of the page link.">
+                Page Link 04
+            </a>
+            <i class="material-icons">arrow_right</i>
+        </li>
+    </ol>
+</nav>
+
+    <h3
+        data-c-font-size="h3"
+        data-c-color="c1"
+        data-c-font-weight="600"
+        data-c-margin="top(double) bottom(normal)">
+        Detailed Information
     </h3>
     <div data-c-accordion="group">
         <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-    
-        data-c-background="c3(80)"
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Breadcrumb Code Explanation
             </p>
             
@@ -3927,25 +4028,28 @@ invisible</code></pre>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
     <div
         aria-hidden="true"
         
+            data-c-background="white(100)"
             data-c-padding="right(normal) left(normal)"
         
         data-c-accordion="content">
         <div 
             
-                data-c-padding="bottom(normal)"
+                data-c-padding="top(normal) bottom(normal)"
             >
             
             
@@ -3959,14 +4063,6 @@ invisible</code></pre>
 </div>
 
     </div>
-    <h3
-        data-c-font-size="h3"
-        data-c-color="c1"
-        data-c-font-weight="600"
-        data-c-margin="top(double) bottom(normal)">
-        How Breadcrumbs are Designed to be Accessible
-    </h3>
-    <p>Coming Soon!</p>
 </div>
                     <!-- Buttons ------------------------------------------- -->
                     
@@ -3989,10 +4085,86 @@ invisible</code></pre>
         data-c-font-size="h3"
         data-c-color="c1"
         data-c-font-weight="600"
-        data-c-margin="bottom(normal)">
+        data-c-margin="bottom(half)">
         Description
     </h3>
     <p data-c-margin="bottom(normal)">Coming Soon!</p>
+    
+        <h4 
+            data-c-font-size="h4"
+            data-c-margin="top(double) bottom(half)">
+            Accessibility
+        </h4>
+        <p>Coming Soon!</p>
+    
+    <h3
+        data-c-font-size="h3"
+        data-c-color="c1"
+        data-c-font-weight="600"
+        data-c-margin="top(double) bottom(normal)">
+        Code Snippet
+    </h3>
+    <div data-c-accordion="group">
+        <div
+    data-c-accordion="accordion"
+    data-c-border="lr(thin, solid, black)"
+    data-c-background="black(90)"
+    data-c-radius="rounded">
+    <button
+        aria-expanded="false"
+        data-c-accordion="trigger"
+        data-c-padding="right"
+        tabindex="0"
+        type="button">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
+                View Button Code
+            </p>
+            
+        </div>
+        <span data-c-visibility="invisible">
+            Click to view...
+        </span>
+        <i
+            aria-hidden="true"
+            class="material-icons"
+            data-c-accordion="icon--add"
+            data-c-color="white">
+            add
+        </i>
+        <i
+            aria-hidden="true"
+            class="material-icons"
+            data-c-accordion="icon--remove"
+            data-c-color="white">
+            remove
+        </i>
+    </button>
+    <div
+        aria-hidden="true"
+        
+        
+        data-c-accordion="content">
+        <div 
+            
+            >
+            
+                <pre><code class="language-twig">&lt;!-- Modify the data-c-button value. --&gt;
+&lt;button
+    data-c-button=&quot;solid(stop)&quot;
+    type=&quot;button&quot;&gt;
+    &lt;!-- Button Text Here --&gt;
+&lt;/button&gt;</code></pre>
+            
+            
+            
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
     <h3
         data-c-font-size="h3"
         data-c-color="c1"
@@ -4310,93 +4482,22 @@ invisible</code></pre>
         data-c-color="c1"
         data-c-font-weight="600"
         data-c-margin="top(double) bottom(normal)">
-        Code Snippet
+        Detailed Information
     </h3>
     <div data-c-accordion="group">
         <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-        data-c-background="c3(80)"
-    
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
-                View Button Code
-            </p>
-            
-        </div>
-        <span data-c-visibility="invisible">
-            Click to view...
-        </span>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion="icon--add">
-            add
-        </i>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion="icon--remove">
-            remove
-        </i>
-    </button>
-    <div
-        aria-hidden="true"
-        
-        
-        data-c-accordion="content">
-        <div 
-            
-                data-c-padding="bottom(normal) rl(normal)"
-            >
-            
-                <pre><code class="language-twig">&lt;!-- Modify the data-c-button value. --&gt;
-&lt;button
-    data-c-button=&quot;solid(stop)&quot;
-    type=&quot;button&quot;&gt;
-    &lt;!-- Button Text Here --&gt;
-&lt;/button&gt;</code></pre>
-            
-            
-            
-            
-            
-        </div>
-    </div>
-</div>
-
-    </div>
-    <h3
-        data-c-font-size="h3"
-        data-c-color="c1"
-        data-c-font-weight="600"
-        data-c-margin="top(double) bottom(normal)">
-        Code Explanation
-    </h3>
-    <div data-c-accordion="group">
-        <div
-    data-c-accordion="accordion"
-    data-c-border="lr(thin, solid, black)"
-    
-    
-        data-c-background="c3(80)"
-    >
-    <button
-        aria-expanded="false"
-        data-c-accordion="trigger"
-        data-c-padding="right"
-        tabindex="0"
-        type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Button Code Explanation
             </p>
             
@@ -4407,25 +4508,28 @@ invisible</code></pre>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
     <div
         aria-hidden="true"
         
+            data-c-background="white(100)"
             data-c-padding="right(normal) left(normal)"
         
         data-c-accordion="content">
         <div 
             
-                data-c-padding="bottom(normal)"
+                data-c-padding="top(normal) bottom(normal)"
             >
             
             
@@ -4439,14 +4543,6 @@ invisible</code></pre>
 </div>
 
     </div>
-    <h3
-        data-c-font-size="h3"
-        data-c-color="c1"
-        data-c-font-weight="600"
-        data-c-margin="top(double) bottom(normal)">
-        How Buttons are Designed to be Accessible
-    </h3>
-    <p>Coming Soon!</p>
 </div>
                     <!-- Carousels ----------------------------------------- -->
                     
@@ -4469,10 +4565,106 @@ invisible</code></pre>
         data-c-font-size="h3"
         data-c-color="c1"
         data-c-font-weight="600"
-        data-c-margin="bottom(normal)">
+        data-c-margin="bottom(half)">
         Description
     </h3>
     <p data-c-margin="bottom(normal)">Coming Soon!</p>
+    
+        <h4 
+            data-c-font-size="h4"
+            data-c-margin="top(double) bottom(half)">
+            Accessibility
+        </h4>
+        <p>Coming Soon!</p>
+    
+    <h3
+        data-c-font-size="h3"
+        data-c-color="c1"
+        data-c-font-weight="600"
+        data-c-margin="top(double) bottom(normal)">
+        Code Snippet
+    </h3>
+    <div data-c-accordion="group">
+        <div
+    data-c-accordion="accordion"
+    data-c-border="lr(thin, solid, black)"
+    data-c-background="black(90)"
+    data-c-radius="rounded">
+    <button
+        aria-expanded="false"
+        data-c-accordion="trigger"
+        data-c-padding="right"
+        tabindex="0"
+        type="button">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
+                View Carousel Code
+            </p>
+            
+        </div>
+        <span data-c-visibility="invisible">
+            Click to view...
+        </span>
+        <i
+            aria-hidden="true"
+            class="material-icons"
+            data-c-accordion="icon--add"
+            data-c-color="white">
+            add
+        </i>
+        <i
+            aria-hidden="true"
+            class="material-icons"
+            data-c-accordion="icon--remove"
+            data-c-color="white">
+            remove
+        </i>
+    </button>
+    <div
+        aria-hidden="true"
+        
+        
+        data-c-accordion="content">
+        <div 
+            
+            >
+            
+                <pre><code class="language-twig">&lt;div
+    data-c-carousel=&quot;content&quot;
+    data-slick=&#039;{&quot;slidesToShow&quot;: 1, &quot;dots&quot;: true}&#039;&gt;
+    &lt;!-- Repeat items as necessary. --&gt;
+    &lt;div
+        data-c-carousel=&quot;item&quot;
+        style=&quot;background-image: url(&#039;URL&#039;);&quot;&gt;
+        &lt;!-- This div is the content wrapper. --&gt;
+        &lt;div
+            data-c-padding=&quot;normal&quot;
+            data-c-background=&quot;black(100)&quot;
+            data-c-margin=&quot;top(triple) bottom(triple)&quot;&gt;
+            &lt;h5
+                data-c-heading=&quot;h5&quot;
+                data-c-margin=&quot;bottom(half)&quot;
+                data-c-font-weight=&quot;bold&quot;
+                data-c-colour=&quot;white&quot;&gt;
+                &lt;!-- Optional Slide Title Here --&gt;
+            &lt;/h5&gt;
+            &lt;p data-c-colour=&quot;white&quot;&gt;
+                &lt;!-- Slide Content Here --&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            
+            
+            
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
     <h3
         data-c-font-size="h3"
         data-c-color="c1"
@@ -4571,113 +4763,22 @@ invisible</code></pre>
         data-c-color="c1"
         data-c-font-weight="600"
         data-c-margin="top(double) bottom(normal)">
-        Code Snippet
+        Detailed Information
     </h3>
     <div data-c-accordion="group">
         <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-        data-c-background="c3(80)"
-    
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
-                View Carousel Code
-            </p>
-            
-        </div>
-        <span data-c-visibility="invisible">
-            Click to view...
-        </span>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion="icon--add">
-            add
-        </i>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion="icon--remove">
-            remove
-        </i>
-    </button>
-    <div
-        aria-hidden="true"
-        
-        
-        data-c-accordion="content">
-        <div 
-            
-                data-c-padding="bottom(normal) rl(normal)"
-            >
-            
-                <pre><code class="language-twig">&lt;div
-    data-c-carousel=&quot;content&quot;
-    data-slick=&#039;{&quot;slidesToShow&quot;: 1, &quot;dots&quot;: true}&#039;&gt;
-    &lt;!-- Repeat items as necessary. --&gt;
-    &lt;div
-        data-c-carousel=&quot;item&quot;
-        style=&quot;background-image: url(&#039;URL&#039;);&quot;&gt;
-        &lt;!-- This div is the content wrapper. --&gt;
-        &lt;div
-            data-c-padding=&quot;normal&quot;
-            data-c-background=&quot;black(100)&quot;
-            data-c-margin=&quot;top(triple) bottom(triple)&quot;&gt;
-            &lt;h5
-                data-c-heading=&quot;h5&quot;
-                data-c-margin=&quot;bottom(half)&quot;
-                data-c-font-weight=&quot;bold&quot;
-                data-c-colour=&quot;white&quot;&gt;
-                &lt;!-- Optional Slide Title Here --&gt;
-            &lt;/h5&gt;
-            &lt;p data-c-colour=&quot;white&quot;&gt;
-                &lt;!-- Slide Content Here --&gt;
-            &lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-            
-            
-            
-            
-            
-        </div>
-    </div>
-</div>
-
-    </div>
-    <h3
-        data-c-font-size="h3"
-        data-c-color="c1"
-        data-c-font-weight="600"
-        data-c-margin="top(double) bottom(normal)">
-        Code Explanation
-    </h3>
-    <div data-c-accordion="group">
-        <div
-    data-c-accordion="accordion"
-    data-c-border="lr(thin, solid, black)"
-    
-    
-        data-c-background="c3(80)"
-    >
-    <button
-        aria-expanded="false"
-        data-c-accordion="trigger"
-        data-c-padding="right"
-        tabindex="0"
-        type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Carousel Code Explanation
             </p>
             
@@ -4688,25 +4789,28 @@ invisible</code></pre>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
     <div
         aria-hidden="true"
         
+            data-c-background="white(100)"
             data-c-padding="right(normal) left(normal)"
         
         data-c-accordion="content">
         <div 
             
-                data-c-padding="bottom(normal)"
+                data-c-padding="top(normal) bottom(normal)"
             >
             
             
@@ -4720,14 +4824,6 @@ invisible</code></pre>
 </div>
 
     </div>
-    <h3
-        data-c-font-size="h3"
-        data-c-color="c1"
-        data-c-font-weight="600"
-        data-c-margin="top(double) bottom(normal)">
-        How Carousels are Designed to be Accessible
-    </h3>
-    <p>Coming Soon!</p>
 </div>
                     <!-- Dialogs ------------------------------------------- -->
                     
@@ -4750,10 +4846,164 @@ invisible</code></pre>
         data-c-font-size="h3"
         data-c-color="c1"
         data-c-font-weight="600"
-        data-c-margin="bottom(normal)">
+        data-c-margin="bottom(half)">
         Description
     </h3>
     <p data-c-margin="bottom(normal)">Coming Soon!</p>
+    
+        <h4 
+            data-c-font-size="h4"
+            data-c-margin="top(double) bottom(half)">
+            Accessibility
+        </h4>
+        <p>Coming Soon!</p>
+    
+    <h3
+        data-c-font-size="h3"
+        data-c-color="c1"
+        data-c-font-weight="600"
+        data-c-margin="top(double) bottom(normal)">
+        Code Snippet
+    </h3>
+    <div data-c-accordion="group">
+        <div
+    data-c-accordion="accordion"
+    data-c-border="lr(thin, solid, black)"
+    data-c-background="black(90)"
+    data-c-radius="rounded">
+    <button
+        aria-expanded="false"
+        data-c-accordion="trigger"
+        data-c-padding="right"
+        tabindex="0"
+        type="button">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
+                View Dialog Code
+            </p>
+            
+        </div>
+        <span data-c-visibility="invisible">
+            Click to view...
+        </span>
+        <i
+            aria-hidden="true"
+            class="material-icons"
+            data-c-accordion="icon--add"
+            data-c-color="white">
+            add
+        </i>
+        <i
+            aria-hidden="true"
+            class="material-icons"
+            data-c-accordion="icon--remove"
+            data-c-color="white">
+            remove
+        </i>
+    </button>
+    <div
+        aria-hidden="true"
+        
+        
+        data-c-accordion="content">
+        <div 
+            
+            >
+            
+                <pre><code class="language-twig">&lt;!-- This is an example Dialog trigger. --&gt;
+&lt;div data-c-alignment=&quot;center&quot;&gt;
+    &lt;button
+        data-c-button=&quot;solid(c1)&quot;
+        data-c-radius=&quot;rounded&quot;
+        data-c-dialog-id=&quot;example-dialog-01&quot;
+        data-c-dialog-action=&quot;open&quot;
+        type=&quot;button&quot;&gt;
+        Open a Dialog
+    &lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!-- This overlay is required somewhere on the site, but not necessarily next to the dialog.--&gt;
+&lt;div data-c-dialog-overlay&gt;&lt;/div&gt;
+
+&lt;!-- Actual Dialog --&gt;
+&lt;div
+    aria-hidden=&quot;true&quot;
+    aria-describedby=&quot;example-dialog-01-description&quot;
+    aria-labelledby=&quot;example-dialog-01-title&quot;
+    data-c-dialog
+    data-c-dialog-id=&quot;example-dialog-01&quot;
+    data-c-padding=&quot;top(double) bottom(double)&quot;
+    role=&quot;dialog&quot;&gt;
+    &lt;div
+        data-c-background=&quot;white(100)&quot;
+        data-c-radius=&quot;rounded&quot;&gt;
+        &lt;div
+            data-c-padding=&quot;tb(normal) right(triple) left(normal)&quot;
+            data-c-border=&quot;bottom(thin, solid, black)&quot;&gt;
+            &lt;h5
+                data-c-font-size=&quot;h4&quot;
+                id=&quot;example-dialog-01-title&quot;
+                data-c-dialog-focus
+                &lt;!-- Dialog Title Here --&gt;
+            &lt;/h5&gt;
+            &lt;!-- This subtitle p can be removed if a subtitle isn&#039;t needed. --&gt;
+            &lt;p
+                data-c-font-size=&quot;h5&quot;
+                data-c-margin=&quot;top(half)&quot;&gt;
+                &lt;!-- Dialog Subtitle Here --&gt;
+            &lt;/p&gt;
+            &lt;button
+                data-c-dialog-action=&quot;close&quot;
+                data-c-dialog-id=&quot;example-dialog-01&quot;
+                type=&quot;button&quot;&gt;
+                &lt;i class=&quot;material-icons&quot;&gt;close&lt;/i&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div
+            data-c-border=&quot;bottom(thin, solid, black)&quot;
+            data-c-padding=&quot;normal&quot;&gt;
+            &lt;div id=&quot;example-dialog-01-description&quot;&gt;
+                &lt;!-- Dialog Content Here--&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- The following dialog actions can be customized depending on the dialog. --&gt;
+        &lt;div data-c-padding=&quot;normal&quot;&gt;
+            &lt;div data-c-grid=&quot;gutter middle&quot;&gt;
+                &lt;div data-c-grid-item=&quot;base(1of2)&quot;&gt;
+                    &lt;button
+                        data-c-button=&quot;outline(slow)&quot;
+                        data-c-radius=&quot;rounded&quot;
+                        data-c-dialog-action=&quot;close&quot;
+                        data-c-dialog-id=&quot;example-dialog-01&quot;&gt;
+                        Cancel
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div
+                    data-c-grid-item=&quot;base(1of2)&quot;
+                    data-c-alignment=&quot;base(right)&quot;&gt;
+                    &lt;button
+                        data-c-button=&quot;solid(go)&quot;
+                        data-c-radius=&quot;rounded&quot;
+                        data-c-dialog-action=&quot;close&quot;
+                        data-c-dialog-id=&quot;example-dialog-01&quot;&gt;
+                        Okay
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            
+            
+            
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
     <h3
         data-c-font-size="h3"
         data-c-color="c1"
@@ -4862,171 +5112,22 @@ invisible</code></pre>
         data-c-color="c1"
         data-c-font-weight="600"
         data-c-margin="top(double) bottom(normal)">
-        Code Snippet
+        Detailed Information
     </h3>
     <div data-c-accordion="group">
         <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-        data-c-background="c3(80)"
-    
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
-                View Dialog Code
-            </p>
-            
-        </div>
-        <span data-c-visibility="invisible">
-            Click to view...
-        </span>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion="icon--add">
-            add
-        </i>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion="icon--remove">
-            remove
-        </i>
-    </button>
-    <div
-        aria-hidden="true"
-        
-        
-        data-c-accordion="content">
-        <div 
-            
-                data-c-padding="bottom(normal) rl(normal)"
-            >
-            
-                <pre><code class="language-twig">&lt;!-- This is an example Dialog trigger. --&gt;
-&lt;div data-c-alignment=&quot;center&quot;&gt;
-    &lt;button
-        data-c-button=&quot;solid(c1)&quot;
-        data-c-radius=&quot;rounded&quot;
-        data-c-dialog-id=&quot;example-dialog-01&quot;
-        data-c-dialog-action=&quot;open&quot;
-        type=&quot;button&quot;&gt;
-        Open a Dialog
-    &lt;/button&gt;
-&lt;/div&gt;
-
-&lt;!-- This overlay is required somewhere on the site, but not necessarily next to the dialog.--&gt;
-&lt;div data-c-dialog-overlay&gt;&lt;/div&gt;
-
-&lt;!-- Actual Dialog --&gt;
-&lt;div
-    aria-hidden=&quot;true&quot;
-    aria-describedby=&quot;example-dialog-01-description&quot;
-    aria-labelledby=&quot;example-dialog-01-title&quot;
-    data-c-dialog
-    data-c-dialog-id=&quot;example-dialog-01&quot;
-    data-c-padding=&quot;top(double) bottom(double)&quot;
-    role=&quot;dialog&quot;&gt;
-    &lt;div
-        data-c-background=&quot;white(100)&quot;
-        data-c-radius=&quot;rounded&quot;&gt;
-        &lt;div
-            data-c-padding=&quot;tb(normal) right(triple) left(normal)&quot;
-            data-c-border=&quot;bottom(thin, solid, black)&quot;&gt;
-            &lt;h5
-                data-c-font-size=&quot;h4&quot;
-                id=&quot;example-dialog-01-title&quot;
-                data-c-dialog-focus
-                &lt;!-- Dialog Title Here --&gt;
-            &lt;/h5&gt;
-            &lt;!-- This subtitle p can be removed if a subtitle isn&#039;t needed. --&gt;
-            &lt;p
-                data-c-font-size=&quot;h5&quot;
-                data-c-margin=&quot;top(half)&quot;&gt;
-                &lt;!-- Dialog Subtitle Here --&gt;
-            &lt;/p&gt;
-            &lt;button
-                data-c-dialog-action=&quot;close&quot;
-                data-c-dialog-id=&quot;example-dialog-01&quot;
-                type=&quot;button&quot;&gt;
-                &lt;i class=&quot;material-icons&quot;&gt;close&lt;/i&gt;
-            &lt;/button&gt;
-        &lt;/div&gt;
-        &lt;div
-            data-c-border=&quot;bottom(thin, solid, black)&quot;
-            data-c-padding=&quot;normal&quot;&gt;
-            &lt;div id=&quot;example-dialog-01-description&quot;&gt;
-                &lt;!-- Dialog Content Here--&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;!-- The following dialog actions can be customized depending on the dialog. --&gt;
-        &lt;div data-c-padding=&quot;normal&quot;&gt;
-            &lt;div data-c-grid=&quot;gutter middle&quot;&gt;
-                &lt;div data-c-grid-item=&quot;base(1of2)&quot;&gt;
-                    &lt;button
-                        data-c-button=&quot;outline(slow)&quot;
-                        data-c-radius=&quot;rounded&quot;
-                        data-c-dialog-action=&quot;close&quot;
-                        data-c-dialog-id=&quot;example-dialog-01&quot;&gt;
-                        Cancel
-                    &lt;/button&gt;
-                &lt;/div&gt;
-                &lt;div
-                    data-c-grid-item=&quot;base(1of2)&quot;
-                    data-c-alignment=&quot;base(right)&quot;&gt;
-                    &lt;button
-                        data-c-button=&quot;solid(go)&quot;
-                        data-c-radius=&quot;rounded&quot;
-                        data-c-dialog-action=&quot;close&quot;
-                        data-c-dialog-id=&quot;example-dialog-01&quot;&gt;
-                        Okay
-                    &lt;/button&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-            
-            
-            
-            
-            
-        </div>
-    </div>
-</div>
-
-    </div>
-    <h3
-        data-c-font-size="h3"
-        data-c-color="c1"
-        data-c-font-weight="600"
-        data-c-margin="top(double) bottom(normal)">
-        Code Explanation
-    </h3>
-    <div data-c-accordion="group">
-        <div
-    data-c-accordion="accordion"
-    data-c-border="lr(thin, solid, black)"
-    
-    
-        data-c-background="c3(80)"
-    >
-    <button
-        aria-expanded="false"
-        data-c-accordion="trigger"
-        data-c-padding="right"
-        tabindex="0"
-        type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Dialog Code Explanation
             </p>
             
@@ -5037,25 +5138,28 @@ invisible</code></pre>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
     <div
         aria-hidden="true"
         
+            data-c-background="white(100)"
             data-c-padding="right(normal) left(normal)"
         
         data-c-accordion="content">
         <div 
             
-                data-c-padding="bottom(normal)"
+                data-c-padding="top(normal) bottom(normal)"
             >
             
             
@@ -5069,14 +5173,6 @@ invisible</code></pre>
 </div>
 
     </div>
-    <h3
-        data-c-font-size="h3"
-        data-c-color="c1"
-        data-c-font-weight="600"
-        data-c-margin="top(double) bottom(normal)">
-        How Dialogs are Designed to be Accessible
-    </h3>
-    <p>Coming Soon!</p>
 </div>
                     <!-- iframes ------------------------------------------- -->
                     
@@ -5099,10 +5195,84 @@ invisible</code></pre>
         data-c-font-size="h3"
         data-c-color="c1"
         data-c-font-weight="600"
-        data-c-margin="bottom(normal)">
+        data-c-margin="bottom(half)">
         Description
     </h3>
     <p data-c-margin="bottom(normal)">Coming Soon!</p>
+    
+        <h4 
+            data-c-font-size="h4"
+            data-c-margin="top(double) bottom(half)">
+            Accessibility
+        </h4>
+        <p>Coming Soon!</p>
+    
+    <h3
+        data-c-font-size="h3"
+        data-c-color="c1"
+        data-c-font-weight="600"
+        data-c-margin="top(double) bottom(normal)">
+        Code Snippet
+    </h3>
+    <div data-c-accordion="group">
+        <div
+    data-c-accordion="accordion"
+    data-c-border="lr(thin, solid, black)"
+    data-c-background="black(90)"
+    data-c-radius="rounded">
+    <button
+        aria-expanded="false"
+        data-c-accordion="trigger"
+        data-c-padding="right"
+        tabindex="0"
+        type="button">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
+                View Iframe Code
+            </p>
+            
+        </div>
+        <span data-c-visibility="invisible">
+            Click to view...
+        </span>
+        <i
+            aria-hidden="true"
+            class="material-icons"
+            data-c-accordion="icon--add"
+            data-c-color="white">
+            add
+        </i>
+        <i
+            aria-hidden="true"
+            class="material-icons"
+            data-c-accordion="icon--remove"
+            data-c-color="white">
+            remove
+        </i>
+    </button>
+    <div
+        aria-hidden="true"
+        
+        
+        data-c-accordion="content">
+        <div 
+            
+            >
+            
+                <pre><code class="language-twig">&lt;div data-c-iframe&gt;
+    &lt;!-- iFrame Here --&gt;&gt;
+&lt;/div&gt;
+</code></pre>
+            
+            
+            
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
     <h3
         data-c-font-size="h3"
         data-c-color="c1"
@@ -5130,91 +5300,22 @@ invisible</code></pre>
         data-c-color="c1"
         data-c-font-weight="600"
         data-c-margin="top(double) bottom(normal)">
-        Code Snippet
+        Detailed Information
     </h3>
     <div data-c-accordion="group">
         <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-        data-c-background="c3(80)"
-    
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
-                View Iframe Code
-            </p>
-            
-        </div>
-        <span data-c-visibility="invisible">
-            Click to view...
-        </span>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion="icon--add">
-            add
-        </i>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion="icon--remove">
-            remove
-        </i>
-    </button>
-    <div
-        aria-hidden="true"
-        
-        
-        data-c-accordion="content">
-        <div 
-            
-                data-c-padding="bottom(normal) rl(normal)"
-            >
-            
-                <pre><code class="language-twig">&lt;div data-c-iframe&gt;
-    &lt;!-- iFrame Here --&gt;&gt;
-&lt;/div&gt;
-</code></pre>
-            
-            
-            
-            
-            
-        </div>
-    </div>
-</div>
-
-    </div>
-    <h3
-        data-c-font-size="h3"
-        data-c-color="c1"
-        data-c-font-weight="600"
-        data-c-margin="top(double) bottom(normal)">
-        Code Explanation
-    </h3>
-    <div data-c-accordion="group">
-        <div
-    data-c-accordion="accordion"
-    data-c-border="lr(thin, solid, black)"
-    
-    
-        data-c-background="c3(80)"
-    >
-    <button
-        aria-expanded="false"
-        data-c-accordion="trigger"
-        data-c-padding="right"
-        tabindex="0"
-        type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Iframe Code Explanation
             </p>
             
@@ -5225,25 +5326,28 @@ invisible</code></pre>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
     <div
         aria-hidden="true"
         
+            data-c-background="white(100)"
             data-c-padding="right(normal) left(normal)"
         
         data-c-accordion="content">
         <div 
             
-                data-c-padding="bottom(normal)"
+                data-c-padding="top(normal) bottom(normal)"
             >
             
             
@@ -5257,14 +5361,6 @@ invisible</code></pre>
 </div>
 
     </div>
-    <h3
-        data-c-font-size="h3"
-        data-c-color="c1"
-        data-c-font-weight="600"
-        data-c-margin="top(double) bottom(normal)">
-        How Iframes are Designed to be Accessible
-    </h3>
-    <p>Coming Soon!</p>
 </div>
                     <!-- Inputs -------------------------------------------- -->
                     <a id="inputs"></a>
@@ -5386,18 +5482,16 @@ invisible</code></pre>
             <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-        data-c-background="c3(80)"
-    
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Checkbox Input Code
             </p>
             
@@ -5408,13 +5502,15 @@ invisible</code></pre>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
@@ -5425,7 +5521,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                data-c-padding="bottom(normal) rl(normal)"
             >
             
                 <pre><code class="language-twig">&lt;div data-c-input=&quot;checkbox&quot;&gt;
@@ -5545,18 +5640,16 @@ invisible</code></pre>
             <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-        data-c-background="c3(80)"
-    
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Date Input Code
             </p>
             
@@ -5567,13 +5660,15 @@ invisible</code></pre>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
@@ -5584,7 +5679,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                data-c-padding="bottom(normal) rl(normal)"
             >
             
                 <pre><code class="language-twig">&lt;div data-c-input=&quot;date&quot;&gt;
@@ -5711,18 +5805,16 @@ invisible</code></pre>
             <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-        data-c-background="c3(80)"
-    
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Dropdown Input Code
             </p>
             
@@ -5733,13 +5825,15 @@ invisible</code></pre>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
@@ -5750,7 +5844,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                data-c-padding="bottom(normal) rl(normal)"
             >
             
                 <pre><code class="language-twig">&lt;div data-c-input=&quot;select&quot;&gt;
@@ -5847,18 +5940,16 @@ invisible</code></pre>
             <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-        data-c-background="c3(80)"
-    
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Email Input Code
             </p>
             
@@ -5869,13 +5960,15 @@ invisible</code></pre>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
@@ -5886,7 +5979,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                data-c-padding="bottom(normal) rl(normal)"
             >
             
                 <pre><code class="language-twig">&lt;div data-c-input=&quot;email&quot;&gt;
@@ -5970,18 +6062,16 @@ invisible</code></pre>
             <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-        data-c-background="c3(80)"
-    
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Number Input Code
             </p>
             
@@ -5992,13 +6082,15 @@ invisible</code></pre>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
@@ -6009,7 +6101,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                data-c-padding="bottom(normal) rl(normal)"
             >
             
                 <pre><code class="language-twig">&lt;div data-c-input=&quot;number&quot;&gt;
@@ -6118,18 +6209,16 @@ invisible</code></pre>
             <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-        data-c-background="c3(80)"
-    
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Password Input Code
             </p>
             
@@ -6140,13 +6229,15 @@ invisible</code></pre>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
@@ -6157,7 +6248,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                data-c-padding="bottom(normal) rl(normal)"
             >
             
                 <pre><code class="language-twig">&lt;div data-c-input=&quot;password&quot;&gt;
@@ -6268,18 +6358,16 @@ invisible</code></pre>
             <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-        data-c-background="c3(80)"
-    
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Radio Input Code
             </p>
             
@@ -6290,13 +6378,15 @@ invisible</code></pre>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
@@ -6307,7 +6397,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                data-c-padding="bottom(normal) rl(normal)"
             >
             
                 <pre><code class="language-twig">&lt;div data-c-input=&quot;radio&quot;&gt;
@@ -6406,18 +6495,16 @@ invisible</code></pre>
             <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-        data-c-background="c3(80)"
-    
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Text Input Code
             </p>
             
@@ -6428,13 +6515,15 @@ invisible</code></pre>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
@@ -6445,7 +6534,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                data-c-padding="bottom(normal) rl(normal)"
             >
             
                 <pre><code class="language-twig">&lt;div data-c-input=&quot;text&quot;&gt;
@@ -6528,18 +6616,16 @@ invisible</code></pre>
             <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-        data-c-background="c3(80)"
-    
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Textarea Input Code
             </p>
             
@@ -6550,13 +6636,15 @@ invisible</code></pre>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
@@ -6567,7 +6655,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                data-c-padding="bottom(normal) rl(normal)"
             >
             
                 <pre><code class="language-twig">&lt;div data-c-input=&quot;textarea&quot;&gt;
@@ -6679,18 +6766,16 @@ invisible</code></pre>
             <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-        data-c-background="c3(80)"
-    
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Text Input With Button Code
             </p>
             
@@ -6701,13 +6786,15 @@ invisible</code></pre>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
@@ -6718,7 +6805,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                data-c-padding="bottom(normal) rl(normal)"
             >
             
                 <pre><code class="language-twig">&lt;div data-c-input=&quot;button&quot;&gt;
@@ -6812,18 +6898,16 @@ invisible</code></pre>
             <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-        data-c-background="c3(80)"
-    
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Url Input Code
             </p>
             
@@ -6834,13 +6918,15 @@ invisible</code></pre>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
@@ -6851,7 +6937,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                data-c-padding="bottom(normal) rl(normal)"
             >
             
                 <pre><code class="language-twig">&lt;div data-c-input=&quot;url&quot;&gt;
@@ -6898,10 +6983,92 @@ invisible</code></pre>
         data-c-font-size="h3"
         data-c-color="c1"
         data-c-font-weight="600"
-        data-c-margin="bottom(normal)">
+        data-c-margin="bottom(half)">
         Description
     </h3>
     <p data-c-margin="bottom(normal)">Coming Soon!</p>
+    
+        <h4 
+            data-c-font-size="h4"
+            data-c-margin="top(double) bottom(half)">
+            Accessibility
+        </h4>
+        <p>Coming Soon!</p>
+    
+    <h3
+        data-c-font-size="h3"
+        data-c-color="c1"
+        data-c-font-weight="600"
+        data-c-margin="top(double) bottom(normal)">
+        Code Snippet
+    </h3>
+    <div data-c-accordion="group">
+        <div
+    data-c-accordion="accordion"
+    data-c-border="lr(thin, solid, black)"
+    data-c-background="black(90)"
+    data-c-radius="rounded">
+    <button
+        aria-expanded="false"
+        data-c-accordion="trigger"
+        data-c-padding="right"
+        tabindex="0"
+        type="button">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
+                View Pullquote Code
+            </p>
+            
+        </div>
+        <span data-c-visibility="invisible">
+            Click to view...
+        </span>
+        <i
+            aria-hidden="true"
+            class="material-icons"
+            data-c-accordion="icon--add"
+            data-c-color="white">
+            add
+        </i>
+        <i
+            aria-hidden="true"
+            class="material-icons"
+            data-c-accordion="icon--remove"
+            data-c-color="white">
+            remove
+        </i>
+    </button>
+    <div
+        aria-hidden="true"
+        
+        
+        data-c-accordion="content">
+        <div 
+            
+            >
+            
+                <pre><code class="language-twig">&lt;blockquote
+    data-c-margin=&quot;top(normal) bottom(normal)&quot;
+    data-c-alignment=&quot;base(center)&quot;&gt;
+    &lt;!-- Colours, font size, font style, etc. can all be modified. --&gt;
+    &lt;span
+        data-c-font-size=&quot;h3&quot;
+        data-c-colour=&quot;c2&quot;
+        data-c-font-style=&quot;italic&quot;
+        data-c-font-weight=&quot;bold&quot;&gt;
+        &lt;!-- Pullquote Here --&gt;
+    &lt;/span&gt;
+&lt;/blockquote&gt;</code></pre>
+            
+            
+            
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
     <h3
         data-c-font-size="h3"
         data-c-color="c1"
@@ -6932,99 +7099,22 @@ invisible</code></pre>
         data-c-color="c1"
         data-c-font-weight="600"
         data-c-margin="top(double) bottom(normal)">
-        Code Snippet
+        Detailed Information
     </h3>
     <div data-c-accordion="group">
         <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-        data-c-background="c3(80)"
-    
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
-                View Pullquote Code
-            </p>
-            
-        </div>
-        <span data-c-visibility="invisible">
-            Click to view...
-        </span>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion="icon--add">
-            add
-        </i>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion="icon--remove">
-            remove
-        </i>
-    </button>
-    <div
-        aria-hidden="true"
-        
-        
-        data-c-accordion="content">
-        <div 
-            
-                data-c-padding="bottom(normal) rl(normal)"
-            >
-            
-                <pre><code class="language-twig">&lt;blockquote
-    data-c-margin=&quot;top(normal) bottom(normal)&quot;
-    data-c-alignment=&quot;base(center)&quot;&gt;
-    &lt;!-- Colours, font size, font style, etc. can all be modified. --&gt;
-    &lt;span
-        data-c-font-size=&quot;h3&quot;
-        data-c-colour=&quot;c2&quot;
-        data-c-font-style=&quot;italic&quot;
-        data-c-font-weight=&quot;bold&quot;&gt;
-        &lt;!-- Pullquote Here --&gt;
-    &lt;/span&gt;
-&lt;/blockquote&gt;</code></pre>
-            
-            
-            
-            
-            
-        </div>
-    </div>
-</div>
-
-    </div>
-    <h3
-        data-c-font-size="h3"
-        data-c-color="c1"
-        data-c-font-weight="600"
-        data-c-margin="top(double) bottom(normal)">
-        Code Explanation
-    </h3>
-    <div data-c-accordion="group">
-        <div
-    data-c-accordion="accordion"
-    data-c-border="lr(thin, solid, black)"
-    
-    
-        data-c-background="c3(80)"
-    >
-    <button
-        aria-expanded="false"
-        data-c-accordion="trigger"
-        data-c-padding="right"
-        tabindex="0"
-        type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Pullquote Code Explanation
             </p>
             
@@ -7035,25 +7125,28 @@ invisible</code></pre>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
     <div
         aria-hidden="true"
         
+            data-c-background="white(100)"
             data-c-padding="right(normal) left(normal)"
         
         data-c-accordion="content">
         <div 
             
-                data-c-padding="bottom(normal)"
+                data-c-padding="top(normal) bottom(normal)"
             >
             
             
@@ -7067,14 +7160,6 @@ invisible</code></pre>
 </div>
 
     </div>
-    <h3
-        data-c-font-size="h3"
-        data-c-color="c1"
-        data-c-font-weight="600"
-        data-c-margin="top(double) bottom(normal)">
-        How Pullquotes are Designed to be Accessible
-    </h3>
-    <p>Coming Soon!</p>
 </div>
                     <!-- Skip-to-content Links ----------------------------- -->
                     
@@ -7097,30 +7182,18 @@ invisible</code></pre>
         data-c-font-size="h3"
         data-c-color="c1"
         data-c-font-weight="600"
-        data-c-margin="bottom(normal)">
+        data-c-margin="bottom(half)">
         Description
     </h3>
     <p data-c-margin="bottom(normal)">Coming Soon!</p>
-    <h3
-        data-c-font-size="h3"
-        data-c-color="c1"
-        data-c-font-weight="600"
-        data-c-margin="top(double) bottom(normal)">
-        Examples
-    </h3>
-    <p>Tab to this location to reveal the skip to content link.</p>
-
-<a
-    data-c-skip-content
-    data-c-background="grey(10)"
-    data-c-padding="normal"
-    data-c-color="white"
-    data-c-margin="top(normal)"
-    href="#content"
-    title="Skip to the main content.">
-    Skip to Main Content
-</a>
-
+    
+        <h4 
+            data-c-font-size="h4"
+            data-c-margin="top(double) bottom(half)">
+            Accessibility
+        </h4>
+        <p>Coming Soon!</p>
+    
     <h3
         data-c-font-size="h3"
         data-c-color="c1"
@@ -7132,18 +7205,16 @@ invisible</code></pre>
         <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-        data-c-background="c3(80)"
-    
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Skip-to-content-link Code
             </p>
             
@@ -7154,13 +7225,15 @@ invisible</code></pre>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
@@ -7171,7 +7244,6 @@ invisible</code></pre>
         data-c-accordion="content">
         <div 
             
-                data-c-padding="bottom(normal) rl(normal)"
             >
             
                 <pre><code class="language-twig">&lt;a
@@ -7199,24 +7271,42 @@ invisible</code></pre>
         data-c-color="c1"
         data-c-font-weight="600"
         data-c-margin="top(double) bottom(normal)">
-        Code Explanation
+        Examples
+    </h3>
+    <p>Tab to this location to reveal the skip to content link.</p>
+
+<a
+    data-c-skip-content
+    data-c-background="grey(10)"
+    data-c-padding="normal"
+    data-c-color="white"
+    data-c-margin="top(normal)"
+    href="#content"
+    title="Skip to the main content.">
+    Skip to Main Content
+</a>
+
+    <h3
+        data-c-font-size="h3"
+        data-c-color="c1"
+        data-c-font-weight="600"
+        data-c-margin="top(double) bottom(normal)">
+        Detailed Information
     </h3>
     <div data-c-accordion="group">
         <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-    
-        data-c-background="c3(80)"
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Skip-to-content-link Code Explanation
             </p>
             
@@ -7227,25 +7317,28 @@ invisible</code></pre>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
     <div
         aria-hidden="true"
         
+            data-c-background="white(100)"
             data-c-padding="right(normal) left(normal)"
         
         data-c-accordion="content">
         <div 
             
-                data-c-padding="bottom(normal)"
+                data-c-padding="top(normal) bottom(normal)"
             >
             
             
@@ -7259,14 +7352,6 @@ invisible</code></pre>
 </div>
 
     </div>
-    <h3
-        data-c-font-size="h3"
-        data-c-color="c1"
-        data-c-font-weight="600"
-        data-c-margin="top(double) bottom(normal)">
-        How Skip-to-content-links are Designed to be Accessible
-    </h3>
-    <p>Coming Soon!</p>
 </div>
                     <!-- Tables -------------------------------------------- -->
                     
@@ -7289,10 +7374,112 @@ invisible</code></pre>
         data-c-font-size="h3"
         data-c-color="c1"
         data-c-font-weight="600"
-        data-c-margin="bottom(normal)">
+        data-c-margin="bottom(half)">
         Description
     </h3>
     <p data-c-margin="bottom(normal)">Coming Soon!</p>
+    
+        <h4 
+            data-c-font-size="h4"
+            data-c-margin="top(double) bottom(half)">
+            Accessibility
+        </h4>
+        <p>Coming Soon!</p>
+    
+    <h3
+        data-c-font-size="h3"
+        data-c-color="c1"
+        data-c-font-weight="600"
+        data-c-margin="top(double) bottom(normal)">
+        Code Snippet
+    </h3>
+    <div data-c-accordion="group">
+        <div
+    data-c-accordion="accordion"
+    data-c-border="lr(thin, solid, black)"
+    data-c-background="black(90)"
+    data-c-radius="rounded">
+    <button
+        aria-expanded="false"
+        data-c-accordion="trigger"
+        data-c-padding="right"
+        tabindex="0"
+        type="button">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
+                View Table Code
+            </p>
+            
+        </div>
+        <span data-c-visibility="invisible">
+            Click to view...
+        </span>
+        <i
+            aria-hidden="true"
+            class="material-icons"
+            data-c-accordion="icon--add"
+            data-c-color="white">
+            add
+        </i>
+        <i
+            aria-hidden="true"
+            class="material-icons"
+            data-c-accordion="icon--remove"
+            data-c-color="white">
+            remove
+        </i>
+    </button>
+    <div
+        aria-hidden="true"
+        
+        
+        data-c-accordion="content">
+        <div 
+            
+            >
+            
+                <pre><code class="language-twig">&lt;div data-c-table&gt;
+    &lt;table&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th scope=&quot;col&quot;&gt;
+                    Help! Tables!
+                &lt;/th&gt;
+                &lt;th scope=&quot;col&quot;&gt;
+                    Help! More Tables!
+                &lt;/th&gt;
+                &lt;th scope=&quot;col&quot;&gt;
+                    Help! Even More Tables!
+                &lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;!-- Repeat rows as necessary. --&gt;
+            &lt;tr&gt;
+                &lt;th scope=&quot;row&quot;&gt;
+                    Sample Title
+                &lt;/th&gt;
+                &lt;td&gt;
+                    This is sample content in a table.
+                &lt;/td&gt;
+                &lt;td&gt;
+                    This is sample content in a table.
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+</code></pre>
+            
+            
+            
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
     <h3
         data-c-font-size="h3"
         data-c-color="c1"
@@ -7358,119 +7545,22 @@ invisible</code></pre>
         data-c-color="c1"
         data-c-font-weight="600"
         data-c-margin="top(double) bottom(normal)">
-        Code Snippet
+        Detailed Information
     </h3>
     <div data-c-accordion="group">
         <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-        data-c-background="c3(80)"
-    
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
-                View Table Code
-            </p>
-            
-        </div>
-        <span data-c-visibility="invisible">
-            Click to view...
-        </span>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion="icon--add">
-            add
-        </i>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion="icon--remove">
-            remove
-        </i>
-    </button>
-    <div
-        aria-hidden="true"
-        
-        
-        data-c-accordion="content">
-        <div 
-            
-                data-c-padding="bottom(normal) rl(normal)"
-            >
-            
-                <pre><code class="language-twig">&lt;div data-c-table&gt;
-    &lt;table&gt;
-        &lt;thead&gt;
-            &lt;tr&gt;
-                &lt;th scope=&quot;col&quot;&gt;
-                    Help! Tables!
-                &lt;/th&gt;
-                &lt;th scope=&quot;col&quot;&gt;
-                    Help! More Tables!
-                &lt;/th&gt;
-                &lt;th scope=&quot;col&quot;&gt;
-                    Help! Even More Tables!
-                &lt;/th&gt;
-            &lt;/tr&gt;
-        &lt;/thead&gt;
-        &lt;tbody&gt;
-            &lt;!-- Repeat rows as necessary. --&gt;
-            &lt;tr&gt;
-                &lt;th scope=&quot;row&quot;&gt;
-                    Sample Title
-                &lt;/th&gt;
-                &lt;td&gt;
-                    This is sample content in a table.
-                &lt;/td&gt;
-                &lt;td&gt;
-                    This is sample content in a table.
-                &lt;/td&gt;
-            &lt;/tr&gt;
-        &lt;/tbody&gt;
-    &lt;/table&gt;
-&lt;/div&gt;
-</code></pre>
-            
-            
-            
-            
-            
-        </div>
-    </div>
-</div>
-
-    </div>
-    <h3
-        data-c-font-size="h3"
-        data-c-color="c1"
-        data-c-font-weight="600"
-        data-c-margin="top(double) bottom(normal)">
-        Code Explanation
-    </h3>
-    <div data-c-accordion="group">
-        <div
-    data-c-accordion="accordion"
-    data-c-border="lr(thin, solid, black)"
-    
-    
-        data-c-background="c3(80)"
-    >
-    <button
-        aria-expanded="false"
-        data-c-accordion="trigger"
-        data-c-padding="right"
-        tabindex="0"
-        type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Table Code Explanation
             </p>
             
@@ -7481,25 +7571,28 @@ invisible</code></pre>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
     <div
         aria-hidden="true"
         
+            data-c-background="white(100)"
             data-c-padding="right(normal) left(normal)"
         
         data-c-accordion="content">
         <div 
             
-                data-c-padding="bottom(normal)"
+                data-c-padding="top(normal) bottom(normal)"
             >
             
             
@@ -7513,14 +7606,6 @@ invisible</code></pre>
 </div>
 
     </div>
-    <h3
-        data-c-font-size="h3"
-        data-c-color="c1"
-        data-c-font-weight="600"
-        data-c-margin="top(double) bottom(normal)">
-        How Tables are Designed to be Accessible
-    </h3>
-    <p>Coming Soon!</p>
 </div>
                     <!-- Tags ---------------------------------------------- -->
                     
@@ -7543,10 +7628,83 @@ invisible</code></pre>
         data-c-font-size="h3"
         data-c-color="c1"
         data-c-font-weight="600"
-        data-c-margin="bottom(normal)">
+        data-c-margin="bottom(half)">
         Description
     </h3>
     <p data-c-margin="bottom(normal)">Tags are useful inline elements that can act as contextual information or links. Tags or pills are often short words or phrases and should be kept to a minimum amount of copy.</p>
+    
+        <h4 
+            data-c-font-size="h4"
+            data-c-margin="top(double) bottom(half)">
+            Accessibility
+        </h4>
+        <p>Coming Soon!</p>
+    
+    <h3
+        data-c-font-size="h3"
+        data-c-color="c1"
+        data-c-font-weight="600"
+        data-c-margin="top(double) bottom(normal)">
+        Code Snippet
+    </h3>
+    <div data-c-accordion="group">
+        <div
+    data-c-accordion="accordion"
+    data-c-border="lr(thin, solid, black)"
+    data-c-background="black(90)"
+    data-c-radius="rounded">
+    <button
+        aria-expanded="false"
+        data-c-accordion="trigger"
+        data-c-padding="right"
+        tabindex="0"
+        type="button">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
+                View Tag Code
+            </p>
+            
+        </div>
+        <span data-c-visibility="invisible">
+            Click to view...
+        </span>
+        <i
+            aria-hidden="true"
+            class="material-icons"
+            data-c-accordion="icon--add"
+            data-c-color="white">
+            add
+        </i>
+        <i
+            aria-hidden="true"
+            class="material-icons"
+            data-c-accordion="icon--remove"
+            data-c-color="white">
+            remove
+        </i>
+    </button>
+    <div
+        aria-hidden="true"
+        
+        
+        data-c-accordion="content">
+        <div 
+            
+            >
+            
+                <pre><code class="language-twig">&lt;div data-c-tag=&quot;c1&quot; data-c-font-size=&quot;small&quot; data-c-radius=&quot;pill&quot;&gt;
+    &lt;!-- Tag Text Goes Here --&gt;
+&lt;/div&gt;</code></pre>
+            
+            
+            
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
     <h3
         data-c-font-size="h3"
         data-c-color="c1"
@@ -7571,90 +7729,22 @@ invisible</code></pre>
         data-c-color="c1"
         data-c-font-weight="600"
         data-c-margin="top(double) bottom(normal)">
-        Code Snippet
+        Detailed Information
     </h3>
     <div data-c-accordion="group">
         <div
     data-c-accordion="accordion"
     data-c-border="lr(thin, solid, black)"
-    
-        data-c-background="c3(80)"
-    
-    >
+    data-c-background="black(90)"
+    data-c-radius="rounded">
     <button
         aria-expanded="false"
         data-c-accordion="trigger"
         data-c-padding="right"
         tabindex="0"
         type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
-                View Tag Code
-            </p>
-            
-        </div>
-        <span data-c-visibility="invisible">
-            Click to view...
-        </span>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion="icon--add">
-            add
-        </i>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion="icon--remove">
-            remove
-        </i>
-    </button>
-    <div
-        aria-hidden="true"
-        
-        
-        data-c-accordion="content">
-        <div 
-            
-                data-c-padding="bottom(normal) rl(normal)"
-            >
-            
-                <pre><code class="language-twig">&lt;div data-c-tag=&quot;c1&quot; data-c-font-size=&quot;small&quot; data-c-radius=&quot;pill&quot;&gt;
-    &lt;!-- Tag Text Goes Here --&gt;
-&lt;/div&gt;</code></pre>
-            
-            
-            
-            
-            
-        </div>
-    </div>
-</div>
-
-    </div>
-    <h3
-        data-c-font-size="h3"
-        data-c-color="c1"
-        data-c-font-weight="600"
-        data-c-margin="top(double) bottom(normal)">
-        Code Explanation
-    </h3>
-    <div data-c-accordion="group">
-        <div
-    data-c-accordion="accordion"
-    data-c-border="lr(thin, solid, black)"
-    
-    
-        data-c-background="c3(80)"
-    >
-    <button
-        aria-expanded="false"
-        data-c-accordion="trigger"
-        data-c-padding="right"
-        tabindex="0"
-        type="button">
-        <div data-c-padding="top(normal) right bottom(normal) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline">
+        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
+            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
                 View Tag Code Explanation
             </p>
             
@@ -7665,25 +7755,28 @@ invisible</code></pre>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add">
+            data-c-accordion="icon--add"
+            data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove">
+            data-c-accordion="icon--remove"
+            data-c-color="white">
             remove
         </i>
     </button>
     <div
         aria-hidden="true"
         
+            data-c-background="white(100)"
             data-c-padding="right(normal) left(normal)"
         
         data-c-accordion="content">
         <div 
             
-                data-c-padding="bottom(normal)"
+                data-c-padding="top(normal) bottom(normal)"
             >
             
             
@@ -7697,14 +7790,6 @@ invisible</code></pre>
 </div>
 
     </div>
-    <h3
-        data-c-font-size="h3"
-        data-c-color="c1"
-        data-c-font-weight="600"
-        data-c-margin="top(double) bottom(normal)">
-        How Tags are Designed to be Accessible
-    </h3>
-    <p>Coming Soon!</p>
 </div>
 
             </div>

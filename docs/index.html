@@ -1955,7 +1955,10 @@ $clone-grid-gutter: $clone-padding;
     </div>
 </div>
 <div>
-    <p data-c-margin="bottom">Usage (Grid): <code class="language-html">&lt;div data-c-grid=&quot;OPTIONS&quot;&gt;&lt;/div&gt;</code></p>
+    <p data-c-margin="bottom">Clone is built with a customizable grid that defaults to a 12 column layout. You can modify this number of columns by changing the <code class="language-scss">$clone-grid-columns</code> variable.</p>
+    <p data-c-margin="bottom">Using the flexbox grid consists of two parts: the grid wrapper and grid items. The grid wrapper allows you to customize the vertical alignment of the items inside, as well as whether you'd like the grid items to be separated by whitespace (AKA a gutter).</p>
+    <p data-c-margin="bottom">Items inside the grid always default to a full, single column until you tell them otherwise using a media query and grid value. This means you can build grids with 1, 2, 3 ... to 12 columns using an <code class="language-md">XOFY</code> structure (e.g. <code class="language-html">&lt;div data-c-grid-item=&quot;base(1of1) tp(1of2) tl(1of3)&quot;&gt;&lt;/div&gt;</code>). This grid item will be full width on all devices below portrait orientation tablets, at which point it switches to 50% of the width. When the device is a tablet in landscape orientation, the column shrinks further to be 33.33% of the width.</p>
+    <p data-c-margin="bottom">Usage (Grid Wrapper): <code class="language-html">&lt;div data-c-grid=&quot;OPTIONS&quot;&gt;&lt;/div&gt;</code></p>
     <p data-c-margin="bottom">Usage (Grid Items): <code class="language-html">&lt;div data-c-grid-item=&quot;MEDIA(XOFY)&quot;&gt;&lt;/div&gt;</code></p>
     <h4
         data-c-font-size="h4"
@@ -1964,7 +1967,7 @@ $clone-grid-gutter: $clone-padding;
     </h4>
     <div data-c-grid="gutter">
         <div data-c-grid-item="equal-col tl(1of3)">
-            <pre><code class="language-md"># OPTIONS (Grid)
+            <pre><code class="language-md"># OPTIONS (Grid Wrapper)
 
 top
 middle
@@ -2125,7 +2128,7 @@ using the $clone-grid-columns variable.</code></pre>
 <h5 data-c-font-size="h5" data-c-margin="top(normal) bottom(normal)">Heading 05</h5>
 <p data-c-font-size="normal" data-c-margin="top(normal) bottom(normal)">Paragraph Copy</p>
 <p data-c-font-size="small" data-c-margin="top(normal) bottom(normal)">Captions &amp; Labels</p>
-<p data-c-margin="bottom(half)">Please note that this scale is not automatically applied to the heading elements and must be applied manually using the <code class="language-html"> data-c-font-size=&quot;&quot;</code> property. This is so that you can manually determine the appearance of a heading when the markup structure might dictate otherwise.</p>
+<p data-c-margin="bottom(half)">Please note that this scale is not automatically applied to the heading elements and must be applied manually using the <code class="language-html"> data-c-font-size=&quot;&quot;</code> property. This is so that you can manually determine the appearance of a heading when the markup structure might dictate otherwise. You can <a href="#util-fonts" title="Learn more about how to use font attributes.">learn more about how to use font attributes here</a>.</p>
 <p>Line height defaults to 1.5, but can manually changed using the <code class="language-scss">$clone-line-height</code> variable.</p>
 <h4
     data-c-font-size="h4"
@@ -2491,6 +2494,7 @@ h2
 h3
 h4
 h5
+regular / normal
 small</script></code></pre>
         </div>
     </div>

@@ -3,7 +3,8 @@
     data-c-font-size="h3"
     data-c-colour="c1"
     data-c-font-weight="600"
-    data-c-margin="top(double) bottom(normal)">
+    data-c-padding="top(double)"
+    data-c-margin="bottom(normal)">
     Visibility
 </h3>
 <div>
@@ -28,9 +29,9 @@ invisible</code></pre>
         Examples
     </h4>
     <div data-c-margin="bottom(half)">
-        <pre><code class="language-md">{% filter escape %}<!--An element hidden from all devices, including screen readers.-->
+        <pre><code class="language-html">{% filter escape %}<!--An element hidden from all devices, including screen readers.-->
 <div data-c-visibility="hidden"></div>{% endfilter %}</code></pre>
     </div>
-    <pre><code class="language-md">{% filter escape %}<!--An element hidden from screens, but not accessibility devices.-->
+    <pre><code class="language-html">{% filter escape %}<!--An element hidden from screens, but not accessibility devices.-->
 <div data-c-visibility="invisible"></div>{% endfilter %}</code></pre>
 </div>

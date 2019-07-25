@@ -3,7 +3,8 @@
     data-c-font-size="h3"
     data-c-colour="c1"
     data-c-font-weight="600"
-    data-c-margin="top(double) bottom(normal)">
+    data-c-padding="top(double)"
+    data-c-margin="bottom(normal)">
     Overlays
 </h3>
 <div>
@@ -52,9 +53,9 @@ go</code></pre>
         Examples
     </h4>
     <div data-c-margin="bottom(half)">
-        <pre><code class="language-md">{% filter escape %}<!--A semi-transparent (50%) white overlay.-->
+        <pre><code class="language-html">{% filter escape %}<!--A semi-transparent (50%) white overlay.-->
 <div data-c-overlay="white(50)"></div>{% endfilter %}</code></pre>
     </div>
-    <pre><code class="language-md">{% filter escape %}<!--A slightly transparent (80%) black overlay over an image background.-->
+    <pre><code class="language-html">{% filter escape %}<!--A slightly transparent (80%) black overlay over an image background.-->
 <div data-c-overlay="black(80)" style="background-image: url('/images/krypto.jpg')"></div>{% endfilter %}</code></pre>
 </div>

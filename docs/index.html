@@ -877,27 +877,13 @@
         <p data-c-margin="bottom">
             Browser Support: IE11, Edge, Chrome, Firefox, Safari
         </p>
-        <div data-c-grid="gutter">
-            <div data-c-grid-item="base(full) tl(1of2)">
-                <a
-                    data-c-button="solid(c1)"
-                    data-c-radius="rounded"
-                    href="#content"
-                    title="View the About Clone section.">
-                    Get Started
-                </a>
-            </div>
-            <div data-c-grid-item="base(full) tl(1of2)" data-c-align="tl(right)">
-                <a
-                    data-c-button="outline(c1)"
-                    data-c-radius="rounded"
-                    href="https://codesandbox.io/embed/clone-sandbox-ejqcl"
-                    title="Try Clone in your browser on Code Sandbox."
-                    target="_blank">
-                    Try it in your browser!
-                </a>
-            </div>
-        </div>
+        <a
+            data-c-button="solid(c1)"
+            data-c-radius="rounded"
+            href="#content"
+            title="View the About Clone section.">
+            Get Started
+        </a>
     </div>
 </div>
 
@@ -918,13 +904,13 @@
                 <div 
                     data-c-container="medium"
                     data-c-padding="top(double) bottom(double)">
-                    <a id="about-installation"></a>
+                    <a id="about-installation" class="offset-anchor-double"></a>
 <h3
     data-c-font-size="h3"
     data-c-colour="c1"
     data-c-font-weight="600"
     data-c-margin="bottom(normal)">
-    Installation
+    Try or Install Clone
 </h3>
 
 <ul>
@@ -998,8 +984,8 @@
         <img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/joshdrink/clone-framework/dist/css/gzip/clone-gridless.min.css.gz.svg?label=CSS%20%28minified%2C%20gzipped%29">
         <img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/joshdrink/clone-framework/dist/js/gzip/clone.min.js.gz.svg?label=JS%20%28minified%2C%20gzipped%29">
     </div>
-    <pre><code class="language-twig">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.8/dist/css/clone-gridless.min.css&quot;&gt;
-&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.8/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+    <pre><code class="language-twig">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.9/dist/css/clone-gridless.min.css&quot;&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.9/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
     <h5
         data-c-font-size="h5"
         data-c-font-weight="600"
@@ -1010,8 +996,8 @@
         <img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/joshdrink/clone-framework/dist/css/gzip/clone.min.css.gz.svg?label=CSS%20%28minified%2C%20gzipped%29">
         <img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/joshdrink/clone-framework/dist/js/gzip/clone.min.js.gz.svg?label=JS%20%28minified%2C%20gzipped%29">
     </div>
-    <pre><code class="language-twig">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.8/dist/css/clone.min.css&quot;&gt;
-&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.8/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+    <pre><code class="language-twig">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.9/dist/css/clone.min.css&quot;&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.9/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
     
     <a id="about-installation-npm"></a>
     <h4
@@ -1043,14 +1029,15 @@
     <p data-c-margin="top(normal) bottom(normal)">
         For now, it is also required that Clone's JavaScript file be imported using the CDN.
     </p>
-    <pre><code class="language-twig">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.8/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+    <pre><code class="language-twig">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.9/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
 </div>
                     <a id="about-usage"></a>
 <h3
     data-c-font-size="h3"
     data-c-colour="c1"
     data-c-font-weight="600"
-    data-c-margin="top(double) bottom(normal)">
+    data-c-padding="top(double)"
+    data-c-margin="bottom(normal)">
     How To Use Clone
 </h3>
 
@@ -1108,7 +1095,8 @@
     data-c-font-size="h3"
     data-c-colour="c1"
     data-c-font-weight="600"
-    data-c-margin="top(double) bottom(normal)">
+    data-c-padding="top(double)"
+    data-c-margin="bottom(normal)">
     Creating A Theme
 </h3>
 
@@ -1742,7 +1730,8 @@ $clone-grid-gutter: $clone-padding;
     data-c-font-size="h3"
     data-c-colour="c1"
     data-c-font-weight="600"
-    data-c-margin="top(double) bottom(normal)">
+    data-c-padding="top(double)"
+    data-c-margin="bottom(normal)">
     Contributing
 </h3>
 
@@ -1766,7 +1755,7 @@ $clone-grid-gutter: $clone-padding;
                 <div 
                     data-c-container="medium"
                     data-c-padding="top(double) bottom(double)">
-                    <a id="colour"></a>
+                    <a id="colour" class="offset-anchor-double"></a>
 <h3
     data-c-font-size="h3"
     data-c-color="c1"
@@ -1784,44 +1773,44 @@ $clone-grid-gutter: $clone-padding;
 <div data-c-grid="gutter" data-c-padding="bottom(half)">
     <div data-c-grid-item="base(1of2) tp(1of5)">
         <div data-c-background="black(30)" data-c-colour="black" data-c-border="all(thin, solid, black)" data-c-radius="rounded" data-c-alignment="centre" data-c-padding="top(normal) right(half) bottom(normal) left(half)">
-            Black
+            <span>Black</span>
         </div>
     </div>
     <div data-c-grid-item="base(1of2) tp(1of5)">
         <div data-c-background="grey(30)" data-c-colour="grey" data-c-border="all(thin, solid, grey)" data-c-radius="rounded" data-c-alignment="centre" data-c-padding="top(normal) right(half) bottom(normal) left(half)">
-            Gre/ay
+            <span>Gre/ay</span>
         </div>
     </div>
     <div data-c-grid-item="base(1of2) tp(1of5)">
         <div data-c-background="white(30)" data-c-colour="black" data-c-border="all(thin, solid, black)" data-c-radius="rounded" data-c-alignment="centre" data-c-padding="top(normal) right(half) bottom(normal) left(half)">
-            White
+            <span>White</span>
         </div>
     </div>
 </div>
 <div data-c-grid="gutter">
     <div data-c-grid-item="base(1of2) tp(1of5)">
         <div data-c-background="c1(30)" data-c-colour="c1" data-c-border="all(thin, solid, c1)" data-c-radius="rounded" data-c-alignment="centre" data-c-padding="top(normal) right(half) bottom(normal) left(half)">
-            Theme 1
+            <span>Theme 1</span>
         </div>
     </div>
     <div data-c-grid-item="base(1of2) tp(1of5)">
         <div data-c-background="c2(30)" data-c-colour="c2" data-c-border="all(thin, solid, c2)" data-c-radius="rounded" data-c-alignment="centre" data-c-padding="top(normal) right(half) bottom(normal) left(half)">
-            Theme 2
+            <span>Theme 2</span>
         </div>
     </div>
     <div data-c-grid-item="base(1of2) tp(1of5)">
         <div data-c-background="c3(30)" data-c-colour="c3" data-c-border="all(thin, solid, c3)" data-c-radius="rounded" data-c-alignment="centre" data-c-padding="top(normal) right(half) bottom(normal) left(half)">
-            Theme 3
+            <span>Theme 3</span>
         </div>
     </div>
     <div data-c-grid-item="base(1of2) tp(1of5)">
         <div data-c-background="c4(30)" data-c-colour="c4" data-c-border="all(thin, solid, c4)" data-c-radius="rounded" data-c-alignment="centre" data-c-padding="top(normal) right(half) bottom(normal) left(half)">
-            Theme 4
+            <span>Theme 4</span>
         </div>
     </div>
     <div data-c-grid-item="base(1of2) tp(1of5)">
         <div data-c-background="c5(30)" data-c-colour="c5" data-c-border="all(thin, solid, c5)" data-c-radius="rounded" data-c-alignment="centre" data-c-padding="top(normal) right(half) bottom(normal) left(half)">
-            Theme 5
+            <span>Theme 5</span>
         </div>
     </div>
 </div>
@@ -1834,17 +1823,17 @@ $clone-grid-gutter: $clone-padding;
 <div data-c-grid="gutter" data-c-padding="bottom(half)">
     <div data-c-grid-item="base(1of2) tp(1of5)">
         <div data-c-background="go(30)" data-c-colour="go" data-c-border="all(thin, solid, go)" data-c-radius="rounded" data-c-alignment="centre" data-c-padding="top(normal) right(half) bottom(normal) left(half)">
-            Go
+            <span>Go</span>
         </div>
     </div>
     <div data-c-grid-item="base(1of2) tp(1of5)">
         <div data-c-background="slow(30)" data-c-colour="slow" data-c-border="all(thin, solid, slow)" data-c-radius="rounded" data-c-alignment="centre" data-c-padding="top(normal) right(half) bottom(normal) left(half)">
-            Slow
+            <span>Slow</span>
         </div>
     </div>
     <div data-c-grid-item="base(1of2) tp(1of5)">
         <div data-c-background="stop(30)" data-c-colour="stop" data-c-border="all(thin, solid, stop)" data-c-radius="rounded" data-c-alignment="centre" data-c-padding="top(normal) right(half) bottom(normal) left(half)">
-            Stop
+            <span>Stop</span>
         </div>
     </div>
 </div>
@@ -1933,7 +1922,8 @@ $clone-grid-gutter: $clone-padding;
     data-c-font-size="h3"
     data-c-color="c1"
     data-c-font-weight="600"
-    data-c-margin="top(double) bottom(normal)">
+    data-c-padding="top(double)"
+    data-c-margin="bottom(normal)">
     Flexbox Grid
 </h3>
 <h4
@@ -2118,7 +2108,8 @@ using the $clone-grid-columns variable.</code></pre>
     data-c-font-size="h3"
     data-c-color="c1"
     data-c-font-weight="600"
-    data-c-margin="top(double) bottom(normal)">
+    data-c-padding="top(double)"
+    data-c-margin="bottom(normal)">
     Typography
 </h3>
 <h4
@@ -2165,7 +2156,7 @@ using the $clone-grid-columns variable.</code></pre>
                 <div 
                     data-c-container="medium"
                     data-c-padding="top(double) bottom(double)">
-                    <a id="util-alignment"></a>
+                    <a id="util-alignment" class="offset-anchor-double"></a>
 <h3
     data-c-font-size="h3"
     data-c-colour="c1"
@@ -2208,10 +2199,10 @@ right</code></pre>
         Examples
     </h4>
     <div data-c-margin="bottom(half)">
-        <pre><code class="language-md">&lt;!--Centred initially, left aligned on landscape tablets.--&gt;
+        <pre><code class="language-html">&lt;!--Centred initially, left aligned on landscape tablets.--&gt;
 &lt;div data-c-alignment=&quot;base(centre) tl(left)&quot;&gt;&lt;/div&gt;</code></pre>
     </div>
-    <pre><code class="language-md">&lt;!--Centred initially, right aligned on landscape phones, centred on landscape tablets, right aligned on large desktops.--&gt;
+    <pre><code class="language-html">&lt;!--Centred initially, right aligned on landscape phones, centred on landscape tablets, right aligned on large desktops.--&gt;
 &lt;div data-c-alignment=&quot;base(centre) pl(right) tl(centre) dl(right)&quot;&gt;&lt;/div&gt;</code></pre>
 </div>
                     <a id="util-backgrounds"></a>
@@ -2219,7 +2210,8 @@ right</code></pre>
     data-c-font-size="h3"
     data-c-colour="c1"
     data-c-font-weight="600"
-    data-c-margin="top(double) bottom(normal)">
+    data-c-padding="top(double)"
+    data-c-margin="bottom(normal)">
     Backgrounds
 </h3>
 <div>
@@ -2268,10 +2260,10 @@ go</code></pre>
         Examples
     </h4>
     <div data-c-margin="bottom(half)">
-        <pre><code class="language-md">&lt;!--Solid black background.--&gt;
+        <pre><code class="language-html">&lt;!--Solid black background.--&gt;
 &lt;div data-c-background=&quot;black(100)&quot;&gt;&lt;/div&gt;</code></pre>
     </div>
-    <pre><code class="language-md">&lt;!--Semi-transparent (50%) theme colour 4 background.--&gt;
+    <pre><code class="language-html">&lt;!--Semi-transparent (50%) theme colour 4 background.--&gt;
 &lt;div data-c-background=&quot;c4(50)&quot;&gt;&lt;/div&gt;</code></pre>
 </div>
                     <a id="util-borders"></a>
@@ -2279,7 +2271,8 @@ go</code></pre>
     data-c-font-size="h3"
     data-c-colour="c1"
     data-c-font-weight="600"
-    data-c-margin="top(double) bottom(normal)">
+    data-c-padding="top(double)"
+    data-c-margin="bottom(normal)">
     Borders
 </h3>
 <div>
@@ -2336,10 +2329,10 @@ go</code></pre>
         Examples
     </h4>
     <div data-c-margin="bottom(half)">
-        <pre><code class="language-md">&lt;!--A thick, solid, black border on the top of the element.--&gt;
+        <pre><code class="language-html">&lt;!--A thick, solid, black border on the top of the element.--&gt;
 &lt;div data-c-border=&quot;top(thick, solid, black)&quot;&gt;&lt;/div&gt;</code></pre>
     </div>
-    <pre><code class="language-md">&lt;!--A thin, dashed, theme colour 5 border on all sides.--&gt;
+    <pre><code class="language-html">&lt;!--A thin, dashed, theme colour 5 border on all sides.--&gt;
 &lt;div data-c-border=&quot;all(thin, dashed, c5)&quot;&gt;&lt;/div&gt;</code></pre>
 </div>
                     <a id="util-cards"></a>
@@ -2347,7 +2340,8 @@ go</code></pre>
     data-c-font-size="h3"
     data-c-colour="c1"
     data-c-font-weight="600"
-    data-c-margin="top(double) bottom(normal)">
+    data-c-padding="top(double)"
+    data-c-margin="bottom(normal)">
     Cards
 </h3>
 <div>
@@ -2362,25 +2356,28 @@ go</code></pre>
         <div data-c-grid="gutter">
             <div data-c-grid-item="base(1of1) tp(1of2)">
                 <div data-c-card data-c-padding="normal" data-c-radius="rounded">
-                    This is a sample card.
+                    <span>This is a sample card.</span>
                 </div>
             </div>
             <div data-c-grid-item="base(1of1) tp(1of2)">
                 <div data-c-card data-c-padding="normal" data-c-radius="rounded">
-                    This is a sample card.
+                    <span>This is a sample card.</span>
                 </div>
             </div>
         </div>
     </div>
-    <pre><code class="language-md">&lt;!--A card element with rounded edges.--&gt;
-&lt;div data-c-card data-c-radius=&quot;rounded&quot;&gt;&lt;/div&gt;</code></pre>
+    <pre><code class="language-html">&lt;!--A card element with rounded edges.--&gt;
+&lt;div data-c-card data-c-radius=&quot;rounded&quot;&gt;
+    &lt;span&gt;&lt;!-- Content Goes Here --&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
 </div>
                     <a id="util-containers"></a>
 <h3
     data-c-font-size="h3"
     data-c-font-weight="600"
     data-c-colour="c1"
-    data-c-margin="top(double) bottom(normal)">
+    data-c-padding="top(double)"
+    data-c-margin="bottom(normal)">
     Containers
 </h3>
 <div>
@@ -2406,7 +2403,7 @@ full</code></pre>
         data-c-margin="top(double) bottom(normal)">
         Examples
     </h4>
-    <pre><code class="language-md">&lt;!--A container for copy.--&gt;
+    <pre><code class="language-html">&lt;!--A container for copy.--&gt;
 &lt;div data-c-container=&quot;small&quot;&gt;&lt;/div&gt;</code></pre>
 </div>
                     <a id="util-fonts"></a>
@@ -2414,7 +2411,8 @@ full</code></pre>
     data-c-font-size="h3"
     data-c-font-weight="600"
     data-c-colour="c1"
-    data-c-margin="top(double) bottom(normal)">
+    data-c-padding="top(double)"
+    data-c-margin="bottom(normal)">
     Fonts &amp; Font Styles
 </h3>
 <div>
@@ -2553,7 +2551,8 @@ bold
     data-c-font-size="h3"
     data-c-colour="c1"
     data-c-font-weight="600"
-    data-c-margin="top(double) bottom(normal)">
+    data-c-padding="top(double)"
+    data-c-margin="bottom(normal)">
     Margins &amp; Padding
 </h3>
 <div>
@@ -2593,10 +2592,10 @@ triple</code></pre>
         Examples
     </h4>
     <div data-c-margin="bottom(half)">
-        <pre><code class="language-md">&lt;!--A double value margin on all sides.--&gt;
+        <pre><code class="language-html">&lt;!--A double value margin on all sides.--&gt;
 &lt;div data-c-margin=&quot;all(double)&quot;&gt;&lt;/div&gt;</code></pre>
     </div>
-    <pre><code class="language-md">&lt;!--Double value on top, normal on the sides, and triple value on the bottom.--&gt;
+    <pre><code class="language-html">&lt;!--Double value on top, normal on the sides, and triple value on the bottom.--&gt;
 &lt;div data-c-padding=&quot;top(double) right(normal) bottom(triple) left(normal)&quot;&gt;&lt;/div&gt;</code></pre>
 </div>
                     <a id="util-overlays"></a>
@@ -2604,7 +2603,8 @@ triple</code></pre>
     data-c-font-size="h3"
     data-c-colour="c1"
     data-c-font-weight="600"
-    data-c-margin="top(double) bottom(normal)">
+    data-c-padding="top(double)"
+    data-c-margin="bottom(normal)">
     Overlays
 </h3>
 <div>
@@ -2653,10 +2653,10 @@ go</code></pre>
         Examples
     </h4>
     <div data-c-margin="bottom(half)">
-        <pre><code class="language-md">&lt;!--A semi-transparent (50%) white overlay.--&gt;
+        <pre><code class="language-html">&lt;!--A semi-transparent (50%) white overlay.--&gt;
 &lt;div data-c-overlay=&quot;white(50)&quot;&gt;&lt;/div&gt;</code></pre>
     </div>
-    <pre><code class="language-md">&lt;!--A slightly transparent (80%) black overlay over an image background.--&gt;
+    <pre><code class="language-html">&lt;!--A slightly transparent (80%) black overlay over an image background.--&gt;
 &lt;div data-c-overlay=&quot;black(80)&quot; style=&quot;background-image: url(&#039;/images/krypto.jpg&#039;)&quot;&gt;&lt;/div&gt;</code></pre>
 </div>
                     <a id="util-radius"></a>
@@ -2664,7 +2664,8 @@ go</code></pre>
     data-c-font-size="h3"
     data-c-colour="c1"
     data-c-font-weight="600"
-    data-c-margin="top(double) bottom(normal)">
+    data-c-padding="top(double)"
+    data-c-margin="bottom(normal)">
     Radius
 </h3>
 <div>
@@ -2688,7 +2689,7 @@ pill</code></pre>
         data-c-margin="top(double) bottom(normal)">
         Examples
     </h4>
-    <pre><code class="language-md">&lt;!--An element with rounded corners.--&gt;
+    <pre><code class="language-html">&lt;!--An element with rounded corners.--&gt;
 &lt;div data-c-radius=&quot;rounded&quot;&gt;&lt;/div&gt;</code></pre>
 </div>
                     <a id="util-visibility"></a>
@@ -2696,7 +2697,8 @@ pill</code></pre>
     data-c-font-size="h3"
     data-c-colour="c1"
     data-c-font-weight="600"
-    data-c-margin="top(double) bottom(normal)">
+    data-c-padding="top(double)"
+    data-c-margin="bottom(normal)">
     Visibility
 </h3>
 <div>
@@ -2721,10 +2723,10 @@ invisible</code></pre>
         Examples
     </h4>
     <div data-c-margin="bottom(half)">
-        <pre><code class="language-md">&lt;!--An element hidden from all devices, including screen readers.--&gt;
+        <pre><code class="language-html">&lt;!--An element hidden from all devices, including screen readers.--&gt;
 &lt;div data-c-visibility=&quot;hidden&quot;&gt;&lt;/div&gt;</code></pre>
     </div>
-    <pre><code class="language-md">&lt;!--An element hidden from screens, but not accessibility devices.--&gt;
+    <pre><code class="language-html">&lt;!--An element hidden from screens, but not accessibility devices.--&gt;
 &lt;div data-c-visibility=&quot;invisible&quot;&gt;&lt;/div&gt;</code></pre>
 </div>
                 </div>
@@ -7702,7 +7704,7 @@ invisible</code></pre>
             >
             
                 <pre><code class="language-twig">&lt;div data-c-tag=&quot;c1&quot; data-c-font-size=&quot;small&quot; data-c-radius=&quot;pill&quot;&gt;
-    &lt;!-- Tag Text Goes Here --&gt;
+    &lt;span&gt;&lt;!-- Tag Text Goes Here --&gt;&lt;/span&gt;
 &lt;/div&gt;</code></pre>
             
             
@@ -7724,12 +7726,12 @@ invisible</code></pre>
     <div data-c-grid="gutter">
     <div data-c-grid-item="tp(1of2)">
         <div data-c-tag="c2" data-c-radius="rounded" data-c-font-size="small">
-            Sample Tag Text
+            <span>Sample Tag Text</span>
         </div>
     </div>
     <div data-c-grid-item="tp(1of2)">
         <a href="" title="" data-c-tag="c4" data-c-radius="pill" data-c-font-size="small">
-            Sample Tag Text
+            <span>Sample Tag Text</span>
         </a>
     </div>
 </div>

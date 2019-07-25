@@ -32,6 +32,15 @@ $clone-whitespace-multiplier: 1.4;
     @media #{$clone-tablet-landscape} {
         display: block;
     }
+    .clone-search-clear-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        text-decoration: underline;
+        &:hover {
+            color: $clone-c1;
+        }
+    }
     .clone-search-results {
         display: none;
         &.active {

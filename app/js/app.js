@@ -118,6 +118,17 @@
 
         });
 
+        // Menu Clear ==========================================================
+        function clearMenu(trigger) {
+            $(".clone-search-results").removeClass("active");
+            $(".clone-menu").removeClass("hidden");
+            $("#cloneSearch").val("");
+        }
+        
+        $(document).on("click", "#clearSearch", function(e) {
+            clearMenu(this);
+        });
+
         // Menu Triggers =======================================================
         function menuTrigger(trigger) {
             if ($(trigger).hasClass("active")) {

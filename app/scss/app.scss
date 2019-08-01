@@ -23,6 +23,11 @@ $clone-menu-background-colour: $clone-black;
     }
 }
 
+[data-c-menu-mobile-trigger] {
+    border-radius: 5px 5px 0 0;
+    padding: 1rem 1.5rem !important;
+}
+
 [data-c-menu] {
     >div:first-child {
         margin: 5vh 20vw;

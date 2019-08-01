@@ -84,11 +84,11 @@
 
             if(terms == "") {
                 $(".clone-search-results").removeClass("active");
-                $(".clone-menu").removeClass("hidden");
+                $("[data-c-menu] >ul").removeClass("hidden");
             }
             else {
                 $(".clone-search-results").addClass("active");
-                $(".clone-menu").addClass("hidden");
+                $("[data-c-menu] >ul").addClass("hidden");
             }
 
             // Prevents the user from submitting the form with the enter key.
@@ -121,7 +121,7 @@
         // Menu Clear ==========================================================
         function clearMenu(trigger) {
             $(".clone-search-results").removeClass("active");
-            $(".clone-menu").removeClass("hidden");
+            $("[data-c-menu] >ul").removeClass("hidden");
             $("#cloneSearch").val("");
         }
         

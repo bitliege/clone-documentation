@@ -74,60 +74,24 @@
 
     </head>
 
-    <body data-clone data-clone-js>
+    <body data-clone data-c-menu-style="sidebar(left)">
 
         
 
-        <div
-            data-c-alert="information(toast)"
-            data-c-radius="rounded"
-            role="alert"
-            id="cookieAlert">
-            <div data-c-padding="half">
-                <span
-                    data-c-margin="bottom(quarter)"
-                    data-c-heading="h5"
-                    data-c-font-weight="bold">
-                    <i
-                        aria-hidden="true"
-                        class="material-icons">
-                        assessment
-                    </i>
-                    Just a heads up!
-                </span>
-                <p>
-                    Clone's documentation uses Cookies and <a href="https://marketingplatform.google.com/about/analytics/benefits/" title="Learn more about what Google Analytics is." target="_blank">Google Analytics</a> to help us better understand our visitors. By viewing this site, you agree to have this basic information collected and relayed back to us. You can learn more about how Google Analytics provides us with this information <a href="https://support.google.com/analytics#topic=3544906" title="Learn more about how Google Analytics works." target="_blank">here</a>.
-                </p>
-            </div>
-            <button data-docs-cookie-trigger data-c-padding="half">
-                <i class="material-icons">close</i>
-            </button>
-        </div>
-
-        <div data-c-grid>
-            <div data-c-grid-item="tl(1of5)">
-            </div>
-            <div data-c-grid-item="tl(4of5)">
-                <a
-                    data-c-skip-content
-                    data-c-background="grey(10)"
-                    data-c-padding="normal"
-                    data-c-color="white"
-                    href="#content"
-                    title="Skip to the main content.">
-                    Skip to Main Content
-                </a>
-            </div>
-        </div>
-
         
-<div
-    class="clone-sidebar"
-    data-c-background="black(100)">
-    <div data-c-padding="top(triple) right(double) bottom(double) left(double)">
+
+<button 
+    type="button"
+    data-c-button="solid(c5)"
+    data-c-menu-mobile-trigger>
+    <span>Open</span><span>Close</span> Menu
+</button>
+
+<nav data-c-menu>
+    <div data-c-padding="top(triple) bottom(double)">
         <img src="img/clone-white.svg">
     </div>
-    <form data-c-padding="right(double) left(double)">
+    <form>
         <div data-c-input="text">
             <label data-c-colour="white" for="cloneSearch">Search Clone</label>
             <span>Required</span>
@@ -137,7 +101,7 @@
             <span>This input has an error.</span>
         </div>
     </form>
-    <div class="clone-search-results" data-c-padding="right(double) bottom(triple) left(double)">
+    <div class="clone-search-results" data-c-padding="bottom(double)">
         <div data-c-grid="gutter middle">
             <div data-c-grid-item="base(1of2)">
                 <p data-c-font-weight="600" data-c-colour="c1">Results</p>
@@ -215,6 +179,13 @@
                     
                         <li>
                             
+                                <a data-terms="essentials, typography, type, font, scale, weight, line height, " href="#type">Typography</a>
+                            
+                        </li>
+                        
+                    
+                        <li>
+                            
                                 <a data-terms="essentials, flexbox grid, item, " href="#flexbox-grid">Flexbox Grid</a>
                             
                         </li>
@@ -222,7 +193,7 @@
                     
                         <li>
                             
-                                <a data-terms="essentials, typography, type, font, scale, weight, line height, " href="#type">Typography</a>
+                                <a data-terms="essentials, menus, navigation, topbar, sticky, sidebar, submenu, " href="#menus">Menus</a>
                             
                         </li>
                         
@@ -482,383 +453,417 @@
             </ul>
         </div>
     </div>
-    <div class="clone-menu" data-c-padding="right(double) bottom(triple) left(double)">
-        <ul data-c-colour="white">
-            
-                <li>
-                    
-                        <a href="#home">Home</a>
-                    
-                    
-                </li>
-            
-                <li>
-                    
-                        <a href="#about">About Clone</a>
-                    
-                    
-                        <button data-docs-menu-trigger>
-                            <i class="material-icons">add</i>
-                            <i class="material-icons">remove</i>
-                        </button>
-                        <ul data-c-colour="white">
-                            
-                                <li>
-                                    
-                                        <a href="#about-installation">Try Or Install Clone</a>
-                                    
-                                    
-                                </li>
-                            
-                                <li>
-                                    
-                                        <a href="#about-usage">How To Use Clone</a>
-                                    
-                                    
-                                </li>
-                            
-                                <li>
-                                    
-                                        <a href="#about-themeing">Creating A Theme</a>
-                                    
-                                    
-                                </li>
-                            
-                                <li>
-                                    
-                                        <a href="#about-contributing">Contributing</a>
-                                    
-                                    
-                                </li>
-                            
-                        </ul>
-                    
-                </li>
-            
-                <li>
-                    
-                        <a href="#essentials">Essentials</a>
-                    
-                    
-                        <button data-docs-menu-trigger>
-                            <i class="material-icons">add</i>
-                            <i class="material-icons">remove</i>
-                        </button>
-                        <ul data-c-colour="white">
-                            
-                                <li>
-                                    
-                                        <a href="#colour">Colour</a>
-                                    
-                                    
-                                </li>
-                            
-                                <li>
-                                    
-                                        <a href="#flexbox-grid">Flexbox Grid</a>
-                                    
-                                    
-                                </li>
-                            
-                                <li>
-                                    
-                                        <a href="#type">Typography</a>
-                                    
-                                    
-                                </li>
-                            
-                        </ul>
-                    
-                </li>
-            
-                <li>
-                    
-                        <a href="#utilities">Utilities</a>
-                    
-                    
-                        <button data-docs-menu-trigger>
-                            <i class="material-icons">add</i>
-                            <i class="material-icons">remove</i>
-                        </button>
-                        <ul data-c-colour="white">
-                            
-                                <li>
-                                    
-                                        <a href="#util-alignment">Alignment</a>
-                                    
-                                    
-                                </li>
-                            
-                                <li>
-                                    
-                                        <a href="#util-backgrounds">Backgrounds</a>
-                                    
-                                    
-                                </li>
-                            
-                                <li>
-                                    
-                                        <a href="#util-borders">Borders</a>
-                                    
-                                    
-                                </li>
-                            
-                                <li>
-                                    
-                                        <a href="#util-cards">Cards</a>
-                                    
-                                    
-                                </li>
-                            
-                                <li>
-                                    
-                                        <a href="#util-containers">Containers</a>
-                                    
-                                    
-                                </li>
-                            
-                                <li>
-                                    
-                                        <a href="#util-fonts">Fonts & Font Styles</a>
-                                    
-                                    
-                                </li>
-                            
-                                <li>
-                                    
-                                        <a href="#util-whitespace">Margins & Padding</a>
-                                    
-                                    
-                                </li>
-                            
-                                <li>
-                                    
-                                        <a href="#util-overlays">Overlays</a>
-                                    
-                                    
-                                </li>
-                            
-                                <li>
-                                    
-                                        <a href="#util-radius">Radius</a>
-                                    
-                                    
-                                </li>
-                            
-                                <li>
-                                    
-                                        <a href="#util-visibility">Visibility</a>
-                                    
-                                    
-                                </li>
-                            
-                        </ul>
-                    
-                </li>
-            
-                <li>
-                    
-                        <p>Components</p>
-                    
-                    
-                        <button data-docs-menu-trigger>
-                            <i class="material-icons">add</i>
-                            <i class="material-icons">remove</i>
-                        </button>
-                        <ul data-c-colour="white">
-                            
-                                <li>
-                                    
-                                        <a href="#accordions">Accordions</a>
-                                    
-                                    
-                                </li>
-                            
-                                <li>
-                                    
-                                        <a href="#alerts">Alerts</a>
-                                    
-                                    
-                                </li>
-                            
-                                <li>
-                                    
-                                        <a href="#back-to-top-links">Back-to-top Links</a>
-                                    
-                                    
-                                </li>
-                            
-                                <li>
-                                    
-                                        <a href="#blockquotes">Blockquotes</a>
-                                    
-                                    
-                                </li>
-                            
-                                <li>
-                                    
-                                        <a href="#breadcrumbs">Breadcrumbs</a>
-                                    
-                                    
-                                </li>
-                            
-                                <li>
-                                    
-                                        <a href="#buttons">Buttons</a>
-                                    
-                                    
-                                </li>
-                            
-                                <li>
-                                    
-                                        <a href="#carousels">Carousels</a>
-                                    
-                                    
-                                </li>
-                            
-                                <li>
-                                    
-                                        <a href="#dialogs">Dialogs</a>
-                                    
-                                    
-                                </li>
-                            
-                                <li>
-                                    
-                                        <a href="#iframes">Iframes</a>
-                                    
-                                    
-                                </li>
-                            
-                                <li>
-                                    
-                                        <a href="#inputs">Inputs</a>
-                                    
-                                    
-                                        <button data-docs-menu-trigger>
-                                            <i class="material-icons">add</i>
-                                            <i class="material-icons">remove</i>
-                                        </button>
-                                        <ul data-c-colour="white">
-                                            
-                                                <li>
-                                                    
-                                                        <a href="#input-checkbox">Checkboxes</a>
-                                                    
-                                                </li>
-                                            
-                                                <li>
-                                                    
-                                                        <a href="#input-date">Dates</a>
-                                                    
-                                                </li>
-                                            
-                                                <li>
-                                                    
-                                                        <a href="#input-dropdown">Dropdowns</a>
-                                                    
-                                                </li>
-                                            
-                                                <li>
-                                                    
-                                                        <a href="#input-email">Emails</a>
-                                                    
-                                                </li>
-                                            
-                                                <li>
-                                                    
-                                                        <a href="#input-number">Numbers</a>
-                                                    
-                                                </li>
-                                            
-                                                <li>
-                                                    
-                                                        <a href="#input-password">Passwords</a>
-                                                    
-                                                </li>
-                                            
-                                                <li>
-                                                    
-                                                        <a href="#input-radio">Radios</a>
-                                                    
-                                                </li>
-                                            
-                                                <li>
-                                                    
-                                                        <a href="#input-text">Text</a>
-                                                    
-                                                </li>
-                                            
-                                                <li>
-                                                    
-                                                        <a href="#input-textarea">Textareas</a>
-                                                    
-                                                </li>
-                                            
-                                                <li>
-                                                    
-                                                        <a href="#input-with-button">Text With Button</a>
-                                                    
-                                                </li>
-                                            
-                                                <li>
-                                                    
-                                                        <a href="#input-url">Urls</a>
-                                                    
-                                                </li>
-                                            
-                                        </ul>
-                                    
-                                </li>
-                            
-                                <li>
-                                    
-                                        <a href="#pullquotes">Pullquotes</a>
-                                    
-                                    
-                                </li>
-                            
-                                <li>
-                                    
-                                        <a href="#skip-to-content-links">Skip-to-content Links</a>
-                                    
-                                    
-                                </li>
-                            
-                                <li>
-                                    
-                                        <a href="#tables">Tables</a>
-                                    
-                                    
-                                </li>
-                            
-                                <li>
-                                    
-                                        <a href="#tags">Tags</a>
-                                    
-                                    
-                                </li>
-                            
-                        </ul>
-                    
-                </li>
-            
-        </ul>
-    </div>
-</div>
+    <ul>
+        
+            <li>
+                
+                    <a href="#home">Home</a>
+                
+                
+            </li>
+        
+            <li>
+                
+                    <a href="#about">About Clone</a>
+                
+                
+                    <button data-c-menu-submenu-trigger>
+                        <i data-c-menu-add class="material-icons">add</i>
+                        <i data-c-menu-remove class="material-icons">remove</i>
+                    </button>
+                    <ul data-c-colour="white">
+                        
+                            <li>
+                                
+                                    <a href="#about-installation">Try Or Install Clone</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="#about-usage">How To Use Clone</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="#about-themeing">Creating A Theme</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="#about-contributing">Contributing</a>
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="#essentials">Essentials</a>
+                
+                
+                    <button data-c-menu-submenu-trigger>
+                        <i data-c-menu-add class="material-icons">add</i>
+                        <i data-c-menu-remove class="material-icons">remove</i>
+                    </button>
+                    <ul data-c-colour="white">
+                        
+                            <li>
+                                
+                                    <a href="#colour">Colour</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="#type">Typography</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="#flexbox-grid">Flexbox Grid</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="#menus">Menus</a>
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li>
+                
+                    <a href="#utilities">Utilities</a>
+                
+                
+                    <button data-c-menu-submenu-trigger>
+                        <i data-c-menu-add class="material-icons">add</i>
+                        <i data-c-menu-remove class="material-icons">remove</i>
+                    </button>
+                    <ul data-c-colour="white">
+                        
+                            <li>
+                                
+                                    <a href="#util-alignment">Alignment</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="#util-backgrounds">Backgrounds</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="#util-borders">Borders</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="#util-cards">Cards</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="#util-containers">Containers</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="#util-fonts">Fonts & Font Styles</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="#util-whitespace">Margins & Padding</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="#util-overlays">Overlays</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="#util-radius">Radius</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="#util-visibility">Visibility</a>
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li>
+                
+                    <p>Components</p>
+                
+                
+                    <button data-c-menu-submenu-trigger>
+                        <i data-c-menu-add class="material-icons">add</i>
+                        <i data-c-menu-remove class="material-icons">remove</i>
+                    </button>
+                    <ul data-c-colour="white">
+                        
+                            <li>
+                                
+                                    <a href="#accordions">Accordions</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="#alerts">Alerts</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="#back-to-top-links">Back-to-top Links</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="#blockquotes">Blockquotes</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="#breadcrumbs">Breadcrumbs</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="#buttons">Buttons</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="#carousels">Carousels</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="#dialogs">Dialogs</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="#iframes">Iframes</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="#inputs">Inputs</a>
+                                
+                                
+                                    <button data-c-menu-submenu-trigger>
+                                        <i data-c-menu-add class="material-icons">add</i>
+                                        <i data-c-menu-remove class="material-icons">remove</i>
+                                    </button>
+                                    <ul data-c-colour="white">
+                                        
+                                            <li>
+                                                
+                                                    <a href="#input-checkbox">Checkboxes</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="#input-date">Dates</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="#input-dropdown">Dropdowns</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="#input-email">Emails</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="#input-number">Numbers</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="#input-password">Passwords</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="#input-radio">Radios</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="#input-text">Text</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="#input-textarea">Textareas</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="#input-with-button">Text With Button</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="#input-url">Urls</a>
+                                                
+                                            </li>
+                                        
+                                    </ul>
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="#pullquotes">Pullquotes</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="#skip-to-content-links">Skip-to-content Links</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="#tables">Tables</a>
+                                
+                                
+                            </li>
+                        
+                            <li>
+                                
+                                    <a href="#tags">Tags</a>
+                                
+                                
+                            </li>
+                        
+                    </ul>
+                
+            </li>
+        
+    </ul>
+</nav>
 
-        <div data-c-grid>
+        <div
+            data-c-alert="information(toast)"
+            data-c-radius="rounded"
+            role="alert"
+            id="cookieAlert">
+            <div data-c-padding="half">
+                <span
+                    data-c-margin="bottom(quarter)"
+                    data-c-heading="h5"
+                    data-c-font-weight="bold">
+                    <i
+                        aria-hidden="true"
+                        class="material-icons">
+                        assessment
+                    </i>
+                    Just a heads up!
+                </span>
+                <p>
+                    Clone's documentation uses Cookies and <a href="https://marketingplatform.google.com/about/analytics/benefits/" title="Learn more about what Google Analytics is." target="_blank">Google Analytics</a> to help us better understand our visitors. By viewing this site, you agree to have this basic information collected and relayed back to us. You can learn more about how Google Analytics provides us with this information <a href="https://support.google.com/analytics#topic=3544906" title="Learn more about how Google Analytics works." target="_blank">here</a>.
+                </p>
+            </div>
+            <button data-docs-cookie-trigger data-c-padding="half">
+                <i class="material-icons">close</i>
+            </button>
+        </div>
 
-            <!-- This serves the purpose of pushing the body content over so that the fixed menu has room (it is of equivalent width to this grid item). -->
-            <div data-c-grid-item="tl(1of5)"></div>
+        <a
+            data-c-skip-content
+            data-c-background="grey(10)"
+            data-c-padding="normal"
+            data-c-color="white"
+            href="#content"
+            title="Skip to the main content.">
+            Skip to Main Content
+        </a>
 
-            <div data-c-grid-item="tl(4of5)">
+        <a id="pageTop"></a>
+        <a id="home"></a>
 
-                <a id="pageTop"></a>
-                <a id="home"></a>
-
-                <!-- Hero ================================================== -->
-                <div class="clone-hero">
+        <!-- Hero ================================================== -->
+        <div class="clone-hero">
     <div 
         data-c-alignment="base(centre) tl(left)"
         data-c-container="medium">
@@ -887,24 +892,24 @@
     </div>
 </div>
 
-                <a id="content"></a>
+        <a id="content"></a>
 
-                <!-- About ================================================= -->
-                <a id="about"></a>
-                <div data-c-background="black(90)">
-                    <div data-c-container="medium">
-                        <h2
-                            data-c-font-size="h2"
-                            data-c-colour="white"
-                            data-c-padding="top(normal) bottom(normal)">
-                            About Clone
-                        </h2>
-                    </div>
-                </div>
-                <div 
-                    data-c-container="medium"
-                    data-c-padding="top(double) bottom(double)">
-                    <a id="about-installation" class="offset-anchor-double"></a>
+        <!-- About ================================================= -->
+        <a id="about"></a>
+        <div data-c-background="black(90)">
+            <div data-c-container="medium">
+                <h2
+                    data-c-font-size="h2"
+                    data-c-colour="white"
+                    data-c-padding="top(normal) bottom(normal)">
+                    About Clone
+                </h2>
+            </div>
+        </div>
+        <div 
+            data-c-container="medium"
+            data-c-padding="top(double) bottom(double)">
+            <a id="about-installation" class="offset-anchor-double"></a>
 <h3
     data-c-font-size="h3"
     data-c-colour="c1"
@@ -984,8 +989,8 @@
         <img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/joshdrink/clone-framework/dist/css/gzip/clone-gridless.min.css.gz.svg?label=CSS%20%28minified%2C%20gzipped%29">
         <img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/joshdrink/clone-framework/dist/js/gzip/clone.min.js.gz.svg?label=JS%20%28minified%2C%20gzipped%29">
     </div>
-    <pre><code class="language-twig">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.9/dist/css/clone-gridless.min.css&quot;&gt;
-&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.9/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+    <pre><code class="language-twig">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.10/dist/css/clone-gridless.min.css&quot;&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.10/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
     <h5
         data-c-font-size="h5"
         data-c-font-weight="600"
@@ -996,8 +1001,8 @@
         <img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/joshdrink/clone-framework/dist/css/gzip/clone.min.css.gz.svg?label=CSS%20%28minified%2C%20gzipped%29">
         <img alt="GitHub file size in bytes" src="https://img.shields.io/github/size/joshdrink/clone-framework/dist/js/gzip/clone.min.js.gz.svg?label=JS%20%28minified%2C%20gzipped%29">
     </div>
-    <pre><code class="language-twig">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.9/dist/css/clone.min.css&quot;&gt;
-&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.9/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+    <pre><code class="language-twig">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.10/dist/css/clone.min.css&quot;&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.10/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
     
     <a id="about-installation-npm"></a>
     <h4
@@ -1029,9 +1034,9 @@
     <p data-c-margin="top(normal) bottom(normal)">
         For now, it is also required that Clone's JavaScript file be imported using the CDN.
     </p>
-    <pre><code class="language-twig">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.9/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+    <pre><code class="language-twig">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/clone-framework@2.3.10/dist/js/clone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
 </div>
-                    <a id="about-usage"></a>
+            <a id="about-usage"></a>
 <h3
     data-c-font-size="h3"
     data-c-colour="c1"
@@ -1090,7 +1095,7 @@
     <p data-c-margin="bottom(half)">A finite list of Utility attributes and how they're used can be found here: <a href="#utilities">Utility Attributes in Clone</a>.</p>
     <p>Above and beyond utility attributes are component attributes, which allow you to build unique and accessible elements. Each individual component is outlined in the sidebar of the site. These component attributes can be combined with utility attributes to design and style each component to exactly what you need.</p>
 </div>
-                    <a id="about-themeing"></a>
+            <a id="about-themeing"></a>
 <h3
     data-c-font-size="h3"
     data-c-colour="c1"
@@ -1228,7 +1233,9 @@ $clone-grid-gutter: $clone-padding !default;
     $clone-selection-background-colour: $clone-c5 !default;
 
     // Hover
-    $clone-hover-colour: $clone-c1 !default;
+    $clone-hover-colour: $clone-c4 !default;
+    $clone-hover-colour-light: lighten($clone-c4, 10%);
+    $clone-hover-colour-dark: darken($clone-c4, 10%);
 
     // Focus
     $clone-focus-colour: $clone-hover-colour !default;
@@ -1261,6 +1268,14 @@ $clone-grid-gutter: $clone-padding !default;
 
     // Code Blocks
     $clone-code-background: $clone-black !default;
+
+    // Menus
+    $clone-menu-background-colour: $clone-black !default;
+    $clone-submenu-background-colour: $clone-c2 !default;
+
+    $clone-menu-font-colour: $clone-white !default;
+    $clone-menu-divider-colour: rgba($clone-c4, .5) !default;
+    $clone-menu-icon-colour: $clone-white !default;
 
     // Pullquotes
     $clone-pullquote-colour: $clone-c2 !default;
@@ -1725,7 +1740,7 @@ $clone-grid-gutter: $clone-padding;
 
     </div>
 </div>
-                    <a id="about-contributing"></a>
+            <a id="about-contributing"></a>
 <h3
     data-c-font-size="h3"
     data-c-colour="c1"
@@ -1738,24 +1753,24 @@ $clone-grid-gutter: $clone-padding;
 <div>
     <p>Coming Soon! Check out <a href="https://github.com/joshdrink/clone-framework" title="Contribute to Clone on Github." target="_blank">Github</a> in the meantime.</p>
 </div>
-                </div>
+        </div>
 
-                <!-- Essentials ============================================ -->
-                <a id="essentials"></a>
-                <div data-c-background="black(90)">
-                    <div data-c-container="medium">
-                        <h2
-                            data-c-font-size="h2"
-                            data-c-colour="white"
-                            data-c-padding="top(normal) bottom(normal)">
-                            Essentials
-                        </h2>
-                    </div>
-                </div>
-                <div 
-                    data-c-container="medium"
-                    data-c-padding="top(double) bottom(double)">
-                    <a id="colour" class="offset-anchor-double"></a>
+        <!-- Essentials ============================================ -->
+        <a id="essentials"></a>
+        <div data-c-background="black(90)">
+            <div data-c-container="medium">
+                <h2
+                    data-c-font-size="h2"
+                    data-c-colour="white"
+                    data-c-padding="top(normal) bottom(normal)">
+                    Essentials
+                </h2>
+            </div>
+        </div>
+        <div 
+            data-c-container="medium"
+            data-c-padding="top(double) bottom(double)">
+            <a id="colour" class="offset-anchor-double"></a>
 <h3
     data-c-font-size="h3"
     data-c-color="c1"
@@ -1917,7 +1932,43 @@ $clone-grid-gutter: $clone-padding;
         </ul>
     </li>
 </ul>
-                    <a id="flexbox-grid"></a>
+            <a id="type"></a>
+<h3
+    data-c-font-size="h3"
+    data-c-color="c1"
+    data-c-font-weight="600"
+    data-c-padding="top(double)"
+    data-c-margin="bottom(normal)">
+    Typography
+</h3>
+<h4
+    data-c-font-size="h4"
+    data-c-margin="top(normal) bottom(normal)">
+    Font Scale &amp; Line Height
+</h4>
+<p>Clone provides a built in means of controlling a typography scale based on a ratio. The system sets the base font to the user's default browser setting to begin with. By default, Clone uses a 1.333 scale for determining the size of the typography. This can be changed by modifying the <code class="language-scss">$clone-font-scale</code> variable. This scale appears as follows:</p>
+<h1 data-c-font-size="h1" data-c-margin="top(normal) bottom(normal)">Heading 01</h1>
+<h2 data-c-font-size="h2" data-c-margin="top(normal) bottom(normal)">Heading 02</h2>
+<h3 data-c-font-size="h3" data-c-margin="top(normal) bottom(normal)">Heading 03</h3>
+<h4 data-c-font-size="h4" data-c-margin="top(normal) bottom(normal)">Heading 04</h4>
+<h5 data-c-font-size="h5" data-c-margin="top(normal) bottom(normal)">Heading 05</h5>
+<p data-c-font-size="normal" data-c-margin="top(normal) bottom(normal)">Paragraph Copy</p>
+<p data-c-font-size="small" data-c-margin="top(normal) bottom(normal)">Captions &amp; Labels</p>
+<p data-c-margin="bottom(half)">Please note that this scale is not automatically applied to the heading elements and must be applied manually using the <code class="language-html"> data-c-font-size=&quot;&quot;</code> property. This is so that you can manually determine the appearance of a heading when the markup structure might dictate otherwise. You can <a href="#util-fonts" title="Learn more about how to use font attributes.">learn more about how to use font attributes here</a>.</p>
+<p>Line height defaults to 1.5, but can manually changed using the <code class="language-scss">$clone-line-height</code> variable.</p>
+<h4
+    data-c-font-size="h4"
+    data-c-margin="top(double) bottom(normal)">
+    Font Types
+</h4>
+<p data-c-margin="bottom(normal)">Clone provides you with customizable variables for the 4 following font types:</p>
+<ul>
+    <li><code class="language-scss">$clone-font-sans</code></li>
+    <li><code class="language-scss">$clone-font-serif</code></li>
+    <li><code class="language-scss">$clone-font-script</code></li>
+    <li><code class="language-scss">$clone-font-monospace</code></li>
+</ul>
+            <a id="flexbox-grid"></a>
 <h3
     data-c-font-size="h3"
     data-c-color="c1"
@@ -2106,60 +2157,37 @@ using the $clone-grid-columns variable.</code></pre>
     </div>
 </div>
 
-                    <a id="type"></a>
+            <a id="menus"></a>
 <h3
     data-c-font-size="h3"
     data-c-color="c1"
     data-c-font-weight="600"
     data-c-padding="top(double)"
     data-c-margin="bottom(normal)">
-    Typography
+    Menus
 </h3>
-<h4
-    data-c-font-size="h4"
-    data-c-margin="top(normal) bottom(normal)">
-    Font Scale &amp; Line Height
-</h4>
-<p>Clone provides a built in means of controlling a typography scale based on a ratio. The system sets the base font to the user's default browser setting to begin with. By default, Clone uses a 1.333 scale for determining the size of the typography. This can be changed by modifying the <code class="language-scss">$clone-font-scale</code> variable. This scale appears as follows:</p>
-<h1 data-c-font-size="h1" data-c-margin="top(normal) bottom(normal)">Heading 01</h1>
-<h2 data-c-font-size="h2" data-c-margin="top(normal) bottom(normal)">Heading 02</h2>
-<h3 data-c-font-size="h3" data-c-margin="top(normal) bottom(normal)">Heading 03</h3>
-<h4 data-c-font-size="h4" data-c-margin="top(normal) bottom(normal)">Heading 04</h4>
-<h5 data-c-font-size="h5" data-c-margin="top(normal) bottom(normal)">Heading 05</h5>
-<p data-c-font-size="normal" data-c-margin="top(normal) bottom(normal)">Paragraph Copy</p>
-<p data-c-font-size="small" data-c-margin="top(normal) bottom(normal)">Captions &amp; Labels</p>
-<p data-c-margin="bottom(half)">Please note that this scale is not automatically applied to the heading elements and must be applied manually using the <code class="language-html"> data-c-font-size=&quot;&quot;</code> property. This is so that you can manually determine the appearance of a heading when the markup structure might dictate otherwise. You can <a href="#util-fonts" title="Learn more about how to use font attributes.">learn more about how to use font attributes here</a>.</p>
-<p>Line height defaults to 1.5, but can manually changed using the <code class="language-scss">$clone-line-height</code> variable.</p>
-<h4
-    data-c-font-size="h4"
-    data-c-margin="top(double) bottom(normal)">
-    Font Types
-</h4>
-<p data-c-margin="bottom(normal)">Clone provides you with customizable variables for the 4 following font types:</p>
-<ul>
-    <li><code class="language-scss">$clone-font-sans</code></li>
-    <li><code class="language-scss">$clone-font-serif</code></li>
-    <li><code class="language-scss">$clone-font-script</code></li>
-    <li><code class="language-scss">$clone-font-monospace</code></li>
-</ul>
-                </div>
 
-                <!-- Utilities ============================================= -->
-                <a id="utilities"></a>
-                <div data-c-background="black(90)">
-                    <div data-c-container="medium">
-                        <h2
-                            data-c-font-size="h2"
-                            data-c-colour="white"
-                            data-c-padding="top(normal) bottom(normal)">
-                            Utilities
-                        </h2>
-                    </div>
-                </div>
-                <div 
-                    data-c-container="medium"
-                    data-c-padding="top(double) bottom(double)">
-                    <a id="util-alignment" class="offset-anchor-double"></a>
+<p>Coming Soon!</p>
+
+
+        </div>
+
+        <!-- Utilities ============================================= -->
+        <a id="utilities"></a>
+        <div data-c-background="black(90)">
+            <div data-c-container="medium">
+                <h2
+                    data-c-font-size="h2"
+                    data-c-colour="white"
+                    data-c-padding="top(normal) bottom(normal)">
+                    Utilities
+                </h2>
+            </div>
+        </div>
+        <div 
+            data-c-container="medium"
+            data-c-padding="top(double) bottom(double)">
+            <a id="util-alignment" class="offset-anchor-double"></a>
 <h3
     data-c-font-size="h3"
     data-c-colour="c1"
@@ -2208,7 +2236,7 @@ right</code></pre>
     <pre><code class="language-html">&lt;!--Centred initially, right aligned on landscape phones, centred on landscape tablets, right aligned on large desktops.--&gt;
 &lt;div data-c-alignment=&quot;base(centre) pl(right) tl(centre) dl(right)&quot;&gt;&lt;/div&gt;</code></pre>
 </div>
-                    <a id="util-backgrounds"></a>
+            <a id="util-backgrounds"></a>
 <h3
     data-c-font-size="h3"
     data-c-colour="c1"
@@ -2269,7 +2297,7 @@ go</code></pre>
     <pre><code class="language-html">&lt;!--Semi-transparent (50%) theme colour 4 background.--&gt;
 &lt;div data-c-background=&quot;c4(50)&quot;&gt;&lt;/div&gt;</code></pre>
 </div>
-                    <a id="util-borders"></a>
+            <a id="util-borders"></a>
 <h3
     data-c-font-size="h3"
     data-c-colour="c1"
@@ -2338,7 +2366,7 @@ go</code></pre>
     <pre><code class="language-html">&lt;!--A thin, dashed, theme colour 5 border on all sides.--&gt;
 &lt;div data-c-border=&quot;all(thin, dashed, c5)&quot;&gt;&lt;/div&gt;</code></pre>
 </div>
-                    <a id="util-cards"></a>
+            <a id="util-cards"></a>
 <h3
     data-c-font-size="h3"
     data-c-colour="c1"
@@ -2374,7 +2402,7 @@ go</code></pre>
     &lt;span&gt;&lt;!-- Content Goes Here --&gt;&lt;/span&gt;
 &lt;/div&gt;</code></pre>
 </div>
-                    <a id="util-containers"></a>
+            <a id="util-containers"></a>
 <h3
     data-c-font-size="h3"
     data-c-font-weight="600"
@@ -2409,7 +2437,7 @@ full</code></pre>
     <pre><code class="language-html">&lt;!--A container for copy.--&gt;
 &lt;div data-c-container=&quot;small&quot;&gt;&lt;/div&gt;</code></pre>
 </div>
-                    <a id="util-fonts"></a>
+            <a id="util-fonts"></a>
 <h3
     data-c-font-size="h3"
     data-c-font-weight="600"
@@ -2550,7 +2578,7 @@ bold
         </div>
     </div>
 </div>
-                    <a id="util-whitespace"></a>
+            <a id="util-whitespace"></a>
 <h3
     data-c-font-size="h3"
     data-c-colour="c1"
@@ -2602,7 +2630,7 @@ triple</code></pre>
     <pre><code class="language-html">&lt;!--Double value on top, normal on the sides, and triple value on the bottom.--&gt;
 &lt;div data-c-padding=&quot;top(double) right(normal) bottom(triple) left(normal)&quot;&gt;&lt;/div&gt;</code></pre>
 </div>
-                    <a id="util-overlays"></a>
+            <a id="util-overlays"></a>
 <h3
     data-c-font-size="h3"
     data-c-colour="c1"
@@ -2663,7 +2691,7 @@ go</code></pre>
     <pre><code class="language-html">&lt;!--A slightly transparent (80%) black overlay over an image background.--&gt;
 &lt;div data-c-overlay=&quot;black(80)&quot; style=&quot;background-image: url(&#039;/images/krypto.jpg&#039;)&quot;&gt;&lt;/div&gt;</code></pre>
 </div>
-                    <a id="util-radius"></a>
+            <a id="util-radius"></a>
 <h3
     data-c-font-size="h3"
     data-c-colour="c1"
@@ -2696,7 +2724,7 @@ pill</code></pre>
     <pre><code class="language-html">&lt;!--An element with rounded corners.--&gt;
 &lt;div data-c-radius=&quot;rounded&quot;&gt;&lt;/div&gt;</code></pre>
 </div>
-                    <a id="util-visibility"></a>
+            <a id="util-visibility"></a>
 <h3
     data-c-font-size="h3"
     data-c-colour="c1"
@@ -2733,14 +2761,14 @@ invisible</code></pre>
     <pre><code class="language-html">&lt;!--An element hidden from screens, but not accessibility devices.--&gt;
 &lt;div data-c-visibility=&quot;invisible&quot;&gt;&lt;/div&gt;</code></pre>
 </div>
-                </div>
+        </div>
 
-                <!-- Components ============================================ -->
-                    <a id="components"></a>
-                    <!-- Accordions ---------------------------------------- -->
-                    
-                    
-                    <a id="accordions"></a>
+        <!-- Components ============================================ -->
+        <a id="components"></a>
+        <!-- Accordions ---------------------------------------- -->
+        
+        
+        <a id="accordions"></a>
 <div data-c-background="black(90)">
     <div data-c-container="medium">
         <h2
@@ -3119,10 +3147,10 @@ invisible</code></pre>
 
     </div>
 </div>
-                    <!-- Alerts -------------------------------------------- -->
-                    
-                    
-                    <a id="alerts"></a>
+        <!-- Alerts -------------------------------------------- -->
+        
+        
+        <a id="alerts"></a>
 <div data-c-background="black(90)">
     <div data-c-container="medium">
         <h2
@@ -3406,10 +3434,10 @@ invisible</code></pre>
 
     </div>
 </div>
-                    <!-- Back-to-Top Links --------------------------------- -->
-                    
-                    
-                    <a id="back-to-top-links"></a>
+        <!-- Back-to-Top Links --------------------------------- -->
+        
+        
+        <a id="back-to-top-links"></a>
 <div data-c-background="black(90)">
     <div data-c-container="medium">
         <h2
@@ -3609,10 +3637,10 @@ invisible</code></pre>
 
     </div>
 </div>
-                    <!-- Blockquotes --------------------------------------- -->
-                    
-                    
-                    <a id="blockquotes"></a>
+        <!-- Blockquotes --------------------------------------- -->
+        
+        
+        <a id="blockquotes"></a>
 <div data-c-background="black(90)">
     <div data-c-container="medium">
         <h2
@@ -3828,10 +3856,10 @@ invisible</code></pre>
 
     </div>
 </div>
-                    <!-- Breadcrumbs --------------------------------------- -->
-                    
-                    
-                    <a id="breadcrumbs"></a>
+        <!-- Breadcrumbs --------------------------------------- -->
+        
+        
+        <a id="breadcrumbs"></a>
 <div data-c-background="black(90)">
     <div data-c-container="medium">
         <h2
@@ -4079,10 +4107,10 @@ invisible</code></pre>
 
     </div>
 </div>
-                    <!-- Buttons ------------------------------------------- -->
-                    
-                    
-                    <a id="buttons"></a>
+        <!-- Buttons ------------------------------------------- -->
+        
+        
+        <a id="buttons"></a>
 <div data-c-background="black(90)">
     <div data-c-container="medium">
         <h2
@@ -4559,10 +4587,10 @@ invisible</code></pre>
 
     </div>
 </div>
-                    <!-- Carousels ----------------------------------------- -->
-                    
-                    
-                    <a id="carousels"></a>
+        <!-- Carousels ----------------------------------------- -->
+        
+        
+        <a id="carousels"></a>
 <div data-c-background="black(90)">
     <div data-c-container="medium">
         <h2
@@ -4840,10 +4868,10 @@ invisible</code></pre>
 
     </div>
 </div>
-                    <!-- Dialogs ------------------------------------------- -->
-                    
-                    
-                    <a id="dialogs"></a>
+        <!-- Dialogs ------------------------------------------- -->
+        
+        
+        <a id="dialogs"></a>
 <div data-c-background="black(90)">
     <div data-c-container="medium">
         <h2
@@ -5189,10 +5217,10 @@ invisible</code></pre>
 
     </div>
 </div>
-                    <!-- iframes ------------------------------------------- -->
-                    
-                    
-                    <a id="iframes"></a>
+        <!-- iframes ------------------------------------------- -->
+        
+        
+        <a id="iframes"></a>
 <div data-c-background="black(90)">
     <div data-c-container="medium">
         <h2
@@ -5377,20 +5405,20 @@ invisible</code></pre>
 
     </div>
 </div>
-                    <!-- Inputs -------------------------------------------- -->
-                    <a id="inputs"></a>
-                    <div data-c-background="black(90)">
-                        <div data-c-container="medium">
-                            <h2
-                                data-c-font-size="h2"
-                                data-c-colour="white"
-                                data-c-padding="top(normal) bottom(normal)">
-                                Inputs
-                            </h2>
-                        </div>
-                    </div>
-                    <div>
-                        <a id="input-checkbox"></a>
+        <!-- Inputs -------------------------------------------- -->
+        <a id="inputs"></a>
+        <div data-c-background="black(90)">
+            <div data-c-container="medium">
+                <h2
+                    data-c-font-size="h2"
+                    data-c-colour="white"
+                    data-c-padding="top(normal) bottom(normal)">
+                    Inputs
+                </h2>
+            </div>
+        </div>
+        <div>
+            <a id="input-checkbox"></a>
 <div  data-c-padding="top(double) bottom(double)">
     <div data-c-container="medium">
         <h3
@@ -5587,7 +5615,7 @@ invisible</code></pre>
         </div>
     </div>
 </div>
-                        <a id="input-date"></a>
+            <a id="input-date"></a>
 <div data-c-background="grey(10)" data-c-padding="top(double) bottom(double)">
     <div data-c-container="medium">
         <h3
@@ -5720,7 +5748,7 @@ invisible</code></pre>
         </div>
     </div>
 </div>
-                        <a id="input-dropdown"></a>
+            <a id="input-dropdown"></a>
 <div  data-c-padding="top(double) bottom(double)">
     <div data-c-container="medium">
         <h3
@@ -5895,7 +5923,7 @@ invisible</code></pre>
         </div>
     </div>
 </div>
-                        <a id="input-email"></a>
+            <a id="input-email"></a>
 <div data-c-background="grey(10)" data-c-padding="top(double) bottom(double)">
     <div data-c-container="medium">
         <h3
@@ -6017,7 +6045,7 @@ invisible</code></pre>
         </div>
     </div>
 </div>
-                        <a id="input-number"></a>
+            <a id="input-number"></a>
 <div  data-c-padding="top(double) bottom(double)">
     <div data-c-container="medium">
         <h3
@@ -6139,7 +6167,7 @@ invisible</code></pre>
         </div>
     </div>
 </div>
-                        <a id="input-password"></a>
+            <a id="input-password"></a>
 <div data-c-background="grey(10)" data-c-padding="top(double) bottom(double)">
     <div data-c-container="medium">
         <h3
@@ -6293,7 +6321,7 @@ invisible</code></pre>
         </div>
     </div>
 </div>
-                        <a id="input-radio"></a>
+            <a id="input-radio"></a>
 <div  data-c-padding="top(double) bottom(double)">
     <div data-c-container="medium">
         <h3
@@ -6450,7 +6478,7 @@ invisible</code></pre>
         </div>
     </div>
 </div>
-                        <a id="input-text"></a>
+            <a id="input-text"></a>
 <div data-c-background="grey(10)" data-c-padding="top(double) bottom(double)">
     <div data-c-container="medium">
         <h3
@@ -6571,7 +6599,7 @@ invisible</code></pre>
         </div>
     </div>
 </div>
-                        <a id="input-textarea"></a>
+            <a id="input-textarea"></a>
 <div  data-c-padding="top(double) bottom(double)">
     <div data-c-container="medium">
         <h3
@@ -6693,7 +6721,7 @@ invisible</code></pre>
         </div>
     </div>
 </div>
-                        <a id="input-with-button"></a>
+            <a id="input-with-button"></a>
 <div data-c-background="grey(10)" data-c-padding="top(double) bottom(double)">
     <div data-c-container="medium">
         <h3
@@ -6853,7 +6881,7 @@ invisible</code></pre>
         </div>
     </div>
 </div>
-                        <a id="input-url"></a>
+            <a id="input-url"></a>
 <div  data-c-padding="top(double) bottom(double)">
     <div data-c-container="medium">
         <h3
@@ -6975,12 +7003,12 @@ invisible</code></pre>
         </div>
     </div>
 </div>
-                    </div>
-                    <!-- Menus --------------------------------------------- -->
-                    <!-- Pullquotes ---------------------------------------- -->
-                    
-                    
-                    <a id="pullquotes"></a>
+        </div>
+        <!-- Menus --------------------------------------------- -->
+        <!-- Pullquotes ---------------------------------------- -->
+        
+        
+        <a id="pullquotes"></a>
 <div data-c-background="black(90)">
     <div data-c-container="medium">
         <h2
@@ -7176,10 +7204,10 @@ invisible</code></pre>
 
     </div>
 </div>
-                    <!-- Skip-to-content Links ----------------------------- -->
-                    
-                    
-                    <a id="skip-to-content-links"></a>
+        <!-- Skip-to-content Links ----------------------------- -->
+        
+        
+        <a id="skip-to-content-links"></a>
 <div data-c-background="black(90)">
     <div data-c-container="medium">
         <h2
@@ -7368,10 +7396,10 @@ invisible</code></pre>
 
     </div>
 </div>
-                    <!-- Tables -------------------------------------------- -->
-                    
-                    
-                    <a id="tables"></a>
+        <!-- Tables -------------------------------------------- -->
+        
+        
+        <a id="tables"></a>
 <div data-c-background="black(90)">
     <div data-c-container="medium">
         <h2
@@ -7622,10 +7650,10 @@ invisible</code></pre>
 
     </div>
 </div>
-                    <!-- Tags ---------------------------------------------- -->
-                    
-                    
-                    <a id="tags"></a>
+        <!-- Tags ---------------------------------------------- -->
+        
+        
+        <a id="tags"></a>
 <div data-c-background="black(90)">
     <div data-c-container="medium">
         <h2
@@ -7806,10 +7834,6 @@ invisible</code></pre>
 
     </div>
 </div>
-
-            </div>
-
-        </div>
 
         <script src="js/clone/clone.js"></script>
 

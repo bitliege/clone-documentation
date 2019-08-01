@@ -73,15 +73,6 @@
                 ]
             },
             "2": {
-                title: "Flexbox Grid",
-                hash: "flexbox-grid",
-                terms: [
-                    "essentials",
-                    "flexbox grid",
-                    "item"
-                ]
-            },
-            "3": {
                 title: "Typography",
                 hash: "type",
                 terms: [
@@ -92,6 +83,28 @@
                     "scale",
                     "weight",
                     "line height"
+                ]
+            },
+            "3": {
+                title: "Flexbox Grid",
+                hash: "flexbox-grid",
+                terms: [
+                    "essentials",
+                    "flexbox grid",
+                    "item"
+                ]
+            },
+            "4": {
+                title: "Menus",
+                hash: "menus",
+                terms: [
+                    "essentials",
+                    "menus",
+                    "navigation",
+                    "topbar",
+                    "sticky",
+                    "sidebar",
+                    "submenu"
                 ]
             }
         }
@@ -428,13 +441,19 @@
         }
     }
 } %}
-<div
-    class="clone-sidebar"
-    data-c-background="black(100)">
-    <div data-c-padding="top(triple) right(double) bottom(double) left(double)">
+
+<button 
+    type="button"
+    data-c-button="solid(c5)"
+    data-c-menu-mobile-trigger>
+    <span>Open</span><span>Close</span> Menu
+</button>
+
+<nav data-c-menu>
+    <div data-c-padding="top(triple) bottom(double)">
         <img src="img/clone-white.svg">
     </div>
-    <form data-c-padding="right(double) left(double)">
+    <form>
         <div data-c-input="text">
             <label data-c-colour="white" for="cloneSearch">Search Clone</label>
             <span>Required</span>
@@ -444,7 +463,7 @@
             <span>This input has an error.</span>
         </div>
     </form>
-    <div class="clone-search-results" data-c-padding="right(double) bottom(triple) left(double)">
+    <div class="clone-search-results" data-c-padding="bottom(double)">
         <div data-c-grid="gutter middle">
             <div data-c-grid-item="base(1of2)">
                 <p data-c-font-weight="600" data-c-colour="c1">Results</p>
@@ -489,51 +508,49 @@
             </ul>
         </div>
     </div>
-    <div class="clone-menu" data-c-padding="right(double) bottom(triple) left(double)">
-        <ul data-c-colour="white">
-            {% for topItem in nav %}
-                <li>
-                    {% if topItem.hash %}
-                        <a href="#{{ topItem.hash }}">{{ topItem.title|title }}</a>
-                    {% else %}
-                        <p>{{ topItem.title|title }}</p>
-                    {% endif %}
-                    {% if topItem.submenu %}
-                        <button data-docs-menu-trigger>
-                            <i class="material-icons">add</i>
-                            <i class="material-icons">remove</i>
-                        </button>
-                        <ul data-c-colour="white">
-                            {% for secondItem in topItem.submenu %}
-                                <li>
-                                    {% if secondItem.hash %}
-                                        <a href="#{{ secondItem.hash }}">{{ secondItem.title|title }}</a>
-                                    {% else %}
-                                        <p>{{ secondItem.title|title }}</p>
-                                    {% endif %}
-                                    {% if secondItem.submenu %}
-                                        <button data-docs-menu-trigger>
-                                            <i class="material-icons">add</i>
-                                            <i class="material-icons">remove</i>
-                                        </button>
-                                        <ul data-c-colour="white">
-                                            {% for thirdItem in secondItem.submenu %}
-                                                <li>
-                                                    {% if thirdItem.hash %}
-                                                        <a href="#{{ thirdItem.hash }}">{{ thirdItem.title|title }}</a>
-                                                    {% else %}
-                                                        <p>{{ thirdItem.title|title }}</p>
-                                                    {% endif %}
-                                                </li>
-                                            {% endfor %}
-                                        </ul>
-                                    {% endif %}
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    {% endif %}
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
-</div>
+    <ul>
+        {% for topItem in nav %}
+            <li>
+                {% if topItem.hash %}
+                    <a href="#{{ topItem.hash }}">{{ topItem.title|title }}</a>
+                {% else %}
+                    <p>{{ topItem.title|title }}</p>
+                {% endif %}
+                {% if topItem.submenu %}
+                    <button data-c-menu-submenu-trigger>
+                        <i data-c-menu-add class="material-icons">add</i>
+                        <i data-c-menu-remove class="material-icons">remove</i>
+                    </button>
+                    <ul data-c-colour="white">
+                        {% for secondItem in topItem.submenu %}
+                            <li>
+                                {% if secondItem.hash %}
+                                    <a href="#{{ secondItem.hash }}">{{ secondItem.title|title }}</a>
+                                {% else %}
+                                    <p>{{ secondItem.title|title }}</p>
+                                {% endif %}
+                                {% if secondItem.submenu %}
+                                    <button data-c-menu-submenu-trigger>
+                                        <i data-c-menu-add class="material-icons">add</i>
+                                        <i data-c-menu-remove class="material-icons">remove</i>
+                                    </button>
+                                    <ul data-c-colour="white">
+                                        {% for thirdItem in secondItem.submenu %}
+                                            <li>
+                                                {% if thirdItem.hash %}
+                                                    <a href="#{{ thirdItem.hash }}">{{ thirdItem.title|title }}</a>
+                                                {% else %}
+                                                    <p>{{ thirdItem.title|title }}</p>
+                                                {% endif %}
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</nav>

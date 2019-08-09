@@ -3,7 +3,8 @@
     data-c-font-size="h3"
     data-c-colour="c1"
     data-c-font-weight="600"
-    data-c-margin="bottom(normal)">
+    data-c-margin="bottom(normal)"
+    data-c-padding="top(double)">
     Try or Install Clone
 </h3>
 
@@ -119,7 +120,9 @@
 // Include Clone
 @import "../node_modules/clone-framework/app/scss/clone";
 
-// Your CSS Goes Below Here{% endfilter %}</code></pre>
+[data-clone] {
+    // Your custom CSS goes here.
+}{% endfilter %}</code></pre>
     <p data-c-margin="top(normal) bottom(normal)">
         For now, it is also required that Clone's JavaScript file be imported using the CDN.
     </p>

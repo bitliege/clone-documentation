@@ -14,6 +14,17 @@
         ],
         submenu: {
             "1": {
+                title: "Why Clone?",
+                hash: "about-why",
+                terms: {
+                    1: "About",
+                    2: "Why use Clone?",
+                    3: "Advantages",
+                    4: "Benefits",
+                    5: "Value Proposition"
+                }
+            },
+            "2": {
                 title: "Try or Install Clone",
                 hash: "about-installation",
                 terms: {
@@ -21,7 +32,7 @@
                     2: "Try or Install Clone"
                 }
             },
-            "2": {
+            "3": {
                 title: "How To Use Clone",
                 hash: "about-usage",
                 terms: {
@@ -29,7 +40,7 @@
                     2: "How to Use Clone"
                 }
             },
-            "3": {
+            "4": {
                 title: "Creating a Theme",
                 hash: "about-themeing",
                 terms: {
@@ -39,7 +50,7 @@
                     4: "Theming"
                 }
             },
-            "4": {
+            "5": {
                 title: "Contributing",
                 hash: "about-contributing",
                 terms: {
@@ -445,7 +456,10 @@
 <button 
     type="button"
     data-c-button="solid(c3)"
-    data-c-menu-mobile-trigger>
+    data-c-menu-mobile-trigger
+    role="button"
+    aria-label="This button opens the main navigation menu."
+    aria-pressed="false">
     <span>Open</span><span>Close</span> Menu
 </button>
 

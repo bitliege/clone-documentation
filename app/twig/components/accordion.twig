@@ -1,11 +1,11 @@
 <div
-    data-c-accordion="accordion"
+    data-c-accordion
     data-c-border="lr(thin, solid, black)"
     data-c-background="black(90)"
     data-c-radius="rounded">
     <button
         aria-expanded="false"
-        data-c-accordion="trigger"
+        data-c-accordion-trigger
         data-c-padding="right"
         tabindex="0"
         type="button">
@@ -25,14 +25,14 @@
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--add"
+            data-c-accordion-add
             data-c-color="white">
             add
         </i>
         <i
             aria-hidden="true"
             class="material-icons"
-            data-c-accordion="icon--remove"
+            data-c-accordion-remove
             data-c-color="white">
             remove
         </i>
@@ -47,7 +47,7 @@
             data-c-background="white(100)"
             data-c-padding="right(normal) left(normal)"
         {% endif %}
-        data-c-accordion="content">
+        data-c-accordion-content>
         <div 
             {% if element %}
             {% elseif content == "themeing" %}

@@ -166,7 +166,7 @@ const twig = require('gulp-twig');
     const compile = series(cleanCache, template, templateThemes, moveCloneJS, movePrismJSMain, movePrismJSTwig, movePrismJSSCSS, movePrismJSMarkup, movePrismJSMarkdown, movePrismJSBash, js, cacheImages, movePrismCSS, compileCSS);
 
     // Quick Compile
-    const quickCompile = series(template, templateThemes, js, cacheImages, compileCSS);
+    const quickCompile = series(template, templateThemes, moveCloneJS, js, cacheImages, compileCSS);
 
     // Dist
     const dist = series(distCacheHTML, distCacheJS, distCacheCSS, distCloneJS, distPrismJS, distPrismCSS, moveImages, distFavicons);

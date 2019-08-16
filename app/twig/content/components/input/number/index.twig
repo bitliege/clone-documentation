@@ -1,0 +1,7 @@
+{% extends "../../../../templates/layout.twig" %}
+{% set component = componentModel.components.input.children.number %}
+{% block title %}{{ component.plural|title }}{% endblock %}
+{% block content %}
+    {{ parent(component) }}
+    {% include "../../../../templates/component-core.twig" with {component} %}
+{% endblock %}

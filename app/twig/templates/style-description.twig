@@ -1,0 +1,15 @@
+<div class="clone-component-description">
+    <div data-c-container="medium">
+        <div data-c-card data-c-background="white(100)" data-c-radius="rounded" data-c-padding="double">
+            <span id="content"></span>
+            <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-colour="c1">Using {{ component.plural|title }}</h2>
+            {% for item in component.description %}
+                <p data-c-margin="tb(normal)">{{ item }}</p>
+            {% endfor %}
+            <h3 data-c-font-size="h4" data-c-margin="top(double)">Markup</h3>
+            {% for item in component.usage %}
+                <p data-c-margin="top(normal)"><code class="language-html">{% filter escape %}{{ item }}{% endfilter %}</code></p>
+            {% endfor %}
+        </div>
+    </div>
+</div>

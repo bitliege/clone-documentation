@@ -22,6 +22,9 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const del = require('del');
 const twig = require('gulp-twig');
+const navigationModel = require('./model-navigation.js');
+const componentModel = require('./model-components.js');
+const stylesModel = require('./model-styles.js');
 
 // Tasks =======================================================================
 
@@ -46,7 +49,25 @@ const twig = require('gulp-twig');
     // Twig
     function template() {
         return src('app/twig/*.twig')
-        .pipe(twig())
+        .pipe(twig({
+            data: {
+                navigationModel,
+                componentModel,
+                stylesModel
+            }
+        }))
+        .pipe(dest('cache'));
+    }
+
+    function templateContent() {
+        return src('app/twig/content/**/index.twig')
+        .pipe(twig({
+            data: {
+                navigationModel,
+                componentModel,
+                stylesModel
+            }
+        }))
         .pipe(dest('cache'));
     }
 
@@ -163,10 +184,10 @@ const twig = require('gulp-twig');
     }
 
     // Compile
-    const compile = series(cleanCache, template, templateThemes, moveCloneJS, movePrismJSMain, movePrismJSTwig, movePrismJSSCSS, movePrismJSMarkup, movePrismJSMarkdown, movePrismJSBash, js, cacheImages, movePrismCSS, compileCSS);
+    const compile = series(cleanCache, template, templateContent, templateThemes, moveCloneJS, movePrismJSMain, movePrismJSTwig, movePrismJSSCSS, movePrismJSMarkup, movePrismJSMarkdown, movePrismJSBash, js, cacheImages, movePrismCSS, compileCSS);
 
     // Quick Compile
-    const quickCompile = series(template, templateThemes, moveCloneJS, js, cacheImages, compileCSS);
+    const quickCompile = series(template, templateContent, templateThemes, moveCloneJS, js, cacheImages, compileCSS);
 
     // Dist
     const dist = series(distCacheHTML, distCacheJS, distCacheCSS, distCloneJS, distPrismJS, distPrismCSS, moveImages, distFavicons);

@@ -1,0 +1,52 @@
+{% set parent = "" %}
+{% for item in componentModel.components %}
+    {% if component.id == item.id %}
+        {% set parent = "" %}
+    {% else %}
+        {% for subItem in item.children %}
+            {% if component.id == subItem.id %}
+                {% set parent = loop.parent.item.element ~ "/" %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+{% include "component-header.twig" with {component} %}
+{% include "component-description.twig" with {component} %}
+{% if component.children is empty %}
+    {# Component Details #}
+    <div data-c-container="medium" data-c-padding="tb(triple)">
+        <div data-c-grid="gutter middle">
+            <div data-c-grid-item="base(1of1) tl(1of2)">
+                <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-colour="c1">Code Snippet</h2>
+            </div>
+            <div data-c-grid-item="base(1of1) tl(1of2)" data-c-align="tl(right)">
+                <button data-c-button="outline(c1)" data-c-radius="rounded" data-docs-copy-code-trigger>
+                    Copy Code
+                </button>
+            </div>
+        </div>
+        <div data-c-margin="top(normal)">
+            {% include "../templates/accordion.twig" with {'title': 'View ' ~ component.title|title ~ ' Code', 'element': parent ~ component.element} %}
+        </div>
+        {% if component %}
+            <span id="details"></span>
+            <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-colour="c1" data-c-margin="top(triple) bottom(normal)">Detailed Information</h2>
+            {% include "../content/components/" ~ parent ~ component.element ~ "/details.twig" %}
+            <span id="examples"></span>
+            <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-colour="c1" data-c-margin="top(triple) bottom(normal)">Examples</h2>
+            {% include "../content/components/" ~ parent ~ component.element ~ "/examples.twig" %}
+        {% endif %}
+    </div>
+{% else %}
+    {# Component Index #}
+    <div data-c-container="medium" data-c-padding="tb(triple)">
+        <p data-c-margin="bottom" data-c-font-weight="bold">Select an input to learn more about how to implement it:</p>
+        <ul class="clone-input-list" data-c-grid="gutter top">
+            {% for child in component.children %}
+                <li data-c-grid-item="base(1of1) tp(1of2) ds(1of3)">
+                    <a href="/components/{{ component.element }}/{{ child.element }}" title="">{{ child.plural|title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}

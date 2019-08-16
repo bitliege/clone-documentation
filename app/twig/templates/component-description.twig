@@ -1,0 +1,16 @@
+<div class="clone-component-description">
+    <div data-c-container="medium">
+        <div data-c-card data-c-background="white(100)" data-c-radius="rounded" data-c-padding="double">
+            <span id="content"></span>
+            <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-colour="c1">About {{ component.plural|title }}</h2>
+            {% for item in component.description %}
+                <p data-c-margin="tb(normal)">{{ item }}</p>
+            {% endfor %}
+            <a data-c-button="outline(c1)" data-c-radius="rounded" href="#details" title="Learn more about how {{ title }} work.">More Info</a>&nbsp;&nbsp;&nbsp;<a data-c-button="outline(c1)" data-c-radius="rounded" href="#examples" title="See {{ title }} examples.">See Examples</a>
+            <h3 data-c-font-size="h4" data-c-margin="top(double)">Accessibility</h3>
+            {% for item in component.accessibility %}
+                <p data-c-margin="top(normal)">{{ item }}</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>

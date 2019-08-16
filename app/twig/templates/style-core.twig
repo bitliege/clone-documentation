@@ -1,0 +1,12 @@
+{% include "component-header.twig" with {component} %}
+{% include "style-description.twig" with {component} %}
+<div data-c-container="medium" data-c-padding="tb(triple)">
+    {% if component %}
+        <span id="details"></span>
+        <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-colour="c1" data-c-margin="bottom(normal)">Available Arguments</h2>
+        {% include "../content/styling/" ~ component.element ~ "/arguments.twig" %}
+        <span id="examples"></span>
+        <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-colour="c1" data-c-margin="top(triple) bottom(normal)">In Practice</h2>
+        {% include "../content/styling/" ~ component.element ~ "/examples.twig" %}
+    {% endif %}
+</div>

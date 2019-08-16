@@ -30,6 +30,12 @@ $clone-menu-background-colour: $clone-black;
     }
 
     [data-c-menu] {
+        .clone-logotype img {
+            @media #{$clone-tablet-landscape} {
+                display: block;
+                max-width: 15rem;
+            }
+        }
         >div:first-child {
             margin: 5vh 20vw;
             @media #{$clone-tablet-landscape} {
@@ -104,14 +110,23 @@ $clone-menu-background-colour: $clone-black;
         border-radius: 5px !important;
         padding: 0 !important;
     }
-    code {
+    p>code,
+    li>code,
+    span>code {
+        background: lighten($clone-grey, 25%) !important;
         border-radius: 5px !important;
+        color: darken($clone-grey, 30%) !important;
         padding: calc(#{$clone-padding} / 6) calc(#{$clone-padding} / 3) !important;
+        text-shadow: none !important;
         @media #{$clone-tablet-portrait} {
             padding: calc((#{$clone-padding} / 6) * #{$clone-whitespace-multiplier}) calc((#{$clone-padding} / 3) * #{$clone-whitespace-multiplier}) !important;
         }
         @media #{$clone-desktop-large} {
             padding: calc(((#{$clone-padding} / 6) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) calc(((#{$clone-padding} / 3) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) !important;
+        }
+        * {
+            color: darken($clone-grey, 30%) !important;
+            text-shadow: none !important;
         }
     }
 
@@ -124,6 +139,24 @@ $clone-menu-background-colour: $clone-black;
             @media #{$clone-desktop-large} {
                 padding: calc(((#{$clone-padding} * 1) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) !important;
             }
+        }
+    }
+
+    [data-docs-cookie-trigger] {
+        background: none;
+        border: none;
+        cursor: pointer;
+        float: right;
+        margin: calc((#{$clone-margin} / 2) * -1) calc((#{$clone-margin} / 2) * -1) 0 0;
+        @media #{$clone-tablet-portrait} {
+            margin: calc(((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * -1) calc(((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * -1) 0 0;
+        }
+        @media #{$clone-desktop-large} {
+            margin: calc((((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) * -1) calc((((#{$clone-margin} / 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) * -1) 0 0;
+        }
+        i {
+            margin-right: .15rem;
+            margin-left: .15rem;
         }
     }
 
@@ -149,6 +182,45 @@ $clone-menu-background-colour: $clone-black;
             a {
                 margin-left: .5rem;
             }
+        }
+    }
+
+    .clone-header {
+        &::before {
+            background: #{$clone-c1};
+            background: -moz-linear-gradient(45deg, rgba($clone-c1, 1) 0%, rgba($clone-c5, 1) 100%);
+            background: -webkit-linear-gradient(45deg, rgba($clone-c1, 1) 0%,rgba($clone-c5, 1) 100%);
+            background: linear-gradient(45deg, rgba($clone-c1, 1) 0%,rgba($clone-c5, 1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$clone-c1}', endColorstr='#{$clone-c5}',GradientType=1 );
+        }
+    }
+    .clone-component-header {
+        &::before {
+            background: #{$clone-c1};
+            background: -moz-linear-gradient(45deg, rgba($clone-c1, .9) 0%, rgba($clone-c5, .8) 100%);
+            background: -webkit-linear-gradient(45deg, rgba($clone-c1, .9) 0%,rgba($clone-c5, .8) 100%);
+            background: linear-gradient(45deg, rgba($clone-c1, .9) 0%,rgba($clone-c5, .8) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$clone-c1}', endColorstr='#{$clone-c5}',GradientType=1 );
+        }
+    }
+
+    .clone-component-description {
+        position: relative;
+        z-index: 1;
+        [data-c-card] {
+            margin-top: calc((#{$clone-margin} * 2) * -1);
+            @media #{$clone-tablet-portrait} {
+                margin-top: calc(((#{$clone-margin} * 2) * #{$clone-whitespace-multiplier}) * -1);
+            }
+            @media #{$clone-desktop-large} {
+                margin-top: calc((((#{$clone-margin} * 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier}) * -1);
+            }
+        }
+    }
+
+    .clone-input-list {
+        li {
+            margin: 0;
         }
     }
 

@@ -66,7 +66,17 @@
 
         {% set cloneVersion = "2.3.14" %}
 
-        {% include "components/menu.twig" %}
+        <a
+            data-c-skip-content
+            data-c-background="grey(10)"
+            data-c-padding="normal"
+            data-c-color="white"
+            href="#content"
+            title="Skip to the main content.">
+            Skip to Main Content
+        </a>                
+
+        {% include "templates/menu.twig" with {"nav": navigationModel.navigation} %}
 
         <div
             data-c-alert="information(toast)"
@@ -74,6 +84,9 @@
             role="alert"
             id="cookieAlert">
             <div data-c-padding="half">
+                <button data-docs-cookie-trigger data-c-padding="half">
+                    <i class="material-icons">close</i>
+                </button>
                 <span
                     data-c-margin="bottom(quarter)"
                     data-c-heading="h5"
@@ -89,20 +102,7 @@
                     Clone's documentation uses Cookies and <a href="https://marketingplatform.google.com/about/analytics/benefits/" title="Learn more about what Google Analytics is." target="_blank">Google Analytics</a> to help us better understand our visitors. By viewing this site, you agree to have this basic information collected and relayed back to us. You can learn more about how Google Analytics provides us with this information <a href="https://support.google.com/analytics#topic=3544906" title="Learn more about how Google Analytics works." target="_blank">here</a>.
                 </p>
             </div>
-            <button data-docs-cookie-trigger data-c-padding="half">
-                <i class="material-icons">close</i>
-            </button>
         </div>
-
-        <a
-            data-c-skip-content
-            data-c-background="grey(10)"
-            data-c-padding="normal"
-            data-c-color="white"
-            href="#content"
-            title="Skip to the main content.">
-            Skip to Main Content
-        </a>
 
         <a id="pageTop"></a>
         <a id="home"></a>
@@ -113,7 +113,7 @@
         <a id="content"></a>
 
         <!-- About ================================================= -->
-        <a id="about"></a>
+        {# <a id="about"></a>
         <div data-c-background="black(90)">
             <div data-c-container="medium">
                 <h2
@@ -132,10 +132,10 @@
             {% include "views/about/usage.twig" %}
             {% include "views/about/theme.twig" %}
             {% include "views/about/contributing.twig" %}
-        </div>
+        </div> #}
 
         <!-- Essentials ============================================ -->
-        <a id="essentials"></a>
+        {# <a id="essentials"></a>
         <div data-c-background="black(90)">
             <div data-c-container="medium">
                 <h2
@@ -152,10 +152,10 @@
             {% include "views/essentials/colour.twig" %}
             {% include "views/essentials/type.twig" %}
             {% include "views/essentials/grid.twig" %}
-        </div>
+        </div> #}
 
         <!-- Menus ============================================ -->
-        <a id="menus"></a>
+        {# <a id="menus"></a>
         <div data-c-background="black(90)">
             <div data-c-container="medium">
                 <h2
@@ -170,10 +170,10 @@
             data-c-container="medium"
             data-c-padding="top(double) bottom(double)">
             {% include "views/menus.twig" %}
-        </div>
+        </div> #}
 
         <!-- Utilities ============================================= -->
-        <a id="utilities"></a>
+        {# <a id="utilities"></a>
         <div data-c-background="black(90)">
             <div data-c-container="medium">
                 <h2
@@ -197,88 +197,7 @@
             {% include "views/utilities/overlays.twig" %}
             {% include "views/utilities/radius.twig" %}
             {% include "views/utilities/visibility.twig" %}
-        </div>
-
-        <!-- Components ============================================ -->
-        <a id="components"></a>
-        <!-- Accordions ---------------------------------------- -->
-        {% set accordionDesc = "Accordions are a great way to arrange and display a high volume of categoric information. They provide the opportunity to include a title, subtitle, and content. The content area is flexible and is a great way to display copy, media, code, etc. It's possible to change the colour of the trigger using the background attribute. Alternatively, you can set the alt property on the accordion group to automatically alternate accordion colours between white and the variable you've selected." %}
-        {% set accordionAcc = 'Coming Soon!' %}
-        {% include "views/components/layout.twig" with {'component': 'accordion', 'description': accordionDesc, 'accessibility': accordionAcc} %}
-        <!-- Alerts -------------------------------------------- -->
-        {% set alertDesc = 'Coming Soon!' %}
-        {% set alertAcc = 'Coming Soon!' %}
-        {% include "views/components/layout.twig" with {'component': 'alert', 'description': alertDesc, 'accessibility': alertAcc} %}
-        <!-- Back-to-Top Links --------------------------------- -->
-        {% set bttlDesc = 'Coming Soon!' %}
-        {% set bttlAcc = 'Coming Soon!' %}
-        {% include "views/components/layout.twig" with {'component': 'back-to-top-link', 'description': bttlDesc, 'accessibility': bttlAcc} %}
-        <!-- Blockquotes --------------------------------------- -->
-        {% set blockquoteDesc = 'Coming Soon!' %}
-        {% set blockquoteAcc = 'Coming Soon!' %}
-        {% include "views/components/layout.twig" with {'component': 'blockquote', 'description': blockquoteDesc, 'accessibility': blockquoteAcc} %}
-        <!-- Breadcrumbs --------------------------------------- -->
-        {% set breadcrumbDesc = 'Coming Soon!' %}
-        {% set breadcrumbAcc = 'Coming Soon!' %}
-        {% include "views/components/layout.twig" with {'component': 'breadcrumb', 'description': breadcrumbDesc, 'accessibility': breadcrumbAcc} %}
-        <!-- Buttons ------------------------------------------- -->
-        {% set buttonDesc = 'Coming Soon!' %}
-        {% set buttonAcc = 'Coming Soon!' %}
-        {% include "views/components/layout.twig" with {'component': 'button', 'description': buttonDesc, 'accessibility': buttonAcc} %}
-        <!-- Carousels ----------------------------------------- -->
-        {% set carouselDesc = 'Coming Soon!' %}
-        {% set carouselAcc = 'Coming Soon!' %}
-        {% include "views/components/layout.twig" with {'component': 'carousel', 'description': carouselDesc, 'accessibility': carouselAcc} %}
-        <!-- Dialogs ------------------------------------------- -->
-        {% set dialogDesc = 'Coming Soon!' %}
-        {% set dialogAcc = 'Coming Soon!' %}
-        {% include "views/components/layout.twig" with {'component': 'dialog', 'description': dialogDesc, 'accessibility': dialogAcc} %}
-        <!-- iframes ------------------------------------------- -->
-        {% set iframeDesc = 'Coming Soon!' %}
-        {% set iframeAcc = 'Coming Soon!' %}
-        {% include "views/components/layout.twig" with {'component': 'iframe', 'description': iframeDesc, 'accessibility': iframeAcc} %}
-        <!-- Inputs -------------------------------------------- -->
-        <a id="inputs"></a>
-        <div data-c-background="black(90)">
-            <div data-c-container="medium">
-                <h2
-                    data-c-font-size="h2"
-                    data-c-colour="white"
-                    data-c-padding="top(normal) bottom(normal)">
-                    Inputs
-                </h2>
-            </div>
-        </div>
-        <div>
-            {% include "views/components/layout-inputs.twig" with {'component': 'input-checkbox', 'title': 'Checkbox Input'} %}
-            {% include "views/components/layout-inputs.twig" with {'component': 'input-date', 'title': 'Date Input', 'alt': true} %}
-            {% include "views/components/layout-inputs.twig" with {'component': 'input-dropdown', 'title': 'Dropdown Input'} %}
-            {% include "views/components/layout-inputs.twig" with {'component': 'input-email', 'title': 'Email Input', 'alt': true} %}
-            {% include "views/components/layout-inputs.twig" with {'component': 'input-number', 'title': 'Number Input'} %}
-            {% include "views/components/layout-inputs.twig" with {'component': 'input-password', 'title': 'Password Input', 'alt': true} %}
-            {% include "views/components/layout-inputs.twig" with {'component': 'input-radio', 'title': 'Radio Input'} %}
-            {% include "views/components/layout-inputs.twig" with {'component': 'input-text', 'title': 'Text Input', 'alt': true} %}
-            {% include "views/components/layout-inputs.twig" with {'component': 'input-textarea', 'title': 'Textarea Input'} %}
-            {% include "views/components/layout-inputs.twig" with {'component': 'input-with-button', 'title': 'Text Input with Button', 'alt': true} %}
-            {% include "views/components/layout-inputs.twig" with {'component': 'input-url', 'title': 'URL Input'} %}
-        </div>
-        <!-- Menus --------------------------------------------- -->
-        <!-- Pullquotes ---------------------------------------- -->
-        {% set pullquoteDesc = 'Coming Soon!' %}
-        {% set pullquoteAcc = 'Coming Soon!' %}
-        {% include "views/components/layout.twig" with {'component': 'pullquote', 'description': pullquoteDesc, 'accessibility': pullquoteAcc} %}
-        <!-- Skip-to-content Links ----------------------------- -->
-        {% set stcDesc = 'Coming Soon!' %}
-        {% set stcAcc = 'Coming Soon!' %}
-        {% include "views/components/layout.twig" with {'component': 'skip-to-content-link', 'description': stcDesc, 'accessibility': stcAcc} %}
-        <!-- Tables -------------------------------------------- -->
-        {% set tableDesc = 'Coming Soon!' %}
-        {% set tableAcc = 'Coming Soon!' %}
-        {% include "views/components/layout.twig" with {'component': 'table', 'description': tableDesc, 'accessibility': tableAcc} %}
-        <!-- Tags ---------------------------------------------- -->
-        {% set tagDesc = 'Tags are useful inline elements that can act as contextual information or links. Tags or pills are often short words or phrases and should be kept to a minimum amount of copy.' %}
-        {% set tagAcc = 'Coming Soon!' %}
-        {% include "views/components/layout.twig" with {'component': 'tag', 'description': tagDesc, 'accessibility': tagAcc} %}
+        </div> #}
 
         <script src="js/clone/clone.js"></script>
 

@@ -1,0 +1,7 @@
+{% extends "../../../templates/layout.twig" %}
+{% set component = stylesModel.styles.radius %}
+{% block title %}{{ component.title|title }}{% endblock %}
+{% block content %}
+    {{ parent(component) }}
+    {% include "../../../templates/style-core.twig" with {component} %}
+{% endblock %}

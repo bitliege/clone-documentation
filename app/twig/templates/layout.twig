@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        {# Site Title #}
+        <title>Clone: {% block title %}{% endblock %}</title>
+
+        {# Charset #}
+        <meta charset="utf-8" />
+
+        {# Compatibility #}
+        <meta
+            http-equiv="X-UA-Compatible"
+            content="IE=edge">
+
+        {# Viewport #}
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0">
+
+        {# Generic Google Fonts #}
+        <link
+            href="https://fonts.googleapis.com/css?family=Euphoria+Script|Open+Sans:400,400i,600,600i,800,800i&amp;subset=latin-ext"
+            rel="stylesheet">
+
+        {# Material Icons #}
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">
+
+        {# Documentation CSS #}
+        <link 
+            async 
+            href="/css/app.css"
+            rel="stylesheet">
+
+        {# Prism CSS #}
+        <link 
+            async 
+            href="/css/prism/prism-okaidia.css"
+            rel="stylesheet">
+
+        {# Favicons #}
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#b91d47">
+        <meta name="msapplication-TileColor" content="#b91d47">
+        <meta name="theme-color" content="#b91d47">
+
+        {# Google Analytics #}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97077222-3"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-97077222-3');
+        </script>
+
+    </head>
+
+    <body data-clone data-c-menu-style="sidebar(left)">
+
+        {% set cloneVersion = "2.3.14" %}
+
+        <a
+            data-c-skip-content
+            data-c-background="grey(10)"
+            data-c-padding="normal"
+            data-c-color="white"
+            href="#content"
+            title="Skip to the main content.">
+            Skip to Main Content
+        </a>                
+
+        <div
+            data-c-alert="information(toast)"
+            data-c-radius="rounded"
+            role="alert"
+            id="cookieAlert">
+            <div data-c-padding="half">
+                <button data-docs-cookie-trigger data-c-padding="half">
+                    <i class="material-icons">close</i>
+                </button>
+                <span
+                    data-c-margin="bottom(quarter)"
+                    data-c-heading="h5"
+                    data-c-font-weight="bold">
+                    <i
+                        aria-hidden="true"
+                        class="material-icons">
+                        assessment
+                    </i>
+                    Just a heads up!
+                </span>
+                <p>
+                    Clone's documentation uses Cookies and <a href="https://marketingplatform.google.com/about/analytics/benefits/" title="Learn more about what Google Analytics is." target="_blank">Google Analytics</a> to help us better understand our visitors. By viewing this site, you agree to have this basic information collected and relayed back to us. You can learn more about how Google Analytics provides us with this information <a href="https://support.google.com/analytics#topic=3544906" title="Learn more about how Google Analytics works." target="_blank">here</a>.
+                </p>
+            </div>
+        </div>
+
+        <a id="pageTop"></a>
+        
+        {% block content %}
+
+            {% include "menu.twig" with {"nav": navigationModel.navigation, component} %}
+
+        {% endblock %}
+
+        <footer class="theme-gradient" data-c-padding="tb(double)">
+
+        </footer>
+
+        <script src="/js/clone/clone.js"></script>
+
+        <script src="/js/app.js"></script>
+
+        <script src="/js/prism/prism.js"></script>
+        <script src="/js/prism/prism-twig.min.js"></script>
+        <script src="/js/prism/prism-scss.min.js"></script>
+        <script src="/js/prism/prism-markup.min.js"></script>
+        <script src="/js/prism/prism-markdown.min.js"></script>
+        <script src="/js/prism/prism-bash.min.js"></script>
+
+    </body>
+
+</html>

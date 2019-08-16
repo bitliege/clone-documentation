@@ -1,0 +1,115 @@
+<button 
+    type="button"
+    data-c-button="solid(c3)"
+    data-c-menu-mobile-trigger
+    role="button"
+    aria-label="This button opens the main navigation menu."
+    aria-pressed="false">
+    <span>Open</span><span>Close</span> Menu
+</button>
+
+<nav data-c-menu>
+    <div class="clone-logotype" data-c-padding="top(triple) bottom(double)">
+        <img data-c-margin="tb(normal) rl(auto)" src="/img/clone-white.svg" alt="Clone's logotype.">
+    </div>
+    <form>
+        <div data-c-input="text">
+            <label data-c-colour="white" for="cloneSearch">Search Clone</label>
+            <span>Required</span>
+            <div>
+                <input id="cloneSearch" placeholder="e.g. margins" type="text" />
+            </div>
+            <span>This input has an error.</span>
+        </div>
+    </form>
+    <div class="clone-search-results" data-c-padding="bottom(double)">
+        <div data-c-grid="gutter middle">
+            <div data-c-grid-item="base(1of2)">
+                <p data-c-font-weight="600" data-c-colour="c1">Results</p>
+            </div>
+            <div data-c-grid-item="base(1of2)" data-c-align="base(right)">
+                <button id="clearSearch" class="clone-search-clear-button" data-c-color="white" data-c-font-size="small">
+                    Clear Search
+                </button>
+            </div>
+        </div>
+        <hr data-c-margin="tb(normal)">
+        <div class="clone-search-null">
+            <p data-c-colour="white">No Results :(</p>
+        </div>
+        <div>
+            <ul data-c-colour="white">
+                {% for topItem in nav %}
+                    {% if topItem.hash %}
+                        <li>
+                            <a data-terms="{% for term in topItem.terms %}{{ term }}, {% endfor %}" href="{{ topItem.hash }}">{{ topItem.title|title }}</a>
+                        </li>
+                    {% endif %}
+                    {% if topItem.submenu %}
+                        {% for secondItem in topItem.submenu %}
+                            <li>
+                                {% if secondItem.hash %}
+                                    <a data-terms="{% for term in secondItem.terms %}{{ term }}, {% endfor %}" href="{{ secondItem.hash }}">{{ secondItem.title|title }}</a>
+                                {% endif %}
+                            </li>
+                            {% if secondItem.submenu %}
+                                {% for thirdItem in secondItem.submenu %}
+                                    <li>
+                                        {% if thirdItem.hash %}
+                                            <a data-terms="{% for term in thirdItem.terms %}{{ term }}, {% endfor %}" href="{{ thirdItem.hash }}">{{ thirdItem.title|title }}</a>
+                                        {% endif %}
+                                    </li>
+                                {% endfor %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <ul>
+        {% for topItem in nav %}
+            <li>
+                {% if topItem.hash %}
+                    <a href="{{ topItem.hash }}">{{ topItem.title|title }}</a>
+                {% else %}
+                    <p>{{ topItem.title|title }}</p>
+                {% endif %}
+                {% if topItem.submenu %}
+                    <button data-c-menu-submenu-trigger>
+                        <i data-c-menu-add class="material-icons">add</i>
+                        <i data-c-menu-remove class="material-icons">remove</i>
+                    </button>
+                    <ul data-c-colour="white">
+                        {% for secondItem in topItem.submenu %}
+                            <li>
+                                {% if secondItem.hash %}
+                                    <a href="{{ secondItem.hash }}">{{ secondItem.title|title }}</a>
+                                {% else %}
+                                    <p>{{ secondItem.title|title }}</p>
+                                {% endif %}
+                                {% if secondItem.submenu %}
+                                    <button data-c-menu-submenu-trigger>
+                                        <i data-c-menu-add class="material-icons">add</i>
+                                        <i data-c-menu-remove class="material-icons">remove</i>
+                                    </button>
+                                    <ul data-c-colour="white">
+                                        {% for thirdItem in secondItem.submenu %}
+                                            <li>
+                                                {% if thirdItem.hash %}
+                                                    <a href="{{ thirdItem.hash }}">{{ thirdItem.title|title }}</a>
+                                                {% else %}
+                                                    <p>{{ thirdItem.title|title }}</p>
+                                                {% endif %}
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</nav>

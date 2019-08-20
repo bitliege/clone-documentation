@@ -110,7 +110,9 @@
 
         {% endblock %}
 
-        <footer class="theme-gradient" data-c-padding="tb(double)">
+        {% if component.title != "home" %}
+            <footer class="theme-gradient" data-c-padding="tb(double)">
+        {% endif %}
 
         </footer>
 

@@ -1,5 +1,8 @@
 {% extends "/templates/layout.twig" %}
-{% block title %}Clone: Documentation{% endblock %}
+{% set component = {
+    title: "home"
+} %}
+{% block title %}Documentation{% endblock %}
 {% block content %}
     {{ parent(component) }}
     {% include "components/hero.twig" %}

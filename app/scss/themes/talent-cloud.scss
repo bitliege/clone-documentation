@@ -1,16 +1,16 @@
 // =============================================================================
 
-    // Clone
-    // Talent Cloud
+    // Clone: Talent Cloud Edition
 
 // =============================================================================
 
-// Clone =======================================================================
-
 // Layout Variables
-$clone-wide-layout: 100rem;
-$clone-form-layout: 60rem;
-$clone-copy-layout: 39rem;
+$clone-large-layout: 100rem;
+$clone-medium-layout: 60rem;
+$clone-small-layout: 39rem;
+$clone-wide-layout: $clone-large-layout;
+$clone-form-layout: $clone-medium-layout;
+$clone-copy-layout: $clone-small-layout;
 
 // Whitespace Variables
 // On Portrait Phone Devices, Media Queries exist at Tablet Landscape, and Desktop Large and are generated using the multiplier below.
@@ -99,6 +99,14 @@ $clone-grid-gutter: $clone-padding;
     // Code Blocks
     $clone-code-background: $clone-black;
 
+    // Menus
+    $clone-menu-background-colour: $clone-black;
+    $clone-submenu-background-colour: $clone-c2;
+
+    $clone-menu-font-colour: $clone-white;
+    $clone-menu-divider-colour: rgba($clone-c3, .5);
+    $clone-menu-icon-colour: $clone-white;
+
     // Pullquotes
     $clone-pullquote-colour: $clone-c2;
 
@@ -112,7 +120,7 @@ $clone-grid-gutter: $clone-padding;
     $clone-font-sans: "Open Sans", sans-serif !default;
     $clone-font-serif: serif !default;
     $clone-font-script: "Euphoria Script", cursive !default;
-    $clone-font-monospace: "Consolas", mono-space !default;
+    $clone-font-monospace: "Consolas", monospace !default;
 
     $clone-font-default: $clone-font-sans !default;
 

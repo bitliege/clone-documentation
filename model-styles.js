@@ -107,7 +107,7 @@ const styles = {
         plural: "Margins & Padding",
         element: "whitespace",
         description: [
-            "This attribute allows you to rounde the corners of an element using two different styles: slightly rounded, and pill (which rounds them entirely). It should be noted that this attribute will force the element into having overflow: hidden;"
+            "These attributes allow you to control the amount of margin space or padding at a granular level. They support a similar shorthand to CSS where you supply the side and the value you want."
         ],
         usage: [
             "<div data-c-margin=\"SIDE(VALUE)\"></div>",

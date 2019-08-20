@@ -30,6 +30,10 @@ $clone-menu-background-colour: $clone-black;
     }
 
     [data-c-menu] {
+        .clone-logotype span {
+            display: block;
+            text-align: center;
+        }
         .clone-logotype img {
             @media #{$clone-tablet-landscape} {
                 display: block;

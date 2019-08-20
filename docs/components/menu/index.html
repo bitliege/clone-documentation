@@ -5,7 +5,7 @@
     <head>
 
         
-        <title>Clone: </title>
+        <title>Clone: Menus</title>
 
         
         <meta charset="utf-8" />
@@ -76,7 +76,38 @@
             Skip to Main Content
         </a>                
 
-        <button 
+        <div
+            data-c-alert="information(toast)"
+            data-c-radius="rounded"
+            role="alert"
+            id="cookieAlert">
+            <div data-c-padding="half">
+                <button data-docs-cookie-trigger data-c-padding="half">
+                    <i class="material-icons">close</i>
+                </button>
+                <span
+                    data-c-margin="bottom(quarter)"
+                    data-c-heading="h5"
+                    data-c-font-weight="bold">
+                    <i
+                        aria-hidden="true"
+                        class="material-icons">
+                        assessment
+                    </i>
+                    Just a heads up!
+                </span>
+                <p>
+                    Clone's documentation uses Cookies and <a href="https://marketingplatform.google.com/about/analytics/benefits/" title="Learn more about what Google Analytics is." target="_blank">Google Analytics</a> to help us better understand our visitors. By viewing this site, you agree to have this basic information collected and relayed back to us. You can learn more about how Google Analytics provides us with this information <a href="https://support.google.com/analytics#topic=3544906" title="Learn more about how Google Analytics works." target="_blank">here</a>.
+                </p>
+            </div>
+        </div>
+
+        <a id="pageTop"></a>
+        
+        
+    
+
+            <button 
     type="button"
     data-c-button="solid(c3)"
     data-c-menu-mobile-trigger
@@ -157,7 +188,7 @@
                 
                     
                         <li>
-                            <a data-terms="getting started, " href="/getting-started">Getting Started</a>
+                            <a data-terms="getting started, " href="/getting-started/install">Getting Started</a>
                         </li>
                     
                     
@@ -201,28 +232,28 @@
                         
                             <li>
                                 
-                                    <a data-terms="styling, utility, utilities, backgrounds, " href="/styling/background-color">Background Colour</a>
+                                    <a data-terms="styling, utility, utilities, backgrounds, " href="/styling/background-colour">Background Colour</a>
                                 
                             </li>
                             
                         
                             <li>
                                 
-                                    <a data-terms="styling, utility, utilities, borders, " href="/styling/borders">Borders</a>
+                                    <a data-terms="styling, utility, utilities, borders, " href="/styling/border">Borders</a>
                                 
                             </li>
                             
                         
                             <li>
                                 
-                                    <a data-terms="styling, utility, utilities, colour, color, c1, c2, c3, c4, c5, " href="/styling/color">Colour</a>
+                                    <a data-terms="styling, utility, utilities, colour, color, c1, c2, c3, c4, c5, " href="/styling/colour">Colour</a>
                                 
                             </li>
                             
                         
                             <li>
                                 
-                                    <a data-terms="styling, utility, utilities, containers, " href="/styling/containers">Containers</a>
+                                    <a data-terms="styling, utility, utilities, containers, " href="/styling/container">Containers</a>
                                 
                             </li>
                             
@@ -250,14 +281,46 @@
                         
                             <li>
                                 
-                                    <a data-terms="styling, utility, utilities, fonts, font styles, essentials, typography, type, font, scale, weight, line height, " href="styling/typography">Typography</a>
+                                    <a data-terms="styling, utility, utilities, fonts, font styles, essentials, typography, type, font, scale, weight, line height, " href="/styling/typography">Typography</a>
                                 
                             </li>
+                            
+                                
+                                    <li>
+                                        
+                                            <a data-terms="styling, typography, type, font family, sans serif, monospace, script, " href="/styling/typography/#family">Font Family</a>
+                                        
+                                    </li>
+                                
+                                    <li>
+                                        
+                                            <a data-terms="styling, typography, type, font scale, line height, headings, " href="/styling/typography/#scale">Font Scale</a>
+                                        
+                                    </li>
+                                
+                                    <li>
+                                        
+                                            <a data-terms="styling, typography, type, color, font colour, " href="/styling/typography/#colour">Font Colour</a>
+                                        
+                                    </li>
+                                
+                                    <li>
+                                        
+                                            <a data-terms="styling, typography, type, font weight, bold, thin, " href="/styling/typography/#weight">Font Weight</a>
+                                        
+                                    </li>
+                                
+                                    <li>
+                                        
+                                            <a data-terms="styling, typography, type, font, style, underline, italics, " href="/styling/typography/#style">Font Style</a>
+                                        
+                                    </li>
+                                
                             
                         
                             <li>
                                 
-                                    <a data-terms="styling, utility, utilities, visibility, " href="/style/visibility">Visibility</a>
+                                    <a data-terms="styling, utility, utilities, visibility, " href="/styling/visibility">Visibility</a>
                                 
                             </li>
                             
@@ -404,7 +467,7 @@
                                 
                                     <li>
                                         
-                                            <a data-terms="components, inputs, buttons, " href="/components/input/with-button">Text With Button</a>
+                                            <a data-terms="components, inputs, buttons, " href="/components/input/text-with-button">Text Input With A Button</a>
                                         
                                     </li>
                                 
@@ -510,7 +573,7 @@
         
             <li>
                 
-                    <a href="/getting-started">Getting Started</a>
+                    <a href="/getting-started/install">Getting Started</a>
                 
                 
                     <button data-c-menu-submenu-trigger>
@@ -564,28 +627,28 @@
                         
                             <li>
                                 
-                                    <a href="/styling/background-color">Background Colour</a>
+                                    <a href="/styling/background-colour">Background Colour</a>
                                 
                                 
                             </li>
                         
                             <li>
                                 
-                                    <a href="/styling/borders">Borders</a>
+                                    <a href="/styling/border">Borders</a>
                                 
                                 
                             </li>
                         
                             <li>
                                 
-                                    <a href="/styling/color">Colour</a>
+                                    <a href="/styling/colour">Colour</a>
                                 
                                 
                             </li>
                         
                             <li>
                                 
-                                    <a href="/styling/containers">Containers</a>
+                                    <a href="/styling/container">Containers</a>
                                 
                                 
                             </li>
@@ -613,14 +676,52 @@
                         
                             <li>
                                 
-                                    <a href="styling/typography">Typography</a>
+                                    <a href="/styling/typography">Typography</a>
                                 
+                                
+                                    <button data-c-menu-submenu-trigger>
+                                        <i data-c-menu-add class="material-icons">add</i>
+                                        <i data-c-menu-remove class="material-icons">remove</i>
+                                    </button>
+                                    <ul data-c-colour="white">
+                                        
+                                            <li>
+                                                
+                                                    <a href="/styling/typography/#family">Font Family</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="/styling/typography/#scale">Font Scale</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="/styling/typography/#colour">Font Colour</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="/styling/typography/#weight">Font Weight</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="/styling/typography/#style">Font Style</a>
+                                                
+                                            </li>
+                                        
+                                    </ul>
                                 
                             </li>
                         
                             <li>
                                 
-                                    <a href="/style/visibility">Visibility</a>
+                                    <a href="/styling/visibility">Visibility</a>
                                 
                                 
                             </li>
@@ -777,7 +878,7 @@
                                         
                                             <li>
                                                 
-                                                    <a href="/components/input/with-button">Text With Button</a>
+                                                    <a href="/components/input/text-with-button">Text Input With A Button</a>
                                                 
                                             </li>
                                         
@@ -840,40 +941,12 @@
     </ul>
 </nav>
 
-        <div
-            data-c-alert="information(toast)"
-            data-c-radius="rounded"
-            role="alert"
-            id="cookieAlert">
-            <div data-c-padding="half">
-                <button data-docs-cookie-trigger data-c-padding="half">
-                    <i class="material-icons">close</i>
-                </button>
-                <span
-                    data-c-margin="bottom(quarter)"
-                    data-c-heading="h5"
-                    data-c-font-weight="bold">
-                    <i
-                        aria-hidden="true"
-                        class="material-icons">
-                        assessment
-                    </i>
-                    Just a heads up!
-                </span>
-                <p>
-                    Clone's documentation uses Cookies and <a href="https://marketingplatform.google.com/about/analytics/benefits/" title="Learn more about what Google Analytics is." target="_blank">Google Analytics</a> to help us better understand our visitors. By viewing this site, you agree to have this basic information collected and relayed back to us. You can learn more about how Google Analytics provides us with this information <a href="https://support.google.com/analytics#topic=3544906" title="Learn more about how Google Analytics works." target="_blank">here</a>.
-                </p>
-            </div>
-        </div>
-
-        <a id="pageTop"></a>
-        
         
     <header class="clone-component-header" data-c-overlay="c1(80)" 
     
         data-c-padding="top(triple)"
      
-    style="background-image: url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')">
+    style="background-image: url('/img/banter-snaps.jpg')" title="This photograph was taken by Banter Snaps and sourced on Unsplash.com.">
     <div data-c-container="medium" data-c-padding="tb(triple)" data-c-colour="white">
         <h1 data-c-font-size="h1" data-c-font-weight="bold" data-c-margin="bottom(double)" data-c-padding="top(triple)">
             Menus
@@ -945,6 +1018,16 @@
                     
                 
                     
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
                     
                 
                     
@@ -1242,15 +1325,15 @@
         <p data-c-margin="bottom">By default, topbar menus are set to the static, and left aligned values. This means the topbar does not follow the user down the page, and the menu items are left aligned. Properties can be combined by comma separating them.</p>
 
         <pre><code class="language-html">&lt;!-- Static, Sticky --&gt;
-        [data-c-menu-style=&quot;topbar(static)&quot; &lt;!-- This topbar will stay at the top of the page. --&gt;
-        [data-c-menu-style=&quot;topbar(sticky)&quot; &lt;!-- This topbar will follow the user down the page. --&gt;</code></pre>
+[data-c-menu-style=&quot;topbar(static)&quot; &lt;!-- This topbar will stay at the top of the page. --&gt;
+[data-c-menu-style=&quot;topbar(sticky)&quot; &lt;!-- This topbar will follow the user down the page. --&gt;</code></pre>
 
 
         <pre><code class="language-html">&lt;!-- Left, Centre/Center, Right --&gt;
-        [data-c-menu-style=&quot;topbar(left)&quot; &lt;!-- The menu&#039;s items will align to the left. --&gt;
-        [data-c-menu-style=&quot;topbar(centre)&quot; &lt;!-- The menu&#039;s items will will be centre aligned. --&gt;
-        [data-c-menu-style=&quot;topbar(center)&quot; &lt;!-- The menu&#039;s items will will be centre aligned. --&gt;
-        [data-c-menu-style=&quot;topbar(right)&quot; &lt;!-- The menu&#039;s items will align to the right. --&gt;</code></pre>
+[data-c-menu-style=&quot;topbar(left)&quot; &lt;!-- The menu&#039;s items will align to the left. --&gt;
+[data-c-menu-style=&quot;topbar(centre)&quot; &lt;!-- The menu&#039;s items will will be centre aligned. --&gt;
+[data-c-menu-style=&quot;topbar(center)&quot; &lt;!-- The menu&#039;s items will will be centre aligned. --&gt;
+[data-c-menu-style=&quot;topbar(right)&quot; &lt;!-- The menu&#039;s items will align to the right. --&gt;</code></pre>
 
         <h4 
             data-c-font-size="h5"
@@ -1262,8 +1345,8 @@
         <p data-c-margin="bottom">By default, sidebar menus will appear on the left side of your application, and automatically confine your content within the remaining space on the right.</p>
 
         <pre><code class="language-html">&lt;!-- Left, Right --&gt;
-        [data-c-menu-style=&quot;sidebar(left)&quot; &lt;!-- The sidebar will appear on the left, with the website content on the right. --&gt;
-        [data-c-menu-style=&quot;sidebar(right)&quot; &lt;!-- The sidebar will appear on the right, with the website content on the left. --&gt;</code></pre>
+[data-c-menu-style=&quot;sidebar(left)&quot; &lt;!-- The sidebar will appear on the left, with the website content on the right. --&gt;
+[data-c-menu-style=&quot;sidebar(right)&quot; &lt;!-- The sidebar will appear on the right, with the website content on the left. --&gt;</code></pre>
 
         <h3 
             data-c-font-size="h4"
@@ -1274,15 +1357,15 @@
         <p data-c-margin="bottom">Clone allows you to control certain colour aspects of the menu and its submenus. Use the variables below to customize the menu to match your theme.</p>
 
         <pre><code class="language-scss">// Menu Colour Options
-        $clone-menu-background-colour: black; // Main menu background.
-        $clone-submenu-background-colour: orange; // Submenu background colour - this colour automatically gets darker the deeper you go into a submenu.
-        $clone-menu-font-colour: white; // The main menu&#039;s font colour - submenu font colour is handled programatically based on the background colour you&#039;ve selected.
-        $clone-menu-divider-colour: rgba(orange, .5); //  The colour of the dividers in the main menu - dividers in submenus are programatically handled.
-        $clone-menu-icon-colour: white; //  The colour of the icons in the main menu - icons in submenus are programatically handled.</code></pre>
+$clone-menu-background-colour: black; // Main menu background.
+$clone-submenu-background-colour: orange; // Submenu background colour - this colour automatically gets darker the deeper you go into a submenu.
+$clone-menu-font-colour: white; // The main menu&#039;s font colour - submenu font colour is handled programatically based on the background colour you&#039;ve selected.
+$clone-menu-divider-colour: rgba(orange, .5); //  The colour of the dividers in the main menu - dividers in submenus are programatically handled.
+$clone-menu-icon-colour: white; //  The colour of the icons in the main menu - icons in submenus are programatically handled.</code></pre>
     </div>
 
 
-        <footer class="theme-gradient" data-c-padding="tb(triple)">
+        <footer class="theme-gradient" data-c-padding="tb(double)">
 
         </footer>
 

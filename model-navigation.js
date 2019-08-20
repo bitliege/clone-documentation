@@ -222,6 +222,79 @@ const navigation = {
                     "scale",
                     "weight",
                     "line height"
+                ],
+                submenu: [
+                    {
+                        id: "styTypFam",
+                        title: "Font Family",
+                        hash: "/styling/typography/#family",
+                        terms: [
+                            "styling",
+                            "typography",
+                            "type",
+                            "font family",
+                            "sans serif",
+                            "monospace",
+                            "script"
+                        ],
+                        submenu: []
+                    },
+                    {
+                        id: "styTypSca",
+                        title: "Font Scale",
+                        hash: "/styling/typography/#scale",
+                        terms: [
+                            "styling",
+                            "typography",
+                            "type",
+                            "font scale",
+                            "line height",
+                            "headings"
+                        ],
+                        submenu: []
+                    },
+                    {
+                        id: "styTypCol",
+                        title: "Font Colour",
+                        hash: "/styling/typography/#colour",
+                        terms: [
+                            "styling",
+                            "typography",
+                            "type",
+                            "color",
+                            "font colour"
+                        ],
+                        submenu: []
+                    },
+                    {
+                        id: "styTypWei",
+                        title: "Font Weight",
+                        hash: "/styling/typography/#weight",
+                        terms: [
+                            "styling",
+                            "typography",
+                            "type",
+                            "font weight",
+                            "bold",
+                            "thin"
+                        ],
+                        submenu: []
+                    },
+                    {
+                        id: "styTypSty",
+                        title: "Font Style",
+                        hash: "/styling/typography/#style",
+                        terms: [
+                            "styling",
+                            "typography",
+                            "type",
+                            "font",
+                            "style",
+                            "underline",
+                            "italics"
+                        ],
+                        submenu: []
+                    },
                 ]
             },
             {

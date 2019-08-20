@@ -1,6 +1,6 @@
 {% extends "../../../templates/layout.twig" %}
 {% set component = componentModel.components.menu %}
-{% block title %}{{ plural|title }}{% endblock %}
+{% block title %}{{ component.plural|title }}{% endblock %}
 {% block content %}
     {{ parent(component) }}
     {% include "../../../templates/component-header.twig" with {component, "space": "none"} %}
@@ -164,15 +164,15 @@
         <p data-c-margin="bottom">By default, topbar menus are set to the static, and left aligned values. This means the topbar does not follow the user down the page, and the menu items are left aligned. Properties can be combined by comma separating them.</p>
 
         <pre><code class="language-html">{% filter escape %}<!-- Static, Sticky -->
-        [data-c-menu-style="topbar(static)" <!-- This topbar will stay at the top of the page. -->
-        [data-c-menu-style="topbar(sticky)" <!-- This topbar will follow the user down the page. -->{% endfilter %}</code></pre>
+[data-c-menu-style="topbar(static)" <!-- This topbar will stay at the top of the page. -->
+[data-c-menu-style="topbar(sticky)" <!-- This topbar will follow the user down the page. -->{% endfilter %}</code></pre>
 
 
         <pre><code class="language-html">{% filter escape %}<!-- Left, Centre/Center, Right -->
-        [data-c-menu-style="topbar(left)" <!-- The menu's items will align to the left. -->
-        [data-c-menu-style="topbar(centre)" <!-- The menu's items will will be centre aligned. -->
-        [data-c-menu-style="topbar(center)" <!-- The menu's items will will be centre aligned. -->
-        [data-c-menu-style="topbar(right)" <!-- The menu's items will align to the right. -->{% endfilter %}</code></pre>
+[data-c-menu-style="topbar(left)" <!-- The menu's items will align to the left. -->
+[data-c-menu-style="topbar(centre)" <!-- The menu's items will will be centre aligned. -->
+[data-c-menu-style="topbar(center)" <!-- The menu's items will will be centre aligned. -->
+[data-c-menu-style="topbar(right)" <!-- The menu's items will align to the right. -->{% endfilter %}</code></pre>
 
         <h4 
             data-c-font-size="h5"
@@ -184,8 +184,8 @@
         <p data-c-margin="bottom">By default, sidebar menus will appear on the left side of your application, and automatically confine your content within the remaining space on the right.</p>
 
         <pre><code class="language-html">{% filter escape %}<!-- Left, Right -->
-        [data-c-menu-style="sidebar(left)" <!-- The sidebar will appear on the left, with the website content on the right. -->
-        [data-c-menu-style="sidebar(right)" <!-- The sidebar will appear on the right, with the website content on the left. -->{% endfilter %}</code></pre>
+[data-c-menu-style="sidebar(left)" <!-- The sidebar will appear on the left, with the website content on the right. -->
+[data-c-menu-style="sidebar(right)" <!-- The sidebar will appear on the right, with the website content on the left. -->{% endfilter %}</code></pre>
 
         <h3 
             data-c-font-size="h4"
@@ -196,10 +196,10 @@
         <p data-c-margin="bottom">Clone allows you to control certain colour aspects of the menu and its submenus. Use the variables below to customize the menu to match your theme.</p>
 
         <pre><code class="language-scss">{% filter escape %}// Menu Colour Options
-        $clone-menu-background-colour: black; // Main menu background.
-        $clone-submenu-background-colour: orange; // Submenu background colour - this colour automatically gets darker the deeper you go into a submenu.
-        $clone-menu-font-colour: white; // The main menu's font colour - submenu font colour is handled programatically based on the background colour you've selected.
-        $clone-menu-divider-colour: rgba(orange, .5); //  The colour of the dividers in the main menu - dividers in submenus are programatically handled.
-        $clone-menu-icon-colour: white; //  The colour of the icons in the main menu - icons in submenus are programatically handled.{% endfilter %}</code></pre>
+$clone-menu-background-colour: black; // Main menu background.
+$clone-submenu-background-colour: orange; // Submenu background colour - this colour automatically gets darker the deeper you go into a submenu.
+$clone-menu-font-colour: white; // The main menu's font colour - submenu font colour is handled programatically based on the background colour you've selected.
+$clone-menu-divider-colour: rgba(orange, .5); //  The colour of the dividers in the main menu - dividers in submenus are programatically handled.
+$clone-menu-icon-colour: white; //  The colour of the icons in the main menu - icons in submenus are programatically handled.{% endfilter %}</code></pre>
     </div>
 {% endblock %}

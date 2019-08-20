@@ -8,7 +8,7 @@
     <div data-c-container="medium" data-c-padding="tb(triple)">
         <h4
             data-c-font-size="h4"
-            data-c-margin="top(normal) bottom(normal)">
+            data-c-margin="bottom(normal)">
             Black, White, Grey, and Theme Colours
         </h4>
         <p data-c-margin="bottom(half)">If you're using Clone through <a href="#about-installation" title="Learn about installing Clone as a Node Module.">NPM</a>, it comes with a built in theme system to help you build in your brand aesthetic. There are customizable variables for black, white, gre/ay, and 5 distinct theme colours.</p>
@@ -144,6 +144,16 @@
                 <strong>Code Blocks</strong>
                 <ul>
                     <li><code class="language-scss">{% filter escape %}$clone-code-background{% endfilter %}</code></li>
+                </ul>
+            </li>
+            <li>
+                <strong>Menus</strong>
+                <ul>
+                    <li><code class="language-scss">{% filter escape %}$clone-menu-background-colour{% endfilter %}</code></li>
+                    <li><code class="language-scss">{% filter escape %}$clone-submenu-background-colour{% endfilter %}</code></li>
+                    <li><code class="language-scss">{% filter escape %}$clone-menu-font-colour{% endfilter %}</code></li>
+                    <li><code class="language-scss">{% filter escape %}$clone-menu-divider-colour{% endfilter %}</code></li>
+                    <li><code class="language-scss">{% filter escape %}$clone-menu-icon-colour{% endfilter %}</code></li>
                 </ul>
             </li>
             <li>

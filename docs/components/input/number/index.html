@@ -76,7 +76,38 @@
             Skip to Main Content
         </a>                
 
-        <button 
+        <div
+            data-c-alert="information(toast)"
+            data-c-radius="rounded"
+            role="alert"
+            id="cookieAlert">
+            <div data-c-padding="half">
+                <button data-docs-cookie-trigger data-c-padding="half">
+                    <i class="material-icons">close</i>
+                </button>
+                <span
+                    data-c-margin="bottom(quarter)"
+                    data-c-heading="h5"
+                    data-c-font-weight="bold">
+                    <i
+                        aria-hidden="true"
+                        class="material-icons">
+                        assessment
+                    </i>
+                    Just a heads up!
+                </span>
+                <p>
+                    Clone's documentation uses Cookies and <a href="https://marketingplatform.google.com/about/analytics/benefits/" title="Learn more about what Google Analytics is." target="_blank">Google Analytics</a> to help us better understand our visitors. By viewing this site, you agree to have this basic information collected and relayed back to us. You can learn more about how Google Analytics provides us with this information <a href="https://support.google.com/analytics#topic=3544906" title="Learn more about how Google Analytics works." target="_blank">here</a>.
+                </p>
+            </div>
+        </div>
+
+        <a id="pageTop"></a>
+        
+        
+    
+
+            <button 
     type="button"
     data-c-button="solid(c3)"
     data-c-menu-mobile-trigger
@@ -157,7 +188,7 @@
                 
                     
                         <li>
-                            <a data-terms="getting started, " href="/getting-started">Getting Started</a>
+                            <a data-terms="getting started, " href="/getting-started/install">Getting Started</a>
                         </li>
                     
                     
@@ -201,28 +232,28 @@
                         
                             <li>
                                 
-                                    <a data-terms="styling, utility, utilities, backgrounds, " href="/styling/background-color">Background Colour</a>
+                                    <a data-terms="styling, utility, utilities, backgrounds, " href="/styling/background-colour">Background Colour</a>
                                 
                             </li>
                             
                         
                             <li>
                                 
-                                    <a data-terms="styling, utility, utilities, borders, " href="/styling/borders">Borders</a>
+                                    <a data-terms="styling, utility, utilities, borders, " href="/styling/border">Borders</a>
                                 
                             </li>
                             
                         
                             <li>
                                 
-                                    <a data-terms="styling, utility, utilities, colour, color, c1, c2, c3, c4, c5, " href="/styling/color">Colour</a>
+                                    <a data-terms="styling, utility, utilities, colour, color, c1, c2, c3, c4, c5, " href="/styling/colour">Colour</a>
                                 
                             </li>
                             
                         
                             <li>
                                 
-                                    <a data-terms="styling, utility, utilities, containers, " href="/styling/containers">Containers</a>
+                                    <a data-terms="styling, utility, utilities, containers, " href="/styling/container">Containers</a>
                                 
                             </li>
                             
@@ -250,14 +281,46 @@
                         
                             <li>
                                 
-                                    <a data-terms="styling, utility, utilities, fonts, font styles, essentials, typography, type, font, scale, weight, line height, " href="styling/typography">Typography</a>
+                                    <a data-terms="styling, utility, utilities, fonts, font styles, essentials, typography, type, font, scale, weight, line height, " href="/styling/typography">Typography</a>
                                 
                             </li>
+                            
+                                
+                                    <li>
+                                        
+                                            <a data-terms="styling, typography, type, font family, sans serif, monospace, script, " href="/styling/typography/#family">Font Family</a>
+                                        
+                                    </li>
+                                
+                                    <li>
+                                        
+                                            <a data-terms="styling, typography, type, font scale, line height, headings, " href="/styling/typography/#scale">Font Scale</a>
+                                        
+                                    </li>
+                                
+                                    <li>
+                                        
+                                            <a data-terms="styling, typography, type, color, font colour, " href="/styling/typography/#colour">Font Colour</a>
+                                        
+                                    </li>
+                                
+                                    <li>
+                                        
+                                            <a data-terms="styling, typography, type, font weight, bold, thin, " href="/styling/typography/#weight">Font Weight</a>
+                                        
+                                    </li>
+                                
+                                    <li>
+                                        
+                                            <a data-terms="styling, typography, type, font, style, underline, italics, " href="/styling/typography/#style">Font Style</a>
+                                        
+                                    </li>
+                                
                             
                         
                             <li>
                                 
-                                    <a data-terms="styling, utility, utilities, visibility, " href="/style/visibility">Visibility</a>
+                                    <a data-terms="styling, utility, utilities, visibility, " href="/styling/visibility">Visibility</a>
                                 
                             </li>
                             
@@ -404,7 +467,7 @@
                                 
                                     <li>
                                         
-                                            <a data-terms="components, inputs, buttons, " href="/components/input/with-button">Text With Button</a>
+                                            <a data-terms="components, inputs, buttons, " href="/components/input/text-with-button">Text Input With A Button</a>
                                         
                                     </li>
                                 
@@ -510,7 +573,7 @@
         
             <li>
                 
-                    <a href="/getting-started">Getting Started</a>
+                    <a href="/getting-started/install">Getting Started</a>
                 
                 
                     <button data-c-menu-submenu-trigger>
@@ -564,28 +627,28 @@
                         
                             <li>
                                 
-                                    <a href="/styling/background-color">Background Colour</a>
+                                    <a href="/styling/background-colour">Background Colour</a>
                                 
                                 
                             </li>
                         
                             <li>
                                 
-                                    <a href="/styling/borders">Borders</a>
+                                    <a href="/styling/border">Borders</a>
                                 
                                 
                             </li>
                         
                             <li>
                                 
-                                    <a href="/styling/color">Colour</a>
+                                    <a href="/styling/colour">Colour</a>
                                 
                                 
                             </li>
                         
                             <li>
                                 
-                                    <a href="/styling/containers">Containers</a>
+                                    <a href="/styling/container">Containers</a>
                                 
                                 
                             </li>
@@ -613,14 +676,52 @@
                         
                             <li>
                                 
-                                    <a href="styling/typography">Typography</a>
+                                    <a href="/styling/typography">Typography</a>
                                 
+                                
+                                    <button data-c-menu-submenu-trigger>
+                                        <i data-c-menu-add class="material-icons">add</i>
+                                        <i data-c-menu-remove class="material-icons">remove</i>
+                                    </button>
+                                    <ul data-c-colour="white">
+                                        
+                                            <li>
+                                                
+                                                    <a href="/styling/typography/#family">Font Family</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="/styling/typography/#scale">Font Scale</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="/styling/typography/#colour">Font Colour</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="/styling/typography/#weight">Font Weight</a>
+                                                
+                                            </li>
+                                        
+                                            <li>
+                                                
+                                                    <a href="/styling/typography/#style">Font Style</a>
+                                                
+                                            </li>
+                                        
+                                    </ul>
                                 
                             </li>
                         
                             <li>
                                 
-                                    <a href="/style/visibility">Visibility</a>
+                                    <a href="/styling/visibility">Visibility</a>
                                 
                                 
                             </li>
@@ -777,7 +878,7 @@
                                         
                                             <li>
                                                 
-                                                    <a href="/components/input/with-button">Text With Button</a>
+                                                    <a href="/components/input/text-with-button">Text Input With A Button</a>
                                                 
                                             </li>
                                         
@@ -840,34 +941,6 @@
     </ul>
 </nav>
 
-        <div
-            data-c-alert="information(toast)"
-            data-c-radius="rounded"
-            role="alert"
-            id="cookieAlert">
-            <div data-c-padding="half">
-                <button data-docs-cookie-trigger data-c-padding="half">
-                    <i class="material-icons">close</i>
-                </button>
-                <span
-                    data-c-margin="bottom(quarter)"
-                    data-c-heading="h5"
-                    data-c-font-weight="bold">
-                    <i
-                        aria-hidden="true"
-                        class="material-icons">
-                        assessment
-                    </i>
-                    Just a heads up!
-                </span>
-                <p>
-                    Clone's documentation uses Cookies and <a href="https://marketingplatform.google.com/about/analytics/benefits/" title="Learn more about what Google Analytics is." target="_blank">Google Analytics</a> to help us better understand our visitors. By viewing this site, you agree to have this basic information collected and relayed back to us. You can learn more about how Google Analytics provides us with this information <a href="https://support.google.com/analytics#topic=3544906" title="Learn more about how Google Analytics works." target="_blank">here</a>.
-                </p>
-            </div>
-        </div>
-
-        <a id="pageTop"></a>
-        
         
     
 
@@ -965,7 +1038,7 @@
     
         data-c-padding="top(triple) bottom(double)"
      
-    style="background-image: url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')">
+    style="background-image: url('/img/banter-snaps.jpg')" title="This photograph was taken by Banter Snaps and sourced on Unsplash.com.">
     <div data-c-container="medium" data-c-padding="tb(triple)" data-c-colour="white">
         <h1 data-c-font-size="h1" data-c-font-weight="bold" data-c-margin="bottom(double)" data-c-padding="top(triple)">
             Numbers
@@ -1037,6 +1110,16 @@
                     
                 
                     
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
                     
                 
                     
@@ -1170,58 +1253,58 @@
                 <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-colour="c1">Code Snippet</h2>
             </div>
             <div data-c-grid-item="base(1of1) tl(1of2)" data-c-align="tl(right)">
-                <button data-c-button="outline(c1)" data-c-radius="rounded" data-docs-copy-code-trigger>
-                    Copy Code
+                <button data-c-button="outline(c1)" data-c-radius="rounded" data-docs-copy-code-trigger="code">
+                    <span aria-hidden="false">Copy Code</span><span style="display: none;" aria-hidden="true">Copied!</span>
                 </button>
             </div>
         </div>
-        <div data-c-margin="top(normal)">
+        <div data-c-margin="top(normal)" data-docs-code="code">
             <div data-c-accordion-group>
-<div
-    data-c-accordion
-    data-c-border="lr(thin, solid, black)"
-    data-c-background="black(90)"
-    data-c-radius="rounded">
-    <button
-        aria-expanded="false"
-        data-c-accordion-trigger
-        data-c-padding="right"
-        tabindex="0"
-        type="button">
-        <div data-c-padding="top(half) right(double) bottom(half) left(normal)">
-            <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
-                View Number Code
-            </p>
-            
-        </div>
-        <span data-c-visibility="invisible">
-            Click to view...
-        </span>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion-add
-            data-c-color="white">
-            add
-        </i>
-        <i
-            aria-hidden="true"
-            class="material-icons"
-            data-c-accordion-remove
-            data-c-color="white">
-            remove
-        </i>
-    </button>
     <div
-        aria-hidden="true"
-        
-        
-        data-c-accordion-content>
-        <div 
+        data-c-accordion
+        data-c-border="lr(thin, solid, black)"
+        data-c-background="black(90)"
+        data-c-radius="rounded">
+        <button
+            aria-expanded="false"
+            data-c-accordion-trigger
+            data-c-padding="right"
+            tabindex="0"
+            type="button">
+            <div data-c-padding="tb(normal) right(double) left(normal)">
+                <p data-c-heading="h4" data-c-font-style="underline" data-c-color="white">
+                    View Number Code
+                </p>
+                
+            </div>
+            <span data-c-visibility="invisible">
+                Click to view...
+            </span>
+            <i
+                aria-hidden="true"
+                class="material-icons"
+                data-c-accordion-add
+                data-c-color="white">
+                add
+            </i>
+            <i
+                aria-hidden="true"
+                class="material-icons"
+                data-c-accordion-remove
+                data-c-color="white">
+                remove
+            </i>
+        </button>
+        <div
+            aria-hidden="true"
             
-            >
             
-                <pre><code class="language-twig">&lt;div data-c-input=&quot;number&quot;&gt;
+            data-c-accordion-content>
+            <div 
+                
+                >
+                
+                    <pre><code class="language-twig">&lt;div data-c-input=&quot;number&quot;&gt;
     &lt;label for=&quot;NUM2&quot;&gt;# of Sidekicks&lt;/label&gt;
     &lt;span&gt;Required&lt;/span&gt;
     &lt;div&gt;
@@ -1230,27 +1313,71 @@
     &lt;span&gt;This input has an error.&lt;/span&gt;
 &lt;/div&gt;
 </code></pre>
-            
-            
-            
-            
-            
+                    <span data-docs-code-content aria-hidden="true" style="display: none;">&lt;div data-c-input=&quot;number&quot;&gt;
+    &lt;label for=&quot;NUM2&quot;&gt;# of Sidekicks&lt;/label&gt;
+    &lt;span&gt;Required&lt;/span&gt;
+    &lt;div&gt;
+        &lt;input id=&quot;NUM2&quot; placeholder=&quot;0&quot; required type=&quot;number&quot; /&gt;
+    &lt;/div&gt;
+    &lt;span&gt;This input has an error.&lt;/span&gt;
+&lt;/div&gt;
+</span>
+                
+                
+                
+                
+                
+            </div>
         </div>
     </div>
 </div>
-</div>
+
         </div>
-        <span id="details"></span>
-        <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-colour="c1" data-c-margin="top(triple) bottom(normal)">Detailed Information</h2>
-        <p>Coming soon!</p>
-        <span id="examples"></span>
-        <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-colour="c1" data-c-margin="top(triple) bottom(normal)">Examples</h2>
-        <p>Coming soon!</p>
+        
+            <span id="details"></span>
+            <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-colour="c1" data-c-margin="top(triple) bottom(normal)">Detailed Information</h2>
+            <p>Coming soon!</p>
+            <span id="examples"></span>
+            <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-colour="c1" data-c-margin="top(triple) bottom(normal)">Examples</h2>
+            <div data-c-grid="gutter top">
+    <div
+        data-c-grid-item="base(1of1) tl(1of3)"
+        data-c-input="number">
+        <label for="NUM1"># of Sidekicks</label>
+        <span>Required</span>
+        <div>
+            <input id="NUM1" placeholder="0" type="number" />
+        </div>
+        <span>This input has an error.</span>
+    </div>
+    <div
+        data-c-grid-item="base(1of1) tl(1of3)"
+        data-c-input="number">
+        <label for="NUM2"># of Sidekicks</label>
+        <span>Required</span>
+        <div>
+            <input id="NUM2" placeholder="0" required type="number" />
+        </div>
+        <span>This input has an error.</span>
+    </div>
+    <div
+        data-c-grid-item="base(1of1) tl(1of3)"
+        data-c-input="number"
+        data-c-invalid>
+        <label for="NUM3"># of Sidekicks</label>
+        <span>Required</span>
+        <div>
+            <input id="NUM3" placeholder="0" type="number" />
+        </div>
+        <span>This input has an error.</span>
+    </div>
+</div>
+        
     </div>
 
 
 
-        <footer class="theme-gradient" data-c-padding="tb(triple)">
+        <footer class="theme-gradient" data-c-padding="tb(double)">
 
         </footer>
 

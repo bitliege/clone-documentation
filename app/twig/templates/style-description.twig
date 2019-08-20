@@ -4,12 +4,20 @@
             <span id="content"></span>
             <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-colour="c1">Using {{ component.plural|title }}</h2>
             {% for item in component.description %}
-                <p data-c-margin="tb(normal)">{{ item }}</p>
+                {% if item == component.description|last %}
+                    <p data-c-margin="top(normal)">{{ item }}</p>
+                {% else %}
+                    <p data-c-margin="tb(normal)">{{ item }}</p>
+                {% endif %}
             {% endfor %}
-            <h3 data-c-font-size="h4" data-c-margin="top(double)">Markup</h3>
-            {% for item in component.usage %}
-                <p data-c-margin="top(normal)"><code class="language-html">{% filter escape %}{{ item }}{% endfilter %}</code></p>
-            {% endfor %}
+            {% if component.usage is empty %}
+                {# do nothing #}
+            {% else %}
+                <h3 data-c-font-size="h4" data-c-margin="top(double)">Markup</h3>
+                {% for item in component.usage %}
+                    <p data-c-margin="top(normal)"><code class="language-html">{% filter escape %}{{ item }}{% endfilter %}</code></p>
+                {% endfor %}
+            {% endif %}
         </div>
     </div>
 </div>

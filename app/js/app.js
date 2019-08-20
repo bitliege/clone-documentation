@@ -140,9 +140,31 @@
             }
           }
     
-          $(document).on("click", "[data-docs-menu-trigger]", function(e) {
+        $(document).on("click", "[data-docs-menu-trigger]", function(e) {
             menuTrigger(this);
-          });
+        });
+
+        // Copying Code ========================================================
+        function copyCode(trigger) {
+            var $temp = $("<textarea>");
+            var codeId = $(trigger).attr("data-docs-copy-code-trigger");
+            var code = "";
+            $("[data-docs-code]").each(function() {
+                if ($(this).attr("data-docs-code") == codeId) {
+                    code = $(this);
+                }
+            });
+            var content = $(code).find("[data-docs-code-content]").text();
+            $("body").append($temp);
+            $temp.val(content).select();
+            document.execCommand("copy");
+            $temp.remove();
+        }
+
+        $(document).on("click", "[data-docs-copy-code-trigger]", function(e) {
+            copyCode(this);
+        });
+          
 
     });
 

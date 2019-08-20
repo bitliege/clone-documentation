@@ -3,5 +3,115 @@
 {% block title %}{{ component.title|title }}{% endblock %}
 {% block content %}
     {{ parent(component) }}
-    {% include "../../../templates/style-core.twig" with {component} %}
+    {% include "../../../templates/component-header.twig" with {component} %}
+    {% include "../../../templates/style-description.twig" with {component} %}
+    <div data-c-container="medium" data-c-padding="tb(triple)">
+
+        <span id="family"></span>
+        <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-margin="bottom(normal)" data-c-colour="c1">Font Family</h2>
+        <p data-c-margin="bottom"><code class="language-html">{% filter escape %}<div data-c-font="STYLE"></div>{% endfilter %}</code></p>
+        <p data-c-margin="bottom">This attribute allows you to assign a specific font-family to an element. Font family arguments can be customized using the variables found in the themeing section of the documentation.</p>
+        <h5 
+            data-c-font-size="h5"
+            data-c-font-weight="700"
+            data-c-margin="top(normal) bottom(normal)">
+            Available Arguments
+        </h5>
+        <div data-c-grid="gutter">
+            <div data-c-grid-item="equal-col base(1of1)">
+                <pre><code class="language-md"># STYLE
+
+sans
+serif
+script
+mono / monospace</script></code></pre>
+            </div>
+        </div>
+
+        <span id="scale"></span>
+        <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-margin="top(triple) bottom(normal)" data-c-colour="c1">Scale &amp; Line Height</h2>
+        <p>Clone provides a built in means of controlling a typography scale based on a ratio. The system sets the base font to the user's default browser setting to begin with. By default, Clone uses a 1.333 scale for determining the size of the typography. This can be changed by modifying the <code class="language-scss">{% filter escape %}$clone-font-scale{% endfilter %}</code> variable. This scale appears as follows:</p>
+        <h1 data-c-font-size="h1" data-c-margin="top(normal) bottom(normal)">Heading 01</h1>
+        <h2 data-c-font-size="h2" data-c-margin="top(normal) bottom(normal)">Heading 02</h2>
+        <h3 data-c-font-size="h3" data-c-margin="top(normal) bottom(normal)">Heading 03</h3>
+        <h4 data-c-font-size="h4" data-c-margin="top(normal) bottom(normal)">Heading 04</h4>
+        <h5 data-c-font-size="h5" data-c-margin="top(normal) bottom(normal)">Heading 05</h5>
+        <p data-c-font-size="normal" data-c-margin="top(normal) bottom(normal)">Paragraph Copy</p>
+        <p data-c-font-size="small" data-c-margin="top(normal) bottom(normal)">Captions &amp; Labels</p>
+        <p data-c-margin="bottom(half)">Please note that this scale is not automatically applied to the heading elements and must be applied manually using the <code class="language-html">{% filter escape %} data-c-font-size="SIZE"{% endfilter %}</code> property. This is so that you can manually determine the appearance of a heading when the markup structure might dictate otherwise.</p>
+        <div data-c-grid="gutter">
+            <div data-c-grid-item="equal-col base(1of1)">
+                <pre><code class="language-md"># SIZE
+
+h1
+h2
+h3
+h4
+h5
+normal / regular
+small</script></code></pre>
+            </div>
+        </div>
+        <p data-c-margin="top(normal)">Line height defaults to 1.5, but can manually changed using the <code class="language-scss">{% filter escape %}$clone-line-height{% endfilter %}</code> variable.</p>
+
+        <span id="colour"></span>
+        <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-margin="top(triple) bottom(normal)" data-c-colour="c1">Font Colour</h2>
+        <p data-c-margin="bottom(normal)"><code class="language-html">{% filter escape %}<div data-c-colour="COLOUR"></div>{% endfilter %}</code>, <code class="language-html">{% filter escape %}<div data-c-color="COLOR"></div>{% endfilter %}</code></p>
+        <p data-c-margin="bottom">This attribute allows you to assign a font colour to an element and all of its children.</p>
+        <h3 data-c-font-size="h4" data-c-margin="top(double) bottom(normal)">Available Arguments</h3>
+        <div data-c-grid="gutter">
+            <div data-c-grid-item="equal-col base(1of1)">
+                <pre><code class="language-md"># COLOUR
+
+white
+gray / grey
+black
+c1 (Theme Colour 01)
+c2 (Theme Colour 02)
+c3 (Theme Colour 03)
+c4 (Theme Colour 04)
+c5 (Theme Colour 05)
+stop
+slow
+go</script></code></pre>
+            </div>
+        </div>
+
+        <span id="weight"></span>
+        <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-margin="top(triple) bottom(normal)" data-c-colour="c1">Font Weight</h2>
+        <p data-c-margin="bottom(normal)"><code class="language-html">{% filter escape %}<div data-c-font-weight="WEIGHT"></div>{% endfilter %}</code></p>
+        <p data-c-margin="bottom">This attribute allows you to assign a font weight to an element.</p>
+        <h3 data-c-font-size="h4" data-c-margin="top(double) bottom(normal)">Available Arguments</h3>
+        <div data-c-grid="gutter">
+            <div data-c-grid-item="equal-col base(1of1)">
+                <pre><code class="language-md"># WEIGHT
+
+100
+200
+300
+400
+normal
+500
+600
+700
+bold
+800
+900</script></code></pre>
+            </div>
+        </div>
+
+        <span id="style"></span>
+        <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-margin="top(triple) bottom(normal)" data-c-colour="c1">Font Style</h2>
+        <p data-c-margin="bottom(normal)"><code class="language-html">{% filter escape %}<div data-c-font-style="STYLE"></div>{% endfilter %}</code></p>
+        <p data-c-margin="bottom">This attribute allows you to assign a text style to an element. You can use <code class="language-html">{% filter escape %}<div data-c-font-weight="bold"></div>{% endfilter %}</code> (found below) to bold items instead.</p>
+        <h3 data-c-font-size="h4" data-c-margin="top(double) bottom(normal)">Available Arguments</h3>
+        <div data-c-grid="gutter">
+            <div data-c-grid-item="equal-col base(1of1)">
+                <pre><code class="language-md"># STYLE
+
+italic
+underline</script></code></pre>
+            </div>
+        </div>
+    </div>
 {% endblock %}

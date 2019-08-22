@@ -8,6 +8,8 @@
 $clone-whitespace-multiplier: 1.4;
 $clone-black: rgba(10, 10, 20, 1);
 $clone-menu-background-colour: $clone-black;
+$clone-submenu-background-colour: rgba(80, 80, 90, 1);
+$clone-visited-colour: rgba(50, 50, 60, 1);
 
 @import "../../node_modules/clone-framework/app/scss/clone";
 
@@ -30,9 +32,12 @@ $clone-menu-background-colour: $clone-black;
     }
 
     [data-c-menu] {
-        .clone-logotype span {
+        .clone-logotype {
             display: block;
             text-align: center;
+            a{
+                text-decoration: none;
+            }
         }
         .clone-logotype img {
             @media #{$clone-tablet-landscape} {

@@ -322,4 +322,18 @@ $clone-visited-colour: rgba(50, 50, 60, 1);
         visibility: hidden;
         pointer-events: none;
     }
+
+    footer {
+        padding-bottom: calc((#{$clone-padding} * 2) + 3rem);
+        @media #{$clone-tablet-portrait} {
+            padding-bottom: calc(((#{$clone-padding} * 2) * #{$clone-whitespace-multiplier}) + 3rem);
+        }
+        @media #{$clone-tablet-landscape} {
+            padding-bottom: calc((#{$clone-padding} * 2) * #{$clone-whitespace-multiplier});
+        }
+        @media #{$clone-desktop-large} {
+            padding-bottom: calc(((#{$clone-padding} * 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+        }
+    }
+
 }

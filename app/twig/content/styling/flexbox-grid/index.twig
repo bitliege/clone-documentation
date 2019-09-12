@@ -5,12 +5,12 @@
     {{ parent(component) }}
     {% include "../../../templates/component-header.twig" with {component} %}
     {% include "../../../templates/style-description.twig" with {component} %}
-    <div data-c-container="medium" data-c-padding="tb(triple)">
+    <div data-c-container="medium" data-c-padding="top(double) bottom(triple)">
         <div
             data-c-alert="information"
             data-c-radius="rounded"
             data-c-padding="half"
-            data-c-margin="bottom(normal)"
+            data-c-margin="bottom(double)"
             role="alert">
             <div>
                 <span
@@ -35,11 +35,7 @@
             <p data-c-margin="bottom">Items inside the grid always default to a full, single column until you tell them otherwise using a media query and grid value. This means you can build grids with 1, 2, 3 ... to 12 columns using an <code class="language-md">{% filter escape %}XOFY{% endfilter %}</code> structure (e.g. <code class="language-html">{% filter escape %}<div data-c-grid-item="base(1of1) tp(1of2) tl(1of3)"></div>{% endfilter %}</code>). This grid item will be full width on all devices below portrait orientation tablets, at which point it switches to 50% of the width. When the device is a tablet in landscape orientation, the column shrinks further to be 33.33% of the width.</p>
             <p data-c-margin="bottom">Usage (Grid Wrapper): <code class="language-html">{% filter escape %}<div data-c-grid="OPTIONS"></div>{% endfilter %}</code></p>
             <p data-c-margin="bottom">Usage (Grid Items): <code class="language-html">{% filter escape %}<div data-c-grid-item="MEDIA(XOFY)"></div>{% endfilter %}</code></p>
-            <h4
-                data-c-font-size="h4"
-                data-c-margin="top(double) bottom(normal)">
-                Available Arguments
-            </h4>
+            <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-colour="c1" data-c-margin="top(triple) bottom(normal)">Available Arguments</h2>
             <div data-c-grid="gutter">
                 <div data-c-grid-item="equal-col tl(1of3)">
                     <pre><code class="language-md"># OPTIONS (Grid Wrapper)
@@ -75,11 +71,7 @@ using the $clone-grid-columns variable.</code></pre>
                 </div>
             </div>
         </div>
-        <h4
-            data-c-font-size="h4"
-            data-c-margin="top(double) bottom(normal)">
-            Examples
-        </h4>
+        <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-colour="c1" data-c-margin="top(triple) bottom(normal)">In Practice</h2>
         <div data-c-padding="bottom(double)">
             <p data-c-margin="bottom(normal)">A grid of 3 items in 3 columns that triggers at the landscape tablet media query (e.g. <code class="language-html">{% filter escape %}<div data-c-grid-item="tl(1of3)"></div>{% endfilter %}</code>).</p>
             <div data-c-grid="gutter">

@@ -1,5 +1,5 @@
 {% extends "../../../../templates/layout.twig" %}
-{% set component = componentModel.components.input.children.radio %}
+{% set component = modelComponents.components.input.children.radio %}
 {% block title %}{{ component.plural|title }}{% endblock %}
 {% block content %}
     {{ parent(component) }}

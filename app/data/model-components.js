@@ -62,6 +62,14 @@ const components = {
         accessibility: [
             "Coming Soon!"
         ],
+        changes: [
+            {
+                version: "2.4.0",
+                items: [
+                    "Reduced the spacing between breadcrumb items."
+                ]
+            }
+        ],
         children: {}
     },
     button: {
@@ -96,10 +104,18 @@ const components = {
         plural: "carousels",
         element: "carousel",
         description: [
-            "Coming Soon!"
+            "Carousels are an interactive way to communicate collections of content or media. They are often used when a single hero element isn't sufficient to communicate multiple facets or pieces of news. Carousels are built into Clone using the help of Glider.js. By default, carousels built using Clone's standard carousel code (found below) will work out of the box. Alternatively, they can be initialized manually (explained below) which allows you to access all of Glider.js' properties and functionality."
         ],
         accessibility: [
-            "Coming Soon!"
+            "Carousels are designed to be tab-navigable and touch enabled. Images and media inside of carousels should always have associated descriptive alt text."
+        ],
+        changes: [
+            {
+                version: "2.4.0",
+                items: [
+                    "Swapped from Slick to Glider for carousel support (this was due to removing jQuery in favour of Cash - later on Cash will be removed as well)."
+                ]
+            }
         ],
         children: {}
     },
@@ -199,7 +215,7 @@ const components = {
                 plural: "passwords",
                 element: "password",
                 description: [
-                    "Coming Soon!"
+                    "Password inputs are useful for authentication related forms. Clone includes a handy \"view\" toggle that manually switches the hidden password input to a visible text input so that the user can effectively see what they're typing. Please take this into consideration upon form submission in your project."
                 ],
                 accessibility: [
                     "Coming Soon!"

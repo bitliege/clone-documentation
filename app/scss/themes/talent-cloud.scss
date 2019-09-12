@@ -1,22 +1,15 @@
-// =============================================================================
-
-    // Clone: Talent Cloud Edition
-
-// =============================================================================
+// Clone: Talent Cloud Edition =================================================
 
 // Layout Variables
 $clone-large-layout: 100rem;
 $clone-medium-layout: 60rem;
 $clone-small-layout: 39rem;
-$clone-wide-layout: $clone-large-layout;
-$clone-form-layout: $clone-medium-layout;
-$clone-copy-layout: $clone-small-layout;
 
 // Whitespace Variables
 // On Portrait Phone Devices, Media Queries exist at Tablet Landscape, and Desktop Large and are generated using the multiplier below.
-$clone-margin: 1rem !default;
-$clone-padding: 1rem !default;
-$clone-whitespace-multiplier: 1.4 !default;
+$clone-margin: 1rem;
+$clone-padding: 1rem;
+$clone-whitespace-multiplier: 1.4;
 
 // Grid Variables
 $clone-grid-columns: 12;
@@ -28,41 +21,21 @@ $clone-grid-gutter: $clone-padding;
     $clone-white: #FFFFFF;
     $clone-black: rgba(20, 20, 35, 1);
 
-    // Grey/Gray
-    $clone-grey: rgba(150, 150, 150, 1);
-    $clone-grey-light: lighten($clone-grey, 10%);
-    $clone-grey-dark: darken($clone-grey, 10%);
-
-    $clone-gray: $clone-grey;
-    $clone-gray-light: $clone-grey-light;
-    $clone-gray-dark: $clone-grey-dark;
+    // gray/Gray
+    $clone-gray: rgba(150, 150, 150, 1);
 
     // Theme Colours
     $clone-c1: #5b1647;
-    $clone-c1-light: lighten($clone-c1, 10%);
-    $clone-c1-dark: darken($clone-c1, 10%);
-
     $clone-c2: #96043e;
-    $clone-c2-light: lighten($clone-c2, 10%);
-    $clone-c2-dark: darken($clone-c2, 10%);
-
     $clone-c3: #c90035;
-    $clone-c3-light: lighten($clone-c3, 10%);
-    $clone-c3-dark: darken($clone-c3, 10%);
-
     $clone-c4: #0a6cbc;
-    $clone-c4-light: lighten($clone-c4, 10%);
-    $clone-c4-dark: darken($clone-c4, 10%);
-
     $clone-c5: #0a6cbc;
-    $clone-c5-light: lighten($clone-c5, 10%);
-    $clone-c5-dark: darken($clone-c5, 10%);
 
     // Go, Slow, Stop
-    $clone-go: green !default;
-    $clone-slow: orange !default;
-    $clone-stop: red !default;
-    $clone-error: $clone-stop !default;
+    $clone-go: green;
+    $clone-slow: orange;
+    $clone-stop: red;
+    $clone-error: $clone-stop;
 
 // Sitewide Colour Variables
 
@@ -76,13 +49,18 @@ $clone-grid-gutter: $clone-padding;
     $clone-focus-colour: $clone-hover-colour;
 
     // Visited Links
-    $clone-visited-colour: $clone-c4-dark !default;
+    $clone-visited-colour: darken($clone-c4, 10%);
+
+// Component Options
+
+    // Cards
+    $clone-card-shadow: 0 3px 5px rgba(0, 0, 0, .5);
 
 // Component Colour Variables
 
     // Accordions
     $clone-accordion-border-colour: $clone-black;
-    $clone-accordion-alternating-background-colour: lighten($clone-grey, 35%);
+    $clone-accordion-alternating-background-colour: lighten($clone-gray, 35%);
 
     // Alerts
     $clone-alert-information: $clone-c1;
@@ -117,23 +95,16 @@ $clone-grid-gutter: $clone-padding;
 // Font Variables
 
     // Fonts
-    $clone-font-sans: "Open Sans", sans-serif !default;
-    $clone-font-serif: serif !default;
-    $clone-font-script: "Euphoria Script", cursive !default;
-    $clone-font-monospace: "Consolas", monospace !default;
+    $clone-font-sans: "Open Sans", sans-serif;
+    $clone-font-serif: serif;
+    $clone-font-script: "Euphoria Script", cursive;
+    $clone-font-monospace: "Consolas", monospace;
 
-    $clone-font-default: $clone-font-sans !default;
+    $clone-font-default: $clone-font-sans;
 
     // Default Line Height
-    $clone-line-height: 1.5 !default;
+    $clone-line-height: 1.5;
 
     // The Typography Scale
-    $clone-default-font-size: 1rem !default;
-    $clone-font-scale: 1.333 !default;
-
-    $clone-font-scale-h1: calc(#{$clone-default-font-size}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}))))) !default;
-    $clone-font-scale-h2: calc(#{$clone-default-font-size}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale})))) !default;
-    $clone-font-scale-h3: calc(#{$clone-default-font-size}*(#{$clone-font-scale}*(#{$clone-font-scale}))) !default;
-    $clone-font-scale-h4: calc(#{$clone-default-font-size}*(#{$clone-font-scale})) !default;
-    $clone-font-scale-h5: $clone-default-font-size !default;
-    $clone-font-scale-small: calc(#{$clone-default-font-size}/(#{$clone-font-scale})) !default;
+    $clone-default-font-size: 1rem;
+    $clone-font-scale: 1.333;

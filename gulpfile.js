@@ -22,9 +22,10 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const del = require('del');
 const twig = require('gulp-twig');
-const navigationModel = require('./model-navigation.js');
-const componentModel = require('./model-components.js');
-const stylesModel = require('./model-styles.js');
+const htmlmin = require('gulp-htmlmin');
+var modelNavigation = require('./app/data/model-navigation.js');
+var modelComponents = require('./app/data/model-components.js');
+var modelStyles = require('./app/data/model-styles.js');
 
 // Tasks =======================================================================
 
@@ -51,10 +52,14 @@ const stylesModel = require('./model-styles.js');
         return src('app/twig/*.twig')
         .pipe(twig({
             data: {
-                navigationModel,
-                componentModel,
-                stylesModel
+                modelNavigation,
+                modelComponents,
+                modelStyles
             }
+        }))
+        .pipe(htmlmin({
+            collapseWhitespace: true,
+            removeComments: true
         }))
         .pipe(dest('cache'));
     }
@@ -63,10 +68,14 @@ const stylesModel = require('./model-styles.js');
         return src('app/twig/content/**/index.twig')
         .pipe(twig({
             data: {
-                navigationModel,
-                componentModel,
-                stylesModel
+                modelNavigation,
+                modelComponents,
+                modelStyles
             }
+        }))
+        .pipe(htmlmin({
+            collapseWhitespace: true,
+            removeComments: true
         }))
         .pipe(dest('cache'));
     }
@@ -74,12 +83,23 @@ const stylesModel = require('./model-styles.js');
     function templateThemes() {
         return src('app/twig/themes/**/*.twig')
         .pipe(twig())
+        .pipe(htmlmin({
+            collapseWhitespace: true,
+            removeComments: true
+        }))
         .pipe(dest('cache/themes'));
     }
 
     // Clone JS
+    // This function is used for local development when clone-framework is NOT linked locally.
+    // function moveCloneJS() {
+    //     return src('node_modules/clone-framework/dist/js/clone.min.js')
+    //     .pipe(dest('cache/js/clone'));
+    // }
+
+    // This function is used for local development when clone-framework IS linked locally to speed up development.
     function moveCloneJS() {
-        return src('node_modules/clone-framework/cache/js/clone.js')
+        return src('node_modules/clone-framework/dist/js/clone.min.js')
         .pipe(dest('cache/js/clone'));
     }
 
@@ -197,6 +217,7 @@ const stylesModel = require('./model-styles.js');
         watch('app/scss/**/*.scss', series(quickCompile, browserSyncReload));
         watch('app/twig/**/*.twig', series(quickCompile, browserSyncReload));
         watch('app/js/*.js', series(quickCompile, browserSyncReload));
+        watch('app/data/*.js', series(quickCompile, browserSyncReload));
     }
 
     // Export

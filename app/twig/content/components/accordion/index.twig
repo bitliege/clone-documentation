@@ -1,5 +1,5 @@
 {% extends "../../../templates/layout.twig" %}
-{% set component = componentModel.components.accordion %}
+{% set component = modelComponents.components.accordion %}
 {% block title %}{{ component.plural|title }}{% endblock %}
 {% block content %}
     {{ parent(component) }}

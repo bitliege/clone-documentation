@@ -1,5 +1,5 @@
 {% extends "../../../templates/layout.twig" %}
-{% set component = componentModel.components.tag %}
+{% set component = modelComponents.components.tag %}
 {% block title %}{{ component.plural|title }}{% endblock %}
 {% block content %}
     {{ parent(component) }}

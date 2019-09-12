@@ -1,16 +1,9 @@
-// =============================================================================
-
-    // Clone: Canada.ca Edition
-
-// =============================================================================
+// Clone: Canada.ca Edition ====================================================
 
 // Layout Variables
 $clone-large-layout: 100rem;
 $clone-medium-layout: 60rem;
 $clone-small-layout: 39rem;
-$clone-wide-layout: $clone-large-layout;
-$clone-form-layout: $clone-medium-layout;
-$clone-copy-layout: $clone-small-layout;
 
 // Whitespace Variables
 // On Portrait Phone Devices, Media Queries exist at Tablet Landscape, and Desktop Large and are generated using the multiplier below.
@@ -28,35 +21,15 @@ $clone-grid-gutter: $clone-padding;
     $clone-white: #FFFFFF;
     $clone-black: rgba(10, 10, 20, 1);
 
-    // Grey/Gray
-    $clone-grey: rgba(150, 150, 150, 1);
-    $clone-grey-light: lighten($clone-grey, 10%);
-    $clone-grey-dark: darken($clone-grey, 10%);
-
-    $clone-gray: $clone-grey;
-    $clone-gray-light: $clone-grey-light;
-    $clone-gray-dark: $clone-grey-dark;
+    // gray/Gray
+    $clone-gray: rgba(150, 150, 150, 1);
 
     // Theme Colours
     $clone-c1: #26374A;
-    $clone-c1-light: lighten($clone-c1, 10%);
-    $clone-c1-dark: darken($clone-c1, 10%);
-
     $clone-c2: #269abc;
-    $clone-c2-light: lighten($clone-c2, 10%);
-    $clone-c2-dark: darken($clone-c2, 10%);
-
     $clone-c3: #af3c43;
-    $clone-c3-light: lighten($clone-c3, 10%);
-    $clone-c3-dark: darken($clone-c3, 10%);
-
     $clone-c4: #F79559;
-    $clone-c4-light: lighten($clone-c4, 10%);
-    $clone-c4-dark: darken($clone-c4, 10%);
-
     $clone-c5: #F7AF5B;
-    $clone-c5-light: lighten($clone-c5, 10%);
-    $clone-c5-dark: darken($clone-c5, 10%);
 
     // Go, Slow, Stop
     $clone-go: green;
@@ -78,11 +51,16 @@ $clone-grid-gutter: $clone-padding;
     // Visited Links
     $clone-visited-colour: #7834bc;
 
+// Component Options
+
+    // Cards
+    $clone-card-shadow: 0 3px 5px rgba(0, 0, 0, .5);
+
 // Component Colour Variables
 
     // Accordions
     $clone-accordion-border-colour: $clone-black;
-    $clone-accordion-alternating-background-colour: lighten($clone-grey, 35%);
+    $clone-accordion-alternating-background-colour: lighten($clone-gray, 35%);
 
     // Alerts
     $clone-alert-information: $clone-c2;
@@ -104,7 +82,7 @@ $clone-grid-gutter: $clone-padding;
     $clone-submenu-background-colour: $clone-c1;
 
     $clone-menu-font-colour: $clone-black;
-    $clone-menu-divider-colour: rgba($clone-grey, .5);
+    $clone-menu-divider-colour: rgba($clone-gray, .5);
     $clone-menu-icon-colour: $clone-c2;
 
     // Pullquotes
@@ -130,10 +108,3 @@ $clone-grid-gutter: $clone-padding;
     // The Typography Scale
     $clone-default-font-size: 1.25rem;
     $clone-font-scale: 1.2;
-
-    $clone-font-scale-h1: calc(#{$clone-default-font-size}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale})))));
-    $clone-font-scale-h2: calc(#{$clone-default-font-size}*(#{$clone-font-scale}*(#{$clone-font-scale}*(#{$clone-font-scale}))));
-    $clone-font-scale-h3: calc(#{$clone-default-font-size}*(#{$clone-font-scale}*(#{$clone-font-scale})));
-    $clone-font-scale-h4: calc(#{$clone-default-font-size}*(#{$clone-font-scale}));
-    $clone-font-scale-h5: $clone-default-font-size;
-    $clone-font-scale-small: calc(#{$clone-default-font-size}/(#{$clone-font-scale}));

@@ -12,7 +12,7 @@
         <p data-c-margin="bottom(normal)">Components are pre-built elements that allow you to build interfaces in the same way you'd stack lego blocks. Components are built to be accessible, customizable, responsive, and work as-is without any or little work involved. Each component is documented and provides code that can be copy-pasted into any Clone project to get you going.</p>
         <p data-c-margin="bottom(normal)">Clone includes the following components:</p>
         <ul class="clone-input-list" data-c-grid="gutter top">
-            {% for child in navigationModel.navigation.components.submenu %}
+            {% for child in modelNavigation.navigation.components.submenu %}
                 <li data-c-grid-item="base(1of1) tp(1of2) ds(1of3)">
                     <a href="{{ child.hash }}" title="">{{ child.title|title }}</a>
                 </li>

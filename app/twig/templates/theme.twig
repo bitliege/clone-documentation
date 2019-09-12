@@ -250,21 +250,24 @@
     <h2 data-c-font-size="h2" data-c-margin="bottom(normal)">
         Carousels
     </h2>
-    <div
-        data-c-carousel="image"
-        data-slick='{"slidesToShow": 1, "dots": true}'>
-        {% for item in triple %}
-            <div
-                data-c-carousel="item"
-                {% if item == 1 %}
-                    style="background-image:url('../../img/themes/josh-spires-1646985-unsplash.jpg');"
-                {% elseif item == 2 %}
-                    style="background-image:url('../../img/themes/nicholas-safran-1645855-unsplash.jpg');"
-                {% elseif item == 3 %}
-                    style="background-image:url('../../img/themes/twk-tt-1646497-unsplash.jpg');"
-                {% endif %}>
-            </div>
-        {% endfor %}
+    <div data-c-carousel-wrapper>
+        <div data-c-carousel="image">
+            <!-- Repeat items as necessary. -->
+            {% for item in triple %}
+                <div data-c-carousel-item
+                    {% if item == 1 %}
+                        style="background-image:url('../../img/themes/josh-spires-1646985-unsplash.jpg');"
+                    {% elseif item == 2 %}
+                        style="background-image:url('../../img/themes/nicholas-safran-1645855-unsplash.jpg');"
+                    {% elseif item == 3 %}
+                        style="background-image:url('../../img/themes/twk-tt-1646497-unsplash.jpg');"
+                    {% endif %}>
+                </div>
+            {% endfor %}
+        </div>
+        <button role="button" aria-label="Previous" data-c-carousel-arrow="prev"><i class="material-icons">arrow_back_ios</i></button>
+        <button role="button" aria-label="Next" data-c-carousel-arrow="next"><i class="material-icons">arrow_forward_ios</i></button>
+        <div role="tablist" data-c-carousel-dots></div>
     </div>
 </div>
 {# Table Example ============================================================ #}

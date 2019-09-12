@@ -36,6 +36,9 @@
             href="/css/app.css"
             rel="stylesheet">
 
+        {# jQuery #}
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+
         {# Prism CSS #}
         <link 
             async 
@@ -64,7 +67,7 @@
 
     <body data-clone data-c-menu-style="sidebar(left)">
 
-        {% set cloneVersion = "2.3.15" %}
+        {% set cloneVersion = "2.4.0" %}
 
         <a
             data-c-skip-content
@@ -106,7 +109,7 @@
         
         {% block content %}
 
-            {% include "menu.twig" with {"nav": navigationModel.navigation, component} %}
+            {% include "menu.twig" with {"nav": modelNavigation.navigation, component} %}
 
         {% endblock %}
 
@@ -118,7 +121,7 @@
             </footer>
         {% endif %}
 
-        <script src="/js/clone/clone.js"></script>
+        <script src="/js/clone/clone.min.js"></script>
 
         <script src="/js/app.js"></script>
 

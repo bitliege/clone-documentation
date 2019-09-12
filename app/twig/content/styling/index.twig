@@ -14,7 +14,7 @@
         <p data-c-margin="bottom(normal)"><code class="language-html">{% filter escape %}<p data-c-align="base(left) tl(center)">lorem ipsum</p>{% endfilter %}</code></p>
         <p data-c-margin="bottom(normal)">You can use the following attributes to style elements:</p>
         <ul class="clone-input-list" data-c-grid="gutter top">
-            {% for child in navigationModel.navigation.styling.submenu %}
+            {% for child in modelNavigation.navigation.styling.submenu %}
                 <li data-c-grid-item="base(1of1) tp(1of2) ds(1of3)">
                     <a href="{{ child.hash }}" title="">{{ child.title|title }}</a>
                 </li>

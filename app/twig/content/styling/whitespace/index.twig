@@ -1,5 +1,5 @@
 {% extends "../../../templates/layout.twig" %}
-{% set component = stylesModel.styles.whitespace %}
+{% set component = modelStyles.styles.whitespace %}
 {% block title %}{{ component.title|title }}{% endblock %}
 {% block content %}
     {{ parent(component) }}

@@ -150,9 +150,10 @@
             });
             var content = $(code).find("[data-docs-code-content]").text();
             $("body").append($temp);
+            console.log(content);
             $temp.val(content).select();
             document.execCommand("copy");
-            $temp.remove();
+            // $temp.remove();
         }
 
         $(document).on("click", "[data-docs-copy-code-trigger]", function(e) {

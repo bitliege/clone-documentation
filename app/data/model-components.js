@@ -10,6 +10,14 @@ const components = {
         accessibility: [
             "Coming Soon!"
         ],
+        changes: [
+            {
+                version: "2.4.1",
+                items: [
+                    "Removed default borders from accordions. They must manually be applied using data-c-border."
+                ]
+            }
+        ],
         children: {}
     },
     alert: {
@@ -68,6 +76,12 @@ const components = {
                 items: [
                     "Reduced the spacing between breadcrumb items."
                 ]
+            },
+            {
+                version: "2.4.1",
+                items: [
+                    "Allows the aria-current item to be a span or p element instead of an anchor."
+                ]
             }
         ],
         children: {}
@@ -82,6 +96,16 @@ const components = {
         ],
         accessibility: [
             "Coming Soon!"
+        ],
+        changes: [
+            {
+                version: "2.4.1",
+                items: [
+                    "Fixed the line height of icons inside buttons.",
+                    "Icons can now be placed on either side of the text in a button provided the text is wrapped in a span element.",
+                    "data-c-button=\"reset\" is now available to remove the background and border properties from generic buttons."
+                ]
+            }
         ],
         children: {}
     },

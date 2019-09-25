@@ -40,7 +40,7 @@
             {% if component.changes is empty %}
                 <p>Coming Soon!</p>
             {% else %}
-                {% for version in component.changes %}
+                {% for version in component.changes|reverse %}
                     <h3 data-c-font-size="h4" data-c-margin="top(double)">Version {{ version.version }}</h3>
                     <ul data-c-margin="top(normal)">
                         {% for change in version.items %}

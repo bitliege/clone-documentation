@@ -61,7 +61,7 @@
                 {% endif %}>
                 {% if element %}
                     <pre><code class="language-twig">{% filter escape %}{% include "../../../node_modules/clone-framework/app/twig/components/" ~ element ~ ".twig" %}{% endfilter %}</code></pre>
-                    <span data-docs-code-content aria-hidden="true" style="display: none;">{% filter escape %}{% include "../../../node_modules/clone-framework/app/twig/components/" ~ element ~ ".twig" %}{% endfilter %}</span>
+                    <textarea data-docs-code-content aria-hidden="true" style="display: none;">{% filter escape %}{% include "../../../node_modules/clone-framework/app/twig/components/" ~ element ~ ".twig" %}{% endfilter %}</textarea>
                 {% endif %}
                 {% if content == "themeing" %}
                     <pre><code class="language-scss">{% filter escape %}{% include "../../../node_modules/clone-framework/app/scss/variables.txt" %}{% endfilter %}</code></pre>

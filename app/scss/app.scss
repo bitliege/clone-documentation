@@ -100,6 +100,9 @@ $clone-visited-colour: temp;
             &.hidden {
                 display: none !important;
             }
+            li.active >a {
+                color: $clone-hover-colour !important;
+            }
         }
     }
 

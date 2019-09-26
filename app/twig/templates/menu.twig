@@ -76,8 +76,37 @@
         </div>
     </div>
     <ul>
+        {% set IDList = [] %}
+        {% for lvl1 in nav %}
+            {% set lvl1ID = lvl1.id %}
+            {% if component.id == lvl1ID %}
+                {% set IDList = IDList|merge([lvl1ID]) %}
+            {% else %}
+                {% if lvl1.submenu %}
+                    {% for lvl2 in lvl1.submenu %}
+                        {% set lvl2ID = lvl2.id %}
+                        {% if component.id == lvl2ID %}
+                            {% set IDList = IDList|merge([lvl1ID]) %}
+                            {% set IDList = IDList|merge([lvl2ID]) %}
+                        {% else %}
+                            {% if lvl2.submenu %}
+                                {% for lvl3 in lvl2.submenu %}
+                                    {% set lvl3ID = lvl3.id %}
+                                    {% if component.id == lvl3ID %}
+                                        {% set IDList = IDList|merge([lvl1ID]) %}
+                                        {% set IDList = IDList|merge([lvl2ID]) %}
+                                        {% set IDList = IDList|merge([lvl3ID]) %}
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+        {# {% for itemID in IDList %}{% if component.id == itemID %}class="active"{% endif %}{% endfor %} #}
         {% for topItem in nav %}
-            <li>
+            <li {% for itemID in IDList %}{% if itemID == topItem.id %}class="active"{% endif %}{% endfor %}>
                 {% if topItem.hash %}
                     <a href="{{ topItem.hash }}">{{ topItem.title|title }}</a>
                 {% else %}
@@ -88,9 +117,9 @@
                         <i data-c-menu-add class="material-icons">add</i>
                         <i data-c-menu-remove class="material-icons">remove</i>
                     </button>
-                    <ul data-c-colour="white">
+                    <ul data-c-colour="white" {% for itemID in IDList %}{% if itemID == topItem.id %}class="active"{% endif %}{% endfor %}>
                         {% for secondItem in topItem.submenu %}
-                            <li>
+                            <li {% for itemID in IDList %}{% if itemID == secondItem.id %}class="active"{% endif %}{% endfor %}>
                                 {% if secondItem.hash %}
                                     <a href="{{ secondItem.hash }}">{{ secondItem.title|title }}</a>
                                 {% else %}
@@ -101,9 +130,9 @@
                                         <i data-c-menu-add class="material-icons">add</i>
                                         <i data-c-menu-remove class="material-icons">remove</i>
                                     </button>
-                                    <ul data-c-colour="white">
+                                    <ul data-c-colour="white" {% for itemID in IDList %}{% if itemID == secondItem.id %}class="active"{% endif %}{% endfor %}>
                                         {% for thirdItem in secondItem.submenu %}
-                                            <li>
+                                            <li {% for itemID in IDList %}{% if itemID == thirdItem.id %}class="active"{% endif %}{% endfor %}>
                                                 {% if thirdItem.hash %}
                                                     <a href="{{ thirdItem.hash }}">{{ thirdItem.title|title }}</a>
                                                 {% else %}

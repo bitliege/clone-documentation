@@ -331,6 +331,12 @@ const components = {
                     "Fixed the line height on submenu buttons.",
                     "Added support for containers on the menu element."
                 ]
+            },
+            {
+                version: "2.4.6",
+                items: [
+                    "Fixed a bug with :scope in IE 11."
+                ]
             }
         ],
         children: {}

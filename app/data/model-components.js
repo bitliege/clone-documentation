@@ -324,6 +324,15 @@ const components = {
         accessibility: [
             "Coming Soon!"
         ],
+        changes: [
+            {
+                version: "2.4.5",
+                items: [
+                    "Fixed the line height on submenu buttons.",
+                    "Added support for containers on the menu element."
+                ]
+            }
+        ],
         children: {}
     },
     overlay: {

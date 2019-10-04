@@ -9,15 +9,17 @@
     {% include "../../templates/header.twig" with {component} %}
     <div data-c-container="medium" data-c-padding="bottom(triple)">
         {% for key, versionX in changes %}
-            <h2 data-c-font-size="h2" data-c-padding="top(triple)" data-c-margin="bottom(normal)">Major Version: {{ key }}</h2>
+            <h2 data-c-font-size="h3" data-c-color="c1" data-c-font-weight="600" data-c-padding="top(triple)" data-c-margin="bottom(normal)">Major Version: {{ key }}</h2>
             {% include "version.twig" with {key, "version": versionX} %}
             {% for key, versionXX in versionX.versions %}
-                <h3 data-c-font-size="h3" data-c-margin="top(triple) bottom(normal)">Minor Version: {{ key }}</h3>
+                <h3 data-c-font-size="h4" data-c-margin="top(triple) bottom(normal)">Minor Version: {{ key }}</h3>
                 {# Minor Version Changes #}
                 {% include "version.twig" with {key, "version": versionXX} %}
                 {% for key, versionXXX in versionXX.versions %}
-                    <h4 data-c-font-size="h4" data-c-border="bottom(thin, solid, gray)" data-c-margin="top(double) bottom(normal)" data-c-padding="bottom(half)">Patch {{ key }}</h4>
-                    {% include "version.twig" with {key, "version": versionXXX} %}
+                    <div data-c-margin="left(normal)">
+                        <h4 data-c-font-size="h5" data-c-font-weight="600" data-c-border="bottom(thin, solid, gray)" data-c-margin="top(double) bottom(normal)" data-c-padding="bottom(half)">Patch {{ key }}</h4>
+                        {% include "version.twig" with {key, "version": versionXXX} %}
+                    </div>
                 {% endfor %}
             {% endfor %}
         {% endfor %}

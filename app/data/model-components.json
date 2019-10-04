@@ -8,9 +8,7 @@
             "description": [
                 "Accordions are a great way to arrange and display a high volume of categoric information. They provide the opportunity to include a title, subtitle, and content. The content area is flexible and is a great way to display copy, media, code, etc. It's possible to change the colour of the trigger using the background attribute. Alternatively, you can set the alt property on the accordion group to automatically alternate accordion colours between white and the variable you've selected."
             ],
-            "accessibility": [
-                "Coming Soon!"
-            ],
+            "accessibility": null,
             "changes": [
                 {
                     "version": "2.4.1",
@@ -26,12 +24,8 @@
             "title": "alert",
             "plural": "alerts",
             "element": "alert",
-            "description": [
-                "Coming Soon!"
-            ],
-            "accessibility": [
-                "Coming Soon!"
-            ],
+            "description": null,
+            "accessibility": null,
             "children": {}
         },
         "backToTopLink": {
@@ -39,12 +33,8 @@
             "title": "back-to-top link",
             "plural": "back-to-top links",
             "element": "back-to-top-link",
-            "description": [
-                "Coming Soon!"
-            ],
-            "accessibility": [
-                "Coming Soon!"
-            ],
+            "description": null,
+            "accessibility": null,
             "children": {}
         },
         "blockquote": {
@@ -52,12 +42,8 @@
             "title": "blockquote",
             "plural": "blockquotes",
             "element": "blockquote",
-            "description": [
-                "Coming Soon!"
-            ],
-            "accessibility": [
-                "Coming Soon!"
-            ],
+            "description": null,
+            "accessibility": null,
             "children": {}
         },
         "breadcrumb": {
@@ -65,12 +51,8 @@
             "title": "breadcrumb",
             "plural": "breadcrumbs",
             "element": "breadcrumb",
-            "description": [
-                "Coming Soon!"
-            ],
-            "accessibility": [
-                "Coming Soon!"
-            ],
+            "description": null,
+            "accessibility": null,
             "changes": [
                 {
                     "version": "2.4.0",
@@ -92,12 +74,8 @@
             "title": "button",
             "plural": "buttons",
             "element": "button",
-            "description": [
-                "Coming Soon!"
-            ],
-            "accessibility": [
-                "Coming Soon!"
-            ],
+            "description": null,
+            "accessibility": null,
             "changes": [
                 {
                     "version": "2.4.1",
@@ -115,12 +93,8 @@
             "title": "card",
             "plural": "cards",
             "element": "card",
-            "description": [
-                "Coming Soon!"
-            ],
-            "accessibility": [
-                "Coming Soon!"
-            ],
+            "description": null,
+            "accessibility": null,
             "children": {}
         },
         "carousel": {
@@ -149,12 +123,8 @@
             "title": "dialog",
             "plural": "dialogs",
             "element": "dialog",
-            "description": [
-                "Coming Soon!"
-            ],
-            "accessibility": [
-                "Coming Soon!"
-            ],
+            "description": null,
+            "accessibility": null,
             "children": {}
         },
         "iframe": {
@@ -162,12 +132,8 @@
             "title": "iframe",
             "plural": "iframes",
             "element": "iframe",
-            "description": [
-                "Coming Soon!"
-            ],
-            "accessibility": [
-                "Coming Soon!"
-            ],
+            "description": null,
+            "accessibility": null,
             "children": {}
         },
         "input": {
@@ -175,12 +141,8 @@
             "title": "input",
             "plural": "inputs",
             "element": "input",
-            "description": [
-                "Coming Soon!"
-            ],
-            "accessibility": [
-                "Coming Soon!"
-            ],
+            "description": null,
+            "accessibility": null,
             "children": {
                 "checkbox": {
                     "id": "comInpChe",
@@ -319,12 +281,8 @@
             "title": "menu",
             "plural": "menus",
             "element": "menu",
-            "description": [
-                "Coming Soon!"
-            ],
-            "accessibility": [
-                "Coming Soon!"
-            ],
+            "description": null,
+            "accessibility": null,
             "changes": [
                 {
                     "version": "2.4.5",
@@ -347,12 +305,8 @@
             "title": "overlay",
             "plural": "overlays",
             "element": "overlay",
-            "description": [
-                "Coming Soon!"
-            ],
-            "accessibility": [
-                "Coming Soon!"
-            ],
+            "description": null,
+            "accessibility": null,
             "children": {}
         },
         "pullquote": {
@@ -360,12 +314,8 @@
             "title": "pullquote",
             "plural": "pullquotes",
             "element": "pullquote",
-            "description": [
-                "Coming Soon!"
-            ],
-            "accessibility": [
-                "Coming Soon!"
-            ],
+            "description": null,
+            "accessibility": null,
             "children": {}
         },
         "skipToContentLink": {
@@ -373,12 +323,8 @@
             "title": "skip-to-content link",
             "plural": "skip-to-content links",
             "element": "skip-to-content-link",
-            "description": [
-                "Coming Soon!"
-            ],
-            "accessibility": [
-                "Coming Soon!"
-            ],
+            "description": null,
+            "accessibility": null,
             "children": {}
         },
         "table": {
@@ -386,12 +332,8 @@
             "title": "table",
             "plural": "tables",
             "element": "table",
-            "description": [
-                "Coming Soon!"
-            ],
-            "accessibility": [
-                "Coming Soon!"
-            ],
+            "description": null,
+            "accessibility": null,
             "children": {}
         },
         "tag": {
@@ -399,12 +341,8 @@
             "title": "tag",
             "plural": "tags",
             "element": "tag",
-            "description": [
-                "Coming Soon!"
-            ],
-            "accessibility": [
-                "Coming Soon!"
-            ],
+            "description": null,
+            "accessibility": null,
             "children": {}
         }
     }

@@ -3,14 +3,22 @@
         <div data-c-card data-c-background="white(100)" data-c-radius="rounded" data-c-padding="double">
             <span id="content"></span>
             <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-colour="c1">About {{ component.plural|title }}</h2>
-            {% for item in component.description %}
-                <p data-c-margin="tb(normal)">{{ item }}</p>
-            {% endfor %}
+            {% if component.description == null %}
+                <p data-c-margin="tb(normal)">A description for this component is coming soon! You can check out the code below in the meantime.</p>
+            {% else %}
+                {% for item in component.description %}
+                    <p data-c-margin="tb(normal)">{{ item }}</p>
+                {% endfor %}
+            {% endif %}
             <a data-c-button="outline(c1)" data-c-radius="rounded" href="#details" title="Learn more about how {{ title }} work.">More Info</a>&nbsp;&nbsp;&nbsp;<a data-c-button="outline(c1)" data-c-radius="rounded" href="#examples" title="See {{ title }} examples.">See Examples</a>&nbsp;&nbsp;&nbsp;<a data-c-button="outline(c1)" data-c-radius="rounded" href="#changes" title="See {{ title }} changes.">Changelog</a>
             <h3 data-c-font-size="h4" data-c-margin="top(double)">Accessibility</h3>
-            {% for item in component.accessibility %}
-                <p data-c-margin="top(normal)">{{ item }}</p>
-            {% endfor %}
+            {% if component.accessibility == null %}
+                <p data-c-margin="top(normal)">A description of how this component is accessible is on its way!</p>
+            {% else %}
+                {% for item in component.accessibility %}
+                    <p data-c-margin="top(normal)">{{ item }}</p>
+                {% endfor %}
+            {% endif %}
         </div>
     </div>
 </div>

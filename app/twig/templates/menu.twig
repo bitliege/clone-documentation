@@ -77,34 +77,6 @@
     </div>
     <ul>
         {% set IDList = [] %}
-        {% for lvl1 in nav %}
-            {% set lvl1ID = lvl1.id %}
-            {% if component.id == lvl1ID %}
-                {% set IDList = IDList|merge([lvl1ID]) %}
-            {% else %}
-                {% if lvl1.submenu %}
-                    {% for lvl2 in lvl1.submenu %}
-                        {% set lvl2ID = lvl2.id %}
-                        {% if component.id == lvl2ID %}
-                            {% set IDList = IDList|merge([lvl1ID]) %}
-                            {% set IDList = IDList|merge([lvl2ID]) %}
-                        {% else %}
-                            {% if lvl2.submenu %}
-                                {% for lvl3 in lvl2.submenu %}
-                                    {% set lvl3ID = lvl3.id %}
-                                    {% if component.id == lvl3ID %}
-                                        {% set IDList = IDList|merge([lvl1ID]) %}
-                                        {% set IDList = IDList|merge([lvl2ID]) %}
-                                        {% set IDList = IDList|merge([lvl3ID]) %}
-                                    {% endif %}
-                                {% endfor %}
-                            {% endif %}
-                        {% endif %}
-                    {% endfor %}
-                {% endif %}
-            {% endif %}
-        {% endfor %}
-        {# {% for itemID in IDList %}{% if component.id == itemID %}class="active"{% endif %}{% endfor %} #}
         {% for topItem in nav %}
             <li {% for itemID in IDList %}{% if itemID == topItem.id %}class="active"{% endif %}{% endfor %}>
                 {% if topItem.hash %}

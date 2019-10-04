@@ -1,0 +1,83 @@
+<h2 data-c-font-size="h3" data-c-font-weight="600" data-c-colour="c1" data-c-margin="top(triple) bottom(normal)">Changelog</h2>
+
+{% for keyX, versionX in changes %}
+    {% for keyXX, versionXX in versionX.versions %}
+        {% for keyXXX, versionXXX in versionXX.versions %}
+            {% set titlePresence = true %}
+            {% for change in versionXXX.changes %}
+                {% if change.components is iterable %}
+                    {% for componentID in change.components %}
+                        {% if component.id == componentID %}
+                            {% if titlePresence == true %}
+                                <h4 data-c-font-size="h4" data-c-border="bottom(thin, solid, gray)" data-c-margin="top(double) bottom(normal)" data-c-padding="bottom(half)">Version {{ keyXXX }}</h4>
+                                <ul>
+                            {% endif %}
+                                {% include "component-version.twig" with {"key": keyXXX, titlePresence} %}
+                            {% set titlePresence = false %}
+                        {% endif %}
+                    {% endfor %}
+                {% else %}
+                    {% if component.id == change.components %}
+                        {% if titlePresence == true %}
+                            <h4 data-c-font-size="h4" data-c-border="bottom(thin, solid, gray)" data-c-margin="top(double) bottom(normal)" data-c-padding="bottom(half)">Version {{ keyXXX }}</h4>
+                            <ul>
+                        {% endif %}
+                            {% include "component-version.twig" with {"key": keyXXX, titlePresence} %}
+                            {% set titlePresence = false %}
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+            </ul>
+        {% endfor %}
+        {% set titlePresence = true %}
+        {% for change in versionXX.changes %}
+            {% if change.components is iterable %}
+                {% for componentID in change.components %}
+                    {% if component.id == componentID %}
+                        {% if titlePresence == true %}
+                            <h4 data-c-font-size="h4" data-c-border="bottom(thin, solid, gray)" data-c-margin="top(double) bottom(normal)" data-c-padding="bottom(half)">Version {{ keyXX }}</h4>
+                            <ul>
+                        {% endif %}
+                        {% include "component-version.twig" with {"key": keyXX, titlePresence} %}
+                        {% set titlePresence = false %}
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                {% if component.id == change.components %}
+                    {% if titlePresence == true %}
+                        <h4 data-c-font-size="h4" data-c-border="bottom(thin, solid, gray)" data-c-margin="top(double) bottom(normal)" data-c-padding="bottom(half)">Version {{ keyXX }}</h4>
+                        <ul>
+                    {% endif %}
+                    {% include "component-version.twig" with {"key": keyXX, titlePresence} %}
+                    {% set titlePresence = false %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+        </ul>
+    {% endfor %}
+    {% set titlePresence = true %}
+    {% for change in versionX.changes %}
+        {% if change.components is iterable %}
+            {% for componentID in change.components %}
+                {% if component.id == componentID %}
+                    {% if titlePresence == true %}
+                        <h4 data-c-font-size="h4" data-c-border="bottom(thin, solid, gray)" data-c-margin="top(double) bottom(normal)" data-c-padding="bottom(half)">Version {{ keyX }}</h4>
+                        <ul>
+                    {% endif %}
+                    {% include "component-version.twig" with {"key": keyX, titlePresence} %}
+                    {% set titlePresence = false %}
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            {% if component.id == change.components %}
+                {% if titlePresence == true %}
+                    <h4 data-c-font-size="h4" data-c-border="bottom(thin, solid, gray)" data-c-margin="top(double) bottom(normal)" data-c-padding="bottom(half)">Version {{ keyX }}</h4>
+                    <ul>
+                {% endif %}
+                {% include "component-version.twig" with {"key": keyX, titlePresence} %}
+                {% set titlePresence = false %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    </ul>
+{% endfor %}

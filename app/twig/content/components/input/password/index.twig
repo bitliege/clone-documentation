@@ -1,5 +1,5 @@
 {% extends "../../../../templates/layout.twig" %}
-{% set component = modelComponents.components.input.children.password %}
+{% set component = components.input.children.password %}
 {% block title %}{{ component.plural|title }}{% endblock %}
 {% block content %}
     {{ parent(component) }}

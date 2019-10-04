@@ -1,0 +1,433 @@
+{
+    "changes": {
+        "2.0.0": {
+            "changes": [
+                {
+                    "components": null,
+                    "notes": "Project beta."
+                }
+            ],
+            "versions": {
+                "2.4.0": {
+                    "changes": [
+                        {
+                            "components": null,
+                            "notes": "Removes jQuery and jQuery UI in favour of Cash."
+                        },
+                        {
+                            "components": "comCaro",
+                            "notes": "Removes Slick Carousel in favour of Glider.js."
+                        },
+                        {
+                            "components": "comBre",
+                            "notes": "Fixes the spacing on breadcrumb elements."
+                        }
+                    ],
+                    "versions": {
+                        "2.4.7": {
+                            "changes": [
+                                {
+                                    "components": "styFle",
+                                    "notes": "Fixed a bug where grids nested inside grid items that are set to equalized columns break because they aren't direct children."
+                                },
+                                {
+                                    "components": "comMen",
+                                    "notes": "Fixes a bug where the body element would be locked if the mobile menu was opened and then the screen was resized to desktop."
+                                },
+                                {
+                                    "components": [
+                                        "comInpRad",
+                                        "comInpChe"
+                                    ],
+                                    "notes": "Adds :opencursor: pointer:close to labels."
+                                }
+                            ]
+                        },
+                        "2.4.6": {
+                            "changes": [
+                                {
+                                    "components": "comDia",
+                                    "notes": "Fixes a bug with dialogs and the use of :open:scope:close in Internet Explorer 11."
+                                }
+                            ]
+                        },
+                        "2.4.5": {
+                            "changes": [
+                                {
+                                    "components": "comMen",
+                                    "notes": "Fixes line height of buttons in menus."
+                                },
+                                {
+                                    "components": [
+                                        "styCon",
+                                        "comMen"
+                                    ],
+                                    "notes": "Adds support for containers on menus (the :opendata-c-container:close attribute can be used on :opendata-c-menu:close elements and will style the nested :openul:close accordingly)."
+                                },
+                                {
+                                    "components": "comMen",
+                                    "notes": "Assigns a minimum width of :open25rem:close to submenus on topbar style menus."
+                                }
+                            ]
+                        },
+                        "2.4.4": {
+                            "changes": [
+                                {
+                                    "components": "comDia",
+                                    "notes": "Adds code that checks for a :opendata-c-dialog-focus:close element before trying to focus."
+                                }
+                            ]
+                        },
+                        "2.4.3": {
+                            "changes": [
+                                {
+                                    "components": "comBut",
+                                    "notes": "Fixes a bug with :openspan:closes inside buttons."
+                                }
+                            ]
+                        },
+                        "2.4.2": {
+                            "changes": [
+                                {
+                                    "components": "comBut",
+                                    "notes": "Fixes a bug introduced by :opendata-c-button=\"reset\":close where borders wouldn't show on regular buttons."
+                                }
+                            ]
+                        },
+                        "2.4.1": {
+                            "changes": [
+                                {
+                                    "components": "comDia",
+                                    "notes": "Fixes a missing :open>:close in the dialog code example."
+                                },
+                                {
+                                    "components": "comAcc",
+                                    "notes": [
+                                        "Removes forced borders from accordions in favor of the border property.",
+                                        "This also means the border colour variable for accordions has been removed."
+                                    ]
+                                },
+                                {
+                                    "components": "comBre",
+                                    "notes": "Updates breadcrumbs to support :openspan:close and :openp:close as the :openaria-current:close element."
+                                },
+                                {
+                                    "components": "comBut",
+                                    "notes": [
+                                        "Updates buttons to require a :openspan:close if using an icon.",
+                                        "This also allows icons on either side of the button's content."
+                                    ]
+                                },
+                                {
+                                    "components": "comBut",
+                                    "notes": "Fixed line height of icons inside buttons."
+                                },
+                                {
+                                    "components": "comBut",
+                                    "notes": [
+                                        "Adds :opendata-c-button=\"reset\":close to allow for buttons that don't need generic button styling.",
+                                        "This removes borders, backgrounds, and adds a :opencursor: pointer;:close value."
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                },
+                "2.3.0": {
+                    "changes": [
+                        {
+                            "components": null,
+                            "notes": null
+                        }
+                    ],
+                    "versions": {
+                        "2.3.15": {
+                            "changes": [
+                                {
+                                    "components": "comMen",
+                                    "notes": "Removes code that focuses the first element on the menu when it opens on mobile devices in favour of keeping the open/close button focused."
+                                },
+                                {
+                                    "components": "styWhi",
+                                    "notes": "Adds support for :openauto:close to :opendata-c-margin=\"tb\":close and :opendata-c-margin=\"rl\":close."
+                                },
+                                {
+                                    "components": "comDia",
+                                    "notes": "Fixes a bug with dialogs popping out of place when closed on certain screen widths."
+                                }
+                            ]
+                        },
+                        "2.3.14": {
+                            "changes": [
+                                {
+                                    "components": "comMen",
+                                    "notes": "Fixes a bug where the menu locks the body overflow on mobile devices."
+                                }
+                            ]
+                        },
+                        "2.3.13": {
+                            "changes": [
+                                {
+                                    "components": null,
+                                    "notes": "Includes jQuery and a minified build of jQuery UI to reduce dependency size."
+                                }
+                            ]
+                        },
+                        "2.3.12": {
+                            "changes": [
+                                {
+                                    "components": "comAle",
+                                    "notes": "Changes the markup of alerts to better support floated close buttons."
+                                },
+                                {
+                                    "components": "comDia",
+                                    "notes": "Fixes z-index layering of dialogs over the new menus."
+                                },
+                                {
+                                    "components": null,
+                                    "notes": "Adds test folder for components that are regularly modified/tested."
+                                },
+                                {
+                                    "components": [
+                                        "comAcc",
+                                        "comAle",
+                                        "comCaro"
+                                    ],
+                                    "notes": "Updates pieces of accordions, alerts, carousels so that their data attributes are specific instead of values."
+                                },
+                                {
+                                    "components": null,
+                                    "notes": "Reviewed all code that exists outside of :opendata-clone:close to ensure minimal consequences of importing the system into existing projects."
+                                }
+                            ]
+                        },
+                        "2.3.11": {
+                            "changes": [
+                                {
+                                    "components": null,
+                                    "notes": "Fixes hover bugs on touch devices."
+                                },
+                                {
+                                    "components": "comTag",
+                                    "notes": "Fixes hover colour on tags."
+                                }
+                            ]
+                        },
+                        "2.3.10": {
+                            "changes": [
+                                {
+                                    "components": "comMen",
+                                    "notes": [
+                                        "Adds customizable, responsive menus to Clone",
+                                        "Menus can be topbars or sidebars, and support up to 5 nested submenus in the :openul:close structure.",
+                                        "New variables have been added to facilitate cutomizing the menu."
+                                    ]
+                                },
+                                {
+                                    "components": null,
+                                    "notes": "Moved Sass functions outside of the :open[data-clone]:close attribute."
+                                },
+                                {
+                                    "components": null,
+                                    "notes": "Adds light, default, and dark hover variables to account for colour disparity when the hover colour matches a background colour."
+                                },
+                                {
+                                    "components": "comInp",
+                                    "notes": "Fixes inheritance bugs in inputs."
+                                },
+                                {
+                                    "components": "comBut",
+                                    "notes": "Fixes a bug with icon font size in buttons."
+                                }
+                            ]
+                        },
+                        "2.3.9": {
+                            "changes": [
+                                {
+                                    "components": null,
+                                    "notes": "Migrates :open.html:close files to :open.twig:close files."
+                                },
+                                {
+                                    "components": [
+                                        "styCol",
+                                        "styTyp"
+                                    ],
+                                    "notes": "Fixes quite a few inheritance bugs for colour, font, weight, etc."
+                                },{
+                                    "components": null,
+                                    "notes": "Reduces redundancy in a few utility SCSS functions."
+                                }
+                            ]
+                        },
+                        "2.3.8": {
+                            "changes": [
+                                {
+                                    "components": "styFle",
+                                    "notes": "Fixes a bug with grid elements missing :opencalc:close."
+                                },
+                                {
+                                    "components": null,
+                                    "notes": "Adds a new pen folder in dist to test CodePen Integration."
+                                },
+                                {
+                                    "components": "styTyp",
+                                    "notes": "Adds :openmonospace:close alternative to :openmono:close for :opendata-c-font:close."
+                                }
+                            ]
+                        },
+                        "2.3.7": {
+                            "changes": [
+                                {
+                                    "components": null,
+                                    "notes": "Fixes a bug with the :opendist:close file nomenclature (:open.min.:close was missing)."
+                                }
+                            ]
+                        },
+                        "2.3.6": {
+                            "changes": [
+                                {
+                                    "components": null,
+                                    "notes": "Revamped :open.gulpfile:close to be more explicit and use modern methods for autoprefixer and cssnano."
+                                },
+                                {
+                                    "components": null,
+                                    "notes": "Fixed the :openindex.html:close link to point to new URL."
+                                },
+                                {
+                                    "components": null,
+                                    "notes": "Migrated layouts to a more logical nomenclature (:openlarge:close, :openmedium:close, :opensmall:close) - support for :openlayout:close, :openform:close, and :opencopy:close continues."
+                                },
+                                {
+                                    "components": "comCar",
+                                    "notes": "Creates a variable to control :opendata-c-card:close's box shadow."
+                                },
+                                {
+                                    "components": "styBor",
+                                    "notes": "Adds support for top/bottom (:opentb:close) and right/left (:openrl, lr:close) to borders."
+                                },
+                                {
+                                    "components": "comDia",
+                                    "notes": "Fixes a few spacing issues with dialog headers."
+                                },
+                                {
+                                    "components": "styTyp",
+                                    "notes": "Fixes a bug with :opendata-c-font-style:close not working with the :openunderline:close value."
+                                }
+                            ]
+                        },
+                        "2.3.5": {
+                            "changes": [
+                                {
+                                    "components": "comDia",
+                                    "notes": "Adds :opendata-c-dialog-focus:close to allow for customization of which element gets focused first when a dialog is opened."
+                                }
+                            ]
+                        },
+                        "2.3.4": {
+                            "changes": [
+                                {
+                                    "components": "comCar",
+                                    "notes": "Adds :opendata-c-card:close to add reusable box shadows."
+                                },
+                                {
+                                    "components": "styWhi",
+                                    "notes": "Adds top/bottom, left/right shortcuts for margins and padding (:opendata-c-margin=\"tb(double)\":close)."
+                                },
+                                {
+                                    "components": "styAli",
+                                    "notes": "Adds shorthand for :opendata-c-align:close."
+                                },
+                                {
+                                    "components": "comTag",
+                                    "notes": "Adds support for :opendata-c-tag:close (still needs documentation)."
+                                },
+                                {
+                                    "components": null,
+                                    "notes": "Changes Brave to a more cohesive theme."
+                                },
+                                {
+                                    "components": "styWhi",
+                                    "notes": [
+                                        "Removes :opendisplay: block:close from :opendata-c-margin/padding:close",
+                                        "This required updates to accordion and dialog subtitles (:openspan:close -> :openp:close)."
+                                    ]
+                                },
+                                {
+                                    "components": "comCaro",
+                                    "notes": "Adds variables to customize carousel colours."
+                                },
+                                {
+                                    "components": "styTyp",
+                                    "notes": "Fixes font scale to use custom variable."
+                                }
+                            ]
+                        },
+                        "2.3.3": {
+                            "changes": [
+                                {
+                                    "components": "comAle",
+                                    "notes": "Fixes a bug with toast alerts on mobile not displaying correctly."
+                                }
+                            ]
+                        },
+                        "2.3.2": {
+                            "changes": [
+                                {
+                                    "components": "comAcc",
+                                    "notes": "Fixes a bug with accordion alternating colours being too light."
+                                },
+                                {
+                                    "components": "comCaro",
+                                    "notes": "Fixes a bug where carousel active dots would be the same colour as inactive ones."
+                                }
+                            ]
+                        },
+                        "2.3.1": {
+                            "changes": [
+                                {
+                                    "components": null,
+                                    "notes": "Began playing with Clone's default theme, Brave (please note that this will continue to change)."
+                                },
+                                {
+                                    "components": null,
+                                    "notes": "Default variable file has been reworked to be more informative and structured."
+                                },
+                                {
+                                    "components": "styCol",
+                                    "notes": "Added a variable for visited link colour."
+                                },
+                                {
+                                    "components": "styCol",
+                                    "notes": "Added :opengray:close as a colour option."
+                                },
+                                {
+                                    "components": "styTyp",
+                                    "notes": "Added a regular utility argument for font size."
+                                },
+                                {
+                                    "components": "comInp",
+                                    "notes": "Modified the file structure for inputs."
+                                },
+                                {
+                                    "components": [
+                                        "comInp",
+                                        "styFle"
+                                    ],
+                                    "notes": "Fixed a bug where inputs were breaking outside of grids."
+                                },
+                                {
+                                    "components": "comBre",
+                                    "notes": "Removed pointer events from the active breadcrumb."
+                                },
+                                {
+                                    "components": "comTab",
+                                    "notes": "Added a variable for alternating table row colour."
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

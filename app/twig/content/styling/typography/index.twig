@@ -1,5 +1,5 @@
 {% extends "../../../templates/layout.twig" %}
-{% set component = modelStyles.styles.typography %}
+{% set component = styles.typography %}
 {% block title %}{{ component.title|title }}{% endblock %}
 {% block content %}
     {{ parent(component) }}
@@ -113,5 +113,6 @@ italic
 underline</script></code></pre>
             </div>
         </div>
+        {% include "../../../templates/changes.twig" with {component} %}
     </div>
 {% endblock %}

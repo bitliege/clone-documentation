@@ -1,0 +1,39 @@
+<ul>
+    {% for change in version.changes %}
+        <li>
+            {% if change.components is null %}
+                {# nothing #}
+            {% else %}
+                {% set last = true %}
+                {% if change.components is iterable %}
+                    {% set last = false %}
+                    {% for component in change.components %}
+                        {% if loop.last %}
+                            {% set last = true %}
+                        {% endif %}
+                        {% include "components.twig" with {"component": component, last} %}
+                    {% endfor %}
+                {% else %}
+                    {% include "components.twig" with {"component": change.components, last} %}
+                {% endif %}&nbsp;-&nbsp;
+            {% endif %}
+            {% if change.notes is iterable %}
+                {{ change.notes[0]|replace({":open": "<code>", ":close": "</code>"}) }}
+                <ul>
+                    {% for note in change.notes %}
+                        {% if note == change.notes[0] %}
+                            {# nothing #}
+                        {% else %}
+                            <li>{{ note|replace({":open": "<code>", ":close": "</code>"}) }}</li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            {% else %}
+                {{ change.notes|replace({":open": "<code>", ":close": "</code>"}) }}
+            {% endif %}
+            {% if change.notes is null %}
+                Version notes were not prepared at this time.
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

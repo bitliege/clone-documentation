@@ -1,5 +1,5 @@
 {% extends "../../../../templates/layout.twig" %}
-{% set component = modelComponents.components.input.children.textWithButton %}
+{% set component = components.input.children.textWithButton %}
 {% block title %}{{ component.plural|title }}{% endblock %}
 {% block content %}
     {{ parent(component) }}

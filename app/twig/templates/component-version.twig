@@ -1,0 +1,16 @@
+{% if change.notes is iterable %}
+    <li>
+        {{ change.notes[0]|replace({":open": "<code>", ":close": "</code>"}) }}
+        <ul>
+            {% for note in change.notes %}
+                {% if note == change.notes[0] %}
+                    {# nothing #}
+                {% else %}
+                    <li>{{ note|replace({":open": "<code>", ":close": "</code>"}) }}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </li>
+{% else %}
+    <li>{{ change.notes|replace({":open": "<code>", ":close": "</code>"}) }}</li>
+{% endif %}

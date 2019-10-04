@@ -1,5 +1,5 @@
 {% extends "../../../templates/layout.twig" %}
-{% set component = modelStyles.styles.colour %}
+{% set component = styles.colour %}
 {% block title %}{{ component.title|title }}{% endblock %}
 {% block content %}
     {{ parent(component) }}
@@ -170,5 +170,6 @@
                 </ul>
             </li>
         </ul>
+        {% include "../../../templates/changes.twig" with {component} %}
     </div>
 {% endblock %}

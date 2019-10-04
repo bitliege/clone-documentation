@@ -1,0 +1,19 @@
+{% for lvl1 in navigation %}
+    {% if component == lvl1.id %}
+        <a data-c-color="c1" href="{{ lvl1.hash }}" title="Visit the {{ lvl1.title }} page for more info." target="_blank">{{ lvl1.title|title }}</a>{% if last == true %}{% else %},{% endif %}
+    {% else %}
+        {% for lvl2 in lvl1.submenu %}
+            {% if component == lvl2.id %}
+                <a data-c-color="c1" href="{{ lvl2.hash }}" title="Visit the {{ lvl2.title }} page for more info." target="_blank">{{ lvl2.title|title }}</a>{% if last == true %}{% else %},{% endif %}
+            {% else %}
+                {% for lvl3 in lvl2.submenu %}
+                    {% if component == lvl3.id %}
+                        <a data-c-color="c1" href="{{ lvl3.hash }}" title="Visit the {{ lvl3.title }} page for more info." target="_blank">{{ lvl3.title|title }}</a>{% if last == true %}{% else %},{% endif %}
+                    {% else %}
+                        {# nothing #}
+                    {% endif %}
+            {% endfor %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endfor %}

@@ -1,5 +1,5 @@
 {% extends "../../../templates/layout.twig" %}
-{% set component = modelComponents.components.alert %}
+{% set component = components.alert %}
 {% block title %}{{ component.plural|title }}{% endblock %}
 {% block content %}
     {{ parent(component) }}

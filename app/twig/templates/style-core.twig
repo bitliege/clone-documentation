@@ -8,5 +8,6 @@
         <span id="examples"></span>
         <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-colour="c1" data-c-margin="top(triple) bottom(normal)">In Practice</h2>
         {% include "../content/styling/" ~ component.element ~ "/examples.twig" %}
+        {% include "changes.twig" with {component} %}
     {% endif %}
 </div>

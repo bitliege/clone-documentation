@@ -1,5 +1,5 @@
 {% extends "../../../templates/layout.twig" %}
-{% set component = modelStyles.styles.flexboxGrid %}
+{% set component = styles.flexboxGrid %}
 {% block title %}{{ component.title|title }}{% endblock %}
 {% block content %}
     {{ parent(component) }}
@@ -172,5 +172,6 @@ using the $clone-grid-columns variable.</code></pre>
                 </div>
             </div>
         </div>
+        {% include "../../../templates/changes.twig" with {component} %}
     </div>
 {% endblock %}

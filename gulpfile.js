@@ -13,6 +13,7 @@
 // Requirements ================================================================
 const gulp = require('gulp');
 const { series, parallel, src, dest, watch } = require('gulp');
+const gulpData = require('gulp-data');
 const sass = require('gulp-sass');
 const browsersync = require('browser-sync').create();
 const uglify = require('gulp-uglify');
@@ -23,9 +24,7 @@ const cssnano = require('cssnano');
 const del = require('del');
 const twig = require('gulp-twig');
 const htmlmin = require('gulp-htmlmin');
-var modelNavigation = require('./app/data/model-navigation.js');
-var modelComponents = require('./app/data/model-components.js');
-var modelStyles = require('./app/data/model-styles.js');
+const fs = require('fs');
 
 // Tasks =======================================================================
 
@@ -50,13 +49,19 @@ var modelStyles = require('./app/data/model-styles.js');
     // Twig
     function template() {
         return src('app/twig/*.twig')
-        .pipe(twig({
-            data: {
-                modelNavigation,
-                modelComponents,
-                modelStyles
-            }
+        .pipe(gulpData(function(file) {
+            return JSON.parse(fs.readFileSync('./app/data/model-navigation.json'));
         }))
+        .pipe(gulpData(function(file) {
+            return JSON.parse(fs.readFileSync('./app/data/model-components.json'));
+        }))
+        .pipe(gulpData(function(file) {
+            return JSON.parse(fs.readFileSync('./app/data/model-styles.json'));
+        }))
+        .pipe(gulpData(function(file) {
+            return JSON.parse(fs.readFileSync('./app/data/model-changes.json'));
+        }))
+        .pipe(twig())
         .pipe(htmlmin({
             collapseWhitespace: true,
             removeComments: true
@@ -66,13 +71,19 @@ var modelStyles = require('./app/data/model-styles.js');
 
     function templateContent() {
         return src('app/twig/content/**/index.twig')
-        .pipe(twig({
-            data: {
-                modelNavigation,
-                modelComponents,
-                modelStyles
-            }
+        .pipe(gulpData(function(file) {
+            return JSON.parse(fs.readFileSync('./app/data/model-navigation.json'));
         }))
+        .pipe(gulpData(function(file) {
+            return JSON.parse(fs.readFileSync('./app/data/model-components.json'));
+        }))
+        .pipe(gulpData(function(file) {
+            return JSON.parse(fs.readFileSync('./app/data/model-styles.json'));
+        }))
+        .pipe(gulpData(function(file) {
+            return JSON.parse(fs.readFileSync('./app/data/model-changes.json'));
+        }))
+        .pipe(twig())
         .pipe(htmlmin({
             collapseWhitespace: true,
             removeComments: true
@@ -217,7 +228,7 @@ var modelStyles = require('./app/data/model-styles.js');
         watch('app/scss/**/*.scss', series(quickCompile, browserSyncReload));
         watch('app/twig/**/*.twig', series(quickCompile, browserSyncReload));
         watch('app/js/*.js', series(quickCompile, browserSyncReload));
-        watch('app/data/*.js', series(quickCompile, browserSyncReload));
+        watch('app/data/*.json', series(quickCompile, browserSyncReload));
     }
 
     // Export

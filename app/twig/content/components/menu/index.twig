@@ -1,5 +1,5 @@
 {% extends "../../../templates/layout.twig" %}
-{% set component = modelComponents.components.menu %}
+{% set component = components.menu %}
 {% block title %}{{ component.plural|title }}{% endblock %}
 {% block content %}
     {{ parent(component) }}
@@ -210,19 +210,6 @@ $clone-submenu-background-colour: orange; // Submenu background colour - this co
 $clone-menu-font-colour: white; // The main menu's font colour - submenu font colour is handled programatically based on the background colour you've selected.
 $clone-menu-divider-colour: rgba(orange, .5); //  The colour of the dividers in the main menu - dividers in submenus are programatically handled.
 $clone-menu-icon-colour: white; //  The colour of the icons in the main menu - icons in submenus are programatically handled.{% endfilter %}</code></pre>
-        <span id="changes"></span>
-        <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-colour="c1" data-c-margin="top(triple) bottom(normal)">Changelog</h2>
-        {% if component.changes is empty %}
-            <p>Coming Soon!</p>
-        {% else %}
-            {% for version in component.changes|reverse %}
-                <h3 data-c-font-size="h4" data-c-margin="top(double)">Version {{ version.version }}</h3>
-                <ul data-c-margin="top(normal)">
-                    {% for change in version.items %}
-                        <li>{{ change }}</li>
-                    {% endfor %}
-                </ul>
-            {% endfor %}
-        {% endif %}
+        {% include "../../../templates/changes.twig" with {component} %}
     </div>
 {% endblock %}

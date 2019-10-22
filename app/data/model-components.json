@@ -157,6 +157,19 @@
                     ],
                     "children": {}
                 },
+                "date": {
+                    "id": "comInpDat",
+                    "title": "date",
+                    "plural": "dates",
+                    "element": "date",
+                    "description": [
+                        "Coming Soon!"
+                    ],
+                    "accessibility": [
+                        "Coming Soon!"
+                    ],
+                    "children": {}
+                },
                 "dropdown": {
                     "id": "comInpDro",
                     "title": "dropdown",

@@ -24,6 +24,22 @@
                         }
                     ],
                     "versions": {
+                        "2.4.8": {
+                            "changes": [
+                                {
+                                    "components": "comAle",
+                                    "notes": "Changed the title element in alert example code to be a paragraph so that it would respect block level styles."
+                                },
+                                {
+                                    "components": "comInpDro",
+                                    "notes": "Fixed a bug where the arrow icon in dropdowns was sometimes positioned behind the input."
+                                },
+                                {
+                                    "components": null,
+                                    "notes": "Fixed an issue where date input content wasn't showing up."
+                                }
+                            ]
+                        },
                         "2.4.7": {
                             "changes": [
                                 {

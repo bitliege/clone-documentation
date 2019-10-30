@@ -19,14 +19,24 @@
             <div data-c-grid-item="base(1of1) tl(1of2)">
                 <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-colour="c1">Code Snippet</h2>
             </div>
-            <div data-c-grid-item="base(1of1) tl(1of2)" data-c-align="tl(right)">
-                <button data-c-button="outline(c1)" data-c-radius="rounded" data-docs-copy-code-trigger="code">
-                    <span aria-hidden="false">Copy Code</span><span style="display: none;" aria-hidden="true">Copied!</span>
-                </button>
-            </div>
+            {% if component.title == "checkbox" %}
+                
+            {% else %}
+                <div data-c-grid-item="base(1of1) tl(1of2)" data-c-align="tl(right)">
+                    <button data-c-button="outline(c1)" data-c-radius="rounded" data-docs-copy-code-trigger="code">
+                        <span aria-hidden="false">Copy Code</span><span style="display: none;" aria-hidden="true">Copied!</span>
+                    </button>
+                </div>
+            {% endif %}
         </div>
         <div data-c-margin="top(normal)" data-docs-code="code">
-            {% include "../templates/accordion.twig" with {'title': 'View ' ~ component.title|title ~ ' Code', 'element': parent ~ component.element} %}
+            {% if component.title == "checkbox" %}
+                {% include "../templates/accordion.twig" with {'title': 'View Checkbox (Single) Code', 'element': parent ~ 'checkbox-single'} %}
+                <br>
+                {% include "../templates/accordion.twig" with {'title': 'View Checkbox (Group) Code', 'element': parent ~ component.element} %}
+            {% else %}
+                {% include "../templates/accordion.twig" with {'title': 'View ' ~ component.title|title ~ ' Code', 'element': parent ~ component.element} %}
+            {% endif %}
         </div>
         {% if component %}
             <span id="details"></span>

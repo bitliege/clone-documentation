@@ -24,6 +24,40 @@
                         }
                     ],
                     "versions": {
+                        "2.4.9": {
+                            "changes": [
+                                {
+                                    "components": "styHor",
+                                    "notes": "Added support for custom horizontal rules."
+                                },
+                                {
+                                    "components": "comDia",
+                                    "notes": [
+                                        "Fixed a bug where dialogs wouldn't size properly if they were close to the viewport's height in size."
+                                    ]
+                                },
+                                {
+                                    "components": "comDia",
+                                    "notes": [
+                                        "Added a bottom margin to dialogs so that they have a buffer of whitespace."
+                                    ]
+                                },
+                                {
+                                    "components": "comInpTel",
+                                    "notes": [
+                                        "Added support for telephone number inputs."
+                                    ]
+                                },
+                                {
+                                    "components": "comInpChe",
+                                    "notes": [
+                                        "Added support for single checkboxes.",
+                                        "This means that single and group checkboxes are distinguished using () syntax. Please see the component page for more details.",
+                                        "This change will not break checkboxes already in production."
+                                    ]
+                                }
+                            ]
+                        },
                         "2.4.8": {
                             "changes": [
                                 {

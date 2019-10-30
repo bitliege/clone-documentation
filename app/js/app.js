@@ -153,6 +153,12 @@
             $temp.val(content).select();
             document.execCommand("copy");
             $temp.remove();
+            $(trigger).find("span:first-child").hide();
+            $(trigger).find("span:last-child").show();
+            setTimeout(function() {
+                $(trigger).find("span:first-child").show();
+                $(trigger).find("span:last-child").hide();
+            }, 1500);
         }
 
         $(document).on("click", "[data-docs-copy-code-trigger]", function(e) {

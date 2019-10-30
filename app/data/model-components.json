@@ -235,6 +235,19 @@
                     ],
                     "children": {}
                 },
+                "telephone": {
+                    "id": "comInpTel",
+                    "title": "telephone number",
+                    "plural": "telephone numbers",
+                    "element": "telephone",
+                    "description": [
+                        "Telephone inputs are used to collect telephone number type data. They can use the pattern attribute to require a specific format if necessary."
+                    ],
+                    "accessibility": [
+                        "Coming Soon!"
+                    ],
+                    "children": {}
+                },
                 "text": {
                     "id": "comInpTex",
                     "title": "text input",

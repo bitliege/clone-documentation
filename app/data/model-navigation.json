@@ -183,6 +183,19 @@
                     ]
                 },
                 {
+                    "id": "styHor",
+                    "title": "Horizontal Rules",
+                    "hash": "/styling/horizontal-rule",
+                    "terms": [
+                        "styling",
+                        "utility",
+                        "utilities",
+                        "hr",
+                        "horizontal rule",
+                        "divider"
+                    ]
+                },
+                {
                     "id": "styWhi",
                     "title": "Margins & Padding",
                     "hash": "/styling/whitespace",
@@ -492,6 +505,17 @@
                                 "components",
                                 "inputs",
                                 "radios"
+                            ]
+                        },
+                        {
+                            "id": "comInpTel",
+                            "title": "telephone numbers",
+                            "hash": "/components/input/telephone",
+                            "terms": [
+                                "components",
+                                "inputs",
+                                "telephone numbers",
+                                "mobile device"
                             ]
                         },
                         {

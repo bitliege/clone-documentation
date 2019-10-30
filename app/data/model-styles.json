@@ -68,13 +68,25 @@
             ],
             "usage": []
         },
+        "horizontalRule": {
+            "id": "styHor",
+            "title": "horizontal rule",
+            "plural": "horizontal rules",
+            "element": "horizontal-rule",
+            "description": [
+                "Horizontal rules are a great way to add clear visual distinction between sections of information. Clone allows for minimal thickness and colour variation to ensure rules can be customized to meet your theme."
+            ],
+            "usage": [
+                "<hr data-c-hr=\"WIDTH(COLOR)\">"
+            ]
+        },
         "radius": {
             "id": "styRad",
             "title": "radius",
             "plural": "radii",
             "element": "radius",
             "description": [
-                "This attribute allows you to rounde the corners of an element using two different styles: slightly rounded, and pill (which rounds them entirely). It should be noted that this attribute will force the element into having overflow: hidden;"
+                "This attribute allows you to round the corners of an element using two different styles: slightly rounded, and pill (which rounds them entirely). It should be noted that this attribute will force the element into having overflow: hidden;"
             ],
             "usage": [
                 "<div data-c-radius=\"STYLE\"></div>"

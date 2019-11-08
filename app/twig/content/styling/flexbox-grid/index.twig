@@ -33,21 +33,40 @@
             <p data-c-margin="bottom">Clone is built with a customizable grid that defaults to a 12 column layout. You can modify this number of columns by changing the <code class="language-scss">{% filter escape %}$clone-grid-columns{% endfilter %}</code> variable.</p>
             <p data-c-margin="bottom">Using the flexbox grid consists of two parts: the grid wrapper and grid items. The grid wrapper allows you to customize the vertical alignment of the items inside, as well as whether you'd like the grid items to be separated by whitespace (AKA a gutter).</p>
             <p data-c-margin="bottom">Items inside the grid always default to a full, single column until you tell them otherwise using a media query and grid value. This means you can build grids with 1, 2, 3 ... to 12 columns using an <code class="language-md">{% filter escape %}XOFY{% endfilter %}</code> structure (e.g. <code class="language-html">{% filter escape %}<div data-c-grid-item="base(1of1) tp(1of2) tl(1of3)"></div>{% endfilter %}</code>). This grid item will be full width on all devices below portrait orientation tablets, at which point it switches to 50% of the width. When the device is a tablet in landscape orientation, the column shrinks further to be 33.33% of the width.</p>
-            <p data-c-margin="bottom">Usage (Grid Wrapper): <code class="language-html">{% filter escape %}<div data-c-grid="OPTIONS"></div>{% endfilter %}</code></p>
-            <p data-c-margin="bottom">Usage (Grid Items): <code class="language-html">{% filter escape %}<div data-c-grid-item="MEDIA(XOFY)"></div>{% endfilter %}</code></p>
             <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-colour="c1" data-c-margin="top(triple) bottom(normal)">Available Arguments</h2>
+            <h3 data-c-font-size="h4" data-c-border="bottom(thin, solid, gray)" data-c-margin="top(double) bottom(normal)" data-c-padding="bottom(half)">Grid Component</h3>
+            <p data-c-margin="bottom">Usage: <code class="language-html">{% filter escape %}<div data-c-grid="OPTIONS"></div>{% endfilter %}</code></p>
             <div data-c-grid="gutter">
-                <div data-c-grid-item="equal-col tl(1of3)">
-                    <pre><code class="language-md"># OPTIONS (Grid Wrapper)
+                <div data-c-grid-item="equal-col tl(1of2)">
+                    <pre><code class="language-md"># OPTIONS
 
 top
 middle
 bottom
-
-gutter (adds whitespace between items)</code></pre>
+gutter(ORIENTATION, VALUE)</code></pre>
                 </div>
-                <div data-c-grid-item="equal-col tl(1of3)">
-                    <pre><code class="language-md"># MEDIA (Grid Item)
+                <div data-c-grid-item="equal-col tl(1of2)">
+                    <pre><code class="language-md"># GUTTER ORIENTATION
+                    
+all
+vertical
+horizontal
+
+# GUTTER VALUE
+
+.25
+.5
+1
+2
+3
+4</code></pre>
+                </div>
+            </div>
+            <h3 data-c-font-size="h4" data-c-border="bottom(thin, solid, gray)" data-c-margin="top(double) bottom(normal)" data-c-padding="bottom(half)">Grid Items</h3>
+            <p data-c-margin="bottom">Usage: <code class="language-html">{% filter escape %}<div data-c-grid-item="MEDIA(XOFY)"></div>{% endfilter %}</code></p>
+            <div data-c-grid="gutter">
+                <div data-c-grid-item="equal-col tl(1of2)">
+                    <pre><code class="language-md"># MEDIA
 
 base
 pp (Phone - Portrait)
@@ -58,8 +77,8 @@ ds (Desktop - Small)
 dm (Desktop - Medium)
 dl (Desktop - Large)</code></pre>
                 </div>
-                <div data-c-grid-item="equal-col tl(1of3)">
-                    <pre><code class="language-md"># XOFY (Grid Item)
+                <div data-c-grid-item="equal-col tl(1of2)">
+                    <pre><code class="language-md"># XOFY
 
 Clone defaults to a 12 column grid, e.g.
 1of3 (33%)

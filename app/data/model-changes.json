@@ -24,6 +24,37 @@
                         }
                     ],
                     "versions": {
+                        "2.4.10": {
+                            "changes": [
+                                {
+                                    "components": "comInpDat",
+                                    "notes": "Added a placeholder to help with backwards compatibility for date fields in IE11 and Safari."
+                                },
+                                {
+                                    "components": null,
+                                    "notes": "Updates whitespace variables to be more granular - they now change at each media query instead of just portrait tablets and large desktops."
+                                },
+                                {
+                                    "components": [
+                                        "styWhi",
+                                        "styFle"
+                                    ],
+                                    "notes": [
+                                        "Began deprecation of word-based values to represent space in favor of numeric values.",
+                                        ":openquarter -> .25:close",
+                                        ":openhalf -> .5:close",
+                                        ":opennormal -> 1:close",
+                                        ":opendouble -> 2:close",
+                                        ":opentriple -> 3:close",
+                                        "Also introduces :open4:close."
+                                    ]
+                                },
+                                {
+                                    "components": "styFle",
+                                    "notes": "Updated gutter syntax to allow for more granular control over the gutter value (it uses the new numeric value above)."
+                                }
+                            ]
+                        },
                         "2.4.9": {
                             "changes": [
                                 {

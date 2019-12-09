@@ -12,18 +12,15 @@
             role="alert">
             <div data-c-padding="half">
             <!-- This title/icon span is optional. -->
-                <span
-                    data-c-margin="bottom(quarter)"
-                    data-c-heading="h5"
-                    data-c-font-weight="bold">
+                <p data-c-margin="bottom(.5)" data-c-font-weight="bold">
                     <i
                         aria-hidden="true"
                         class="material-icons">
                         star
                     </i>
                     Just a heads up!
-                </span>
-                <p data-c-margin="bottom(quarter)">We're actively looking for feedback!</p>
+                </p>
+                <p data-c-margin="bottom(.5)">We're actively looking for feedback!</p>
                 <p>
                     Menus are currently experimental and are undergoing a phase of user testing. We want to make sure Clone provides a simple, yet accessible and user-friendly solution to how menus are handled. It is likely that menus will change in the future, so please use them at your own discretion. All changes made to menus will be <a href="https://github.com/joshdrink/clone-framework/blob/master/README.md" title="View Clone's changelog." target="_blank">noted in the changelog over on Github</a>.
                 </p>
@@ -49,20 +46,13 @@
         </ul>
 
         <a id="menu-choice"></a>
-        <h2
-            data-c-font-size="h3"
-            data-c-colour="c1"
-            data-c-font-weight="600"
-            data-c-padding="top(double)"
-            data-c-margin="bottom(normal)">
+        <h2 data-c-heading="h2" data-c-padding="top(double)" data-c-margin="bottom(normal)">
             Choosing Your Menu
         </h2>
 
         <p>Clone offers two menu layouts that can be used under different circumstances. Both menus automatically respond and collapse to a functional mobile menu on smaller devices.</p>
 
-        <h3 
-            data-c-font-size="h4"
-            data-c-margin="top(double) bottom(normal)">
+        <h3 data-c-heading="h3" data-c-margin="top(2) bottom(1)" data-c-padding="bottom(1)">
             Topbar
         </h3>
 
@@ -72,9 +62,7 @@
             <img src="/img/menus/topbar.png" alt="A preview of the topbar style menu.">
         </a>
 
-        <h3 
-            data-c-font-size="h4"
-            data-c-margin="top(double) bottom(normal)">
+        <h3 data-c-heading="h3" data-c-margin="top(2) bottom(1)" data-c-padding="bottom(1)">
             Sidebar
         </h3>
 
@@ -84,9 +72,7 @@
             <img src="/img/menus/sidebar.png" alt="A preview of the sidebar style menu.">
         </a>
 
-        <h3 
-            data-c-font-size="h4"
-            data-c-margin="top(double) bottom(normal)">
+        <h3 data-c-heading="h3" data-c-margin="top(2) bottom(1)" data-c-padding="bottom(1)">
             Mobile
         </h3>
 
@@ -112,12 +98,7 @@
 
         <a id="menu-installation"></a>
 
-        <h2
-            data-c-font-size="h3"
-            data-c-colour="c1"
-            data-c-font-weight="600"
-            data-c-padding="top(triple)"
-            data-c-margin="bottom(normal)">
+        <h2 data-c-heading="h2" data-c-padding="top(3)" data-c-margin="bottom(1)">
             Installing Your Menu
         </h2>
 
@@ -126,10 +107,10 @@
         <p data-c-margin="bottom(normal)">To begin, we need to give the <code class="language-html">{% filter escape %}<body>{% endfilter %}</code> tag a unique <code class="language-html">{% filter escape %}data-c-menu-style{% endfilter %}</code> attribute to determine the menu's type:</p>
 
         <pre><code class="language-html">{% filter escape %}<!--Topbar Menus-->
-        <body data-clone data-c-menu-style="topbar">
+<body data-clone data-c-menu-style="topbar">
 
-        <!--Sidebar Menus-->
-        <body data-clone data-c-menu-style="sidebar">{% endfilter %}</code></pre>
+<!--Sidebar Menus-->
+<body data-clone data-c-menu-style="sidebar">{% endfilter %}</code></pre>
 
         <p data-c-margin="tb(normal)">Once this is done, you can move forward by installing the menu proper inside your <code class="language-html">{% filter escape %}<body>{% endfilter %}</code> element using the following markup:</p>
 
@@ -137,27 +118,17 @@
 
         <a id="menu-customization"></a>
 
-        <h2
-            data-c-font-size="h3"
-            data-c-colour="c1"
-            data-c-font-weight="600"
-            data-c-padding="top(triple)"
-            data-c-margin="bottom(normal)">
+        <h2 data-c-heading="h2" data-c-padding="top(3)" data-c-margin="bottom(1)">
             Customizing Your Menu
         </h2>
 
-        <h3 
-            data-c-font-size="h4"
-            data-c-margin="top(double) bottom(normal)">
+        <h3 data-c-heading="h3" data-c-margin="top(2) bottom(1)" data-c-padding="bottom(1)">
             Basic Properties
         </h3>
 
         <p>The <code class="language-html">{% filter escape %}data-c-menu-style{% endfilter %}</code> property can be customized using a few values to modify some basic properties. These properties depend on the type of menu you're implementing:</p>
 
-        <h4 
-            data-c-font-size="h5"
-            data-c-font-weight="700"
-            data-c-margin="top(double) bottom(normal)">
+        <h4 data-c-heading="h4" data-c-margin="top(double) bottom(normal)">
             Topbar Menus
         </h4>
 
@@ -183,10 +154,7 @@ data-c-menu data-c-container="small"
 data-c-menu data-c-container="medium"
 data-c-menu data-c-container="large"{% endfilter %}</code></pre>
 
-        <h4 
-            data-c-font-size="h5"
-            data-c-font-weight="700"
-            data-c-margin="top(double) bottom(normal)">
+        <h4 data-c-heading="h4" data-c-margin="top(double) bottom(normal)">
             Sidebar Menus
         </h4>
 
@@ -196,9 +164,7 @@ data-c-menu data-c-container="large"{% endfilter %}</code></pre>
 data-c-menu-style="sidebar(left)" <!-- The sidebar will appear on the left, with the website content on the right. -->
 data-c-menu-style="sidebar(right)" <!-- The sidebar will appear on the right, with the website content on the left. -->{% endfilter %}</code></pre>
 
-        <h3 
-            data-c-font-size="h4"
-            data-c-margin="top(triple) bottom(normal)">
+        <h3 data-c-heading="h3" data-c-margin="top(2) bottom(1)" data-c-padding="bottom(1)">
             Custom Colours
         </h3>
 

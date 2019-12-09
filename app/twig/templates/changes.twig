@@ -1,4 +1,4 @@
-<h2 data-c-font-size="h3" data-c-font-weight="600" data-c-colour="c1" data-c-margin="top(triple) bottom(normal)">Changelog</h2>
+<h2 data-c-heading="h2" data-c-margin="top(3) bottom(1)">Changelog</h2>
 
 {% set changePresence = false %}
 
@@ -11,7 +11,7 @@
                     {% for componentID in change.components %}
                         {% if component.id == componentID %}
                             {% if titlePresence == true %}
-                                <h4 data-c-font-size="h4" data-c-border="bottom(thin, solid, gray)" data-c-margin="top(double) bottom(normal)" data-c-padding="bottom(half)">Version {{ keyXXX }}</h4>
+                                <h3 data-c-heading="h3" data-c-margin="top(2) bottom(1)" data-c-padding="bottom(1)">Version {{ keyXXX }}</h3>
                                 <ul>
                             {% endif %}
                             {% set changePresence = true %}
@@ -22,7 +22,7 @@
                 {% else %}
                     {% if component.id == change.components %}
                         {% if titlePresence == true %}
-                            <h4 data-c-font-size="h4" data-c-border="bottom(thin, solid, gray)" data-c-margin="top(double) bottom(normal)" data-c-padding="bottom(half)">Version {{ keyXXX }}</h4>
+                            <h3 data-c-heading="h3" data-c-margin="top(2) bottom(1)" data-c-padding="bottom(1)">Version {{ keyXXX }}</h3>
                             <ul>
                         {% endif %}
                         {% set changePresence = true %}
@@ -39,7 +39,7 @@
                 {% for componentID in change.components %}
                     {% if component.id == componentID %}
                         {% if titlePresence == true %}
-                            <h4 data-c-font-size="h4" data-c-border="bottom(thin, solid, gray)" data-c-margin="top(double) bottom(normal)" data-c-padding="bottom(half)">Version {{ keyXX }}</h4>
+                            <h3 data-c-heading="h3" data-c-margin="top(2) bottom(1)" data-c-padding="bottom(1)">Version {{ keyXX }}</h3>
                             <ul>
                         {% endif %}
                         {% set changePresence = true %}
@@ -50,7 +50,7 @@
             {% else %}
                 {% if component.id == change.components %}
                     {% if titlePresence == true %}
-                        <h4 data-c-font-size="h4" data-c-border="bottom(thin, solid, gray)" data-c-margin="top(double) bottom(normal)" data-c-padding="bottom(half)">Version {{ keyXX }}</h4>
+                        <h3 data-c-heading="h3" data-c-margin="top(2) bottom(1)" data-c-padding="bottom(1)">Version {{ keyXX }}</h3>
                         <ul>
                     {% endif %}
                     {% set changePresence = true %}
@@ -67,7 +67,7 @@
             {% for componentID in change.components %}
                 {% if component.id == componentID %}
                     {% if titlePresence == true %}
-                        <h4 data-c-font-size="h4" data-c-border="bottom(thin, solid, gray)" data-c-margin="top(double) bottom(normal)" data-c-padding="bottom(half)">Version {{ keyX }}</h4>
+                        <h3 data-c-heading="h3" data-c-margin="top(2) bottom(1)" data-c-padding="bottom(1)">Version {{ keyX }}</h3>
                         <ul>
                     {% endif %}
                     {% set changePresence = true %}
@@ -78,7 +78,7 @@
         {% else %}
             {% if component.id == change.components %}
                 {% if titlePresence == true %}
-                    <h4 data-c-font-size="h4" data-c-border="bottom(thin, solid, gray)" data-c-margin="top(double) bottom(normal)" data-c-padding="bottom(half)">Version {{ keyX }}</h4>
+                    <h3 data-c-heading="h3" data-c-margin="top(2) bottom(1)" data-c-padding="bottom(1)">Version {{ keyX }}</h3>
                     <ul>
                 {% endif %}
                 {% set changePresence = true %}

@@ -17,7 +17,7 @@
     <div data-c-container="medium" data-c-padding="tb(triple)">
         <div data-c-grid="gutter middle">
             <div data-c-grid-item="base(1of1) tl(1of2)">
-                <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-colour="c1">Code Snippet</h2>
+                <h2 data-c-heading="h2">Code Snippet</h2>
             </div>
             {% if component.title == "checkbox" %}
                 
@@ -40,10 +40,10 @@
         </div>
         {% if component %}
             <span id="details"></span>
-            <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-colour="c1" data-c-margin="top(triple) bottom(normal)">Detailed Information</h2>
+            <h2 data-c-heading="h2" data-c-margin="top(triple) bottom(normal)">Detailed Information</h2>
             {% include "../content/components/" ~ parent ~ component.element ~ "/details.twig" %}
             <span id="examples"></span>
-            <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-colour="c1" data-c-margin="top(triple) bottom(normal)">Examples</h2>
+            <h2 data-c-heading="h2" data-c-margin="top(triple) bottom(normal)">Examples</h2>
             {% include "../content/components/" ~ parent ~ component.element ~ "/examples.twig" %}
             <span id="changes"></span>
             {% include "changes.twig" with {component} %}

@@ -8,12 +8,7 @@
     {{ parent(component) }}
     {% include "../../../templates/header.twig" with {component} %}
     <div data-c-container="medium" data-c-padding="bottom(triple)">
-        <h2
-            data-c-font-size="h3"
-            data-c-colour="c1"
-            data-c-font-weight="600"
-            data-c-padding="top(triple)"
-            data-c-margin="bottom(normal)">
+        <h2 data-c-heading="h2" data-c-padding="top(3)" data-c-margin="bottom(1)">
             Customizing Clone
         </h2>
         <div>
@@ -39,19 +34,15 @@ $clone-c1: #5B1647;
                 {% include "../../../templates/accordion.twig" with {'title': 'View Theme Variables', 'content': 'themeing'} %}
             </div>
         </div>
-        <h4
-            data-c-font-size="h4"
-            data-c-margin="top(double) bottom(normal)">
+        <h3 data-c-heading="h3" data-c-margin="top(2) bottom(1)" data-c-padding="bottom(1)">
             Pre-built Themes
-        </h4>
+        </h3>
         <div data-c-background="grey(10)" data-c-padding="all(normal)" data-c-margin="bottom(normal)">
             <div data-c-grid="gutter middle">
                 <div data-c-grid-item="tp(1of2)">
-                    <h5
-                        data-c-font-size="h5"
-                        data-c-font-weight="bold">
+                    <h4 data-c-heading="h4">
                         Brave Theme
-                    </h5>
+                    </h4>
                 </div>
                 <div data-c-grid-item="tp(1of2)" data-c-align="tp(right)">
                     <a href="/themes/brave/" title="Visit the Brave theme in a new browser tab." target="_blank">Preview Brave</a>
@@ -62,11 +53,9 @@ $clone-c1: #5B1647;
         <div data-c-background="grey(10)" data-c-padding="all(normal)" data-c-margin="bottom(normal)">
             <div data-c-grid="gutter middle">
                 <div data-c-grid-item="tp(1of2)">
-                    <h5
-                        data-c-font-size="h5"
-                        data-c-font-weight="bold">
+                    <h4 data-c-heading="h4">
                         Canada.ca Theme
-                    </h5>
+                    </h4>
                 </div>
                 <div data-c-grid-item="tp(1of2)" data-c-align="tp(right)">
                     <a href="/themes/canada/" title="Visit the Canada.ca theme in a new browser tab." target="_blank">Preview Canada.ca</a>
@@ -80,11 +69,9 @@ $clone-c1: #5B1647;
         <div data-c-background="grey(10)" data-c-padding="all(normal)">
             <div data-c-grid="gutter middle">
                 <div data-c-grid-item="tp(1of2)">
-                    <h5
-                        data-c-font-size="h5"
-                        data-c-font-weight="bold">
+                    <h4 data-c-heading="h4">
                         Talent Cloud Theme
-                    </h5>
+                    </h4>
                 </div>
                 <div data-c-grid-item="tp(1of2)" data-c-align="tp(right)">
                     <a href="/themes/talent-cloud/" title="Visit the Talent Cloud theme in a new browser tab." target="_blank">Preview Talent Cloud</a>

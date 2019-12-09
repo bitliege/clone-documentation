@@ -7,16 +7,15 @@
     {% include "../../../templates/style-description.twig" with {component} %}
     <div data-c-container="medium" data-c-padding="tb(triple)">
 
+        {# Font Family #}
         <span id="family"></span>
-        <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-margin="bottom(normal)" data-c-colour="c1">Font Family</h2>
-        <p data-c-margin="bottom"><code class="language-html">{% filter escape %}<div data-c-font="STYLE"></div>{% endfilter %}</code></p>
-        <p data-c-margin="bottom">This attribute allows you to assign a specific font-family to an element. Font family arguments can be customized using the variables found in the themeing section of the documentation.</p>
-        <h5 
-            data-c-font-size="h5"
-            data-c-font-weight="700"
-            data-c-margin="top(normal) bottom(normal)">
-            Available Arguments
-        </h5>
+        <h2 data-c-heading="h2" data-c-margin="bottom(normal)">Font Family</h2>
+        <p data-c-margin="bottom(1)">This attribute allows you to assign a specific font-family to an element. Font family arguments can be customized using the variables found in the themeing section of the documentation.</p>
+        <p data-c-margin="bottom(.5)" data-c-font-weight="bold">Usage:</p>
+        <p data-c-margin="bottom(1)"><code class="language-html">{% filter escape %}<div data-c-font="STYLE"></div>{% endfilter %}</code></p>
+        <p data-c-margin="bottom(.5)" data-c-font-weight="bold">Practical Example:</p>
+        <p data-c-margin="bottom(1)"><code class="language-html">{% filter escape %}<p data-c-font="serif"></p>{% endfilter %}</code></p>
+        <h3 data-c-heading="h3" data-c-margin="top(2) bottom(1)" data-c-padding="bottom(1)">Available Arguments</h3>
         <div data-c-grid="gutter">
             <div data-c-grid-item="equal-col base(1of1)">
                 <pre><code class="language-md"># STYLE
@@ -28,8 +27,9 @@ mono / monospace</script></code></pre>
             </div>
         </div>
 
+        {# Scale & Line Height #}
         <span id="scale"></span>
-        <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-margin="top(triple) bottom(normal)" data-c-colour="c1">Scale &amp; Line Height</h2>
+        <h2 data-c-heading="h2" data-c-margin="top(triple) bottom(normal)">Scale &amp; Line Height</h2>
         <p>Clone provides a built in means of controlling a typography scale based on a ratio. The system sets the base font to the user's default browser setting to begin with. By default, Clone uses a 1.333 scale for determining the size of the typography. This can be changed by modifying the <code class="language-scss">{% filter escape %}$clone-font-scale{% endfilter %}</code> variable. This scale appears as follows:</p>
         <h1 data-c-font-size="h1" data-c-margin="top(normal) bottom(normal)">Heading 01</h1>
         <h2 data-c-font-size="h2" data-c-margin="top(normal) bottom(normal)">Heading 02</h2>
@@ -38,7 +38,7 @@ mono / monospace</script></code></pre>
         <h5 data-c-font-size="h5" data-c-margin="top(normal) bottom(normal)">Heading 05</h5>
         <p data-c-font-size="normal" data-c-margin="top(normal) bottom(normal)">Paragraph Copy</p>
         <p data-c-font-size="small" data-c-margin="top(normal) bottom(normal)">Captions &amp; Labels</p>
-        <p data-c-margin="bottom(half)">Please note that this scale is not automatically applied to the heading elements and must be applied manually using the <code class="language-html">{% filter escape %} data-c-font-size="SIZE"{% endfilter %}</code> property. This is so that you can manually determine the appearance of a heading when the markup structure might dictate otherwise.</p>
+        <p data-c-margin="bottom(half)">Please note that this scale is not automatically applied to the heading elements and must be applied manually using the <code class="language-html">{% filter escape %} data-c-font-size="SIZE"{% endfilter %}</code> property. Headings can also be modified using the <code class="language-html">{% filter escape %} data-c-heading="HEADING"{% endfilter %}</code> attribute <a href="#headings" title="Learn more about the heading attribute.">described below</a>.</p>
         <div data-c-grid="gutter">
             <div data-c-grid-item="equal-col base(1of1)">
                 <pre><code class="language-md"># SIZE
@@ -54,11 +54,51 @@ small</script></code></pre>
         </div>
         <p data-c-margin="top(normal)">Line height defaults to 1.5, but can manually changed using the <code class="language-scss">{% filter escape %}$clone-line-height{% endfilter %}</code> variable.</p>
 
+        {# Headings #}
+        <span id="headings"></span>
+        <h2 data-c-heading="h2" data-c-margin="top(3) bottom(1)">Headings</h2>
+        <p data-c-margin="bottom(1)">This attribute allows you to assign consistent styles to an element that represents a heading. This attribute is designed in a way that it can be applied to any text element, but generally, it should be used to consistently style the headings in your project to ensure typographic consistency.</p>
+        <p data-c-margin="bottom(.5)" data-c-font-weight="bold">Usage:</p>
+        <p data-c-margin="bottom(1)"><code class="language-html">{% filter escape %}<h1 data-c-heading="HEADING"></h1>{% endfilter %}</code></p>
+        <p data-c-margin="bottom(.5)" data-c-font-weight="bold">Practical Example:</p>
+        <p data-c-margin="bottom(1)"><code class="language-html">{% filter escape %}<h2 data-c-heading="h2"></h2>{% endfilter %}</code></p>
+        <h3 data-c-heading="h3" data-c-margin="top(2) bottom(1)" data-c-padding="bottom(1)">Available Arguments</h3>
+        <div data-c-grid="gutter">
+            <div data-c-grid-item="equal-col base(1of1)">
+                <pre><code class="language-md"># HEADING
+
+h1
+h2
+h3
+h4
+h5</script></code></pre>
+            </div>
+        </div>
+        <h3 data-c-heading="h3" data-c-margin="top(2) bottom(1)" data-c-padding="bottom(1)">Theme Variables</h3>
+        <p data-c-margin="tb(1)">The following variables allow you to customize the way headings are displayed project wide. These variables are available for headings 1 through 5, but the example below only shows heading level 1 (replace the number) for brevity.</p>
+        <div data-c-grid="gutter">
+            <div data-c-grid-item="equal-col base(1of1)">
+                <pre><code class="language-md"># THEME VARIABLES
+
+$clone-heading-1-border-color
+$clone-heading-1-border-style
+$clone-heading-1-border-width
+$clone-heading-1-color
+$clone-heading-1-font
+$clone-heading-1-font-size
+$clone-heading-1-font-weight</script></code></pre>
+            </div>
+        </div>
+
+        {# Font Color #}
         <span id="colour"></span>
-        <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-margin="top(triple) bottom(normal)" data-c-colour="c1">Font Colour</h2>
-        <p data-c-margin="bottom(normal)"><code class="language-html">{% filter escape %}<div data-c-colour="COLOUR"></div>{% endfilter %}</code>, <code class="language-html">{% filter escape %}<div data-c-color="COLOR"></div>{% endfilter %}</code></p>
-        <p data-c-margin="bottom">This attribute allows you to assign a font colour to an element and all of its children.</p>
-        <h3 data-c-font-size="h4" data-c-margin="top(double) bottom(normal)">Available Arguments</h3>
+        <h2 data-c-heading="h2" data-c-margin="top(triple) bottom(normal)">Font Colour</h2>
+        <p data-c-margin="bottom(1)">This attribute allows you to assign a font colour to an element and all of its children.</p>
+        <p data-c-margin="bottom(.5)" data-c-font-weight="bold">Usage:</p>
+        <p data-c-margin="bottom(1)"><code class="language-html">{% filter escape %}<div data-c-color="COLOR"></div>{% endfilter %}</code></p>
+        <p data-c-margin="bottom(.5)" data-c-font-weight="bold">Practical Example:</p>
+        <p data-c-margin="bottom(1)"><code class="language-html">{% filter escape %}<p data-c-color="c1"></p>{% endfilter %}</code></p>
+        <h3 data-c-heading="h3" data-c-margin="top(double) bottom(normal)" data-c-padding="bottom(1)">Available Arguments</h3>
         <div data-c-grid="gutter">
             <div data-c-grid-item="equal-col base(1of1)">
                 <pre><code class="language-md"># COLOUR
@@ -77,34 +117,15 @@ go</script></code></pre>
             </div>
         </div>
 
-        <span id="weight"></span>
-        <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-margin="top(triple) bottom(normal)" data-c-colour="c1">Font Weight</h2>
-        <p data-c-margin="bottom(normal)"><code class="language-html">{% filter escape %}<div data-c-font-weight="WEIGHT"></div>{% endfilter %}</code></p>
-        <p data-c-margin="bottom">This attribute allows you to assign a font weight to an element.</p>
-        <h3 data-c-font-size="h4" data-c-margin="top(double) bottom(normal)">Available Arguments</h3>
-        <div data-c-grid="gutter">
-            <div data-c-grid-item="equal-col base(1of1)">
-                <pre><code class="language-md"># WEIGHT
-
-100
-200
-300
-400
-normal
-500
-600
-700
-bold
-800
-900</script></code></pre>
-            </div>
-        </div>
-
+        {# Font Style #}
         <span id="style"></span>
-        <h2 data-c-font-size="h3" data-c-font-weight="600" data-c-margin="top(triple) bottom(normal)" data-c-colour="c1">Font Style</h2>
-        <p data-c-margin="bottom(normal)"><code class="language-html">{% filter escape %}<div data-c-font-style="STYLE"></div>{% endfilter %}</code></p>
-        <p data-c-margin="bottom">This attribute allows you to assign a text style to an element. You can use <code class="language-html">{% filter escape %}<div data-c-font-weight="bold"></div>{% endfilter %}</code> (found below) to bold items instead.</p>
-        <h3 data-c-font-size="h4" data-c-margin="top(double) bottom(normal)">Available Arguments</h3>
+        <h2 data-c-heading="h2" data-c-margin="top(3) bottom(1)">Font Style</h2>
+        <p data-c-margin="bottom(1)">This attribute allows you to assign a text style to an element. You can use <code class="language-html">{% filter escape %}data-c-font-weight="bold"{% endfilter %}</code> (found below) to bold items instead.</p>
+        <p data-c-margin="bottom(.5)" data-c-font-weight="bold">Usage:</p>
+        <p data-c-margin="bottom(1)"><code class="language-html">{% filter escape %}<div data-c-font-style="STYLE"></div>{% endfilter %}</code></p>
+        <p data-c-margin="bottom(.5)" data-c-font-weight="bold">Practical Example:</p>
+        <p data-c-margin="bottom(1)"><code class="language-html">{% filter escape %}<p data-c-font-style="underline"></p>{% endfilter %}</code></p>
+        <h3 data-c-heading="h3" data-c-margin="top(2) bottom(1)" data-c-padding="bottom(1)">Available Arguments</h3>
         <div data-c-grid="gutter">
             <div data-c-grid-item="equal-col base(1of1)">
                 <pre><code class="language-md"># STYLE
@@ -113,6 +134,34 @@ italic
 underline</script></code></pre>
             </div>
         </div>
+
+        {# Font Weight #}
+        <span id="weight"></span>
+        <h2 data-c-heading="h2" data-c-margin="top(3) bottom(1)">Font Weight</h2>
+        <p data-c-margin="bottom(1)">This attribute allows you to assign a font weight to an element.</p>
+        <p data-c-margin="bottom(.5)" data-c-font-weight="bold">Usage:</p>
+        <p data-c-margin="bottom(1)"><code class="language-html">{% filter escape %}<div data-c-font-weight="WEIGHT"></div>{% endfilter %}</code></p>
+        <p data-c-margin="bottom(.5)" data-c-font-weight="bold">Practical Example:</p>
+        <p data-c-margin="bottom(1)"><code class="language-html">{% filter escape %}<p data-c-font-weight="bold"></p>{% endfilter %}</code></p>
+        <h3 data-c-heading="h3" data-c-margin="top(2) bottom(1)" data-c-padding="bottom(1)">Available Arguments</h3>
+        <div data-c-grid="gutter">
+            <div data-c-grid-item="equal-col base(1of1)">
+                <pre><code class="language-md"># WEIGHT
+
+100
+200
+300
+400 / normal
+500
+600
+700 / bold
+800
+900</script></code></pre>
+            </div>
+        </div>
+
+        {# Changelog #}
         {% include "../../../templates/changes.twig" with {component} %}
+
     </div>
 {% endblock %}

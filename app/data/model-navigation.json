@@ -268,6 +268,20 @@
                             "submenu": []
                         },
                         {
+                            "id": "styTypHea",
+                            "title": "Headings",
+                            "hash": "/styling/typography/#headings",
+                            "terms": [
+                                "styling",
+                                "typography",
+                                "type",
+                                "font scale",
+                                "line height",
+                                "headings"
+                            ],
+                            "submenu": []
+                        },
+                        {
                             "id": "styTypCol",
                             "title": "Font Colour",
                             "hash": "/styling/typography/#colour",

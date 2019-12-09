@@ -5,11 +5,6 @@
 
 // =============================================================================
 
-$clone-whitespace-multiplier: 1.4;
-$clone-black: rgba(10, 10, 20, 1);
-$clone-menu-background-colour: $clone-black;
-$clone-submenu-background-colour: rgba(80, 80, 90, 1);
-// $clone-visited-colour: rgba(50, 50, 60, 1);
 $clone-visited-colour: temp;
 
 @import "../../node_modules/clone-framework/app/scss/clone";
@@ -174,19 +169,13 @@ $clone-visited-colour: temp;
     }
 
     .clone-hero {
-        padding: 4rem 0;
-        position: relative;
-        width: 100%;
-        @media screen and (min-width: 480px){
-            min-height: 100vh;
-        }
-        >div {
-            @media screen and (min-width: 480px){
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
+        min-height: 100vh;
+        &::before {
+            background: #{$clone-c1};
+            background: -moz-linear-gradient(45deg, rgba($clone-c1, .9) 0%, rgba($clone-c5, .8) 100%);
+            background: -webkit-linear-gradient(45deg, rgba($clone-c1, .9) 0%,rgba($clone-c5, .8) 100%);
+            background: linear-gradient(45deg, rgba($clone-c1, .9) 0%,rgba($clone-c5, .8) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$clone-c1}', endColorstr='#{$clone-c5}',GradientType=1 );
         }
         .clone-hero-release {
             img, a {
@@ -194,6 +183,23 @@ $clone-visited-colour: temp;
             }
             a {
                 margin-left: .5rem;
+            }
+        }
+        .clone-hero-card {
+            transition: transform .2s ease;
+            &:hover {
+                box-shadow: 0 10px 25px rgba(0, 0, 0, .3);
+                color: $clone-black !important;
+                transform: scale(1.05);
+                transition: transform .2s ease;
+            }
+            >div {
+                align-items: center;
+                display: flex;
+                height: 100%;
+                p {
+                    width: 100%;
+                }
             }
         }
     }

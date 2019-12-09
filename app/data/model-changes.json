@@ -24,6 +24,50 @@
                         }
                     ],
                     "versions": {
+                        "2.4.11": {
+                            "changes": [
+                                {
+                                    "components": "styTyp",
+                                    "notes": [
+                                        "Added support for styleguide style heading theme variables to help users ensure consistent styles for 5 levels of heading.",
+                                        "A new heading section was added to the typography page to explain how headings work.",
+                                        "The whole documentation site was updated to reflect these changes."
+                                    ]
+                                },
+                                {
+                                    "components": null,
+                                    "notes": "Lowered Brave theme's whitespace multiplier value from :open1.4:close to :open1.2:close."
+                                },
+                                {
+                                    "components": "comAcc",
+                                    "notes": "Removed :opendata-c-heading:close value on accordion triggers in the example code to accommodate support for the new heading system."
+                                },
+                                {
+                                    "components": "comMen",
+                                    "notes": "Fixed an issue where menu buttons were overlapping with dividers."
+                                },
+                                {
+                                    "components": "comMen",
+                                    "notes": "Fixed an issue where the menu had no padding on its bottom, which caused the mobile button to overlap with the menu items in the list."
+                                },
+                                {
+                                    "components": "comBre",
+                                    "notes": "Updated the example code to remove excess whitespace within the anchors."
+                                },
+                                {
+                                    "components": "comAle",
+                                    "notes": "Updates the example code to remove heading attribute and fixed examples."
+                                },
+                                {
+                                    "components": null,
+                                    "notes": "Removed the :open$clone-grid-gutter:close variable from the theme files as its no longer used."
+                                },
+                                {
+                                    "components": "comInp",
+                                    "notes": "Fixed a bug introduced by the new gutter system that broke the placement of input indicators such as \"Required\" and error messages."
+                                }
+                            ]
+                        },
                         "2.4.10": {
                             "changes": [
                                 {

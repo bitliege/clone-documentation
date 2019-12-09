@@ -7,17 +7,41 @@
 {% block content %}
     {{ parent(component) }}
     {% include "../../templates/header.twig" with {component} %}
-    <div data-c-container="medium" data-c-padding="bottom(triple)">
+    <div data-c-container="medium" data-c-padding="bottom(3)">
+        {# Most Recent Changes #}
         {% for key, versionX in changes %}
-            <h2 data-c-font-size="h3" data-c-color="c1" data-c-font-weight="600" data-c-padding="top(triple)" data-c-margin="bottom(normal)">Major Version: {{ key }}</h2>
+            {% if key == cloneVersion %}
+                <h2 data-c-heading="h2" data-c-padding="top(3)" data-c-margin="bottom(1)">Most Recent Version: Major Update {{ key }}</h2>
+                {% include "version.twig" with {key, "version": versionX} %}
+            {% else %}
+                {% for key, versionXX in versionX.versions %}
+                    {% if key == cloneVersion %}
+                        <h2 data-c-heading="h2" data-c-padding="top(3)" data-c-margin="bottom(1)">Most Recent Version: Minor Update {{ key }}</h2>
+                        {# Minor Version Changes #}
+                        {% include "version.twig" with {key, "version": versionXX} %}
+                    {% else %}
+                        {% for key, versionXXX in versionXX.versions %}
+                            {% if key == cloneVersion %}
+                                <h2 data-c-heading="h2" data-c-padding="top(3)" data-c-margin="bottom(1)">Most Recent Version: Patch {{ key }}</h2>
+                                {% include "version.twig" with {key, "version": versionXXX} %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+        {# Full Changelog #}
+        <h2 data-c-heading="h2" data-c-padding="top(3)">Full History</h2>
+        {% for key, versionX in changes %}
+            <h3 data-c-heading="h3" data-c-padding="top(3) bottom(1)" data-c-margin="bottom(1)">Major Version: {{ key }}</h3>
             {% include "version.twig" with {key, "version": versionX} %}
             {% for key, versionXX in versionX.versions %}
-                <h3 data-c-font-size="h4" data-c-margin="top(triple) bottom(normal)">Minor Version: {{ key }}</h3>
+                <h4 data-c-heading="h4" data-c-margin="top(2) bottom(1)">Minor Version: {{ key }}</h4>
                 {# Minor Version Changes #}
                 {% include "version.twig" with {key, "version": versionXX} %}
                 {% for key, versionXXX in versionXX.versions %}
-                    <div data-c-margin="left(normal)">
-                        <h4 data-c-font-size="h5" data-c-font-weight="600" data-c-border="bottom(thin, solid, gray)" data-c-margin="top(double) bottom(normal)" data-c-padding="bottom(half)">Patch {{ key }}</h4>
+                    <div data-c-margin="left(1)">
+                        <h5 data-c-heading="h5" data-c-margin="top(2) bottom(1)" data-c-padding="bottom(1)">Patch {{ key }}</h5>
                         {% include "version.twig" with {key, "version": versionXXX} %}
                     </div>
                 {% endfor %}

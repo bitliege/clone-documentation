@@ -24,6 +24,22 @@
                         }
                     ],
                     "versions": {
+                        "2.4.12": {
+                            "changes": [
+                                {
+                                    "components": "styCol",
+                                    "notes": "Added content under Color to explain manual hover overrides."
+                                },
+                                {
+                                    "components": "styCol",
+                                    "notes": "Updates :opendata-c-hover-color:close to accommodate buttons."
+                                },
+                                {
+                                    "components": "styCol",
+                                    "notes": "Fixes a bug where anchors were not respecting hover attributes that override the default hover value."
+                                }
+                            ]
+                        },
                         "2.4.11": {
                             "changes": [
                                 {

@@ -5,12 +5,10 @@
     {{ parent(component) }}
     {% include "../../../templates/component-header.twig" with {component} %}
     {% include "../../../templates/style-description.twig" with {component} %}
-    <div data-c-container="medium" data-c-padding="tb(triple)">
-        <h4
-            data-c-font-size="h4"
-            data-c-margin="bottom(normal)">
+    <div data-c-container="medium" data-c-padding="bottom(triple)">
+        <h2 data-c-heading="h2" data-c-margin="top(3) bottom(1)">
             Black, White, Grey, and Theme Colours
-        </h4>
+        </h2>
         <p data-c-margin="bottom(half)">If you're using Clone through <a href="#about-installation" title="Learn about installing Clone as a Node Module.">NPM</a>, it comes with a built in theme system to help you build in your brand aesthetic. There are customizable variables for black, white, gre/ay, and 5 distinct theme colours.</p>
         <p data-c-margin="bottom(double)">In practice, theme colours are accessed using <code class="language-html">{% filter escape %}cX{% endfilter %}</code>, where <code class="language-html">{% filter escape %}X{% endfilter %}</code> can be any number between 1 and 5. We recommend setting up your theme colours in order of importance: 1 being your primary, 2 being your secondary, etc. Black, white, and gre/ay are accessed using their respective names (and yes, we included both spellings!).</p>
         <div data-c-grid="gutter" data-c-padding="bottom(half)">
@@ -57,11 +55,9 @@
                 </div>
             </div>
         </div>
-        <h4
-            data-c-font-size="h4"
-            data-c-margin="top(double) bottom(normal)">
+        <h2 data-c-heading="h2" data-c-margin="top(3) bottom(1)">
             Go, Slow, Stop
-        </h4>
+        </h2>
         <p data-c-margin="bottom(normal)">Clone also provides you with three customizable action colours: go (good), slow (attention), stop (error).</p>
         <div data-c-grid="gutter" data-c-padding="bottom(half)">
             <div data-c-grid-item="base(1of2) tp(1of5)">
@@ -80,23 +76,15 @@
                 </div>
             </div>
         </div>
-        <h4
-            data-c-font-size="h4"
-            data-c-margin="top(double) bottom(normal)">
+        <h2 data-c-heading="h2" data-c-margin="top(3) bottom(1)">
             Sitewide Colour Settings
-        </h4>
+        </h2>
         <p data-c-margin="bottom(normal)">Clone allows you to customize the following sitewide colour settings:</p>
         <ul>
             <li>
                 <strong>Text Selection Background Colour</strong> <span data-c-colour="grey">(changes the colour of the background behind highlighted text)</span>
                 <ul>
                     <li><code class="language-scss">{% filter escape %}$clone-selection-background-colour{% endfilter %}</code></li>
-                </ul>
-            </li>
-            <li>
-                <strong>Hover Colour</strong> <span data-c-colour="grey">(changes the hover colour of links and buttons)</span>
-                <ul>
-                    <li><code class="language-scss">{% filter escape %}$clone-hover-colour{% endfilter %}</code></li>
                 </ul>
             </li>
             <li>
@@ -112,11 +100,28 @@
                 </ul>
             </li>
         </ul>
-        <h4
-            data-c-font-size="h4"
-            data-c-margin="top(double) bottom(normal)">
+        <h3 data-c-heading="h3" data-c-margin="top(2) bottom(1)" data-c-padding="bottom(1)">Hover Colors</h3>
+        <p data-c-margin="bottom(1)">Clone offers a sitewide variable that allows you to customize the generic hover color of links and buttons, but in some instances you'll want to customize the hover color to accommodate for accessibility or color schemes. In order to do this, Clone provides an attribute that provides access to the entire theme palette discussed above.</p>
+        <p data-c-margin="bottom(1)">To set the sitewide hover colour, you can use the <code class="language-scss">{% filter escape %}$clone-hover-colour{% endfilter %}</code> variable.</p>
+        <p data-c-margin="bottom(1)">To set a custom hover color on an element, you can use the <code class="language-html">{% filter escape %}data-c-hover-color="COLOR"{% endfilter %}</code> attribute. The options available to this attribute are outlined below.</p>
+        <div>
+            <pre><code class="language-md"># COLOR
+
+white
+gray / grey
+black
+c1 (Theme Colour 01)
+c2 (Theme Colour 02)
+c3 (Theme Colour 03)
+c4 (Theme Colour 04)
+c5 (Theme Colour 05)
+stop
+slow
+go</code></pre>
+        </div>
+        <h2 data-c-heading="h2" data-c-margin="top(3) bottom(1)">
             Component Colours
-        </h4>
+        </h2>
         <p data-c-margin="bottom(normal)">Clone allows you to customize the following component specific colour settings:</p>
         <ul>
             <li>

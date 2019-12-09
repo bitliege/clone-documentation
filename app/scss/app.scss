@@ -186,12 +186,12 @@ $clone-visited-colour: temp;
             }
         }
         .clone-hero-card {
-            transition: transform .2s ease;
+            transition: all .2s ease;
             &:hover {
                 box-shadow: 0 10px 25px rgba(0, 0, 0, .3);
                 color: $clone-black !important;
                 transform: scale(1.05);
-                transition: transform .2s ease;
+                transition: all .2s ease;
             }
             >div {
                 align-items: center;

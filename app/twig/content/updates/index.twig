@@ -12,17 +12,20 @@
         {% for key, versionX in changes %}
             {% if key == cloneVersion %}
                 <h2 data-c-heading="h2" data-c-padding="top(3)" data-c-margin="bottom(1)">Most Recent Version: Major Update {{ key }}</h2>
+                <p data-c-margin="bottom(1)">Published on: {{ versionX.date }}</p>
                 {% include "version.twig" with {key, "version": versionX} %}
             {% else %}
                 {% for key, versionXX in versionX.versions %}
                     {% if key == cloneVersion %}
                         <h2 data-c-heading="h2" data-c-padding="top(3)" data-c-margin="bottom(1)">Most Recent Version: Minor Update {{ key }}</h2>
+                        <p data-c-margin="bottom(1)">Published on: {{ versionXX.date }}</p>
                         {# Minor Version Changes #}
                         {% include "version.twig" with {key, "version": versionXX} %}
                     {% else %}
                         {% for key, versionXXX in versionXX.versions %}
                             {% if key == cloneVersion %}
                                 <h2 data-c-heading="h2" data-c-padding="top(3)" data-c-margin="bottom(1)">Most Recent Version: Patch {{ key }}</h2>
+                                <p data-c-margin="bottom(1)">Published on: {{ versionXXX.date }}</p>
                                 {% include "version.twig" with {key, "version": versionXXX} %}
                             {% endif %}
                         {% endfor %}

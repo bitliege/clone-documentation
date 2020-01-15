@@ -24,6 +24,18 @@
                         }
                     ],
                     "versions": {
+                        "2.4.13": {
+                            "date": "2020/JAN/15",
+                            "changes": [
+                                {
+                                    "components": [
+                                        "comInp",
+                                        "styFle"
+                                    ],
+                                    "notes": "Fixed a bug where grids nested inside of grids broke the placement of input labels due to specificity."
+                                }
+                            ]
+                        },
                         "2.4.12": {
                             "changes": [
                                 {

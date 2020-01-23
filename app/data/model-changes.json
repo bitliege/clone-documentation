@@ -24,6 +24,23 @@
                         }
                     ],
                     "versions": {
+                        "2.4.14": {
+                            "date": "2020/JAN/23",
+                            "changes": [
+                                {
+                                    "components": "comMen",
+                                    "notes": "Fixed a bug where padding on mobile menus remained when they transitioned to desktop menus."
+                                },
+                                {
+                                    "components": "comBre",
+                                    "notes": "Removed the material icon in favor of a simple forward slash."
+                                },
+                                {
+                                    "components": "comBre",
+                                    "notes": "Reduced CSS involved in placing the slash to give more control to the user."
+                                }
+                            ]
+                        },
                         "2.4.13": {
                             "date": "2020/JAN/15",
                             "changes": [

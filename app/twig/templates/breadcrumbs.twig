@@ -6,18 +6,14 @@
             <li>
                 <a
                     href="/"
-                    title="Return to the Clone homepage.">
-                    Home</a>
-                <i class="material-icons">arrow_right</i>
+                    title="Return to the Clone homepage.">Home</a><i>/</i>
             </li>
             {% for main in navigation %}
                 {% if component.id == main.id %}
                     <li>
                         <a
                             href="{{ main.hash }}"
-                            title="Return to {{ main.title|title }}">
-                            {{ main.title|title }}</a>
-                        <i class="material-icons">arrow_right</i>
+                            title="Return to {{ main.title|title }}">{{ main.title|title }}</a><i>/</i>
                     </li>
                 {% endif %}
                 {% for lvl1 in main.submenu %}
@@ -25,16 +21,12 @@
                         <li>
                             <a
                                 href="{{ loop.parent.main.hash }}"
-                                title="Return to {{ loop.parent.main.title|title }}">
-                                {{ loop.parent.main.title|title }}</a>
-                            <i class="material-icons">arrow_right</i>
+                                title="Return to {{ loop.parent.main.title|title }}">{{ loop.parent.main.title|title }}</a><i>/</i>
                         </li>
                         <li>
                             <a
                                 href="{{ lvl1.hash }}"
-                                title="Return to {{ lvl1.title|title }}">
-                                {{ lvl1.title|title }}</a>
-                            <i class="material-icons">arrow_right</i>
+                                title="Return to {{ lvl1.title|title }}">{{ lvl1.title|title }}</a><i>/</i>
                         </li>
                     {% endif %}
                     {% for lvl2 in lvl1.submenu %}
@@ -42,23 +34,17 @@
                             <li>
                                 <a
                                     href="{{ loop.parent.loop.parent.main.hash }}"
-                                    title="Return to {{ loop.parent.loop.parent.main.title|title }}">
-                                    {{ loop.parent.loop.parent.main.title|title }}</a>
-                                <i class="material-icons">arrow_right</i>
+                                    title="Return to {{ loop.parent.loop.parent.main.title|title }}">{{ loop.parent.loop.parent.main.title|title }}</a><i>/</i>
                             </li>
                             <li>
                                 <a
                                     href="{{ loop.parent.lvl1.hash }}"
-                                    title="Return to {{ loop.parent.lvl1.title|title }}">
-                                    {{ loop.parent.lvl1.title|title }}</a>
-                                <i class="material-icons">arrow_right</i>
+                                    title="Return to {{ loop.parent.lvl1.title|title }}">{{ loop.parent.lvl1.title|title }}</a><i>/</i>
                             </li>
                             <li>
                                 <a
                                     href="{{ lvl2.hash }}"
-                                    title="Return to {{ lvl2.title|title }}">
-                                    {{ lvl2.title|title }}</a>
-                                <i class="material-icons">arrow_right</i>
+                                    title="Return to {{ lvl2.title|title }}">{{ lvl2.title|title }}</a><i>/</i>
                             </li>
                         {% endif %}
                     {% endfor %}

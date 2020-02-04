@@ -1,0 +1,27 @@
+{% extends "../../templates/layout.twig" %}
+{% set component = {
+    id: "the",
+    title: "theme clone"
+} %}
+{% block title %}{{ component.title|title }}{% endblock %}
+{% block content %}
+    {{ parent(component) }}
+    {% include "../../templates/header.twig" with {component} %}
+    <div data-c-container="medium" data-c-padding="bottom(3)">
+        <h2 data-c-heading="h2" data-c-margin="top(3) bottom(1)">Customizing Clone's Look</h2>
+        <p data-c-margin="bottom(2)">If you're using Clone with Sass, it offers a fully customizable set of Sass variables that can be used to "skin" the system to match your brand. You can learn more about how to go about creating your own theme by checking out the "<a href="/themes/how" title="Learn how to create your own Clone theme that matches your brand.">How to Create a Theme</a>" documentation. Below, we've included a few themes that you can install through your Sass files for convenience.</p>
+        <h2 data-c-heading="h2" data-c-margin="top(3) bottom(1)" id="prebuiltThemes">Pre-built Themes</h2>
+        <p data-c-margin="bottom(1)">The following themes are available for Clone:</p>
+        <ul class="clone-input-list" data-c-grid="gutter top">
+            <li data-c-grid-item="base(1of1) tp(1of2) ds(1of3)">
+                <a href="/themes/brave" title="">Brave (Default)</a>
+            </li>
+            <li data-c-grid-item="base(1of1) tp(1of2) ds(1of3)">
+                <a href="/themes/talent-cloud" title="">Talent Cloud</a>
+            </li>
+            <li data-c-grid-item="base(1of1) tp(1of2) ds(1of3)">
+                <a href="/themes/canada-ca" title="">Canada.ca</a>
+            </li>
+        </ul>
+    </div>
+{% endblock %}

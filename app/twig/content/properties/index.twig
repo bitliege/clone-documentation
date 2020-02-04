@@ -1,0 +1,24 @@
+{% extends "../../templates/layout.twig" %}
+{% set component = {
+    id: "sty",
+    title: "properties & style"
+} %}
+{% block title %}{{ component.title|title }}{% endblock %}
+{% block content %}
+    {{ parent(component) }}
+    {% include "../../templates/header.twig" with {component} %}
+    <div data-c-container="medium" data-c-padding="bottom(3)">
+        <h2 data-c-heading="h2" data-c-margin="top(3) bottom(1)">Using Properties to Style Elements</h2>
+        <p data-c-margin="bottom(1)">Unlike other front-end frameworks, Clone employs the use of HTML5 data attributes to style elements instead of classes. What this means is that values can be written right into your markup to determine the direct style output. Because data attributes use a key-value pair, we can leverage the value to allow for modifers, such as media queries or placement on an element.</p>
+        <p data-c-margin="bottom(.5)">For example, here's how you can modify an element to centre-align text on tablets that have a landscape orientation:</p>
+        <p data-c-margin="bottom(1)"><code class="language-html">{% filter escape %}<p data-c-align="base(left) tl(center)">lorem ipsum</p>{% endfilter %}</code></p>
+        <p data-c-margin="bottom(1)">You can use the following attributes to style elements:</p>
+        <ul class="clone-input-list" data-c-grid="gutter top">
+            {% for child in navigation.styling.submenu %}
+                <li data-c-grid-item="base(1of1) tp(1of2) ds(1of3)">
+                    <a href="{{ child.hash }}" title="">{{ child.title|title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

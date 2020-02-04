@@ -1,0 +1,53 @@
+{% extends "../../../templates/layout.twig" %}
+{% set component = {
+    id: "theLisGov",
+    title: "the canada.ca theme"
+} %}
+{% block title %}{{ component.title|title }}{% endblock %}
+{% block content %}
+    {{ parent(component) }}
+    {% include "../../../templates/header.twig" with {component} %}
+    <div data-c-container="medium" data-c-padding="bottom(triple)">
+        <h2 data-c-heading="h2" data-c-padding="top(3)" data-c-margin="bottom(1)">
+            A Theme for the Government of Canada
+        </h2>
+        <div data-c-margin="bottom(1)">
+            <div data-c-grid="gutter middle">
+                <div data-c-grid-item="tp(1of2) tl(2of3) dm(4of5)" data-c-align="base(center) tp(left)">
+                    <p>The Canada.ca theme is built to emulate the basic style (colour, font, whitespace, etc.) of the Canada.ca government theme.</p>
+                </div>
+                <div data-c-grid-item="tp(1of2) tl(1of3) dm(1of5)" data-c-align="base(center) tp(right)">
+                    <a data-c-button="outline(c1)" data-c-radius="rounded" href="/themes/canada-ca/example/" title="Visit the Canada.ca theme in a new browser tab." target="_blank">Preview Canada.ca</a>
+                </div>
+            </div>
+        </div>
+        <div data-c-grid="gutter(all, 1)">
+            <div data-c-grid-item="base(1of2) tp(1of3)">
+                <div class="can-1" data-c-radius="rounded" data-c-padding="tb(2)"></div>
+            </div>
+            <div data-c-grid-item="base(1of2) tp(1of3)">
+                <div class="can-2" data-c-radius="rounded" data-c-padding="tb(2)"></div>
+            </div>
+            <div data-c-grid-item="base(1of2) tp(1of3)">
+                <div class="can-3" data-c-radius="rounded" data-c-padding="tb(2)"></div>
+            </div>
+        </div>
+        <div data-c-margin="top(3)">
+            <div data-c-grid="gutter middle">
+                <div data-c-grid-item="base(1of1) tl(1of2)">
+                    <h2 data-c-heading="h2">Canada.ca's Variables</h2>
+                </div>
+                <div data-c-grid-item="base(1of1) tl(1of2)" data-c-align="tl(right)">
+                    <button data-c-button="outline(c1)" data-c-radius="rounded" data-docs-copy-code-trigger="code">
+                        <span aria-hidden="false">Copy Theme</span><span style="display: none;" aria-hidden="true">Copied!</span>
+                    </button>
+                </div>
+            </div>
+            <div 
+                data-c-margin="top"
+                data-docs-code="code">
+                {% include "../../../templates/accordion.twig" with {'title': 'View Canada.ca\'s Variables', 'content': 'canada'} %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

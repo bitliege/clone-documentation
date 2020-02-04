@@ -24,6 +24,30 @@
                         }
                     ],
                     "versions": {
+                        "2.4.15": {
+                            "date": "2020/FEB/04",
+                            "changes": [
+                                {
+                                    "components": null,
+                                    "notes": "Updated \"Styling\" to \"Properties\" in the documentation."
+                                },
+                                {
+                                    "components": null,
+                                    "notes": [
+                                        "Moved theme documentation to its own menu area.",
+                                        "This resulted in a consolidation of \"About Clone\" and \"Getting Started\"."
+                                    ]
+                                },
+                                {
+                                    "components": "styDis",
+                                    "notes": "Added the display attribute to allow for manual control over the display property of an element."
+                                },
+                                {
+                                    "components": "comBut",
+                                    "notes": "Updated buttons to support images as their child icon instead of just icon fonts."
+                                }
+                            ]
+                        },
                         "2.4.14": {
                             "date": "2020/JAN/23",
                             "changes": [

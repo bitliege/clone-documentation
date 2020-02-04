@@ -58,6 +58,18 @@
                 "<div data-c-container=\"TYPE\"></div>"
             ]
         },
+        "display": {
+            "id": "styDis",
+            "title": "display",
+            "plural": "displays",
+            "element": "display",
+            "description": [
+                "This attribute allows you to specify a basic display value for an element."
+            ],
+            "usage": [
+                "<div data-c-display=\"VALUE\"></div>"
+            ]
+        },
         "flexboxGrid": {
             "id": "styFle",
             "title": "flexbox grid",

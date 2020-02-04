@@ -9,6 +9,12 @@ $clone-visited-colour: temp;
 
 @import "../../node_modules/clone-framework/app/scss/clone";
 
+$clone-ws-tp: #{$clone-whitespace-multiplier}; // 1.4rem
+$clone-ws-tl: #{$clone-ws-tp} * 1.2; // 1.68rem
+$clone-ws-ds: #{$clone-ws-tl} * 1.2; // 2.016rem
+$clone-ws-dm: #{$clone-ws-ds} * 1.2; // 2.4192rem
+$clone-ws-dl: #{$clone-ws-dm} * 1.2; // 2.90304rem
+
 [data-clone] {
     #cookieAlert {
         display: none;
@@ -270,6 +276,25 @@ $clone-visited-colour: temp;
         }
     }
 
+    .can-1 {
+        background: #26374A;
+    }
+    .can-2 {
+        background: #269abc;
+    }
+    .can-3 {
+        background: #af3c43;
+    }
+    .tal-1 {
+        background: #5b1647;
+    }
+    .tal-2 {
+        background: #96043e;
+    }
+    .tal-3 {
+        background: #c90035;
+    }
+
     .offset-anchor-normal {
         display: block;
         content: " ";
@@ -334,15 +359,21 @@ $clone-visited-colour: temp;
     }
 
     footer {
-        padding-bottom: calc((#{$clone-padding} * 2) + 3rem);
+        padding-bottom: calc(#{$clone-padding} * 2 + 3rem);
         @media #{$clone-tablet-portrait} {
-            padding-bottom: calc(((#{$clone-padding} * 2) * #{$clone-whitespace-multiplier}) + 3rem);
+            padding-bottom: calc((#{$clone-padding} * 2) * #{$clone-ws-tp} + 3rem);
         }
         @media #{$clone-tablet-landscape} {
-            padding-bottom: calc((#{$clone-padding} * 2) * #{$clone-whitespace-multiplier});
+            padding-bottom: calc((#{$clone-padding} * 2) * #{$clone-ws-tl});
+        }
+        @media #{$clone-desktop-small} {
+            padding-bottom: calc((#{$clone-padding} * 2) * #{$clone-ws-ds});
+        }
+        @media #{$clone-desktop-medium} {
+            padding-bottom: calc((#{$clone-padding} * 2) * #{$clone-ws-dm});
         }
         @media #{$clone-desktop-large} {
-            padding-bottom: calc(((#{$clone-padding} * 2) * #{$clone-whitespace-multiplier}) * #{$clone-whitespace-multiplier});
+            padding-bottom: calc((#{$clone-padding} * 2) * #{$clone-ws-dl});
         }
         i {
             font-size: $clone-default-font-size;

@@ -1,0 +1,48 @@
+{% extends "../../../templates/layout.twig" %}
+{% set component = {
+    id: "theHow",
+    title: "how to create a theme"
+} %}
+{% block title %}{{ component.title|title }}{% endblock %}
+{% block content %}
+    {{ parent(component) }}
+    {% include "../../../templates/header.twig" with {component} %}
+    <div data-c-container="medium" data-c-padding="bottom(triple)">
+        <h2 data-c-heading="h2" data-c-padding="top(3)" data-c-margin="bottom(1)">
+            Customizing Clone
+        </h2>
+        <div data-c-margin="bottom(3)">
+            <p data-c-margin="bottom(half)">Not a fan of Clone's default theme? No problem!</p>
+            <p data-c-margin="bottom">Clone has a set of built-in variables that you can customize through Sass that will allow you to control a variety of fonts, colours, whitespace, etc. Simply pick and choose the variables you want to customize from the list below and add them to your Sass file, directly above Clone's import function:</p>
+            <pre><code class="language-scss">{% filter escape %}// My Custom Clone Theme
+// Please note that Clone must be included last, after all of your custom variables.
+
+// Clone Theme Variables
+// All available theme variables can be found at https://github.com/joshdrink/clone-framework/blob/master/app/scss/core/_defaults.scss
+$clone-grid-columns: 8;
+$clone-c1: #5B1647;
+
+// Include Clone
+@import "../node_modules/clone-framework/app/scss/clone";
+
+[data-clone] {
+    // Your custom CSS goes here.
+}{% endfilter %}</code></pre>
+        </div>
+        <div data-c-grid="gutter middle">
+            <div data-c-grid-item="base(1of1) tl(1of2)">
+                <h2 data-c-heading="h2">Theme Variables</h2>
+            </div>
+            <div data-c-grid-item="base(1of1) tl(1of2)" data-c-align="tl(right)">
+                <button data-c-button="outline(c1)" data-c-radius="rounded" data-docs-copy-code-trigger="code">
+                    <span aria-hidden="false">Copy All Variables</span><span style="display: none;" aria-hidden="true">Copied!</span>
+                </button>
+            </div>
+        </div>
+        <div 
+            data-c-margin="top"
+            data-docs-code="code">
+            {% include "../../../templates/accordion.twig" with {'title': 'View Theme Variables', 'content': 'themeing'} %}
+        </div>
+    </div>
+{% endblock %}

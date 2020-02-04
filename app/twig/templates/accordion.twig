@@ -42,6 +42,7 @@
             aria-hidden="true"
             {% if element %}
             {% elseif content == "themeing" %}
+            {% elseif content == "brave" %}
             {% elseif content == "canada" %}
             {% elseif content == "talent-cloud" %}
             {% else %}
@@ -52,6 +53,7 @@
             <div 
                 {% if element %}
                 {% elseif content == "themeing" %}
+                {% elseif content == "brave" %}
                 {% elseif content == "canada" %}
                 {% elseif content == "talent-cloud" %}
                 {% elseif explanation %}
@@ -65,12 +67,19 @@
                 {% endif %}
                 {% if content == "themeing" %}
                     <pre><code class="language-scss">{% filter escape %}{% include "../../../node_modules/clone-framework/app/scss/variables.txt" %}{% endfilter %}</code></pre>
+                    <textarea data-docs-code-content aria-hidden="true" style="display: none;">{% filter escape %}{% include "../../../node_modules/clone-framework/app/scss/variables.txt" %}{% endfilter %}</textarea>
+                {% endif %}
+                {% if content == "brave" %}
+                    <pre><code class="language-scss">{% filter escape %}{% include "../../scss/themes/brave.scss" %}{% endfilter %}</code></pre>
+                    <textarea data-docs-code-content aria-hidden="true" style="display: none;">{% filter escape %}{% include "../../scss/themes/brave.scss" %}{% endfilter %}</textarea>
                 {% endif %}
                 {% if content == "canada" %}
                     <pre><code class="language-scss">{% filter escape %}{% include "../../scss/themes/canada.scss" %}{% endfilter %}</code></pre>
+                    <textarea data-docs-code-content aria-hidden="true" style="display: none;">{% filter escape %}{% include "../../scss/themes/canada.scss" %}{% endfilter %}</textarea>
                 {% endif %}
                 {% if content == "talent-cloud" %}
                     <pre><code class="language-scss">{% filter escape %}{% include "../../scss/themes/talent-cloud.scss" %}{% endfilter %}</code></pre>
+                    <textarea data-docs-code-content aria-hidden="true" style="display: none;">{% filter escape %}{% include "../../scss/themes/talent-cloud.scss" %}{% endfilter %}</textarea>
                 {% endif %}
                 {% if explanation %}
                     {% include "../views/components/explanation/" ~ explanation ~ ".twig" %}

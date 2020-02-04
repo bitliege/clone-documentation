@@ -91,16 +91,6 @@ const fs = require('fs');
         .pipe(dest('cache'));
     }
 
-    function templateThemes() {
-        return src('app/twig/themes/**/*.twig')
-        .pipe(twig())
-        .pipe(htmlmin({
-            collapseWhitespace: true,
-            removeComments: true
-        }))
-        .pipe(dest('cache/themes'));
-    }
-
     // Clone JS
     // This function is used for local development when clone-framework is NOT linked locally.
     // function moveCloneJS() {
@@ -215,10 +205,10 @@ const fs = require('fs');
     }
 
     // Compile
-    const compile = series(cleanCache, template, templateContent, templateThemes, moveCloneJS, movePrismJSMain, movePrismJSTwig, movePrismJSSCSS, movePrismJSMarkup, movePrismJSMarkdown, movePrismJSBash, js, cacheImages, movePrismCSS, compileCSS);
+    const compile = series(cleanCache, template, templateContent, moveCloneJS, movePrismJSMain, movePrismJSTwig, movePrismJSSCSS, movePrismJSMarkup, movePrismJSMarkdown, movePrismJSBash, js, cacheImages, movePrismCSS, compileCSS);
 
     // Quick Compile
-    const quickCompile = series(template, templateContent, templateThemes, moveCloneJS, js, cacheImages, compileCSS);
+    const quickCompile = series(template, templateContent, moveCloneJS, js, cacheImages, compileCSS);
 
     // Dist
     const dist = series(distCacheHTML, distCacheJS, distCacheCSS, distCloneJS, distPrismJS, distPrismCSS, moveImages, distFavicons);

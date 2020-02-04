@@ -1,0 +1,53 @@
+{% extends "../../../templates/layout.twig" %}
+{% set component = {
+    id: "theLisTal",
+    title: "the talent cloud theme"
+} %}
+{% block title %}{{ component.title|title }}{% endblock %}
+{% block content %}
+    {{ parent(component) }}
+    {% include "../../../templates/header.twig" with {component} %}
+    <div data-c-container="medium" data-c-padding="bottom(triple)">
+        <h2 data-c-heading="h2" data-c-padding="top(3)" data-c-margin="bottom(1)">
+            A Theme for Talent Cloud
+        </h2>
+        <div data-c-margin="bottom(1)">
+            <div data-c-grid="gutter middle">
+                <div data-c-grid-item="tp(1of2) tl(2of3) dm(4of5)" data-c-align="base(center) tp(left)">
+                    <p>Talent Cloud's theme is designed to be professional yet warm, welcoming, and distinctly Canadian. This theme is actively used on <a href="https://talent.canada.ca/" title="Visit Talent Cloud in a different tab." target="_blank">Talent Cloud's hiring experiment</a>.</p>
+                </div>
+                <div data-c-grid-item="tp(1of2) tl(1of3) dm(1of5)" data-c-align="base(center) tp(right)">
+                    <a data-c-button="outline(c1)" data-c-radius="rounded" href="/themes/talent-cloud/example/" title="Visit the Talent Cloud theme in a new browser tab." target="_blank">Preview Talent Cloud</a>
+                </div>
+            </div>
+        </div>
+        <div data-c-grid="gutter(all, 1)">
+            <div data-c-grid-item="base(1of2) tp(1of3)">
+                <div class="tal-1" data-c-radius="rounded" data-c-padding="tb(2)"></div>
+            </div>
+            <div data-c-grid-item="base(1of2) tp(1of3)">
+                <div class="tal-2" data-c-radius="rounded" data-c-padding="tb(2)"></div>
+            </div>
+            <div data-c-grid-item="base(1of2) tp(1of3)">
+                <div class="tal-3" data-c-radius="rounded" data-c-padding="tb(2)"></div>
+            </div>
+        </div>
+        <div data-c-margin="top(3)">
+            <div data-c-grid="gutter middle">
+                <div data-c-grid-item="base(1of1) tl(1of2)">
+                    <h2 data-c-heading="h2">Talent Cloud's Variables</h2>
+                </div>
+                <div data-c-grid-item="base(1of1) tl(1of2)" data-c-align="tl(right)">
+                    <button data-c-button="outline(c1)" data-c-radius="rounded" data-docs-copy-code-trigger="code">
+                        <span aria-hidden="false">Copy Theme</span><span style="display: none;" aria-hidden="true">Copied!</span>
+                    </button>
+                </div>
+            </div>
+            <div 
+                data-c-margin="top"
+                data-docs-code="code">
+                {% include "../../../templates/accordion.twig" with {'title': 'View Talent Cloud\'s Variables', 'content': 'talent-cloud'} %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

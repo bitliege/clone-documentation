@@ -8,62 +8,30 @@
                 "home"
             ]
         },
-        "about": {
-            "id": "abo",
-            "title": "About Clone",
-            "hash": "/about",
-            "terms": [
-                "about clone"
-            ],
-            "submenu": [
-                {
-                    "id": "aboWha",
-                    "title": "What is Clone?",
-                    "hash": "/about/#what",
-                    "terms": [
-                        "about",
-                        "what is clone",
-                        "design system",
-                        "consistency",
-                        "explanation"
-                    ]
-                },
-                {
-                    "id": "aboWhy",
-                    "title": "Why Use Clone?",
-                    "hash": "/about/#why",
-                    "terms": [
-                        "About",
-                        "Why use Clone?",
-                        "Advantages",
-                        "Benefits",
-                        "Value Proposition"
-                    ]
-                },
-                {
-                    "id": "aboCon",
-                    "title": "Contribute to Clone",
-                    "hash": "/about/#contribute",
-                    "terms": [
-                        "About",
-                        "Contributing",
-                        "Contribute",
-                        "Github"
-                    ]
-                }
-            ]
-        },
         "gettingstarted": {
             "id": "get",
             "title": "Getting Started",
-            "hash": "/getting-started/install",
+            "hash": "/getting-started/about",
             "terms": [
-                "getting started"
+                "getting started",
+                "about",
+                "what is clone",
+                "design system",
+                "consistency",
+                "explanation"
             ],
             "submenu": [
                 {
+                    "id": "abo",
+                    "title": "About Clone",
+                    "hash": "/getting-started/about",
+                    "terms": [
+                        "about clone"
+                    ]
+                },
+                {
                     "id": "getIns",
-                    "title": "Install Clone",
+                    "title": "Installation",
                     "hash": "/getting-started/install",
                     "terms": [
                         "getting started",
@@ -76,34 +44,19 @@
                 },
                 {
                     "id": "getBas",
-                    "title": "Basic Usage",
+                    "title": "The Basics",
                     "hash": "/getting-started/basics",
                     "terms": [
                         "getting started",
                         "basics usage"
-                    ]
-                },
-                {
-                    "id": "getCre",
-                    "title": "Create A Theme",
-                    "hash": "/getting-started/themes",
-                    "terms": [
-                        "getting started",
-                        "themes",
-                        "create a",
-                        "brave",
-                        "talent cloud",
-                        "government of canada",
-                        "themeing",
-                        "theming"                    
                     ]
                 }
             ]
         },
         "styling": {
             "id": "sty",
-            "title": "Styling",
-            "hash": "/styling",
+            "title": "Properties",
+            "hash": "/properties",
             "terms": [
                 "styling",
                 "utilities"
@@ -112,7 +65,7 @@
                 {
                     "id": "styAli",
                     "title": "Alignment",
-                    "hash": "/styling/alignment",
+                    "hash": "/properties/alignment",
                     "terms": [
                         "styling",
                         "utility",
@@ -123,7 +76,7 @@
                 {
                     "id": "styBac",
                     "title": "Background Colour",
-                    "hash": "/styling/background-colour",
+                    "hash": "/properties/background-colour",
                     "terms": [
                         "styling",
                         "utility",
@@ -134,7 +87,7 @@
                 {
                     "id": "styBor",
                     "title": "Borders",
-                    "hash": "/styling/border",
+                    "hash": "/properties/border",
                     "terms": [
                         "styling",
                         "utility",
@@ -145,7 +98,7 @@
                 {
                     "id": "styCol",
                     "title": "Colour",
-                    "hash": "/styling/colour",
+                    "hash": "/properties/colour",
                     "terms": [
                         "styling",
                         "utility",
@@ -162,7 +115,7 @@
                 {
                     "id": "styCon",
                     "title": "Containers",
-                    "hash": "/styling/container",
+                    "hash": "/properties/container",
                     "terms": [
                         "styling",
                         "utility",
@@ -171,9 +124,22 @@
                     ]
                 },
                 {
+                    "id": "styDis",
+                    "title": "Display",
+                    "hash": "/properties/display",
+                    "terms": [
+                        "styling",
+                        "utility",
+                        "utilities",
+                        "display",
+                        "block",
+                        "inline"
+                    ]
+                },
+                {
                     "id": "styFle",
                     "title": "Flexbox Grid",
-                    "hash": "/styling/flexbox-grid",
+                    "hash": "/properties/flexbox-grid",
                     "terms": [
                         "styling",
                         "utility",
@@ -185,7 +151,7 @@
                 {
                     "id": "styHor",
                     "title": "Horizontal Rules",
-                    "hash": "/styling/horizontal-rule",
+                    "hash": "/properties/horizontal-rule",
                     "terms": [
                         "styling",
                         "utility",
@@ -198,7 +164,7 @@
                 {
                     "id": "styWhi",
                     "title": "Margins & Padding",
-                    "hash": "/styling/whitespace",
+                    "hash": "/properties/whitespace",
                     "terms": [
                         "styling",
                         "utility",
@@ -211,7 +177,7 @@
                 {
                     "id": "styRad",
                     "title": "Radius",
-                    "hash": "/styling/radius",
+                    "hash": "/properties/radius",
                     "terms": [
                         "styling",
                         "utility",
@@ -222,7 +188,7 @@
                 {
                     "id": "styTyp",
                     "title": "Typography",
-                    "hash": "/styling/typography",
+                    "hash": "/properties/typography",
                     "terms": [
                         "styling",
                         "utility",
@@ -241,7 +207,7 @@
                         {
                             "id": "styTypFam",
                             "title": "Font Family",
-                            "hash": "/styling/typography/#family",
+                            "hash": "/properties/typography/#family",
                             "terms": [
                                 "styling",
                                 "typography",
@@ -256,7 +222,7 @@
                         {
                             "id": "styTypSca",
                             "title": "Font Scale",
-                            "hash": "/styling/typography/#scale",
+                            "hash": "/properties/typography/#scale",
                             "terms": [
                                 "styling",
                                 "typography",
@@ -270,7 +236,7 @@
                         {
                             "id": "styTypHea",
                             "title": "Headings",
-                            "hash": "/styling/typography/#headings",
+                            "hash": "/properties/typography/#headings",
                             "terms": [
                                 "styling",
                                 "typography",
@@ -284,7 +250,7 @@
                         {
                             "id": "styTypCol",
                             "title": "Font Colour",
-                            "hash": "/styling/typography/#colour",
+                            "hash": "/properties/typography/#colour",
                             "terms": [
                                 "styling",
                                 "typography",
@@ -297,7 +263,7 @@
                         {
                             "id": "styTypWei",
                             "title": "Font Weight",
-                            "hash": "/styling/typography/#weight",
+                            "hash": "/properties/typography/#weight",
                             "terms": [
                                 "styling",
                                 "typography",
@@ -311,7 +277,7 @@
                         {
                             "id": "styTypSty",
                             "title": "Font Style",
-                            "hash": "/styling/typography/#style",
+                            "hash": "/properties/typography/#style",
                             "terms": [
                                 "styling",
                                 "typography",
@@ -328,7 +294,7 @@
                 {
                     "id": "styVis",
                     "title": "Visibility",
-                    "hash": "/styling/visibility",
+                    "hash": "/properties/visibility",
                     "terms": [
                         "styling",
                         "utility",
@@ -632,6 +598,77 @@
                         "components",
                         "tags",
                         "badge"
+                    ]
+                }
+            ]
+        },
+        "themes": {
+            "id": "the",
+            "title": "Themes",
+            "hash": "/themes",
+            "terms": [
+                "themes",
+                "theming",
+                "themeing",
+                "skinning"
+            ],
+            "submenu": [
+                {
+                    "id": "theHow",
+                    "title": "How to Create a Theme",
+                    "hash": "/themes/how",
+                    "terms": [
+                        "themes",
+                        "theming",
+                        "themeing",
+                        "how to"
+                    ]
+                },
+                {
+                    "id": "theLis",
+                    "title": "Pre-built Themes",
+                    "hash": "/themes/#prebuiltThemes",
+                    "terms": [
+                        "themes",
+                        "theming",
+                        "themeing",
+                        "how to"
+                    ],
+                    "submenu": [
+                        {
+                            "id": "theLisBra",
+                            "title": "Brave",
+                            "hash": "/themes/brave",
+                            "terms": [
+                                "themes",
+                                "theming",
+                                "themeing",
+                                "brave"
+                            ]
+                        },
+                        {
+                            "id": "theLisTal",
+                            "title": "Talent Cloud",
+                            "hash": "/themes/talent-cloud",
+                            "terms": [
+                                "themes",
+                                "theming",
+                                "themeing",
+                                "talent cloud"
+                            ]
+                        },
+                        {
+                            "id": "theLisGov",
+                            "title": "Canada.ca",
+                            "hash": "/themes/canada-ca",
+                            "terms": [
+                                "themes",
+                                "theming",
+                                "themeing",
+                                "canada.ca",
+                                "government of canada"
+                            ]
+                        }
                     ]
                 }
             ]

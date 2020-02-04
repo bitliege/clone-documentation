@@ -1,0 +1,15 @@
+{% extends "../../../templates/layout.twig" %}
+{% set component = {
+    id: "abo",
+    title: "about clone"
+} %}
+{% block title %}About Clone{% endblock %}
+{% block content %}
+    {{ parent(component) }}
+    {% include "../../../templates/header.twig" with {component} %}
+    <div data-c-container="medium" data-c-padding="bottom(triple)">
+        {% include "what.twig" %}
+        {% include "why.twig" %}
+        {% include "contribute.twig" %}
+    </div>
+{% endblock %}

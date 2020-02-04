@@ -25,8 +25,8 @@ $clone-grid-columns: 12;
     $clone-c1: #26374A;
     $clone-c2: #269abc;
     $clone-c3: #af3c43;
-    $clone-c4: #F79559;
-    $clone-c5: #F7AF5B;
+    // $clone-c4: #F79559;
+    // $clone-c5: #F7AF5B;
 
     // Go, Slow, Stop
     $clone-go: green;
@@ -36,7 +36,7 @@ $clone-grid-columns: 12;
 // Sitewide Colour Variables
 
     // Text Selection
-    $clone-selection-background-colour: $clone-c5;
+    $clone-selection-background-colour: $clone-c1;
 
     // Hover
     $clone-hover-colour: #0535d2;

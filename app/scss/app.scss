@@ -6,6 +6,7 @@
 // =============================================================================
 
 $clone-visited-colour: temp;
+$clone-whitespace-multiplier: 1;
 
 @import "../../node_modules/clone-framework/app/scss/clone";
 

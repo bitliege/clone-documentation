@@ -2,9 +2,9 @@
     <div data-c-container="medium">
         <div data-c-card data-c-background="white(100)" data-c-radius="rounded" data-c-padding="all(2)">
             <span id="content"></span>
-            <p data-c-font-weight="bold">About {{ component.plural|title }}</p>
+            <h3 data-c-font-size="h4">About {{ component.plural|title }}</h3>
             {% if component.description == null %}
-                <p data-c-margin="tb(1)">A description for this component is coming soon! You can check out the code below in the meantime.</p>
+                <p data-c-margin="tb(.5)">A description for this component is coming soon! You can check out the code below in the meantime.</p>
             {% else %}
                 {% for item in component.description %}
                     <p data-c-margin="tb(1)">{{ item }}</p>
@@ -15,12 +15,12 @@
             {% else %}
                 {# Parent components don't need quick actions. #}
             {% endif %}
-            <p data-c-font-weight="bold" data-c-margin="top(2)">{{ component.title|title }} Accessibility</p>
+            <h3 data-c-font-size="h4" data-c-margin="top(2)">{{ component.title|title }} Accessibility</h3>
             {% if component.accessibility == null %}
-                <p data-c-margin="top(1)">A description of how this component is accessible is on its way!</p>
+                <p data-c-margin="top(.5)">A description of how this component is accessible is on its way!</p>
             {% else %}
                 {% for item in component.accessibility %}
-                    <p data-c-margin="top(1)">{{ item }}</p>
+                    <p data-c-margin="top(.5)">{{ item }}</p>
                 {% endfor %}
             {% endif %}
         </div>

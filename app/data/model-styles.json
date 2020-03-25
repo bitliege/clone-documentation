@@ -52,10 +52,10 @@
             "plural": "containers",
             "element": "container",
             "description": [
-                "This attribute allows you to select from one of three container types: small (for large volumes of text), medium (for narrow UI and forms), large (for contained UI), and full (for content that has no maximum width but requires a margin)."
+                "This attribute allows you to select from one of three container types: small (for large volumes of text), medium (for narrow UI and forms), large (for contained UI), and full (for content that has no maximum width but requires a margin). This is accompanied by a selected alignment that will set the margins on the container to be left aligned, centered within the page, or right aligned."
             ],
             "usage": [
-                "<div data-c-container=\"TYPE\"></div>"
+                "<div data-c-container=\"TYPE(ALIGNMENT)\"></div>"
             ]
         },
         "display": {

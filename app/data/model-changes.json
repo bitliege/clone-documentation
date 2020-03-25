@@ -24,6 +24,42 @@
                         }
                     ],
                     "versions": {
+                        "2.4.16": {
+                            "date": "2020/MAR/25",
+                            "changes": [
+                                {
+                                    "components": null,
+                                    "notes": "Updated most component example code and removed a bunch of whitespace."
+                                },
+                                {
+                                    "components": "styCon",
+                                    "notes": "Added support for aligning containers left, centered, and right."
+                                },
+                                {
+                                    "components": "comAcc",
+                                    "notes": "Fixed a bug where a :opentrue:close value on the :opendata-c-accordion:close attribute would cause the component to break."
+                                },
+                                {
+                                    "components": "comDia",
+                                    "notes": [
+                                        "Updated dialogs with a new :opendata-c-dialog-escapable:close attribute that allows the user to use the :openESC:close key to close a dialog.",
+                                        "Omitting this attribute prevents this behaviour."
+                                    ]
+                                },
+                                {
+                                    "components": "comDia",
+                                    "notes": "Dialog close buttons now support :openspan:close elements, images, as well as the original icon font :openi:close elements."
+                                },
+                                {
+                                    "components": "comAle",
+                                    "notes": "Alert titles now support :openspan:close elements, images, as well as the original icon font :openi:close elements."
+                                },
+                                {
+                                    "components": "comAle",
+                                    "notes": "Alert close buttons now support :openspan:close elements, images, as well as the original icon font :openi:close elements."
+                                }
+                            ]
+                        },
                         "2.4.15": {
                             "date": "2020/FEB/04",
                             "changes": [

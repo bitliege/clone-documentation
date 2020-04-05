@@ -91,9 +91,9 @@ $clone-heading-1-font-weight</script></code></pre>
         </div>
 
         {# Font Color #}
-        <span id="colour"></span>
-        <h2 data-c-heading="h2" data-c-margin="top(triple) bottom(normal)">Font Colour</h2>
-        <p data-c-margin="bottom(1)">This attribute allows you to assign a font colour to an element and all of its children.</p>
+        <span id="color"></span>
+        <h2 data-c-heading="h2" data-c-margin="top(triple) bottom(normal)">Font Color</h2>
+        <p data-c-margin="bottom(1)">This attribute allows you to assign a font color to an element and all of its children.</p>
         <p data-c-margin="bottom(.5)" data-c-font-weight="bold">Usage:</p>
         <p data-c-margin="bottom(1)"><code class="language-html">{% filter escape %}<div data-c-color="COLOR"></div>{% endfilter %}</code></p>
         <p data-c-margin="bottom(.5)" data-c-font-weight="bold">Practical Example:</p>
@@ -101,16 +101,16 @@ $clone-heading-1-font-weight</script></code></pre>
         <h3 data-c-heading="h3" data-c-margin="top(double) bottom(normal)" data-c-padding="bottom(1)">Available Arguments</h3>
         <div data-c-grid="gutter">
             <div data-c-grid-item="equal-col base(1of1)">
-                <pre><code class="language-md"># COLOUR
+                <pre><code class="language-md"># COLOR
 
 white
-gray / grey
+gray
 black
-c1 (Theme Colour 01)
-c2 (Theme Colour 02)
-c3 (Theme Colour 03)
-c4 (Theme Colour 04)
-c5 (Theme Colour 05)
+c1 (Theme Color 01)
+c2 (Theme Color 02)
+c3 (Theme Color 03)
+c4 (Theme Color 04)
+c5 (Theme Color 05)
 stop
 slow
 go</script></code></pre>
@@ -120,7 +120,7 @@ go</script></code></pre>
         {# Font Style #}
         <span id="style"></span>
         <h2 data-c-heading="h2" data-c-margin="top(3) bottom(1)">Font Style</h2>
-        <p data-c-margin="bottom(1)">This attribute allows you to assign a text style to an element. You can use <code class="language-html">{% filter escape %}data-c-font-weight="bold"{% endfilter %}</code> (found below) to bold items instead.</p>
+        <p data-c-margin="bottom(1)">This attribute allows you to reset or assign a text style to an element. You can use <code class="language-html">{% filter escape %}data-c-font-weight="bold"{% endfilter %}</code> (found below) to bold items instead.</p>
         <p data-c-margin="bottom(.5)" data-c-font-weight="bold">Usage:</p>
         <p data-c-margin="bottom(1)"><code class="language-html">{% filter escape %}<div data-c-font-style="STYLE"></div>{% endfilter %}</code></p>
         <p data-c-margin="bottom(.5)" data-c-font-weight="bold">Practical Example:</p>
@@ -130,6 +130,7 @@ go</script></code></pre>
             <div data-c-grid-item="equal-col base(1of1)">
                 <pre><code class="language-md"># STYLE
 
+reset
 italic
 underline</script></code></pre>
             </div>

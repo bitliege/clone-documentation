@@ -89,16 +89,20 @@
                 <li>At the top of your main project <code class="language-md">.scss</code> file, include the following:</li>
             </ol>
             <pre><code class="language-scss">{% filter escape %}// My Custom Clone Theme
-// Please note that Clone must be included last, after all of your custom variables.
+// Please note that the order of the instructions/includes below is important to maintain.
 
-// Clone Theme Variables
-// All available theme variables can be found at https://github.com/joshdrink/clone-framework/blob/master/app/scss/core/_defaults.scss
+// Include Clone's Variables
+// Doing this gives you access to the default variables in the event you'd like to use one of them as a value in your custom theme variables.
+@import "node_modules/clone-framework/app/scss/core/_defaults";
+
+// Your Clone Theme Variables
+// Put any of the variables you'd like to customize here. A list of all the available variables can be found at: https://designwithclone.ca/themes/how/
 
 // Include Clone
-@import "../node_modules/clone-framework/app/scss/clone";
+@import "node_modules/clone-framework/app/scss/clone";
 
 [data-clone] {
-    // Your custom CSS goes here.
+    // Custom CSS for your app goes here.
 }{% endfilter %}</code></pre>
             <p data-c-margin="top(normal) bottom(normal)">
                 For now, it is also required that Clone's JavaScript file be imported using the CDN.

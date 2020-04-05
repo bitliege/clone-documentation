@@ -1,6 +1,6 @@
 <div data-c-margin="bottom(.5)">
-    <pre><code class="language-html">{% filter escape %}<!--A container for copy, centered on the page.-->
-<div data-c-container="small(center)"></div>{% endfilter %}</code></pre>
+    <pre><code class="language-html">{% filter escape %}<!--A container that is full width initially and then shrinks and aligns to the left on landscape tablet devices.-->
+<div data-c-container="base(full, center) tl(small, left)"></div>{% endfilter %}</code></pre>
 </div>
-<pre><code class="language-html">{% filter escape %}<!--A container for forms, left aligned on the page.-->
-<div data-c-container="medium(left)"></div>{% endfilter %}</code></pre>
+<pre><code class="language-html">{% filter escape %}<!--A container that small and left aligned initially and then grows larger and centers itself on small desktop devices.-->
+<div data-c-container="base(small, left) ds(large, center)"></div>{% endfilter %}</code></pre>

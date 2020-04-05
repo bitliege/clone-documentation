@@ -24,6 +24,34 @@
                         }
                     ],
                     "versions": {
+                        "2.4.17": {
+                            "date": "2020/APR/05",
+                            "changes": [
+                                {
+                                    "components": null,
+                                    "notes": [
+                                        "Migrated all default variables to standard language formatting (e.g. color over colour).",
+                                        "The alternate spelling can still be used, but defining variables in your theme should be the standard spelling."
+                                    ]
+                                },
+                                {
+                                    "components": "styCon",
+                                    "notes": "Added media query support for containers - old syntax will be supported until next minor version update (2.5)."
+                                },
+                                {
+                                    "components": "styCol",
+                                    "notes": "Removed :open$clone-visited-link-color:close as it was interfering with the ability to properly control the color of links on a variety of background colors."
+                                },
+                                {
+                                    "components": "styTyp",
+                                    "notes": "Added a reset option for :opendata-c-font-style:close."
+                                },
+                                {
+                                    "components": "comAcc",
+                                    "notes": "Added a custom focus state for accordion triggers."
+                                }
+                            ]
+                        },
                         "2.4.16": {
                             "date": "2020/MAR/25",
                             "changes": [

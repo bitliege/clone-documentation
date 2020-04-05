@@ -1,12 +1,14 @@
-// =============================================================================
+// My Custom Clone Theme
+// Please note that the order of the instructions/includes below is important to maintain.
 
-    // Clone
-    // Core
+// Include Clone's Variables
+// Doing this gives you access to the default variables in the event you'd like to use one of them as a value in your custom theme variables.
+@import "../../node_modules/clone-framework/app/scss/core/_defaults";
 
-// =============================================================================
+// Your Clone Theme Variables
+// Put any of the variables you'd like to customize here. A list of all the available variables can be found at: https://designwithclone.ca/themes/how/
 
-$clone-visited-colour: temp;
-
+// Include Clone
 @import "../../node_modules/clone-framework/app/scss/clone";
 
 $clone-ws-tp: #{$clone-whitespace-multiplier}; // 1.4rem
@@ -16,6 +18,7 @@ $clone-ws-dm: #{$clone-ws-ds} * 1.2; // 2.4192rem
 $clone-ws-dl: #{$clone-ws-dm} * 1.2; // 2.90304rem
 
 [data-clone] {
+    // Custom CSS for your app goes here.
     #cookieAlert {
         display: none;
         button {

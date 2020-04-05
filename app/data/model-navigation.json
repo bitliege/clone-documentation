@@ -75,8 +75,8 @@
                 },
                 {
                     "id": "styBac",
-                    "title": "Background Colour",
-                    "hash": "/properties/background-colour",
+                    "title": "Background Color",
+                    "hash": "/properties/background-color",
                     "terms": [
                         "styling",
                         "utility",
@@ -97,8 +97,8 @@
                 },
                 {
                     "id": "styCol",
-                    "title": "Colour",
-                    "hash": "/properties/colour",
+                    "title": "Color",
+                    "hash": "/properties/color",
                     "terms": [
                         "styling",
                         "utility",
@@ -249,8 +249,8 @@
                         },
                         {
                             "id": "styTypCol",
-                            "title": "Font Colour",
-                            "hash": "/properties/typography/#colour",
+                            "title": "Font Color",
+                            "hash": "/properties/typography/#color",
                             "terms": [
                                 "styling",
                                 "typography",

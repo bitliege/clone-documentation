@@ -12,16 +12,16 @@
                 "<div data-c-alignment=\"MEDIA(ALIGNMENT)\">"
             ]
         },
-        "backgroundColour": {
+        "backgroundColor": {
             "id": "styBac",
-            "title": "background colour",
-            "plural": "background colours",
-            "element": "background-colour",
+            "title": "background color",
+            "plural": "background colors",
+            "element": "background-color",
             "description": [
-                "This attribute assigns a background colour based on the colour and opacity provided."
+                "This attribute assigns a background color based on the color and opacity provided."
             ],
             "usage": [
-                "<div data-c-background=\"COLOUR(OPACITY)\">"
+                "<div data-c-background=\"COLOR(OPACITY)\">"
             ]
         },
         "border": {
@@ -30,17 +30,17 @@
             "plural": "borders",
             "element": "border",
             "description": [
-                "This attribute assigns a border to the selected side of the element. It allows you to customize the thickness, style, and colour."
+                "This attribute assigns a border to the selected side of the element. It allows you to customize the thickness, style, and color."
             ],
             "usage": [
-                "<div data-c-border=\"SIDE(THICKNESS, STYLE, COLOUR)\">"
+                "<div data-c-border=\"SIDE(THICKNESS, STYLE, COLOR)\">"
             ]
         },
-        "colour": {
+        "color": {
             "id": "styCol",
-            "title": "colour",
-            "plural": "colours",
-            "element": "colour",
+            "title": "color",
+            "plural": "colors",
+            "element": "color",
             "description": [
                 "Coming soon!"
             ],
@@ -52,10 +52,10 @@
             "plural": "containers",
             "element": "container",
             "description": [
-                "This attribute allows you to select from one of three container types: small (for large volumes of text), medium (for narrow UI and forms), large (for contained UI), and full (for content that has no maximum width but requires a margin). This is accompanied by a selected alignment that will set the margins on the container to be left aligned, centered within the page, or right aligned."
+                "This attribute allows you to select from one of three container types: small (for large volumes of text), medium (for narrow UI and forms), large (for contained UI), and full (for content that has no maximum width but requires a margin). These can be media query specific. This is accompanied by a selected alignment that will set the margins on the container to be left aligned, centered within the page, or right aligned."
             ],
             "usage": [
-                "<div data-c-container=\"TYPE(ALIGNMENT)\"></div>"
+                "<div data-c-container=\"MEDIA(TYPE, ALIGNMENT)\"></div>"
             ]
         },
         "display": {
@@ -86,7 +86,7 @@
             "plural": "horizontal rules",
             "element": "horizontal-rule",
             "description": [
-                "Horizontal rules are a great way to add clear visual distinction between sections of information. Clone allows for minimal thickness and colour variation to ensure rules can be customized to meet your theme."
+                "Horizontal rules are a great way to add clear visual distinction between sections of information. Clone allows for minimal thickness and color variation to ensure rules can be customized to meet your theme."
             ],
             "usage": [
                 "<hr data-c-hr=\"WIDTH(COLOR)\">"

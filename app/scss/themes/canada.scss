@@ -23,7 +23,7 @@ $clone-small-layout: 39rem;
 $clone-margin: 1rem;
 $clone-padding: 1rem;
     // Calculation Variables
-    $clone-whitespace-multiplier: 1;
+    $clone-whitespace-multiplier: 1.15;
     $clone-ws-tp: #{$clone-whitespace-multiplier}; // 1.4rem
     $clone-ws-tl: #{$clone-ws-tp} * #{$clone-whitespace-multiplier}; // 1.68rem
     $clone-ws-ds: #{$clone-ws-tl} * #{$clone-whitespace-multiplier}; // 2.016rem
